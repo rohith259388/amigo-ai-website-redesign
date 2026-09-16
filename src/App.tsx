@@ -3,7 +3,6 @@ import { useLayoutEffect } from "react";
 import { AutoApplySection } from "./components/AutoApplySection";
 import { BuddySection } from "./components/BuddySection";
 import { CompanionSection } from "./components/CompanionSection";
-import { CreatorsSection } from "./components/CreatorsSection";
 import { Ecosystem } from "./components/Ecosystem";
 import { FAQ } from "./components/FAQ";
 import { FinalCTA } from "./components/FinalCTA";
@@ -13,6 +12,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { InterviewSection } from "./components/InterviewSection";
 import { Journey } from "./components/Journey";
 import { Navbar } from "./components/Navbar";
+import { CreatorsPage } from "./components/pages/CreatorsPage";
 import { QuestionPage } from "./components/pages/QuestionPage";
 import { QuestionsPage } from "./components/pages/QuestionsPage";
 import { Pricing } from "./components/Pricing";
@@ -25,6 +25,8 @@ import { useHashRoute } from "./hooks/useHashRoute";
 export default function App() {
   const route = useHashRoute();
   const routeKey = route.name === "question" ? `question/${route.slug}` : route.name;
+  const activeHref =
+    route.name === "questions" || route.name === "question" ? "#/questions" : route.name === "creators" ? "#/creators" : null;
 
   // The browser can't scroll to a section anchor that belongs to a page that isn't rendered yet.
   useLayoutEffect(() => {
@@ -36,11 +38,12 @@ export default function App() {
   return (
     <MotionConfig reducedMotion="user">
       <div className="relative min-h-screen bg-amigo-surface text-amigo-dark antialiased" style={{ overflowX: "clip" }}>
-        <Navbar onQuestions={route.name !== "home"} />
+        <Navbar activeHref={activeHref} />
         <main>
           {route.name === "home" && <Home />}
           {route.name === "questions" && <QuestionsPage />}
           {route.name === "question" && <QuestionPage key={route.slug} slug={route.slug} />}
+          {route.name === "creators" && <CreatorsPage />}
         </main>
         <Footer />
       </div>
@@ -69,7 +72,6 @@ function Home() {
       <Ecosystem />
       <QuestionsSection />
       <Pricing />
-      <CreatorsSection />
       <FAQ />
       <FinalCTA />
     </>

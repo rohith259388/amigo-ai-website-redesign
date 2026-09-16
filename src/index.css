@@ -284,6 +284,26 @@
   background-size: 72px 72px;
 }
 
+@utility input {
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding-inline: 1rem;
+  font-size: 15px;
+  color: #111318;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &::placeholder {
+    color: rgba(17, 19, 24, 0.4);
+  }
+  &:focus {
+    border-color: #6c2bd9;
+    box-shadow: 0 0 0 3px rgba(108, 43, 217, 0.14);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
