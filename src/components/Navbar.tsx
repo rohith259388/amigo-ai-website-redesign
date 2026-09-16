@@ -16,10 +16,10 @@ export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Questions", href: "#/questions" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Creators Wanted", href: "#creators" },
+  { label: "Creators Wanted", href: "#/creators" },
 ];
 
-export function Navbar({ onQuestions }: { onQuestions: boolean }) {
+export function Navbar({ activeHref }: { activeHref: string | null }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -48,7 +48,7 @@ export function Navbar({ onQuestions }: { onQuestions: boolean }) {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [onQuestions]);
+  }, [activeHref]);
 
   return (
     <>
@@ -66,7 +66,7 @@ export function Navbar({ onQuestions }: { onQuestions: boolean }) {
 
             <ul className="hidden items-center gap-0.5 xl:flex">
               {NAV_LINKS.map((l) => {
-                const isActive = onQuestions ? l.href === "#/questions" : active === l.href.slice(1);
+                const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
                 return (
                   <li key={l.href}>
                     <a

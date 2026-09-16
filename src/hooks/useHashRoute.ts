@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 
-export type Route = { name: "home" } | { name: "questions" } | { name: "question"; slug: string };
+export type Route =
+  | { name: "home" }
+  | { name: "questions" }
+  | { name: "question"; slug: string }
+  | { name: "creators" };
 
 // Routes live under "#/..." so plain section anchors like "#resume" keep working on the home page.
 function parse(hash: string): Route {
+  if (/^#\/creators\/?$/.test(hash)) return { name: "creators" };
   const match = hash.match(/^#\/questions(?:\/([\w-]+))?\/?$/);
   if (!match) return { name: "home" };
   return match[1] ? { name: "question", slug: match[1] } : { name: "questions" };
