@@ -1,346 +1,346 @@
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Mic, MicOff, MonitorUp, PhoneOff, Sparkles, ThumbsUp, Video } from "lucide-react";
-import { useRef, useState, type ReactNode } from "react";
+import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
+import { Copy, FileText, Minus, Mic, Plus, Sparkles, X } from "lucide-react";
+import { useRef } from "react";
+import { useSequence } from "@/hooks/useSequence";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
-import amigoMonogram from "@/assets/amigo-monogram.png";
-import { AmigoBot } from "./ui/AmigoBot";
 import { Avatar, Bolt, Eyebrow, LiveDot, Wave } from "./ui/Brand";
-import { Typewriter } from "./ui/Typewriter";
+import { Reveal, TextReveal } from "./ui/Reveal";
 
-const QUESTION = "Explain your experience with Java.";
-const STATUS = ["Listening", "Question detected", "Thinking…", "Suggestion ready", "Standing by"];
-const ANSWER_LINES = [
-  "Based on your CV — lead with Nexa Labs:",
-  "4 years of Java, mostly Spring Boot microservices.",
-  "Highlight the monolith → 12 services migration.",
-  "Land the number: 40% faster deploys, fewer incidents.",
-];
+const QA = {
+  category: "Frontend & Fullstack",
+  question: "What is JavaScript?",
+  chips: ["What is", "JavaScript and", "how does it work", "in the browser?"],
+  paragraphs: [
+    {
+      text: "JavaScript is a high-level, interpreted programming language that's primarily used for adding interactivity to websites. It's a key technology alongside HTML and CSS in building dynamic web applications.",
+      highlights: ["high-level, interpreted programming language", "dynamic web applications"],
+    },
+    {
+      text: "It runs in the browser, which means it can manipulate the Document Object Model (DOM), allowing real-time updates without reloading the page. It also runs server-side with Node.js, making it versatile across the whole stack.",
+      highlights: ["manipulate the Document Object Model (DOM)", "Node.js"],
+    },
+  ],
+  followUps: ["How it handles async tasks", "Its main frameworks", "Compare it with Java"],
+};
 
-function Card({ children, className, label, icon }: { children: ReactNode; className?: string; label: string; icon?: ReactNode }) {
+/** Splits a paragraph into plain + highlighted runs, in order of appearance. */
+function splitHighlights(text: string, highlights: string[]) {
+  const hits = highlights
+    .map((h) => ({ h, i: text.indexOf(h) }))
+    .filter((x) => x.i >= 0)
+    .sort((a, b) => a.i - b.i);
+
+  const parts: { text: string; hl: boolean }[] = [];
+  let cursor = 0;
+  for (const { h, i } of hits) {
+    if (i < cursor) continue;
+    if (i > cursor) parts.push({ text: text.slice(cursor, i), hl: false });
+    parts.push({ text: h, hl: true });
+    cursor = i + h.length;
+  }
+  if (cursor < text.length) parts.push({ text: text.slice(cursor), hl: false });
+  return parts;
+}
+
+function Paragraph({ text, highlights, delay }: { text: string; highlights: string[]; delay: number }) {
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 14, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -8, scale: 0.98 }}
-      transition={{ duration: 0.5, ease: EASE }}
-      className={cn("rounded-2xl p-3.5 ring-1 ring-white/10", className)}
+    <motion.p
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: EASE, delay }}
+      className="text-[13.5px] leading-relaxed text-amigo-dark/75 sm:text-[15px]"
     >
-      <div className="flex items-center gap-1.5 text-[9px] font-bold uppercase tracking-[0.18em] text-amigo-lilac/80">
-        {icon}
-        {label}
-      </div>
-      {children}
-    </motion.div>
+      {splitHighlights(text, highlights).map((part, i) =>
+        part.hl ? (
+          <motion.span
+            key={i}
+            initial={{ backgroundColor: "rgba(241,233,255,0)", color: "rgba(17,19,24,0.75)" }}
+            animate={{ backgroundColor: "rgba(241,233,255,1)", color: "#6C2BD9" }}
+            transition={{ duration: 0.5, ease: EASE, delay: delay + 0.45 + i * 0.12 }}
+            className="rounded-[5px] px-1 font-semibold"
+          >
+            {part.text}
+          </motion.span>
+        ) : (
+          <span key={i}>{part.text}</span>
+        )
+      )}
+    </motion.p>
   );
 }
 
 export function InterviewSection() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const [step, setStep] = useState(0);
-
-  useMotionValueEvent(scrollYProgress, "change", (v) => {
-    const s = v < 0.14 ? 0 : v < 0.3 ? 1 : v < 0.44 ? 2 : v < 0.7 ? 3 : 4;
-    setStep((prev) => (prev === s ? prev : s));
-  });
-
-  const interviewerSpeaking = step === 1;
-  const youSpeaking = step === 4;
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { amount: 0.25 });
+  const reduce = useReducedMotion();
+  // 0 listening · 1 transcript chips · 2 question locked · 3 answer p1 · 4 answer p2 · 5 follow-ups
+  const step = useSequence([1900, 2300, 1300, 2500, 2600, 4400], inView, { reduced: !!reduce });
 
   return (
-    <section id="interview" ref={ref} className="edge-glow relative h-[400vh] bg-amigo-ink text-white" style={{ overflowX: "clip" }}>
-      <div className="sticky top-0 flex h-[100svh] flex-col overflow-hidden">
-        <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 h-[50vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-purple/20 blur-[140px]" />
-        <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_50%_100%,black_10%,transparent_70%)]" />
+    <section id="interview" className="edge-glow relative overflow-hidden bg-amigo-ink py-28 text-white lg:py-36">
+      <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_50%_40%,black,transparent_75%)]" />
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/4 h-[560px] w-[860px] -translate-x-1/2 rounded-full bg-amigo-purple/25 blur-[150px]"
+        animate={reduce ? {} : { opacity: [0.6, 1, 0.6] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
+      <div className="container-x relative">
         {/* header */}
-        <div className="container-x relative pt-20 sm:pt-24 lg:pt-28">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
-            <div>
-              <Eyebrow tone="light">04 — Interview</Eyebrow>
-              <h2 className="headline mt-3 text-[clamp(1.85rem,4.2vw,4rem)]">
-                When the Interview Starts,
-                <br />
-                Amigo Is There.
-              </h2>
-            </div>
-            <p className="hidden max-w-[400px] text-[16px] leading-relaxed text-white/55 sm:block lg:text-[17px]">
-              Get real-time assistance during technical, behavioural, coding, and role-specific interviews.
-            </p>
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
+          <div>
+            <Eyebrow tone="light">04 — Interview</Eyebrow>
+            <TextReveal
+              className="headline mt-4 text-[clamp(2.2rem,4.8vw,4.25rem)] text-white"
+              lines={["When the Interview Starts,", <span key="g" className="text-gradient-light pr-2">Amigo Is There.</span>]}
+            />
           </div>
+          <Reveal delay={0.15}>
+            <p className="max-w-[400px] text-[16px] leading-relaxed text-white/55 lg:text-[17px]">
+              Amigo hears the question, writes the answer and keeps going — technical, behavioural or coding. Private to
+              you, on top of any call.
+            </p>
+          </Reveal>
         </div>
 
-        {/* stage */}
-        <div className="container-x relative min-h-0 flex-1 py-5 lg:py-8">
-          <div className="grid h-full min-h-0 grid-cols-1 gap-4 lg:grid-cols-[1.25fr_0.75fr]">
-            {/* Video window */}
-            <div className="relative flex aspect-[16/9] flex-col overflow-hidden rounded-[24px] border border-white/10 bg-[#0E1016] shadow-panel sm:aspect-[16/10] lg:aspect-auto lg:h-full">
-              <div className="flex items-center justify-between border-b border-white/5 px-4 py-2.5 text-[12px]">
-                <span className="flex items-center gap-2 font-semibold text-white/80">
-                  <span className="grid h-5 w-5 place-items-center rounded-md bg-white/10">
-                    <Video size={12} />
-                  </span>
-                  Technical Interview · Nexa Labs
+        {/* ---------- the copilot overlay, floating over a blurred call ---------- */}
+        <div ref={ref} className="relative mt-14 lg:mt-16">
+          {/* the call, blurred, running behind the overlay */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-[560px] max-w-[1060px] overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,#1B1F30,#0B0C10)] opacity-95 blur-[2px] sm:block"
+          >
+            <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[13px] font-medium text-white/70">
+              <span className="flex items-center gap-2.5">
+                <span className="grid h-6 w-6 place-items-center rounded-md bg-white/10 text-[11px]">▶</span>
+                Technical Interview · Nexa Labs
+              </span>
+              <span className="flex items-center gap-2.5">
+                <span className="flex items-center gap-1.5 rounded-full bg-red-500/20 px-2.5 py-1 text-[11px] font-bold text-red-300">
+                  <LiveDot color="#F87171" /> REC
                 </span>
-                <span className="flex items-center gap-2 text-white/50">
-                  <span className="flex items-center gap-1.5 rounded-full bg-red-500/15 px-2 py-0.5 text-[10px] font-bold text-red-400">
-                    <LiveDot color="#F87171" /> REC
-                  </span>
-                  <span className="tabular-nums">24:18</span>
-                </span>
-              </div>
-
-              <div className="relative min-h-0 flex-1 bg-[radial-gradient(ellipse_at_50%_35%,rgba(108,43,217,0.28),transparent_60%),linear-gradient(180deg,#151824,#0B0C10)]">
-                {/* interviewer */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <motion.div
-                    animate={interviewerSpeaking ? { boxShadow: "0 0 0 6px rgba(183,142,255,0.35)" } : { boxShadow: "0 0 0 0px rgba(183,142,255,0)" }}
-                    transition={{ duration: 0.4 }}
-                    className="rounded-full"
-                  >
-                    <Avatar name="Sarah Kim" size={92} />
-                  </motion.div>
+                <span className="tabular-nums text-white/60">24:18</span>
+              </span>
+            </div>
+            <div className="flex items-start justify-center gap-16 pt-7">
+              <div className="flex flex-col items-center gap-2.5">
+                <div className="rounded-full ring-4 ring-amigo-light/40">
+                  <Avatar name="Sarah Kim" size={104} />
                 </div>
-                <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-black/50 px-3 py-1.5 text-[12px] font-semibold backdrop-blur">
+                <span className="flex items-center gap-2 rounded-full bg-black/50 px-3 py-1.5 text-[12.5px] font-semibold text-white/80">
                   Sarah K. · Engineering Manager
-                  <Wave bars={4} className="h-3" light active={interviewerSpeaking} />
-                </div>
-
-                {/* caption */}
-                <AnimatePresence>
-                  {step >= 1 && (
-                    <motion.div
-                      key="caption"
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 12 }}
-                      transition={{ duration: 0.5, ease: EASE }}
-                      className="absolute left-1/2 top-[68%] w-[min(92%,460px)] -translate-x-1/2"
-                    >
-                      <div className="relative rounded-2xl bg-black/60 px-4 py-2.5 text-center text-[13px] leading-snug backdrop-blur-md ring-1 ring-white/10 sm:text-[14px]">
-                        <span className="text-white/50">Sarah: </span>
-                        <Typewriter text={`“${QUESTION}”`} active={step >= 1} />
-                        <AnimatePresence>
-                          {step >= 1 && step <= 3 && (
-                            <motion.span
-                              initial={{ opacity: 0, scale: 0.6 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              exit={{ opacity: 0, scale: 0.6 }}
-                              transition={SPRING}
-                              className="absolute -right-2 -top-3 flex items-center gap-1 rounded-full bg-amigo-purple px-2 py-1 text-[10px] font-bold shadow-glow"
-                            >
-                              <Bolt solid="#fff" className="h-3 w-3" /> Detected
-                            </motion.span>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-
-                {/* self view */}
-                <motion.div
-                  animate={youSpeaking ? { boxShadow: "0 0 0 2px rgba(183,142,255,0.9)" } : { boxShadow: "0 0 0 1px rgba(255,255,255,0.12)" }}
-                  className="absolute bottom-3 right-3 flex h-[72px] w-[104px] flex-col items-center justify-center gap-1 rounded-xl bg-[#1A1D27] sm:h-[84px] sm:w-[124px]"
-                >
-                  <Avatar name="Alex Morgan" size={34} />
-                  <span className="flex items-center gap-1.5 text-[10px] font-semibold text-white/70">
-                    You <Wave bars={3} className="h-2" light active={youSpeaking} />
-                  </span>
-                </motion.div>
+                  <Wave bars={4} className="h-3" light />
+                </span>
               </div>
-
-              <div className="flex items-center justify-center gap-2 border-t border-white/5 py-2.5">
-                {[Mic, Video, MonitorUp].map((Icon, i) => (
-                  <span key={i} className="grid h-8 w-8 place-items-center rounded-full bg-white/8 text-white/70">
-                    <Icon size={14} />
-                  </span>
-                ))}
-                <span className="grid h-8 w-8 place-items-center rounded-full bg-white/8 text-white/40">
-                  <MicOff size={14} />
-                </span>
-                <span className="grid h-8 w-10 place-items-center rounded-full bg-red-500/90 text-white">
-                  <PhoneOff size={14} />
-                </span>
+              <div className="flex flex-col items-center gap-2.5">
+                <Avatar name="Alex Morgan" size={84} />
+                <span className="rounded-full bg-black/50 px-3 py-1.5 text-[12.5px] font-semibold text-white/80">You</span>
               </div>
             </div>
+          </div>
 
-            {/* Amigo panel */}
-            <div className="glass-dark relative flex min-h-0 flex-col overflow-hidden rounded-[24px] shadow-panel">
-              <div className="flex items-center gap-3 border-b border-white/8 px-4 py-3">
-                <div className="-my-2 -ml-1 w-10">
-                  <AmigoBot size={40} disc={false} mood={step === 3 || step === 4 ? "talk" : step === 2 ? "focus" : "happy"} image={amigoMonogram} />
+          <Reveal y={40} className="relative pt-0 sm:pt-[232px]">
+            <motion.div
+              animate={reduce ? {} : { y: [0, -7, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="relative mx-auto w-full max-w-[890px]"
+            >
+              <div className="overflow-hidden rounded-[24px] border border-white/20 bg-white/95 shadow-[0_35px_100px_-20px_rgba(108,43,217,0.65)] backdrop-blur-xl">
+                {/* toolbar */}
+                <div className="flex flex-wrap items-center gap-2 border-b border-amigo-dark/[0.07] px-3 py-3 sm:px-4">
+                  <span className="flex items-center gap-2 rounded-[14px] border border-amigo-border bg-amigo-surface px-3 py-2 text-[12.5px] font-semibold text-amigo-dark/75">
+                    <FileText size={15} className="text-[#f97316]" /> Brief
+                  </span>
+                  <span
+                    className={cn(
+                      "flex items-center gap-2 rounded-[14px] border px-3 py-2 text-[12.5px] font-semibold transition-colors",
+                      step === 0 || step === 1
+                        ? "border-amigo-purple/35 bg-amigo-pale text-amigo-purple"
+                        : "border-amigo-border bg-white text-amigo-dark/55"
+                    )}
+                  >
+                    <Mic size={15} className={step <= 1 ? "text-amigo-purple" : "text-amigo-dark/35"} />
+                    Panel
+                    {step <= 1 && <LiveDot color="#22C55E" />}
+                  </span>
+
+                  <div className="relative hidden min-w-[180px] flex-1 items-center rounded-[14px] border border-amigo-border bg-white px-3.5 py-2 text-[12.5px] text-amigo-dark/40 sm:flex">
+                    Type any question…
+                    <motion.span
+                      className="ml-0.5 inline-block h-[13px] w-[2px] bg-amigo-purple"
+                      animate={{ opacity: [1, 0, 1] }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    />
+                  </div>
+
+                  <div className="ml-auto flex items-center gap-1.5 text-amigo-dark/35">
+                    <span className="grid h-8 w-8 place-items-center rounded-[10px] border border-amigo-border bg-white">
+                      <Copy size={14} />
+                    </span>
+                    <span className="hidden items-center gap-1 rounded-[10px] border border-amigo-border bg-white px-2 py-1.5 sm:flex">
+                      <Minus size={13} />
+                      <span className="text-[11px] font-bold text-amigo-dark/50">100%</span>
+                      <Plus size={13} />
+                    </span>
+                    <span className="grid h-8 w-8 place-items-center rounded-[10px] border border-amigo-border bg-white">
+                      <X size={14} />
+                    </span>
+                  </div>
                 </div>
-                <div className="leading-tight">
-                  <div className="text-[14px] font-bold">Amigo</div>
-                  <AnimatePresence mode="wait" initial={false}>
-                    <motion.div
-                      key={STATUS[step]}
-                      initial={{ opacity: 0, y: 4 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -4 }}
-                      transition={{ duration: 0.25 }}
-                      className="text-[11px] text-amigo-lilac"
-                    >
-                      {STATUS[step]}
-                    </motion.div>
+
+                {/* status row */}
+                <div className="flex items-center gap-3 border-b border-amigo-dark/[0.06] bg-amigo-surface/60 px-4 py-2.5 sm:px-5">
+                  <span className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-amigo-purple">
+                    <Bolt className="h-3.5 w-3.5" />
+                    {step === 0 ? "Listening" : step === 1 ? "Capturing question" : step === 2 ? "Thinking" : "Answer live"}
+                  </span>
+                  <Wave bars={4} className="h-3.5" active={step <= 2} />
+                  <span className="ml-auto hidden text-[11px] font-semibold text-amigo-dark/40 sm:block">
+                    {QA.category} · Q1
+                  </span>
+                </div>
+
+                {/* body */}
+                <div className="min-h-[300px] px-4 py-5 sm:min-h-[340px] sm:px-6 sm:py-6">
+                  {/* live transcript chips */}
+                  <div className="flex min-h-[30px] flex-wrap items-center gap-1.5">
+                    <AnimatePresence>
+                      {step === 0 && (
+                        <motion.span
+                          key="idle"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="flex items-center gap-2 text-[12.5px] font-medium text-amigo-dark/40"
+                        >
+                          <Wave bars={5} className="h-3.5" /> Listening to the interviewer…
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+
+                    {step >= 1 &&
+                      QA.chips.map((c, i) => (
+                        <motion.span
+                          key={c}
+                          initial={{ opacity: 0, y: 8, scale: 0.94 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          transition={{ ...SPRING, delay: step === 1 ? i * 0.34 : 0 }}
+                          className="rounded-full bg-amigo-dark/[0.05] px-2.5 py-1 text-[11.5px] font-medium text-amigo-dark/60"
+                        >
+                          {c}
+                        </motion.span>
+                      ))}
+                  </div>
+
+                  {/* detected question */}
+                  <AnimatePresence>
+                    {step >= 2 && (
+                      <motion.div
+                        key="q"
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: EASE }}
+                        className="mt-4 flex items-start gap-2.5"
+                      >
+                        <span className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-amigo-purple text-white shadow-glow">
+                          <Sparkles size={13} />
+                        </span>
+                        <h3 className="text-[19px] font-extrabold tracking-[-0.02em] text-amigo-dark sm:text-[23px]">
+                          {QA.question}
+                        </h3>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  {/* standby ghost lines → shimmer while Amigo thinks */}
+                  <AnimatePresence>
+                    {step <= 2 && (
+                      <motion.div
+                        key="ghost"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: step === 2 ? 1 : 0.45 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.4 }}
+                        className={cn("space-y-2.5", step === 2 ? "mt-5" : "mt-6")}
+                      >
+                        {["92%", "78%", "60%", "84%"].map((w, i) => (
+                          <div key={w} className="h-2.5 overflow-hidden rounded-full bg-amigo-pale" style={{ width: w }}>
+                            {step === 2 && (
+                              <motion.div
+                                className="h-full w-1/3 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.9),transparent)]"
+                                animate={{ x: ["-120%", "320%"] }}
+                                transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.12 }}
+                              />
+                            )}
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  {/* streamed answer */}
+                  <div className="mt-4 space-y-3.5">
+                    {step >= 3 && <Paragraph text={QA.paragraphs[0].text} highlights={QA.paragraphs[0].highlights} delay={0} />}
+                    {step >= 4 && <Paragraph text={QA.paragraphs[1].text} highlights={QA.paragraphs[1].highlights} delay={0.1} />}
+                    {step === 4 && (
+                      <motion.span
+                        className="inline-block h-4 w-[2px] bg-amigo-purple align-middle"
+                        animate={{ opacity: [1, 0, 1] }}
+                        transition={{ duration: 0.9, repeat: Infinity, ease: "linear" }}
+                      />
+                    )}
+                  </div>
+
+                  {/* follow-ups */}
+                  <AnimatePresence>
+                    {step >= 5 && (
+                      <motion.div
+                        key="followups"
+                        initial={{ opacity: 0, y: 14 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, ease: EASE }}
+                        className="mt-6 border-t border-amigo-dark/[0.07] pt-4"
+                      >
+                        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amigo-dark/35">
+                          Ask a follow-up
+                        </div>
+                        <div className="mt-2.5 flex flex-wrap gap-2">
+                          {QA.followUps.map((f, i) => (
+                            <motion.span
+                              key={f}
+                              initial={{ opacity: 0, scale: 0.92 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ ...SPRING, delay: 0.15 + i * 0.09 }}
+                              className={cn(
+                                "rounded-full border px-3 py-1.5 text-[12.5px] font-semibold",
+                                i === 0
+                                  ? "border-amigo-purple/30 bg-amigo-pale text-amigo-purple"
+                                  : "border-amigo-border bg-white text-amigo-dark/65"
+                              )}
+                            >
+                              {f}
+                            </motion.span>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
-                <Wave className="ml-auto h-3.5" light bars={5} active={step <= 1} />
-                <span className="hidden rounded-full bg-white/8 px-2 py-1 text-[10px] font-semibold text-white/50 sm:block">Private to you</span>
               </div>
 
-              <div className="scrollbar-none min-h-0 flex-1 space-y-2.5 overflow-hidden p-3.5">
-                <AnimatePresence initial={false}>
-                  {step === 0 && (
-                    <motion.div
-                      key="idle"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="flex h-full flex-col items-center justify-center gap-3 text-center"
-                    >
-                      <Wave bars={7} className="h-6" light />
-                      <div className="text-[13px] font-semibold text-white/80">Listening for questions…</div>
-                      <div className="max-w-[240px] text-[12px] text-white/45">
-                        Amigo follows the conversation and surfaces help only when it matters.
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {step >= 1 && (
-                    <Card key="q" label="Question detected" icon={<Bolt className="h-3 w-3" />} className={cn("bg-white/5", step >= 3 && "hidden sm:block")}>
-                      <div className="mt-1 text-[13.5px] font-semibold leading-snug">“{QUESTION}”</div>
-                      <div className="mt-1.5 text-[11px] text-white/45">Technical · Experience · Java</div>
-                    </Card>
-                  )}
-
-                  {step === 2 && (
-                    <Card key="think" label="Amigo is thinking" icon={<Sparkles size={11} />} className="bg-white/5">
-                      <div className="mt-2 flex items-center gap-3">
-                        <span className="flex items-center gap-1">
-                          {[0, 1, 2].map((i) => (
-                            <motion.span
-                              key={i}
-                              className="h-1.5 w-1.5 rounded-full bg-amigo-light"
-                              animate={{ y: [0, -4, 0], opacity: [0.4, 1, 0.4] }}
-                              transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
-                            />
-                          ))}
-                        </span>
-                        <span className="text-[12px] text-white/60">Reading your CV · matching to the role</span>
-                      </div>
-                    </Card>
-                  )}
-
-                  {step >= 3 && (
-                    <Card
-                      key="answer"
-                      label="Suggested answer"
-                      icon={<Sparkles size={11} />}
-                      className="bg-[linear-gradient(135deg,rgba(108,43,217,0.45),rgba(183,142,255,0.12))] ring-amigo-light/30"
-                    >
-                      <ul className="mt-2 space-y-1.5">
-                        {ANSWER_LINES.map((l, i) => (
-                          <motion.li
-                            key={l}
-                            initial={{ opacity: 0, x: -8 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.45, ease: EASE, delay: 0.15 + i * 0.28 }}
-                            className={cn("text-[12.5px] leading-snug", i === 0 ? "font-semibold text-white" : "text-white/85")}
-                          >
-                            {i > 0 && <span className="mr-1.5 text-amigo-light">•</span>}
-                            {l}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </Card>
-                  )}
-
-                  {step >= 4 && (
-                    <motion.div
-                      key="interact"
-                      layout
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5, ease: EASE }}
-                      className="space-y-2.5"
-                    >
-                      <div className="flex flex-wrap gap-1.5">
-                        {["Shorter", "More technical", "Add example"].map((c, i) => (
-                          <motion.button
-                            key={c}
-                            type="button"
-                            initial={{ opacity: 0, scale: 0.85 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ ...SPRING, delay: 0.1 + i * 0.08 }}
-                            className={cn(
-                              "rounded-full px-3 py-1.5 text-[11.5px] font-semibold ring-1 transition-colors",
-                              i === 1 ? "bg-amigo-light text-amigo-dark ring-amigo-light" : "bg-white/6 text-white/80 ring-white/10 hover:bg-white/10"
-                            )}
-                          >
-                            {c}
-                          </motion.button>
-                        ))}
-                        <motion.span
-                          initial={{ opacity: 0, scale: 0.85 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ ...SPRING, delay: 0.4 }}
-                          className="ml-auto grid h-8 w-8 place-items-center rounded-full bg-white/6 text-amigo-lilac ring-1 ring-white/10"
-                        >
-                          <ThumbsUp size={13} />
-                        </motion.span>
-                      </div>
-                      <div className="hidden rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 sm:block">
-                        <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-white/40">Likely follow-up</div>
-                        <div className="mt-1 text-[12.5px] text-white/80">“How do you handle concurrency in those services?”</div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* live analysis */}
-              <div className="hidden grid-cols-3 gap-3 border-t border-white/8 px-4 py-3 sm:grid">
-                {[
-                  { k: "Tone", v: step >= 4 ? "Confident" : "—", p: step >= 4 ? 0.85 : 0.2 },
-                  { k: "Pace", v: step >= 4 ? "Good" : "—", p: step >= 4 ? 0.7 : 0.2 },
-                  { k: "Keywords", v: step >= 3 ? "3 / 4" : "0 / 4", p: step >= 3 ? 0.75 : 0.05 },
-                ].map((m) => (
-                  <div key={m.k}>
-                    <div className="flex items-center justify-between text-[10px]">
-                      <span className="text-white/40">{m.k}</span>
-                      <span className="font-semibold text-white/80">{m.v}</span>
-                    </div>
-                    <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-white/10">
-                      <motion.div
-                        className="h-full rounded-full bg-[linear-gradient(90deg,#6C2BD9,#B78EFF)]"
-                        animate={{ width: `${m.p * 100}%` }}
-                        transition={{ duration: 0.9, ease: EASE }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* step rail */}
-        <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
-          {STATUS.map((s, i) => (
-            <span key={s} className="group relative flex items-center">
-              <span
-                className={cn(
-                  "block h-1.5 w-1.5 rounded-full transition-all duration-500",
-                  i === step ? "h-6 bg-amigo-light" : i < step ? "bg-amigo-light/50" : "bg-white/15"
-                )}
-              />
-            </span>
-          ))}
+              {/* floating "private" tag */}
+              <motion.span
+                initial={{ opacity: 0, x: 12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6, duration: 0.6, ease: EASE }}
+                className="absolute -right-2 -top-3 flex items-center gap-1.5 rounded-full bg-amigo-dark px-3 py-1.5 text-[11px] font-bold text-white shadow-glow ring-1 ring-white/15 sm:-right-4"
+              >
+                <Bolt className="h-3 w-3" /> Only you can see this
+              </motion.span>
+            </motion.div>
+          </Reveal>
         </div>
       </div>
     </section>

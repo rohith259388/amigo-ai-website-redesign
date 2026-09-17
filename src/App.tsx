@@ -16,6 +16,7 @@ import { CreatorsPage } from "./components/pages/CreatorsPage";
 import { QuestionPage } from "./components/pages/QuestionPage";
 import { QuestionsPage } from "./components/pages/QuestionsPage";
 import { Pricing } from "./components/Pricing";
+import { PrivacySection } from "./components/PrivacySection";
 import { QuestionsSection } from "./components/QuestionsSection";
 import { ResumeSection } from "./components/ResumeSection";
 import { BoltDivider } from "./components/ui/BoltDivider";
@@ -62,6 +63,7 @@ function Home() {
       </div>
       <AutoApplySection />
       <InterviewSection />
+      <PrivacySection />
       <BuddySection />
       <CompanionSection />
       <HowItWorks />
