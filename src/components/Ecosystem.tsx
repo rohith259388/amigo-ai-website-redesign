@@ -55,18 +55,18 @@ export function Ecosystem() {
   const Visual = node.Visual;
 
   return (
-    <section className="edge-glow relative overflow-hidden bg-amigo-dark py-28 text-white lg:py-40">
-      <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_30%_50%,black_10%,transparent_70%)]" />
-      <div aria-hidden className="pointer-events-none absolute -left-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-amigo-purple/25 blur-[150px]" />
+    <section className="edge-glow relative overflow-hidden bg-amigo-surface py-28 text-amigo-dark lg:py-40">
+      <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_30%_50%,black_10%,transparent_70%)]" />
+      <div aria-hidden className="pointer-events-none absolute -left-40 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-amigo-light/25 blur-[150px]" />
 
       <div className="container-x relative">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <Eyebrow tone="light">Ecosystem</Eyebrow>
-            <TextReveal className="headline mt-5 text-[clamp(2.6rem,5.4vw,5rem)]" lines={["Everything connects", <span key="g" className="text-gradient-light pr-2">through Amigo.</span>]} />
+            <Eyebrow>Ecosystem</Eyebrow>
+            <TextReveal className="headline mt-5 text-[clamp(2.6rem,5.4vw,5rem)] text-amigo-dark" lines={["Everything connects", <span key="g" className="text-gradient pr-2">through Amigo.</span>]} />
           </div>
           <Reveal delay={0.2}>
-            <p className="max-w-[380px] text-[17px] leading-relaxed text-white/55">
+            <p className="max-w-[380px] text-[17px] leading-relaxed text-amigo-dark/60">
               Your resume, jobs, applications, interviews and your Buddy — one connected companion, not five separate tools.
             </p>
           </Reveal>
@@ -87,14 +87,14 @@ export function Ecosystem() {
                   <stop offset="1" stopColor="#B78EFF" />
                 </linearGradient>
               </defs>
-              <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(255,255,255,0.07)" strokeWidth="0.25" strokeDasharray="1 1.5" />
-              <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.25" />
+              <circle cx="50" cy="50" r={R} fill="none" stroke="rgba(17,19,24,0.09)" strokeWidth="0.25" strokeDasharray="1 1.5" />
+              <circle cx="50" cy="50" r="22" fill="none" stroke="rgba(17,19,24,0.07)" strokeWidth="0.25" />
               {NODES.map((n, i) => {
                 const p = pos(n.angle);
                 const on = i === active;
                 return (
                   <g key={n.key}>
-                    <line x1="50" y1="50" x2={p.x} y2={p.y} stroke="rgba(255,255,255,0.08)" strokeWidth="0.3" />
+                    <line x1="50" y1="50" x2={p.x} y2={p.y} stroke="rgba(17,19,24,0.1)" strokeWidth="0.3" />
                     <motion.line
                       x1="50"
                       y1="50"
@@ -112,7 +112,7 @@ export function Ecosystem() {
                     {on && (
                       <motion.circle
                         r="0.9"
-                        fill="#EAD9FF"
+                        fill="#6C2BD9"
                         initial={{ cx: 50, cy: 50, opacity: 0 }}
                         animate={{ cx: [50, p.x], cy: [50, p.y], opacity: [0, 1, 0] }}
                         transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
@@ -131,20 +131,20 @@ export function Ecosystem() {
                 initial={{ scale: 1, opacity: 0.6 }}
                 animate={{ scale: 1.7, opacity: 0 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="absolute inset-0 rounded-full border border-amigo-light/60"
+                className="absolute inset-0 rounded-full border border-amigo-purple/40"
               />
               <motion.div
                 key={`core-${active}`}
                 initial={{ scale: 1 }}
                 animate={{ scale: [1, 1.06, 1] }}
                 transition={{ duration: 0.7, ease: EASE }}
-                className="glass-dark relative grid h-[150px] w-[150px] place-items-center rounded-full shadow-glow-lg lg:h-[176px] lg:w-[176px]"
+                className="glass relative grid h-[150px] w-[150px] place-items-center rounded-full shadow-glow-lg lg:h-[176px] lg:w-[176px]"
               >
-                <div aria-hidden className="absolute inset-3 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.35),transparent_70%)]" />
+                <div aria-hidden className="absolute inset-3 rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.2),transparent_70%)]" />
                 <div className="-mt-2">
                   <AmigoBot size={100} disc={false} mood={active === 4 ? "wink" : active === 3 ? "talk" : "happy"} image={amigoMonogram} />
                 </div>
-                <span className="absolute -bottom-7 text-[12px] font-extrabold tracking-[0.3em] text-white/70">AMIGO</span>
+                <span className="absolute -bottom-7 text-[12px] font-extrabold tracking-[0.3em] text-amigo-dark/60">AMIGO</span>
               </motion.div>
             </div>
 
@@ -162,10 +162,10 @@ export function Ecosystem() {
                   style={{ left: `${p.x}%`, top: `${p.y}%` }}
                   className={cn(
                     "absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-2.5 rounded-full py-2 pl-2 pr-4 text-[13px] font-semibold transition-all duration-500",
-                    on ? "glass-dark scale-105 border-amigo-light/60 bg-amigo-purple/30 text-white shadow-glow" : "glass-dark text-white/70 hover:text-white"
+                    on ? "glass scale-105 border-amigo-purple/30 bg-amigo-purple/10 text-amigo-dark shadow-glow" : "glass text-amigo-dark/60 hover:text-amigo-dark"
                   )}
                 >
-                  <span className={cn("grid h-8 w-8 place-items-center rounded-full transition-colors", on ? "bg-[linear-gradient(135deg,#6C2BD9,#B78EFF)] text-white" : "bg-white/10 text-amigo-lilac")}>
+                  <span className={cn("grid h-8 w-8 place-items-center rounded-full transition-colors", on ? "bg-[linear-gradient(135deg,#6C2BD9,#B78EFF)] text-white" : "bg-amigo-pale text-amigo-purple")}>
                     <n.Icon size={15} />
                   </span>
                   {n.label}
@@ -183,7 +183,7 @@ export function Ecosystem() {
                 onClick={() => setActive(i)}
                 className={cn(
                   "flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2 text-[13px] font-semibold transition-colors",
-                  i === active ? "bg-amigo-purple text-white shadow-glow" : "bg-white/8 text-white/70"
+                  i === active ? "bg-amigo-purple text-white shadow-glow" : "bg-white text-amigo-dark/60 ring-1 ring-amigo-border"
                 )}
               >
                 <n.Icon size={14} /> {n.label}
@@ -207,13 +207,14 @@ export function Ecosystem() {
                     <node.Icon size={17} />
                   </span>
                   <div className="leading-tight">
-                    <div className="text-[18px] font-bold">{node.label}</div>
-                    <div className="text-[13px] text-white/50">{node.blurb}</div>
+                    <div className="text-[18px] font-bold text-amigo-dark">{node.label}</div>
+                    <div className="text-[13px] text-amigo-dark/50">{node.blurb}</div>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
-            <div className="relative flex min-h-[360px] items-center justify-center rounded-[28px] bg-white/[0.03] p-6 ring-1 ring-white/8 sm:min-h-[420px] sm:p-10">
+            <div className="relative flex min-h-[360px] items-center justify-center rounded-[28px] bg-amigo-dark p-6 shadow-panel ring-1 ring-white/10 sm:min-h-[420px] sm:p-10">
+              <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 rounded-[28px] [mask-image:radial-gradient(ellipse_at_50%_100%,black_10%,transparent_70%)]" />
               <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-purple/25 blur-[70px]" />
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div

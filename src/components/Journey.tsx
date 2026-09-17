@@ -8,7 +8,7 @@ import {
   useVelocity,
   type MotionValue,
 } from "framer-motion";
-import { useRef, useState, type ComponentType } from "react";
+import { useEffect, useRef, useState, type ComponentType } from "react";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
 import { clamp, EASE } from "@/lib/motion";
 import amigoMonogram from "@/assets/amigo-monogram.png";
@@ -44,7 +44,8 @@ const STAGE_W = 64; // vw
 const PAD = 18; // vw — puts each stage's centre (32vw) on the viewport centre
 const INTRO = 0.1;
 const TRACK_TOP = 30; // vh
-const PATH_Y = 78; // vh
+const PATH_Y = 88; // vh — where Amigo rides
+const LINE_Y = 93; // vh — the rail itself, sitting a little below Amigo
 
 export function Journey() {
   const isDesktop = useIsDesktop();
@@ -56,8 +57,6 @@ function JourneyDesktop() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const t = useTransform(scrollYProgress, [INTRO, 1], [0, 1]);
-  const smooth = useSpring(t, { stiffness: 110, damping: 28, mass: 0.5 });
-  const x = useTransform(smooth, (v) => `${-v * 4 * STAGE_W}vw`);
 
   const [active, setActive] = useState(0);
   useMotionValueEvent(t, "change", (v) => {
@@ -65,18 +64,29 @@ function JourneyDesktop() {
     setActive((prev) => (prev === i ? prev : i));
   });
 
+  // The track snaps to the active stage rather than tracking scroll continuously.
+  // Tracking it continuously left the *active* stage up to half a panel off-centre,
+  // which pushed its heading and copy off the left edge of the viewport.
+  const snap = useSpring(0, { stiffness: 90, damping: 21, mass: 0.6 });
+  useEffect(() => {
+    snap.set(-active * STAGE_W);
+  }, [active, snap]);
+
+  const x = useTransform(snap, (v) => `${v}vw`);
+  const smooth = useTransform(snap, (v) => clamp(-v / (4 * STAGE_W), 0, 1));
+
   const introX = useTransform(scrollYProgress, [0, INTRO], ["-36vw", "0vw"]);
   const introY = useTransform(scrollYProgress, [0, INTRO], ["-48vh", "0vh"]);
   const introScale = useTransform(scrollYProgress, [0, INTRO], [0.5, 1]);
   const introOpacity = useTransform(scrollYProgress, [0, INTRO * 0.5], [0, 1]);
 
-  const vel = useVelocity(smooth);
-  const lean = useSpring(useTransform(vel, [-1.4, 1.4], [-11, 11]), { stiffness: 120, damping: 22 });
+  const vel = useVelocity(snap);
+  const lean = useSpring(useTransform(vel, [-420, 420], [11, -11]), { stiffness: 120, damping: 22 });
   const headerY = useTransform(scrollYProgress, [0, 0.06], [30, 0]);
   const headerOpacity = useTransform(scrollYProgress, [0, 0.06], [0, 1]);
 
   return (
-    <section id="journey" ref={ref} className="edge-glow relative h-[540vh] bg-amigo-dark text-white" style={{ overflowX: "clip" }}>
+    <section id="journey" ref={ref} className="edge-glow relative h-[440vh] bg-amigo-dark text-white" style={{ overflowX: "clip" }}>
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           aria-hidden
@@ -87,18 +97,24 @@ function JourneyDesktop() {
           className="pointer-events-none absolute left-1/2 top-[74vh] h-[56vh] w-[64vw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-purple/25 blur-[130px]"
         />
 
+        {/* scrim so the heading always reads above the moving stages */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 z-20 h-[32vh] bg-[linear-gradient(180deg,#111318_45%,rgba(17,19,24,0.82)_72%,transparent)]"
+        />
+
         {/* header */}
-        <motion.div style={{ y: headerY, opacity: headerOpacity }} className="container-x relative z-10 pt-24">
-          <div className="flex items-end justify-between gap-8">
+        <motion.div style={{ y: headerY, opacity: headerOpacity }} className="container-x relative z-30 pt-24">
+          <div className="flex items-end justify-between gap-10">
             <div>
               <Eyebrow tone="light">The journey</Eyebrow>
-              <h2 className="headline mt-4 text-[clamp(2.2rem,4vw,4rem)]">
-                From Job Search
-                <br />
-                to Job Offer.
-              </h2>
+              <TextReveal
+                as="h2"
+                className="headline mt-4 text-[clamp(2.2rem,4vw,4rem)] text-white"
+                lines={["From Job Search", <span key="g" className="text-gradient-light pr-2">to Job Offer.</span>]}
+              />
             </div>
-            <div className="mb-1 flex flex-col items-end gap-4">
+            <div className="mb-2 flex flex-col items-end gap-4">
               <p className="max-w-[300px] text-right text-[16px] leading-relaxed text-white/55">
                 One companion for every step of your journey.
               </p>
@@ -135,7 +151,7 @@ function JourneyDesktop() {
         >
           <motion.div style={{ rotate: lean }}>
             <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}>
-              <AmigoBot size={200} mood={STAGES[active].mood} image={amigoMonogram} />
+              <AmigoBot size={165} mood={STAGES[active].mood} image={amigoMonogram} />
             </motion.div>
           </motion.div>
         </motion.div>
@@ -159,38 +175,41 @@ function StagePanel({
 }) {
   const lineScale = useTransform(t, (v) => clamp(v * 4 - (index - 0.5), 0, 1));
   const Visual = stage.Visual;
-  const pathTop = `${PATH_Y - TRACK_TOP}vh`;
+  const pathTop = `${LINE_Y - TRACK_TOP}vh`;
 
   return (
     <div className="relative h-full shrink-0" style={{ width: `${STAGE_W}vw` }}>
+      {/* ghost number — sits behind the stage row, clear of the heading */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -top-[9vh] left-[-2vw] select-none text-[24vw] font-extrabold leading-none tracking-[-0.06em] text-white/[0.035]"
+        className="pointer-events-none absolute left-[4vw] top-[2vh] select-none text-[19vw] font-extrabold leading-none tracking-[-0.06em] text-white/[0.03]"
       >
         {stage.n}
       </span>
 
-      <div className="absolute left-0 top-[10%] w-[22vw]">
+      {/* content row — padded inside the panel so text can never reach the viewport edge */}
+      <div className="absolute inset-x-0 top-[4vh] flex items-start gap-[4vw] px-[7vw]">
         <motion.div
-          animate={{ opacity: active ? 1 : 0.32, y: active ? 0 : 10 }}
-          transition={{ duration: 0.7, ease: EASE }}
+          animate={{ opacity: active ? 1 : 0.3, y: active ? 0 : 10 }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="w-[24vw] shrink-0 pt-[2vh]"
         >
           <div className="flex items-center gap-3 text-[13px] font-bold tracking-[0.24em] text-amigo-light">
             <span>{stage.n}</span>
             <span className="h-px w-8 bg-amigo-light/50" />
           </div>
-          <h3 className="headline mt-4 text-[clamp(3rem,5.6vw,5.6rem)] uppercase">{stage.title}</h3>
-          <p className="mt-4 max-w-[18vw] text-[clamp(1rem,1.25vw,1.3rem)] leading-relaxed text-white/60">{stage.text}</p>
+          <h3 className="headline mt-4 text-[clamp(2.4rem,4.4vw,4.4rem)] uppercase">{stage.title}</h3>
+          <p className="mt-4 text-[clamp(0.95rem,1.15vw,1.2rem)] leading-relaxed text-white/60">{stage.text}</p>
         </motion.div>
-      </div>
 
-      <div className="absolute right-[1vw] top-[6%] flex w-[25vw] justify-end">
         <motion.div
-          animate={{ opacity: active ? 1 : 0.22, scale: active ? 1 : 0.92, filter: active ? "blur(0px)" : "blur(2px)" }}
-          transition={{ duration: 0.7, ease: EASE }}
-          className="w-full max-w-[340px]"
+          animate={{ opacity: active ? 1 : 0.2, scale: active ? 1 : 0.92, filter: active ? "blur(0px)" : "blur(2px)" }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="flex min-w-0 flex-1 justify-end"
         >
-          <Visual active={reached} />
+          <div className="w-full max-w-[300px]">
+            <Visual active={reached} />
+          </div>
         </motion.div>
       </div>
 
@@ -220,7 +239,7 @@ function StagePanel({
 }
 
 function EndCap() {
-  const pathTop = `${PATH_Y - TRACK_TOP}vh`;
+  const pathTop = `${LINE_Y - TRACK_TOP}vh`;
   return (
     <div className="relative h-full shrink-0" style={{ width: "42vw" }}>
       <div className="absolute inset-x-0 h-px bg-white/10" style={{ top: pathTop }}>
