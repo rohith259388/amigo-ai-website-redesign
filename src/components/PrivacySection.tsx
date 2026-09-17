@@ -87,21 +87,36 @@ export function PrivacySection() {
           {CARDS.map((c, i) => (
             <li key={c.n}>
               <Reveal delay={i * 0.06} className="h-full">
-                <div className="flex h-full flex-col rounded-[24px] border border-amigo-border bg-white p-6 shadow-card">
-                  <div className="flex items-center justify-between">
-                    <span className="headline text-[26px] text-amigo-dark/15">{c.n}</span>
-                  </div>
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-amigo-border bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-amigo-purple/30 hover:shadow-glow">
+                  {/* corner wash + faint grid, for depth instead of an empty tile */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-amigo-pale opacity-70 blur-2xl transition-opacity duration-300 group-hover:opacity-100"
+                  />
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(108,43,217,0.35),transparent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  />
 
-                  <div className="relative mt-3 grid aspect-square place-items-center overflow-hidden rounded-2xl bg-amigo-pale/50">
-                    <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_50%_20%,black,transparent_75%)]" />
-                    <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-purple/15 blur-[40px]" />
-                    <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-white text-amigo-purple shadow-card">
-                      <c.Icon size={24} />
+                  <div className="relative flex items-start justify-between">
+                    <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[linear-gradient(135deg,#6C2BD9,#A855F7)] text-white shadow-[0_10px_22px_-8px_rgba(108,43,217,0.85)] transition-transform duration-300 group-hover:scale-105">
+                      <c.Icon size={21} />
+                    </span>
+                    <span className="text-[12px] font-extrabold tabular-nums tracking-[0.1em] text-amigo-dark/20 transition-colors duration-300 group-hover:text-amigo-purple/40">
+                      {c.n}
                     </span>
                   </div>
 
-                  <h3 className="mt-5 text-[17px] font-bold tracking-[-0.01em] text-amigo-dark">{c.title}</h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-amigo-dark/60">{c.text}</p>
+                  {/* fixed title height keeps every card's body copy on the same baseline */}
+                  <h3 className="relative mt-6 min-h-[2.7em] text-[17px] font-bold leading-snug tracking-[-0.015em] text-amigo-dark">
+                    {c.title}
+                  </h3>
+                  <p className="relative mt-1.5 text-[14px] leading-relaxed text-amigo-dark/60">{c.text}</p>
+
+                  <span
+                    aria-hidden
+                    className="relative mt-auto block h-[3px] w-9 shrink-0 translate-y-2 rounded-full bg-[linear-gradient(90deg,#6C2BD9,#B78EFF)] transition-all duration-500 group-hover:w-full"
+                  />
                 </div>
               </Reveal>
             </li>
