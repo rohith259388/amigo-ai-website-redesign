@@ -96,7 +96,7 @@ export function QuestionsPage() {
   }, [filters, needle, tab]);
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#F7F4FF_0%,#FFFFFF_38%)] pb-28 pt-32 lg:pb-36 lg:pt-40">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-surface)_0%,var(--c-card)_38%)] pb-28 pt-32 lg:pb-36 lg:pt-40">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 -top-20 h-[520px] w-[520px] rounded-full bg-amigo-light/25 blur-[140px]"
@@ -171,7 +171,7 @@ export function QuestionsPage() {
 
             {/* Role switcher + search */}
             <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-center">
-              <div className="scrollbar-none -mx-5 flex gap-1 overflow-x-auto px-5 sm:mx-0 sm:rounded-full sm:bg-white sm:p-1.5 sm:px-1.5 sm:ring-1 sm:ring-amigo-border">
+              <div className="scrollbar-none -mx-5 flex gap-1 overflow-x-auto px-5 sm:mx-0 sm:rounded-full sm:bg-[var(--c-card)] sm:p-1.5 sm:px-1.5 sm:ring-1 sm:ring-amigo-border">
                 {[ALL, ...ROLES].map((r) => {
                   const active = filters.role === r;
                   return (

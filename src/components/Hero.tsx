@@ -134,7 +134,7 @@ export function Hero() {
     <section
       id="top"
       ref={ref}
-      className="grain relative overflow-hidden bg-[linear-gradient(180deg,#F7F4FF_0%,#EDE7FF_100%)]"
+      className="grain relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-surface)_0%,var(--color-amigo-mist)_100%)]"
     >
       {/* ambient lighting */}
       <motion.div aria-hidden className="pointer-events-none absolute inset-0" style={{ background: glowBg }} />

@@ -1,14 +1,15 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sparkles, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTheme } from "@/hooks/useTheme";
 import { EASE, SNAPPY } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { AmigoBot } from "./ui/AmigoBot";
-import { Logo } from "./ui/Brand";
+import { LiveDot, Logo } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 
-export const NAV_LINKS = [
+export const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
   { label: "Resume", href: "#resume" },
   { label: "Auto Apply", href: "#auto-apply" },
   { label: "Interview AI", href: "#interview" },
@@ -16,7 +17,7 @@ export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Questions", href: "#/questions" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Creators Wanted", href: "#/creators" },
+  { label: "Creators Wanted", href: "#/creators", highlight: true },
 ];
 
 export function Navbar({ activeHref }: { activeHref: string | null }) {
@@ -67,6 +68,25 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
             <ul className="hidden items-center gap-0.5 xl:flex">
               {NAV_LINKS.map((l) => {
                 const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
+                if (l.highlight) {
+                  return (
+                    <li key={l.href} className="ml-1">
+                      <a
+                        href={l.href}
+                        className={cn(
+                          "group relative flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[14px] font-semibold ring-1 transition-all duration-300",
+                          isActive
+                            ? "bg-amigo-purple text-white shadow-glow ring-transparent"
+                            : "bg-amigo-pale text-amigo-purple ring-amigo-purple/25 hover:shadow-glow hover:ring-amigo-purple/50"
+                        )}
+                      >
+                        <Sparkles size={14} className="transition-transform duration-300 group-hover:rotate-12" />
+                        {l.label}
+                        {!isActive && <LiveDot color="#A855F7" className="-mr-0.5" />}
+                      </a>
+                    </li>
+                  );
+                }
                 return (
                   <li key={l.href}>
                     <a
@@ -91,6 +111,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
             </ul>
 
             <div className="relative z-10 flex items-center gap-2">
+              <ThemeToggle onDark={open} />
               <MagneticButton size="sm" href="#pricing" className="hidden sm:inline-flex">
                 Try for free
               </MagneticButton>
@@ -152,7 +173,16 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                 onClick={onClose}
                 className="flex items-center justify-between border-b border-white/10 py-4 text-[30px] font-extrabold tracking-[-0.03em] sm:text-[36px]"
               >
-                <span>{l.label}</span>
+                {l.highlight ? (
+                  <span className="flex items-center gap-3">
+                    <span className="text-gradient-light">{l.label}</span>
+                    <span className="rounded-full bg-amigo-purple px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+                      Open
+                    </span>
+                  </span>
+                ) : (
+                  <span>{l.label}</span>
+                )}
                 <ArrowUpRight className="text-amigo-light" />
               </a>
             </motion.li>
@@ -174,5 +204,35 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         </motion.div>
       </div>
     </motion.div>
+  );
+}
+
+function ThemeToggle({ onDark }: { onDark: boolean }) {
+  const { theme, toggle } = useTheme();
+  const dark = theme === "dark";
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+      title={dark ? "Light mode" : "Dark mode"}
+      className={cn(
+        "grid h-11 w-11 place-items-center rounded-full transition-colors",
+        onDark ? "bg-white/10 text-white" : "glass text-amigo-dark hover:text-amigo-purple"
+      )}
+    >
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={theme}
+          initial={{ rotate: -90, scale: 0.5, opacity: 0 }}
+          animate={{ rotate: 0, scale: 1, opacity: 1 }}
+          exit={{ rotate: 90, scale: 0.5, opacity: 0 }}
+          transition={{ duration: 0.25 }}
+          className="grid place-items-center"
+        >
+          {dark ? <Sun size={18} /> : <Moon size={18} />}
+        </motion.span>
+      </AnimatePresence>
+    </button>
   );
 }

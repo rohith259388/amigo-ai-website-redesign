@@ -157,6 +157,69 @@
   }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Dark theme ----------
+   Colours flip through the theme variables. amigo-dark is the ink colour, so every
+   text-amigo-dark/NN, bg-amigo-dark/NN and border-amigo-dark/NN tint follows on its own.
+   The class is set on <html> before first paint by the script in index.html. */
+:root {
+  --c-card: #ffffff;
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --c-card: #16131f;
+  --color-amigo-dark: #ecebf3;
+  --color-amigo-surface: #0d0b14;
+  --color-amigo-pale: #251c3d;
+  --color-amigo-mist: #1c1630;
+  --color-amigo-border: #2a2540;
+}
+
+/* Utilities whose light-mode colour is a literal rather than a flipping token.
+   :where() keeps these at single-class specificity so hover/responsive variants still win. */
+@layer utilities {
+  :where(.dark) .bg-white {
+    background-color: var(--c-card);
+  }
+  :where(.dark) .bg-white\/70 {
+    background-color: rgb(22 19 31 / 0.7);
+  }
+  :where(.dark) .bg-white\/80 {
+    background-color: rgb(22 19 31 / 0.8);
+  }
+  :where(.dark) .bg-white\/90 {
+    background-color: rgb(22 19 31 / 0.9);
+  }
+  :where(.dark) .bg-white\/95 {
+    background-color: rgb(22 19 31 / 0.95);
+  }
+  :where(.dark) .border-white\/80 {
+    border-color: rgb(255 255 255 / 0.08);
+  }
+  :where(.dark) .ring-white {
+    --tw-ring-color: var(--c-card);
+  }
+  /* Solid dark panels and buttons keep white text, so they stay dark — just lifted off the page. */
+  :where(.dark) .bg-amigo-dark {
+    background-color: #1c1829;
+  }
+  :where(.dark) .text-amigo-purple,
+  :where(.dark) .hover\:text-amigo-purple:hover,
+  :where(.dark) .group:hover .group-hover\:text-amigo-purple {
+    color: #b794ff;
+  }
+  :where(.dark) .text-gradient {
+    background-image: linear-gradient(92deg, #a47bff 0%, #c79bff 55%, #e2d0ff 100%);
+  }
+  :where(.dark) .glass {
+    background-color: rgba(22, 19, 31, 0.7);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -288,15 +351,15 @@
   height: 3rem;
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid #e5e7eb;
-  background: #fff;
+  border: 1px solid var(--color-amigo-border);
+  background: var(--c-card);
   padding-inline: 1rem;
   font-size: 15px;
-  color: #111318;
+  color: var(--color-amigo-dark);
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   &::placeholder {
-    color: rgba(17, 19, 24, 0.4);
+    color: color-mix(in oklab, var(--color-amigo-dark) 40%, transparent);
   }
   &:focus {
     border-color: #6c2bd9;
