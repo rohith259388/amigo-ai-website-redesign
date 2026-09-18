@@ -1,5 +1,37 @@
 export const CATEGORIES = ["General", "Motivation", "Behavioural", "Situational", "Technical"] as const;
+export const ROLES = ["Any Role", "Software Engineer", "Product Manager", "Data Scientist", "Designer"] as const;
+export const DIFFICULTIES = ["Easy", "Medium", "Hard"] as const;
+export const ROUNDS = ["Screening", "Recruiter Call", "Hiring Manager", "Onsite", "Final Round"] as const;
+export const SENIORITIES = ["Junior", "Mid", "Senior"] as const;
+
 export type Category = (typeof CATEGORIES)[number];
+export type Role = (typeof ROLES)[number];
+export type Difficulty = (typeof DIFFICULTIES)[number];
+export type Round = (typeof ROUNDS)[number];
+export type Seniority = (typeof SENIORITIES)[number];
+
+/** Short labels for the role switcher pills. */
+export const ROLE_SHORT: Record<Role, string> = {
+  "Any Role": "Any role",
+  "Software Engineer": "SWE",
+  "Product Manager": "PM",
+  "Data Scientist": "DS",
+  Designer: "Design",
+};
+
+/** Brand colour per company, used for the monogram tile on each card. */
+export const COMPANY_COLORS: Record<string, string> = {
+  Airbnb: "#FF5A5F",
+  Amazon: "#F59E0B",
+  Anthropic: "#D97757",
+  Google: "#4285F4",
+  Meta: "#0866FF",
+  Microsoft: "#00A4EF",
+  Netflix: "#E50914",
+  Razorpay: "#3395FF",
+  Stripe: "#635BFF",
+  Uber: "#111318",
+};
 
 export type Review = {
   name: string;
@@ -13,6 +45,18 @@ export type Question = {
   slug: string;
   category: Category;
   question: string;
+  /** Company this question is most often reported from. */
+  company: string;
+  role: Role;
+  difficulty: Difficulty;
+  round: Round;
+  seniority: Seniority;
+  tags: string[];
+  likes: number;
+  /** How many people have practised this question with Amigo. */
+  solved: number;
+  /** Last updated, e.g. "Sep 12, 2026". */
+  date: string;
   answer: { approach: string; example: string };
   reviews: Review[];
 };
@@ -22,6 +66,15 @@ export const QUESTIONS: Question[] = [
     slug: "tell-me-about-yourself",
     category: "General",
     question: "Tell me about yourself.",
+    company: "Google",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Recruiter Call",
+    seniority: "Junior",
+    tags: ["Self Introduction","Storytelling"],
+    likes: 412,
+    solved: 9840,
+    date: "Sep 12, 2026",
     answer: {
       approach:
         "Keep it to about 90 seconds and make it relevant to the role. Use present, past, future: what you do now, the experience that got you here, and why this job is the logical next step. Skip your life story — every sentence should earn its place.",
@@ -38,6 +91,15 @@ export const QUESTIONS: Question[] = [
     slug: "greatest-strengths",
     category: "General",
     question: "What are your greatest strengths?",
+    company: "Amazon",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Self Awareness","Evidence & Proof"],
+    likes: 268,
+    solved: 6120,
+    date: "Aug 30, 2026",
     answer: {
       approach:
         "Pick two or three strengths that map directly to the job description, then prove each one with a concrete example. Claims without evidence sound rehearsed; a quick story makes them believable.",
@@ -54,6 +116,15 @@ export const QUESTIONS: Question[] = [
     slug: "greatest-weakness",
     category: "General",
     question: "What is your greatest weakness?",
+    company: "Meta",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Self Awareness","Growth Mindset"],
+    likes: 351,
+    solved: 7480,
+    date: "Sep 04, 2026",
     answer: {
       approach:
         "Choose a real weakness that isn't core to the role, show you're aware of it and — most importantly — explain what you're actively doing about it. Avoid disguised strengths like “I work too hard”; interviewers see through them.",
@@ -70,6 +141,15 @@ export const QUESTIONS: Question[] = [
     slug: "why-should-we-hire-you",
     category: "General",
     question: "Why should we hire you?",
+    company: "Stripe",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Final Round",
+    seniority: "Senior",
+    tags: ["Closing Pitch","Value Fit"],
+    likes: 297,
+    solved: 5310,
+    date: "Aug 22, 2026",
     answer: {
       approach:
         "This is your closing pitch. Connect their biggest need to your strongest proof in three parts: the problem they have, the experience you bring to it and the result they can expect. Make it about them, not you.",
@@ -86,6 +166,15 @@ export const QUESTIONS: Question[] = [
     slug: "where-do-you-see-yourself-in-five-years",
     category: "General",
     question: "Where do you see yourself in five years?",
+    company: "Microsoft",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Career Goals","Motivation & Fit"],
+    likes: 184,
+    solved: 4210,
+    date: "Jul 18, 2026",
     answer: {
       approach:
         "They want to know if you're ambitious, realistic and likely to stay. Show a direction rather than a job title, and tie your growth to what this role and company can offer.",
@@ -102,6 +191,15 @@ export const QUESTIONS: Question[] = [
     slug: "do-you-have-any-questions-for-us",
     category: "General",
     question: "Do you have any questions for us?",
+    company: "Anthropic",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Final Round",
+    seniority: "Mid",
+    tags: ["Closing Pitch","Curiosity"],
+    likes: 226,
+    solved: 5890,
+    date: "Sep 09, 2026",
     answer: {
       approach:
         "Always say yes. Prepare three or four thoughtful questions about the team, how success is measured and the challenges ahead. Avoid anything you could find on their website, and save salary and holidays for later stages.",
@@ -118,6 +216,15 @@ export const QUESTIONS: Question[] = [
     slug: "salary-expectations",
     category: "General",
     question: "What are your salary expectations?",
+    company: "Netflix",
+    role: "Any Role",
+    difficulty: "Hard",
+    round: "Recruiter Call",
+    seniority: "Senior",
+    tags: ["Negotiation","Compensation"],
+    likes: 488,
+    solved: 8120,
+    date: "Sep 15, 2026",
     answer: {
       approach:
         "Research the market range first, then give a range anchored on the value you bring rather than your current salary. If it's early, it's fine to ask about their budget — but be ready with a number.",
@@ -134,6 +241,15 @@ export const QUESTIONS: Question[] = [
     slug: "why-do-you-want-to-work-here",
     category: "Motivation",
     question: "Why do you want to work here?",
+    company: "Airbnb",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Recruiter Call",
+    seniority: "Junior",
+    tags: ["Motivation & Fit","Company Research"],
+    likes: 214,
+    solved: 5040,
+    date: "Aug 11, 2026",
     answer: {
       approach:
         "Show you've done your homework. Mention something specific about the company — its product, mission or recent work — and connect it to your own experience and goals. Generic praise is forgettable; specifics are memorable.",
@@ -150,6 +266,15 @@ export const QUESTIONS: Question[] = [
     slug: "why-are-you-leaving-your-current-job",
     category: "Motivation",
     question: "Why are you leaving your current job?",
+    company: "Uber",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Recruiter Call",
+    seniority: "Mid",
+    tags: ["Motivation & Fit","Professionalism"],
+    likes: 173,
+    solved: 3960,
+    date: "Jul 29, 2026",
     answer: {
       approach:
         "Keep it positive and forward-looking. Focus on what you're moving towards rather than what you're escaping, and never criticise your current employer — even if it's deserved.",
@@ -166,6 +291,15 @@ export const QUESTIONS: Question[] = [
     slug: "what-motivates-you",
     category: "Motivation",
     question: "What motivates you?",
+    company: "Google",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Hiring Manager",
+    seniority: "Junior",
+    tags: ["Motivation & Fit","Self Awareness"],
+    likes: 142,
+    solved: 3180,
+    date: "Jun 26, 2026",
     answer: {
       approach:
         "Be honest and specific, then link your motivation to the role. The best answers show what energises you and give a quick example of it in action at work.",
@@ -182,6 +316,15 @@ export const QUESTIONS: Question[] = [
     slug: "why-do-you-want-this-role",
     category: "Motivation",
     question: "Why do you want this role?",
+    company: "Airbnb",
+    role: "Designer",
+    difficulty: "Easy",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Motivation & Fit","Role Alignment"],
+    likes: 168,
+    solved: 3640,
+    date: "Aug 05, 2026",
     answer: {
       approach:
         "Match the role's key responsibilities to your skills and interests. Pick two or three things from the job description that genuinely appeal to you, and explain why you're a natural fit for each.",
@@ -198,6 +341,15 @@ export const QUESTIONS: Question[] = [
     slug: "explain-the-gap-in-your-cv",
     category: "Motivation",
     question: "Can you explain the gap in your CV?",
+    company: "Microsoft",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Screening",
+    seniority: "Mid",
+    tags: ["Career Gaps","Professionalism"],
+    likes: 208,
+    solved: 4470,
+    date: "Sep 01, 2026",
     answer: {
       approach:
         "Be brief, honest and unapologetic. Explain the reason in a sentence, mention anything useful you did during that time, and move quickly to why you're ready and excited to return now.",
@@ -214,6 +366,15 @@ export const QUESTIONS: Question[] = [
     slug: "tell-me-about-a-time-you-failed",
     category: "Behavioural",
     question: "Tell me about a time you failed.",
+    company: "Amazon",
+    role: "Any Role",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Behavioral & Leadership","STAR Method"],
+    likes: 394,
+    solved: 7720,
+    date: "Sep 07, 2026",
     answer: {
       approach:
         "Use the STAR method — Situation, Task, Action, Result — but spend most of your time on what you learned and changed afterwards. Choose a real failure with real stakes, and take ownership without over-apologising.",
@@ -230,6 +391,15 @@ export const QUESTIONS: Question[] = [
     slug: "conflict-with-a-coworker",
     category: "Behavioural",
     question: "Describe a conflict with a coworker and how you resolved it.",
+    company: "Meta",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Onsite",
+    seniority: "Mid",
+    tags: ["Behavioral & Leadership","Collaboration"],
+    likes: 287,
+    solved: 6310,
+    date: "Aug 19, 2026",
     answer: {
       approach:
         "Show emotional maturity. Pick a professional disagreement rather than a personal feud, explain how you listened and found common ground, and finish with a positive outcome for the work and the relationship.",
@@ -246,6 +416,15 @@ export const QUESTIONS: Question[] = [
     slug: "a-time-you-showed-leadership",
     category: "Behavioural",
     question: "Tell me about a time you showed leadership.",
+    company: "Stripe",
+    role: "Product Manager",
+    difficulty: "Medium",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Behavioral & Leadership","Ownership"],
+    likes: 256,
+    solved: 5470,
+    date: "Aug 14, 2026",
     answer: {
       approach:
         "Leadership isn't just about a title. Pick a moment where you took initiative, brought people together or made a tough call. Show how you influenced others and what the team achieved because of it.",
@@ -262,6 +441,15 @@ export const QUESTIONS: Question[] = [
     slug: "biggest-professional-achievement",
     category: "Behavioural",
     question: "What is your biggest professional achievement?",
+    company: "Uber",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Behavioral & Leadership","Impact & Metrics"],
+    likes: 231,
+    solved: 4980,
+    date: "Jul 22, 2026",
     answer: {
       approach:
         "Choose an achievement relevant to the role with a measurable result. Set the context quickly, explain the challenge, highlight your specific contribution and end with the impact in numbers where you can.",
@@ -278,6 +466,15 @@ export const QUESTIONS: Question[] = [
     slug: "meeting-a-tight-deadline",
     category: "Behavioural",
     question: "Describe a time you had to meet a tight deadline.",
+    company: "Razorpay",
+    role: "Software Engineer",
+    difficulty: "Medium",
+    round: "Onsite",
+    seniority: "Mid",
+    tags: ["Behavioral & Leadership","Prioritisation"],
+    likes: 199,
+    solved: 4320,
+    date: "Jul 09, 2026",
     answer: {
       approach:
         "Show how you plan and prioritise under pressure. Explain how you broke the work down, what you chose not to do and how you kept stakeholders informed — then share the result.",
@@ -294,6 +491,15 @@ export const QUESTIONS: Question[] = [
     slug: "receiving-critical-feedback",
     category: "Behavioural",
     question: "Tell me about a time you received critical feedback.",
+    company: "Anthropic",
+    role: "Designer",
+    difficulty: "Medium",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Behavioral & Leadership","Growth Mindset"],
+    likes: 176,
+    solved: 3810,
+    date: "Jun 30, 2026",
     answer: {
       approach:
         "Show that you're coachable. Describe the feedback honestly, how you reacted without getting defensive and the concrete steps you took to improve. End with evidence that the change stuck.",
@@ -310,6 +516,15 @@ export const QUESTIONS: Question[] = [
     slug: "disagreeing-with-your-manager",
     category: "Behavioural",
     question: "Tell me about a time you disagreed with your manager.",
+    company: "Netflix",
+    role: "Software Engineer",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Behavioral & Leadership","Influence"],
+    likes: 312,
+    solved: 6640,
+    date: "Sep 02, 2026",
     answer: {
       approach:
         "Demonstrate that you can push back respectfully. Explain how you raised your concern with evidence, listened to their reasoning and supported the final decision — even if it didn't go your way.",
@@ -326,6 +541,15 @@ export const QUESTIONS: Question[] = [
     slug: "handling-stress-and-pressure",
     category: "Situational",
     question: "How do you handle stress and pressure?",
+    company: "Razorpay",
+    role: "Any Role",
+    difficulty: "Easy",
+    round: "Screening",
+    seniority: "Junior",
+    tags: ["Resilience","Ways of Working"],
+    likes: 154,
+    solved: 3520,
+    date: "Jun 18, 2026",
     answer: {
       approach:
         "Acknowledge that pressure is normal, then show your practical system for handling it. Give a real example where that system helped you stay effective when things got intense.",
@@ -342,6 +566,15 @@ export const QUESTIONS: Question[] = [
     slug: "your-first-90-days",
     category: "Situational",
     question: "What would you do in your first 90 days?",
+    company: "Stripe",
+    role: "Product Manager",
+    difficulty: "Hard",
+    round: "Final Round",
+    seniority: "Senior",
+    tags: ["Onboarding Plan","Strategy"],
+    likes: 341,
+    solved: 5960,
+    date: "Sep 10, 2026",
     answer: {
       approach:
         "Show a thoughtful ramp-up plan: learn first, then contribute, then take ownership. Be specific enough to show initiative, but humble enough to acknowledge you'll adjust once you understand the team.",
@@ -358,6 +591,15 @@ export const QUESTIONS: Question[] = [
     slug: "prioritising-when-everything-is-urgent",
     category: "Situational",
     question: "How do you prioritise when everything is urgent?",
+    company: "Google",
+    role: "Product Manager",
+    difficulty: "Medium",
+    round: "Onsite",
+    seniority: "Mid",
+    tags: ["Prioritisation","Ways of Working"],
+    likes: 223,
+    solved: 4860,
+    date: "Aug 08, 2026",
     answer: {
       approach:
         "Show a clear, repeatable method. Explain how you judge impact and urgency, how you communicate trade-offs and how you check priorities with stakeholders instead of guessing.",
@@ -374,6 +616,15 @@ export const QUESTIONS: Question[] = [
     slug: "handling-a-difficult-stakeholder",
     category: "Situational",
     question: "How would you handle a difficult stakeholder?",
+    company: "Meta",
+    role: "Product Manager",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Stakeholder Management","Influence"],
+    likes: 264,
+    solved: 4410,
+    date: "Aug 25, 2026",
     answer: {
       approach:
         "Show empathy and structure. Explain how you'd understand what's driving their behaviour, align on shared goals and keep communication clear and regular — with an example if you have one.",
@@ -390,6 +641,15 @@ export const QUESTIONS: Question[] = [
     slug: "handling-ambiguity",
     category: "Situational",
     question: "How do you handle ambiguity?",
+    company: "Anthropic",
+    role: "Data Scientist",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Ambiguity & Decision Making","Strategy"],
+    likes: 289,
+    solved: 5230,
+    date: "Sep 05, 2026",
     answer: {
       approach:
         "Show that you can make progress without perfect information. Explain how you clarify what you can, make reasonable assumptions, move forward in small steps and adjust as you learn.",
@@ -406,6 +666,15 @@ export const QUESTIONS: Question[] = [
     slug: "underperforming-teammate",
     category: "Situational",
     question: "What would you do if a teammate wasn't pulling their weight?",
+    company: "Airbnb",
+    role: "Any Role",
+    difficulty: "Medium",
+    round: "Hiring Manager",
+    seniority: "Senior",
+    tags: ["Team Dynamics","Difficult Conversations"],
+    likes: 187,
+    solved: 3970,
+    date: "Jul 14, 2026",
     answer: {
       approach:
         "Show that you'd address it directly and kindly before escalating. Start with curiosity, have a private conversation, offer support and only involve a manager if the problem continues and affects the team.",
@@ -422,6 +691,15 @@ export const QUESTIONS: Question[] = [
     slug: "walk-me-through-a-project",
     category: "Technical",
     question: "Walk me through a project you're proud of.",
+    company: "Microsoft",
+    role: "Software Engineer",
+    difficulty: "Medium",
+    round: "Onsite",
+    seniority: "Mid",
+    tags: ["Project Deep Dive","Technical Communication"],
+    likes: 302,
+    solved: 6480,
+    date: "Aug 28, 2026",
     answer: {
       approach:
         "Tell it like a story: the problem, the constraints, the decisions you made and why, and the outcome. Go one level deeper than you think on technical choices — that's where interviewers probe.",
@@ -438,6 +716,15 @@ export const QUESTIONS: Question[] = [
     slug: "staying-up-to-date",
     category: "Technical",
     question: "How do you stay up to date in your field?",
+    company: "Razorpay",
+    role: "Software Engineer",
+    difficulty: "Easy",
+    round: "Screening",
+    seniority: "Junior",
+    tags: ["Learning Habits","Curiosity"],
+    likes: 131,
+    solved: 2940,
+    date: "Jun 12, 2026",
     answer: {
       approach:
         "Name specific sources and habits, and show how you apply what you learn. A quick example of something you picked up recently and used at work makes it credible.",
@@ -454,6 +741,15 @@ export const QUESTIONS: Question[] = [
     slug: "explaining-tech-to-non-technical-people",
     category: "Technical",
     question: "How would you explain a technical concept to a non-technical person?",
+    company: "Amazon",
+    role: "Data Scientist",
+    difficulty: "Medium",
+    round: "Hiring Manager",
+    seniority: "Mid",
+    tags: ["Technical Communication","Stakeholder Management"],
+    likes: 217,
+    solved: 4690,
+    date: "Jul 26, 2026",
     answer: {
       approach:
         "Demonstrate it live. Pick a concept, use a simple everyday analogy, avoid jargon and check for understanding. Interviewers are testing communication as much as knowledge.",
@@ -470,6 +766,15 @@ export const QUESTIONS: Question[] = [
     slug: "design-a-rate-limiter",
     category: "Technical",
     question: "How would you design a rate limiter?",
+    company: "Uber",
+    role: "Software Engineer",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["System Design","Scalability"],
+    likes: 526,
+    solved: 11240,
+    date: "Sep 16, 2026",
     answer: {
       approach:
         "Clarify requirements first — limits per user or per IP, single server or distributed, how strict. Then walk through an algorithm, where state lives and the trade-offs. Talking through your reasoning matters more than a perfect design.",
@@ -486,6 +791,15 @@ export const QUESTIONS: Question[] = [
     slug: "debugging-a-production-issue",
     category: "Technical",
     question: "How do you approach debugging a production issue?",
+    company: "Netflix",
+    role: "Software Engineer",
+    difficulty: "Hard",
+    round: "Onsite",
+    seniority: "Senior",
+    tags: ["Incident Response","Problem Solving"],
+    likes: 447,
+    solved: 9120,
+    date: "Sep 14, 2026",
     answer: {
       approach:
         "Show a calm, systematic process: stabilise first, then investigate. Explain how you limit impact, gather evidence, form and test hypotheses and prevent it from happening again.",
@@ -503,3 +817,11 @@ export const QUESTIONS: Question[] = [
 export function averageRating(q: Question) {
   return q.reviews.reduce((sum, r) => sum + r.rating, 0) / q.reviews.length;
 }
+
+export function companiesByCount() {
+  const counts = new Map<string, number>();
+  for (const q of QUESTIONS) counts.set(q.company, (counts.get(q.company) ?? 0) + 1);
+  return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
+export const COMPANIES = companiesByCount().map(([name]) => name);
