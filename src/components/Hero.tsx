@@ -160,7 +160,7 @@ export function Hero() {
           </motion.div>
 
           <h1 className="headline mt-7 text-[clamp(3.3rem,7.4vw,6.75rem)] text-amigo-dark">
-            {["Your AI", "Job Search", "Companion."].map((line, i) => (
+            {["Your AI", "Interview", "Companion."].map((line, i) => (
               <span key={line} className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
                 <motion.span
                   className={cn("block", i === 2 && "text-gradient pr-2")}
