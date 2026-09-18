@@ -36,7 +36,7 @@ export function AutoApplySection() {
   const revealed = step >= 3;
 
   return (
-    <section id="auto-apply" className="relative overflow-hidden bg-[linear-gradient(180deg,#F1E9FF_0%,#F7F4FF_100%)] py-28 lg:py-40">
+    <section id="auto-apply" className="relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-pale)_0%,var(--color-amigo-surface)_100%)] py-28 lg:py-40">
       <div aria-hidden className="pointer-events-none absolute -left-32 bottom-0 h-[480px] w-[480px] rounded-full bg-amigo-light/30 blur-[140px]" />
       <div className="container-x relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
@@ -205,7 +205,7 @@ export function AutoApplySection() {
                                     {j.match}% Match
                                   </motion.div>
                                 ) : (
-                                  <div className="h-7 w-20 animate-shimmer rounded-full bg-[linear-gradient(90deg,#EDE7FF_25%,#F7F4FF_50%,#EDE7FF_75%)] bg-[length:200%_100%]" />
+                                  <div className="h-7 w-20 animate-shimmer rounded-full bg-[linear-gradient(90deg,var(--color-amigo-mist)_25%,var(--color-amigo-surface)_50%,var(--color-amigo-mist)_75%)] bg-[length:200%_100%]" />
                                 )}
                               </div>
                             </div>

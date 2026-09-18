@@ -6,11 +6,11 @@ type Variant = "primary" | "gradient" | "ghost" | "light" | "outline-light";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-amigo-dark text-white shadow-[0_10px_30px_-10px_rgba(17,19,24,0.5)] hover:shadow-[0_18px_40px_-12px_rgba(108,43,217,0.55)]",
+    "bg-amigo-dark text-white shadow-[0_10px_30px_-10px_rgba(17,19,24,0.5)] hover:shadow-[0_18px_40px_-12px_rgba(108,43,217,0.55)] dark:bg-white! dark:text-amigo-ink",
   gradient:
     "bg-[linear-gradient(120deg,#6C2BD9,#A855F7_55%,#B78EFF)] bg-[length:180%_100%] bg-left hover:bg-right text-white shadow-glow",
-  ghost: "glass text-amigo-dark hover:bg-white/90",
-  light: "bg-white text-amigo-dark shadow-[0_18px_40px_-14px_rgba(183,142,255,0.6)] hover:shadow-glow-lg",
+  ghost: "glass text-amigo-dark hover:bg-white/90 dark:hover:bg-white/10",
+  light: "bg-white text-amigo-dark shadow-[0_18px_40px_-14px_rgba(183,142,255,0.6)] hover:shadow-glow-lg dark:bg-white! dark:text-amigo-ink",
   "outline-light": "border border-white/15 bg-white/[0.04] text-white hover:bg-white/[0.1]",
 };
 

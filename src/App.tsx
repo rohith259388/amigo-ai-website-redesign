@@ -58,7 +58,7 @@ function Home() {
       <Hero />
       <Journey />
       <ResumeSection />
-      <div className="bg-[linear-gradient(180deg,#F7F4FF,#F1E9FF)]">
+      <div className="bg-[linear-gradient(180deg,var(--color-amigo-surface),var(--color-amigo-pale))]">
         <BoltDivider />
       </div>
       <AutoApplySection />
@@ -67,7 +67,7 @@ function Home() {
       <BuddySection />
       <CompanionSection />
       <HowItWorks />
-      <div className="bg-[linear-gradient(180deg,#F7F4FF,#FFFFFF)]">
+      <div className="bg-[linear-gradient(180deg,var(--color-amigo-surface),var(--c-card))]">
         <BoltDivider />
       </div>
       <WhyAmigo />

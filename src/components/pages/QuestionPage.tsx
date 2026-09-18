@@ -29,7 +29,7 @@ export function QuestionPage({ slug }: { slug: string }) {
   const rating = averageRating(question);
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#F7F4FF_0%,#FFFFFF_55%)] pb-28 pt-32 lg:pb-36 lg:pt-40">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-surface)_0%,var(--c-card)_55%)] pb-28 pt-32 lg:pb-36 lg:pt-40">
       <div aria-hidden className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-amigo-light/25 blur-[140px]" />
       <div className="container-x relative">
         <div className="mx-auto max-w-[880px]">
