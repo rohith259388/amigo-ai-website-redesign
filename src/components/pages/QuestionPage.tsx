@@ -1,9 +1,12 @@
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Eye, Heart } from "lucide-react";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { averageRating, QUESTIONS } from "@/data/questions";
 import { Avatar } from "../ui/Brand";
+import { CompanyMark } from "../ui/CompanyMark";
 import { Reveal, TextReveal } from "../ui/Reveal";
 import { Stars } from "../ui/Stars";
+
+const DIFFICULTY_COLOR: Record<string, string> = { Easy: "#16A34A", Medium: "#F59E0B", Hard: "#EF4444" };
 
 export function QuestionPage({ slug }: { slug: string }) {
   const index = QUESTIONS.findIndex((q) => q.slug === slug);
@@ -37,15 +40,44 @@ export function QuestionPage({ slug }: { slug: string }) {
             <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-0.5" /> All questions
           </a>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 text-[13px]">
-            <span className="rounded-full bg-amigo-pale px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-amigo-purple">
-              {question.category}
+          <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <CompanyMark name={question.company} size={30} />
+            <span className="rounded-md bg-amigo-pale px-2 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-amigo-purple">
+              {question.company}
             </span>
-            <span className="text-amigo-dark/45">
-              Question {index + 1} of {QUESTIONS.length}
+            <span
+              className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em]"
+              style={{ color: DIFFICULTY_COLOR[question.difficulty] }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full" style={{ background: DIFFICULTY_COLOR[question.difficulty] }} />
+              {question.difficulty}
+            </span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-amigo-dark/40">
+              · {question.round} · {question.seniority} · {question.category}
             </span>
           </div>
           <TextReveal as="h1" className="headline mt-5 text-[clamp(2.25rem,5vw,4.25rem)] text-amigo-dark" lines={[question.question]} />
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3 text-[13px] text-amigo-dark/50">
+            <span className="inline-flex items-center gap-1.5">
+              <Heart size={14} /> {question.likes}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Eye size={14} /> {question.solved.toLocaleString()} people practised
+            </span>
+            <span>Updated {question.date}</span>
+            <span className="text-amigo-dark/35">
+              Question {index + 1} of {QUESTIONS.length}
+            </span>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {question.tags.map((t) => (
+              <span key={t} className="rounded-full bg-amigo-dark/[0.04] px-3 py-1.5 text-[12.5px] font-medium text-amigo-dark/65">
+                {t}
+              </span>
+            ))}
+          </div>
 
           <Reveal delay={0.15} className="mt-12">
             <article className="overflow-hidden rounded-[28px] border border-white/80 bg-white shadow-[0_50px_120px_-40px_rgba(108,43,217,0.35)]">
