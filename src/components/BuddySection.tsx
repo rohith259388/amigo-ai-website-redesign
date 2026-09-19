@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useSequence } from "@/hooks/useSequence";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
-import { Avatar, Bolt, Eyebrow, LiveDot, Wave } from "./ui/Brand";
+import { Avatar, Bolt, LiveDot, Wave } from "./ui/Brand";
 import { Reveal, TextReveal } from "./ui/Reveal";
 import { Typewriter } from "./ui/Typewriter";
 
@@ -116,16 +116,15 @@ export function BuddySection() {
       <div className="container-x relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <Eyebrow>05 — Buddy</Eyebrow>
             <TextReveal
-              className="headline mt-5 text-[clamp(2.6rem,5.4vw,5rem)] text-amigo-dark"
+              className="headline text-[clamp(2.6rem,5.4vw,5rem)] text-amigo-dark"
               lines={["Amigo Answers.", <span key="g" className="text-gradient pr-2">Your Buddy Backs You Up.</span>]}
             />
           </div>
           <Reveal className="lg:col-span-5" delay={0.15}>
             <p className="text-[18px] leading-relaxed text-amigo-dark/65">
               One window, three columns. The question you were asked, Amigo's answer, and a hint from someone who knows
-              you — all live, all private.
+              you, all live and all private.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {MODES.map(({ icon: Icon, label }) => (
@@ -200,7 +199,7 @@ export function BuddySection() {
             className="relative z-10 sm:pt-[236px]"
           >
             <Reveal y={40}>
-              <div className="overflow-hidden rounded-[26px] border border-amigo-border bg-[linear-gradient(180deg,var(--c-card),var(--color-amigo-pale))] shadow-[0_50px_120px_-40px_rgba(108,43,217,0.45)]">
+              <div className="overflow-hidden rounded-[26px] border border-amigo-border bg-[linear-gradient(180deg,#FCFBFF,#F4F0FF)] shadow-[0_50px_120px_-40px_rgba(108,43,217,0.45)]">
                 {/* title bar */}
                 <div className="flex items-center gap-3 border-b border-amigo-dark/[0.06] px-4 py-3 sm:px-5">
                   <span className="flex items-center gap-1.5">
@@ -353,7 +352,7 @@ export function BuddySection() {
                     active={step === 4 || step === 5}
                     done={false}
                     tone={{
-                      header: "bg-[var(--color-amigo-pale)]",
+                      header: "bg-[#F6E9FF]",
                       text: "text-amigo-vivid",
                       ring: "ring-amigo-vivid/35",
                       glow: "bg-amigo-vivid/20",
@@ -370,8 +369,8 @@ export function BuddySection() {
 
                     {step < 4 ? (
                       <div className="flex flex-1 flex-col justify-center gap-2.5 opacity-50">
-                        <Skeleton w="82%" tint="bg-[var(--color-amigo-pale)]" />
-                        <Skeleton w="60%" tint="bg-[var(--color-amigo-pale)]" />
+                        <Skeleton w="82%" tint="bg-[#F6E9FF]" />
+                        <Skeleton w="60%" tint="bg-[#F6E9FF]" />
                       </div>
                     ) : step === 4 ? (
                       <div className="flex flex-1 items-center gap-2 text-[12px] font-semibold text-amigo-vivid">
@@ -427,7 +426,7 @@ export function BuddySection() {
               </div>
             </div>
             <div className="flex items-start gap-3 rounded-2xl border border-amigo-border bg-white p-5 shadow-card">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--color-amigo-pale)] text-amigo-vivid">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#F6E9FF] text-amigo-vivid">
                 <MessageSquare size={18} />
               </span>
               <div>

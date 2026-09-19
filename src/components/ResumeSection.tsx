@@ -1,10 +1,11 @@
 import { AnimatePresence, animate, motion, useInView, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
-import { Check, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Download, Sparkles } from "lucide-react";
 import { useEffect, useRef, type ReactNode } from "react";
 import { useSequence } from "@/hooks/useSequence";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
-import { Avatar, Bolt, Eyebrow } from "./ui/Brand";
+import { Avatar, Bolt } from "./ui/Brand";
+import { MagneticButton } from "./ui/MagneticButton";
 import { Reveal, TextReveal } from "./ui/Reveal";
 
 const PIPELINE = [
@@ -87,10 +88,9 @@ export function ResumeSection() {
       />
       <div className="container-x grid grid-cols-1 items-start gap-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
         <div className="lg:sticky lg:top-32">
-          <Eyebrow>01 — Build</Eyebrow>
           <TextReveal
-            className="headline mt-5 text-[clamp(2.75rem,5.4vw,5rem)] text-amigo-dark"
-            lines={["Your Resume.", <span key="g" className="text-gradient pr-2">Built for the Job.</span>]}
+            className="headline text-[clamp(2.1rem,3.6vw,3.5rem)] text-amigo-dark"
+            lines={["A Resume,", <span key="g" className="text-gradient pr-2">Built for the Job.</span>]}
           />
           <Reveal delay={0.15}>
             <p className="mt-6 max-w-[460px] text-[18px] leading-relaxed text-amigo-dark/65">
@@ -141,6 +141,12 @@ export function ResumeSection() {
                 );
               })}
             </ol>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <MagneticButton href="#pricing" size="lg" className="mt-8">
+              Build Resume
+              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+            </MagneticButton>
           </Reveal>
         </div>
 

@@ -33,6 +33,7 @@
   --animate-talk: talk 0.45s ease-in-out infinite alternate;
   --animate-ping-soft: pingSoft 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-scroll-dot: scrollDot 2.2s ease-in-out infinite;
+  --animate-marquee: marquee 22s linear infinite;
 
   @keyframes float {
     0%,
@@ -155,6 +156,11 @@
       opacity: 0;
     }
   }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -165,12 +171,18 @@
    The class is set on <html> before first paint by the script in index.html. */
 :root {
   --c-card: #ffffff;
+  /* A section background that must stay visibly distinct from --color-amigo-surface next to it
+     (e.g. a white section sandwiched between two surface-toned ones). In light mode plain white
+     already contrasts against the surface's lavender tint, but in dark mode --c-card sits too
+     close to --color-amigo-surface to read as a separate block, so dark mode gets its own value. */
+  --c-panel: #ffffff;
   color-scheme: light;
 }
 
 :root.dark {
   color-scheme: dark;
   --c-card: #16131f;
+  --c-panel: #1c1829;
   --color-amigo-dark: #ecebf3;
   --color-amigo-surface: #0d0b14;
   --color-amigo-pale: #251c3d;
@@ -218,6 +230,53 @@
     background-color: rgba(22, 19, 31, 0.7);
     border-color: rgba(255, 255, 255, 0.08);
   }
+}
+
+/* ---------- Light-pinned islands ----------
+   Some cards are screenshots of a light desktop app (the interview copilot panel, the Buddy
+   window) sitting on top of a separately-dark "call" mockup. Letting them flip dark makes two
+   dark panels stack on each other with no visible edge between them, so `.theme-light-pin`
+   locks a subtree to the light palette regardless of the page-level .dark class. Overriding the
+   custom properties handles every token-based utility (bg-amigo-*, text-amigo-dark/NN, ...); the
+   rules below only need to re-cover the literal (non-token) utilities that .dark overrides above. */
+.theme-light-pin {
+  --c-card: #ffffff;
+  --c-panel: #ffffff;
+  --color-amigo-dark: #111318;
+  --color-amigo-surface: #f7f4ff;
+  --color-amigo-pale: #f1e9ff;
+  --color-amigo-mist: #ede7ff;
+  --color-amigo-border: #e5e7eb;
+  color-scheme: light;
+}
+:where(.dark) .theme-light-pin.bg-white,
+:where(.dark) .theme-light-pin .bg-white {
+  background-color: #fff;
+}
+:where(.dark) .theme-light-pin.bg-white\/95,
+:where(.dark) .theme-light-pin .bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+:where(.dark) .theme-light-pin.bg-white\/90,
+:where(.dark) .theme-light-pin .bg-white\/90 {
+  background-color: rgb(255 255 255 / 0.9);
+}
+:where(.dark) .theme-light-pin.border-white\/80,
+:where(.dark) .theme-light-pin .border-white\/80 {
+  border-color: rgb(255 255 255 / 0.8);
+}
+:where(.dark) .theme-light-pin.bg-amigo-dark,
+:where(.dark) .theme-light-pin .bg-amigo-dark {
+  background-color: var(--color-amigo-dark);
+}
+:where(.dark) .theme-light-pin .text-amigo-purple,
+:where(.dark) .theme-light-pin .hover\:text-amigo-purple:hover,
+:where(.dark) .theme-light-pin .group:hover .group-hover\:text-amigo-purple {
+  color: #6c2bd9;
+}
+:where(.dark) .theme-light-pin .glass {
+  background-color: rgba(255, 255, 255, 0.62);
+  border-color: rgba(255, 255, 255, 0.78);
 }
 
 @layer base {
@@ -383,7 +442,8 @@
   .animate-blink,
   .animate-talk,
   .animate-ping-soft,
-  .animate-scroll-dot {
+  .animate-scroll-dot,
+  .animate-marquee {
     animation: none !important;
   }
 }

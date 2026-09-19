@@ -9,6 +9,7 @@ import { FinalCTA } from "./components/FinalCTA";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
+import { InterviewPartnerSection } from "./components/InterviewPartnerSection";
 import { InterviewSection } from "./components/InterviewSection";
 import { Journey } from "./components/Journey";
 import { Navbar } from "./components/Navbar";
@@ -63,6 +64,7 @@ function Home() {
       </div>
       <AutoApplySection />
       <InterviewSection />
+      <InterviewPartnerSection />
       <PrivacySection />
       <BuddySection />
       <CompanionSection />

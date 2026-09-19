@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import { useSequence } from "@/hooks/useSequence";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
-import { Bolt, Eyebrow, LiveDot } from "./ui/Brand";
+import { Bolt, LiveDot } from "./ui/Brand";
 import { Reveal, TextReveal } from "./ui/Reveal";
 
 const FLOW = [
@@ -36,19 +36,16 @@ export function AutoApplySection() {
   const revealed = step >= 3;
 
   return (
-    <section id="auto-apply" className="relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-pale)_0%,var(--color-amigo-surface)_100%)] py-28 lg:py-40">
+    <section id="auto-apply" className="relative overflow-hidden bg-[linear-gradient(180deg,var(--color-amigo-pale)_0%,var(--color-amigo-surface)_100%)] py-16 lg:py-20">
       <div aria-hidden className="pointer-events-none absolute -left-32 bottom-0 h-[480px] w-[480px] rounded-full bg-amigo-light/30 blur-[140px]" />
       <div className="container-x relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <div className="flex flex-wrap items-center gap-3">
-              <Eyebrow>02 — Apply</Eyebrow>
-              <span className="inline-flex items-center gap-2 rounded-full bg-amigo-dark px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-white">
-                <LiveDot color="#B78EFF" /> Coming soon
-              </span>
-            </div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-amigo-dark px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-white">
+              <LiveDot color="#B78EFF" /> Coming soon
+            </span>
             <TextReveal
-              className="headline mt-5 text-[clamp(2.75rem,5.4vw,5rem)] text-amigo-dark"
+              className="headline mt-4 text-[clamp(2.25rem,4vw,3.75rem)] text-amigo-dark"
               lines={["Stop Spending", "Hours Applying."]}
             />
           </div>
@@ -62,7 +59,7 @@ export function AutoApplySection() {
           </Reveal>
         </div>
 
-        <div ref={ref} className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-14">
+        <div ref={ref} className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-[280px_1fr] lg:gap-14">
           {/* Flow */}
           <Reveal className="relative" delay={0.1}>
             <div className="relative flex justify-between gap-2 lg:flex-col lg:gap-0">
@@ -138,7 +135,7 @@ export function AutoApplySection() {
               </div>
 
               {/* cards */}
-              <div className="relative mt-4 min-h-[300px]">
+              <div className="relative mt-4 min-h-[260px]">
                 <AnimatePresence>
                   {!showJobs && (
                     <motion.div

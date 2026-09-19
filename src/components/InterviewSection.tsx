@@ -1,10 +1,11 @@
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
-import { Copy, FileText, Minus, Mic, Plus, Sparkles, X } from "lucide-react";
+import { ArrowRight, Copy, FileText, Minus, Mic, Plus, Sparkles, X } from "lucide-react";
 import { useRef } from "react";
 import { useSequence } from "@/hooks/useSequence";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import { Avatar, Bolt, Eyebrow, LiveDot, Wave } from "./ui/Brand";
+import { MagneticButton } from "./ui/MagneticButton";
 import { Reveal, TextReveal } from "./ui/Reveal";
 
 const QA = {
@@ -78,39 +79,43 @@ export function InterviewSection() {
   const step = useSequence([1900, 2300, 1300, 2500, 2600, 4400], inView, { reduced: !!reduce });
 
   return (
-    <section id="interview" className="edge-glow relative overflow-hidden bg-amigo-ink py-28 text-white lg:py-36">
-      <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_50%_40%,black,transparent_75%)]" />
+    <section id="interview" className="edge-glow relative overflow-hidden bg-[var(--c-panel)] py-14 text-amigo-dark lg:py-16">
+      <div aria-hidden className="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_50%_40%,black,transparent_75%)]" />
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/4 h-[560px] w-[860px] -translate-x-1/2 rounded-full bg-amigo-purple/25 blur-[150px]"
-        animate={reduce ? {} : { opacity: [0.6, 1, 0.6] }}
+        className="pointer-events-none absolute left-1/2 top-1/4 h-[480px] w-[720px] -translate-x-1/2 rounded-full bg-amigo-purple/15 blur-[90px]"
+        animate={reduce ? {} : { opacity: [0.35, 0.55, 0.35] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="container-x relative">
         {/* header */}
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
           <div>
-            <Eyebrow tone="light">04 — Interview</Eyebrow>
+            <Eyebrow tone="purple">Interview</Eyebrow>
             <TextReveal
-              className="headline mt-4 text-[clamp(2.2rem,4.8vw,4.25rem)] text-white"
-              lines={["When the Interview Starts,", <span key="g" className="text-gradient-light pr-2">Amigo Is There.</span>]}
+              className="headline mt-4 text-[clamp(1.9rem,3.4vw,3.1rem)] text-amigo-dark"
+              lines={["When the Interview Starts,", <span key="g" className="text-gradient pr-2">Amigo Is There.</span>]}
             />
           </div>
-          <Reveal delay={0.15}>
-            <p className="max-w-[400px] text-[16px] leading-relaxed text-white/55 lg:text-[17px]">
-              Amigo hears the question, writes the answer and keeps going — technical, behavioural or coding. Private to
-              you, on top of any call.
+          <Reveal delay={0.15} className="max-w-[400px]">
+            <p className="text-[16px] leading-relaxed text-amigo-dark/65 lg:text-[17px]">
+              Amigo hears the question, writes the answer and keeps going through technical, behavioural and coding
+              rounds alike. Private to you, on top of any call.
             </p>
+            <MagneticButton href="#pricing" size="md" className="mt-6">
+              Try for Free
+              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+            </MagneticButton>
           </Reveal>
         </div>
 
         {/* ---------- the copilot overlay, floating over a blurred call ---------- */}
-        <div ref={ref} className="relative mt-14 lg:mt-16">
+        <div ref={ref} className="relative mt-6 lg:mt-8">
           {/* the call, blurred, running behind the overlay */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-[560px] max-w-[1060px] overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,#1B1F30,#0B0C10)] opacity-95 blur-[2px] sm:block"
+            className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden h-[300px] max-w-[1060px] overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,#1B1F30,#0B0C10)] opacity-90 sm:block"
           >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[13px] font-medium text-white/70">
               <span className="flex items-center gap-2.5">
@@ -141,13 +146,13 @@ export function InterviewSection() {
             </div>
           </div>
 
-          <Reveal y={40} className="relative pt-0 sm:pt-[232px]">
+          <Reveal y={40} className="relative pt-0 sm:pt-[110px]">
             <motion.div
               animate={reduce ? {} : { y: [0, -7, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="relative mx-auto w-full max-w-[890px]"
+              className="theme-light-pin relative mx-auto w-full max-w-[890px]"
             >
-              <div className="overflow-hidden rounded-[24px] border border-white/20 bg-white/95 shadow-[0_35px_100px_-20px_rgba(108,43,217,0.65)] backdrop-blur-xl">
+              <div className="overflow-hidden rounded-[24px] border border-white/20 bg-white/95 shadow-[0_35px_100px_-20px_rgba(108,43,217,0.65)] backdrop-blur-sm">
                 {/* toolbar */}
                 <div className="flex flex-wrap items-center gap-2 border-b border-amigo-dark/[0.07] px-3 py-3 sm:px-4">
                   <span className="flex items-center gap-2 rounded-[14px] border border-amigo-border bg-amigo-surface px-3 py-2 text-[12.5px] font-semibold text-amigo-dark/75">
@@ -203,7 +208,7 @@ export function InterviewSection() {
                 </div>
 
                 {/* body */}
-                <div className="min-h-[300px] px-4 py-5 sm:min-h-[340px] sm:px-6 sm:py-6">
+                <div className="min-h-[240px] px-4 py-5 sm:min-h-[260px] sm:px-6 sm:py-6">
                   {/* live transcript chips */}
                   <div className="flex min-h-[30px] flex-wrap items-center gap-1.5">
                     <AnimatePresence>

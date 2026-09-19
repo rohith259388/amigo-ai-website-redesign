@@ -20,7 +20,14 @@ import { Bolt } from "./ui/Brand";
 import { FloatingChip, type ChipVariant } from "./ui/FloatingChip";
 import { MagneticButton } from "./ui/MagneticButton";
 
-const PILLARS = ["Resume Builder", "Auto Apply", "Interview AI", "Buddy"];
+const PILLARS = [
+  "Build Resume",
+  "Match Jobs",
+  "Auto Apply",
+  "Real-Time AI Coding Support",
+  "Real Time AI Interview Support",
+  "Real Time Buddy Support",
+];
 
 const CHIPS: {
   id: string;
@@ -31,11 +38,11 @@ const CHIPS: {
   delay: number;
   className: string;
 }[] = [
-  { id: "resume", label: "Resume ready", variant: "check", depth: 1.5, delay: 0.5, className: "left-[2%] top-[16%] sm:left-[0%]" },
+  { id: "resume", label: "Build resume", variant: "check", depth: 1.5, delay: 0.5, className: "left-[2%] top-[16%] sm:left-[0%]" },
   { id: "listening", label: "AI is listening…", variant: "wave", depth: 0.8, delay: 1.4, className: "right-[6%] top-[2%] sm:right-[4%]" },
-  { id: "jobs", label: "12 jobs matched", variant: "default", icon: <Briefcase size={14} />, depth: 1.15, delay: 0.8, className: "right-[-2%] top-[34%] sm:right-[-4%]" },
-  { id: "interview", label: "Interview starting…", variant: "live", icon: <Video size={14} />, depth: 1.0, delay: 1.1, className: "left-[-2%] bottom-[24%] sm:left-[-1%]" },
-  { id: "buddy", label: "Your Buddy joined", variant: "avatars", depth: 1.35, delay: 1.7, className: "right-[0%] bottom-[12%] sm:right-[2%]" },
+  { id: "jobs", label: "Jobs applied", variant: "default", icon: <Briefcase size={14} />, depth: 1.15, delay: 0.8, className: "right-[-2%] top-[34%] sm:right-[-4%]" },
+  { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0, delay: 1.1, className: "left-[-2%] bottom-[24%] sm:left-[-1%]" },
+  { id: "buddy", label: "Real time buddy support", variant: "avatars", depth: 1.35, delay: 1.7, className: "right-[0%] bottom-[12%] sm:right-[2%]" },
 ];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
@@ -198,19 +205,26 @@ export function Hero() {
             </MagneticButton>
           </motion.div>
 
-          <motion.ul
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-[12px] font-bold uppercase tracking-[0.16em] text-amigo-dark/45"
+            className="mask-fade-x relative mt-10 w-full overflow-hidden"
           >
-            {PILLARS.map((p, i) => (
-              <li key={p} className="flex items-center gap-3">
-                {i > 0 && <span className="h-1 w-1 rounded-full bg-amigo-vivid" />}
-                <span>{p}</span>
-              </li>
-            ))}
-          </motion.ul>
+            {/* Accessible copy for screen readers — the marquee below is duplicated for the loop and hidden from them. */}
+            <span className="sr-only">{PILLARS.join(", ")}</span>
+            <ul aria-hidden className="flex w-max animate-marquee items-center gap-x-8 hover:[animation-play-state:paused]">
+              {[...PILLARS, ...PILLARS].map((p, i) => (
+                <li
+                  key={i}
+                  className="flex shrink-0 items-center gap-3 text-[12px] font-bold whitespace-nowrap uppercase tracking-[0.16em] text-amigo-dark/45"
+                >
+                  <span className="h-1 w-1 shrink-0 rounded-full bg-amigo-vivid" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </motion.div>
 
         {/* scene */}
