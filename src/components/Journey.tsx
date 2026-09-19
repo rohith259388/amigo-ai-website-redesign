@@ -8,9 +8,11 @@ import {
   useVelocity,
   type MotionValue,
 } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState, type ComponentType } from "react";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
 import { clamp, EASE } from "@/lib/motion";
+import { requestPricingView } from "@/utils/pricingView";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { AmigoBot, AmigoFloating, type BotMood } from "./ui/AmigoBot";
 import { Eyebrow } from "./ui/Brand";
@@ -33,11 +35,46 @@ type Stage = {
 };
 
 const STAGES: Stage[] = [
-  { n: "01", key: "build", title: "Build", text: "Create your job-ready CV.", mood: "happy", Visual: ResumeVisual },
-  { n: "02", key: "apply", title: "Apply", text: "Discover relevant opportunities.", mood: "happy", Visual: JobsVisual },
-  { n: "03", key: "prepare", title: "Prepare", text: "Practice for the interview.", mood: "focus", Visual: PrepareVisual },
-  { n: "04", key: "interview", title: "Interview", text: "Get real-time AI assistance.", mood: "talk", Visual: InterviewVisual },
-  { n: "05", key: "buddy", title: "Buddy", text: "Bring someone you trust.", mood: "wink", Visual: BuddyVisual },
+  {
+    n: "01",
+    key: "build",
+    title: "Build",
+    text: "Build your CV with Amigo AI. Tell it about your experience once, and it turns that into a polished, ready to send resume.",
+    mood: "happy",
+    Visual: ResumeVisual,
+  },
+  {
+    n: "02",
+    key: "apply",
+    title: "Apply",
+    text: "Amigo AI matches you to roles that fit your goals, then helps you apply with an application tailored to each one.",
+    mood: "happy",
+    Visual: JobsVisual,
+  },
+  {
+    n: "03",
+    key: "prepare",
+    title: "Prepare",
+    text: "Practice with Amigo AI before the real thing. Get role specific questions and feedback that adapts as you improve.",
+    mood: "focus",
+    Visual: PrepareVisual,
+  },
+  {
+    n: "04",
+    key: "interview",
+    title: "Interview",
+    text: "Amigo joins the call with you and listens in real time, surfacing answers the moment you need them most.",
+    mood: "talk",
+    Visual: InterviewVisual,
+  },
+  {
+    n: "05",
+    key: "buddy",
+    title: "Buddy",
+    text: "Bring a trusted friend into the room with you. They add the context and reassurance Amigo alone cannot give.",
+    mood: "wink",
+    Visual: BuddyVisual,
+  },
 ];
 
 const STAGE_W = 64; // vw
@@ -245,16 +282,19 @@ function EndCap() {
       <div className="absolute inset-x-0 h-px bg-white/10" style={{ top: pathTop }}>
         <div className="absolute inset-y-0 left-0 w-[40%] bg-[linear-gradient(90deg,#B78EFF,transparent)]" />
       </div>
-      <div
-        className="absolute left-[3vw] flex -translate-y-[130%] items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg"
+      <a
+        href="#pricing"
+        onClick={() => requestPricingView("monthly")}
+        className="group absolute left-[3vw] flex -translate-y-[130%] items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg transition-transform duration-300 hover:-translate-y-[136%]"
         style={{ top: pathTop }}
       >
         <span className="grid h-10 w-10 place-items-center rounded-full bg-[linear-gradient(135deg,#6C2BD9,#B78EFF)] text-lg">🎉</span>
         <div className="leading-tight">
-          <div className="text-[14px] font-bold">Offer received</div>
-          <div className="text-[11px] text-amigo-dark/50">Nexa Labs · Senior Java Developer</div>
+          <div className="text-[14px] font-bold">Get 50% off</div>
+          <div className="text-[11px] text-amigo-dark/50">Unlimited monthly plan</div>
         </div>
-      </div>
+        <ArrowUpRight size={16} className="ml-1 text-amigo-purple transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      </a>
     </div>
   );
 }
@@ -287,13 +327,18 @@ function JourneyMobile() {
             <span className="absolute -left-[42px] top-1 grid h-5 w-5 place-items-center rounded-full bg-amigo-dark ring-1 ring-white/15">
               <span className="h-2.5 w-2.5 rounded-full bg-amigo-light shadow-glow" />
             </span>
-            <div className="inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg">
+            <a
+              href="#pricing"
+              onClick={() => requestPricingView("monthly")}
+              className="group inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg"
+            >
               <span className="grid h-10 w-10 place-items-center rounded-full bg-[linear-gradient(135deg,#6C2BD9,#B78EFF)] text-lg">🎉</span>
               <div className="leading-tight">
-                <div className="text-[14px] font-bold">Offer received</div>
-                <div className="text-[11px] text-amigo-dark/50">Nexa Labs · Senior Java Developer</div>
+                <div className="text-[14px] font-bold">Get 50% off</div>
+                <div className="text-[11px] text-amigo-dark/50">Unlimited monthly plan</div>
               </div>
-            </div>
+              <ArrowUpRight size={16} className="ml-1 text-amigo-purple transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
           </li>
         </ol>
       </div>

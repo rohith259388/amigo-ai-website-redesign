@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Check, Gift, Infinity as InfinityIcon, Rocket, Sparkles, Zap, type LucideIcon } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, Check, Clock, Gift, Infinity as InfinityIcon, Rocket, Sparkles, Zap, type LucideIcon } from "lucide-react";
+import { useEffect, useState } from "react";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
+import { onPricingViewRequest, readRequestedPricingView } from "@/utils/pricingView";
 import { Eyebrow } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 import { Reveal, TextReveal } from "./ui/Reveal";
@@ -88,7 +89,11 @@ const MONTHLY_PLAN = {
 };
 
 export function Pricing() {
-  const [view, setView] = useState<"minutes" | "monthly">("minutes");
+  const [view, setView] = useState<"minutes" | "monthly">(() => readRequestedPricingView() ?? "minutes");
+
+  // A CTA elsewhere on the page (the Journey section's "50% off" pill) can flip this tab to
+  // Monthly before scrolling here, even though Pricing is already mounted.
+  useEffect(() => onPricingViewRequest(setView), []);
 
   return (
     <section id="pricing" className="relative overflow-hidden bg-amigo-surface py-28 lg:py-40">
@@ -260,7 +265,12 @@ function MonthlyCard() {
         <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/10 text-amigo-light">
           <p.Icon size={22} />
         </span>
-        <span className="rounded-full bg-white/15 px-2.5 py-1 text-[11px] font-bold text-white">{p.save}</span>
+        <div className="flex flex-col items-end gap-1.5">
+          <span className="rounded-full bg-white/15 px-2.5 py-1 text-[11px] font-bold text-white">{p.save}</span>
+          <span className="flex items-center gap-1 rounded-full bg-amigo-vivid/20 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-amigo-light">
+            <Clock size={11} /> Limited time
+          </span>
+        </div>
       </div>
 
       <div className="relative mt-6 text-[13px] font-bold uppercase tracking-[0.2em] text-white/60">{p.name}</div>

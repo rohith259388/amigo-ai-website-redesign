@@ -111,6 +111,15 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
             </ul>
 
             <div className="relative z-10 flex items-center gap-2">
+              <a
+                href="#login"
+                className={cn(
+                  "hidden rounded-full px-3.5 py-2 text-[14px] font-semibold transition-colors sm:inline-flex",
+                  open ? "text-white/80 hover:text-white" : "text-amigo-dark/65 hover:text-amigo-dark"
+                )}
+              >
+                Log in
+              </a>
               <ThemeToggle onDark={open} />
               <MagneticButton size="sm" href="#pricing" className="hidden sm:inline-flex">
                 Try for free
@@ -196,9 +205,18 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         >
           <div>
             <p className="mb-4 text-[14px] text-white/50">Your AI job-search companion.</p>
-            <MagneticButton variant="gradient" href="#pricing" onClick={onClose}>
-              Try for free
-            </MagneticButton>
+            <div className="flex flex-wrap items-center gap-3">
+              <MagneticButton variant="gradient" href="#pricing" onClick={onClose}>
+                Try for free
+              </MagneticButton>
+              <a
+                href="#login"
+                onClick={onClose}
+                className="text-[14px] font-semibold text-white/70 transition-colors hover:text-white"
+              >
+                Log in
+              </a>
+            </div>
           </div>
           <AmigoBot size={108} mood="wink" image={amigoMonogram} />
         </motion.div>
