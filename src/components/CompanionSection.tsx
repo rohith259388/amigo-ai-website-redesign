@@ -392,17 +392,8 @@ export function CompanionSection() {
             340,000+ five-star reviews
           </span>
 
-          <h2 className="headline mt-5 text-[clamp(2.25rem,3.6vw,3.25rem)]">
-            <span className="block overflow-hidden pb-1">
-              <span className={`block transition-transform duration-900 ${headerVisible ? 'translate-y-0' : 'translate-y-full'}`} style={{transitionDelay: headerVisible ? '0ms' : undefined}}>People Trust &
-              </span>
-            </span>
-            <span className="block overflow-hidden pb-1">
-              <span className={`block transition-transform duration-900 text-gradient ${headerVisible ? 'translate-y-0' : 'translate-y-full'}`} style={{transitionDelay: headerVisible ? '130ms' : undefined}}>Love</span>
-            </span>
-            <span className="block overflow-hidden pb-1">
-              <span className={`block transition-transform duration-900 ${headerVisible ? 'translate-y-0' : 'translate-y-full'}`} style={{transitionDelay: headerVisible ? '260ms' : undefined}}>Amigo</span>
-            </span>
+          <h2 className={`headline mt-5 text-[clamp(2.25rem,3.6vw,3.25rem)] transition-all ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{transitionDelay: headerVisible ? '0ms' : undefined}}>
+            People Trust & <span className="text-gradient">Love</span> Amigo
           </h2>
 
           <p className={`mx-auto mt-4 max-w-[36rem] text-base text-amigo-dark/60 transition-all ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{transitionDelay: headerVisible ? '300ms' : undefined}}>
