@@ -23,20 +23,13 @@ export function Bolt({
 }
 
 /* ---------- Wordmark ---------- */
-export function Logo({ dark, className, compact }: { dark?: boolean; className?: string; compact?: boolean }) {
+export function Logo({ className, compact }: { className?: string; compact?: boolean }) {
   return (
-    <span className={cn("inline-flex items-center gap-1.5 leading-none", className)}>
-      <span
-        className={cn(
-          "font-extrabold tracking-[-0.06em]",
-          compact ? "text-[20px]" : "text-[22px]",
-          dark ? "text-white" : "text-amigo-dark"
-        )}
-      >
-        AMIGO
-      </span>
-      <Bolt className={cn("-mt-1", compact ? "h-4 w-4" : "h-5 w-5")} />
-    </span>
+    <img
+      src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1789971456/Amigo_Logo_4_b1jkuc.png"
+      alt="Amigo Logo"
+      className={cn("object-contain", compact ? "h-8" : "h-10", className)}
+    />
   );
 }
 

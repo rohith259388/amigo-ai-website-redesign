@@ -34,7 +34,7 @@ export function Footer() {
       <div className="container-x relative pb-10 pt-20">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo dark />
+            <Logo />
             <p className="mt-4 max-w-[280px] text-[15px] leading-relaxed text-white/55">Your AI job-search companion.</p>
             <p className="mt-6 text-[12px] font-bold uppercase tracking-[0.24em] text-white/30">Practice smarter · Answer better · Crack the job</p>
           </div>

@@ -57,30 +57,30 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
         <div className="container-x">
           <nav
             className={cn(
-              "mt-3 flex h-[62px] items-center justify-between rounded-full pl-5 pr-2.5 transition-all duration-500 sm:mt-4",
+              "mt-3 flex h-[60px] items-center justify-between rounded-full px-6 transition-all duration-500 sm:mt-4",
               scrolled && !open ? "glass shadow-card" : "border border-transparent bg-transparent"
             )}
           >
-            <a href="#top" aria-label="Amigo — home" className="relative z-10">
-              <Logo dark={open} />
+            <a href="#top" aria-label="Amigo — home" className="relative z-10 flex-shrink-0">
+              <Logo />
             </a>
 
-            <ul className="hidden items-center gap-0.5 xl:flex">
+            <ul className="hidden items-center gap-1 xl:flex">
               {NAV_LINKS.map((l) => {
                 const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
                 if (l.highlight) {
                   return (
-                    <li key={l.href} className="ml-1">
+                    <li key={l.href}>
                       <a
                         href={l.href}
                         className={cn(
-                          "group relative flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[14px] font-semibold ring-1 transition-all duration-300",
+                          "group relative flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-semibold ring-1 transition-all duration-300 whitespace-nowrap",
                           isActive
                             ? "bg-amigo-purple text-white shadow-glow ring-transparent"
                             : "bg-amigo-pale text-amigo-purple ring-amigo-purple/25 hover:shadow-glow hover:ring-amigo-purple/50"
                         )}
                       >
-                        <Sparkles size={14} className="transition-transform duration-300 group-hover:rotate-12" />
+                        <Sparkles size={13} className="transition-transform duration-300 group-hover:rotate-12" />
                         {l.label}
                         {!isActive && <LiveDot color="#A855F7" className="-mr-0.5" />}
                       </a>
@@ -92,7 +92,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                     <a
                       href={l.href}
                       className={cn(
-                        "relative block rounded-full px-3.5 py-2 text-[14px] font-medium transition-colors duration-300",
+                        "relative block rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-300 whitespace-nowrap",
                         isActive ? "text-amigo-dark" : "text-amigo-dark/60 hover:text-amigo-dark"
                       )}
                     >
@@ -114,14 +114,14 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
               <a
                 href="#login"
                 className={cn(
-                  "hidden rounded-full px-3.5 py-2 text-[14px] font-semibold transition-colors sm:inline-flex",
+                  "hidden rounded-full px-4 py-2 text-[13px] font-semibold transition-colors sm:inline-flex whitespace-nowrap",
                   open ? "text-white/80 hover:text-white" : "text-amigo-dark/65 hover:text-amigo-dark"
                 )}
               >
                 Log in
               </a>
               <ThemeToggle onDark={open} />
-              <MagneticButton size="sm" href="#pricing" className="hidden sm:inline-flex">
+              <MagneticButton variant="gradient" size="sm" href="#pricing" className="hidden sm:inline-flex whitespace-nowrap">
                 Try for free
               </MagneticButton>
               <button
