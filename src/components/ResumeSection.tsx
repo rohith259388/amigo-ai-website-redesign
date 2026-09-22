@@ -96,7 +96,7 @@ export function ResumeSection() {
         className="pointer-events-none absolute -right-40 top-20 h-[520px] w-[520px] rounded-full bg-amigo-light/25 blur-[140px]"
       />
       <div className="container-x grid grid-cols-1 items-start gap-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
-        <div className="lg:sticky lg:top-32">
+        <div className="min-w-0 lg:sticky lg:top-32">
           <TextReveal
             className="headline text-[clamp(2.1rem,3.6vw,3.5rem)] text-amigo-dark"
             lines={["A Resume,", <span key="g" className="text-gradient pr-2">Built for the Job.</span>]}
@@ -160,14 +160,14 @@ export function ResumeSection() {
         </div>
 
         {/* Product window */}
-        <Reveal delay={0.2} y={40} className="relative">
+        <Reveal delay={0.2} y={40} className="relative min-w-0">
           <div
             aria-hidden
             className="pointer-events-none absolute -inset-10 rounded-[40px] bg-[radial-gradient(closest-side,rgba(183,142,255,0.35),transparent)] blur-2xl"
           />
           <div
             ref={ref}
-            className="relative overflow-hidden rounded-[28px] border border-white/80 bg-white/80 shadow-[0_50px_120px_-40px_rgba(108,43,217,0.4)] backdrop-blur-xl"
+            className="relative w-full min-w-0 overflow-hidden rounded-[28px] border border-white/80 bg-white/80 shadow-[0_50px_120px_-40px_rgba(108,43,217,0.4)] backdrop-blur-xl"
           >
             {/* title bar */}
             <div className="flex items-center gap-3 border-b border-amigo-border/70 bg-white/70 px-5 py-3.5">
@@ -187,7 +187,7 @@ export function ResumeSection() {
             {/* body */}
             <div
               ref={panelsRef}
-              className="scrollbar-none grid snap-x snap-mandatory auto-cols-[minmax(270px,1fr)] grid-flow-col gap-px overflow-x-auto bg-amigo-border/60 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible"
+              className="scrollbar-none grid min-w-0 max-w-full snap-x snap-mandatory auto-cols-[minmax(270px,1fr)] grid-flow-col gap-px overflow-x-auto bg-amigo-border/60 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible"
             >
               {/* JD */}
               <div className="snap-start bg-white p-5">
