@@ -66,9 +66,18 @@ function PanelTitle({ children, right }: { children: ReactNode; right?: ReactNod
 
 export function ResumeSection() {
   const ref = useRef<HTMLDivElement>(null);
+  const panelsRef = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { amount: 0.3 });
   const reduce = useReducedMotion();
   const step = useSequence([1300, 1500, 1500, 1900, 3800], inView, { reduced: !!reduce });
+
+  useEffect(() => {
+    const el = panelsRef.current;
+    if (!el) return;
+    const index = step <= 0 ? 0 : step <= 2 ? 1 : 2;
+    const panel = el.children[index] as HTMLElement | undefined;
+    if (panel) el.scrollTo({ left: panel.offsetLeft, behavior: "smooth" });
+  }, [step]);
 
   const score = useMotionValue(61);
   const scoreText = useTransform(score, (v) => Math.round(v));
@@ -176,7 +185,10 @@ export function ResumeSection() {
             </div>
 
             {/* body */}
-            <div className="scrollbar-none grid snap-x snap-mandatory auto-cols-[minmax(270px,1fr)] grid-flow-col gap-px overflow-x-auto bg-amigo-border/60 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible">
+            <div
+              ref={panelsRef}
+              className="scrollbar-none grid snap-x snap-mandatory auto-cols-[minmax(270px,1fr)] grid-flow-col gap-px overflow-x-auto bg-amigo-border/60 lg:auto-cols-auto lg:grid-flow-row lg:grid-cols-3 lg:overflow-visible"
+            >
               {/* JD */}
               <div className="snap-start bg-white p-5">
                 <PanelTitle>Job description</PanelTitle>
@@ -326,6 +338,22 @@ export function ResumeSection() {
                   </Swap>
                 </div>
               </div>
+            </div>
+
+            {/* mobile panel progress */}
+            <div className="flex items-center justify-center gap-1.5 border-t border-amigo-border/70 bg-white/70 py-2.5 lg:hidden">
+              {[0, 1, 2].map((i) => {
+                const activeIndex = step <= 0 ? 0 : step <= 2 ? 1 : 2;
+                return (
+                  <span
+                    key={i}
+                    className={cn(
+                      "h-1.5 rounded-full transition-all duration-500",
+                      i === activeIndex ? "w-5 bg-amigo-purple" : "w-1.5 bg-amigo-dark/15"
+                    )}
+                  />
+                );
+              })}
             </div>
 
             {/* footer / ATS */}

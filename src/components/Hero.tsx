@@ -38,11 +38,11 @@ const CHIPS: {
   delay: number;
   className: string;
 }[] = [
-  { id: "resume", label: "Build resume", variant: "check", depth: 1.5, delay: 0.5, className: "left-[2%] top-[16%] sm:left-[0%]" },
-  { id: "listening", label: "AI is listening…", variant: "wave", depth: 0.8, delay: 1.4, className: "right-[6%] top-[2%] sm:right-[4%]" },
-  { id: "jobs", label: "Jobs applied", variant: "default", icon: <Briefcase size={14} />, depth: 1.15, delay: 0.8, className: "right-[-2%] top-[34%] sm:right-[-4%]" },
-  { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0, delay: 1.1, className: "left-[-2%] bottom-[24%] sm:left-[-1%]" },
-  { id: "buddy", label: "Real time buddy support", variant: "avatars", depth: 1.35, delay: 1.7, className: "right-[0%] bottom-[12%] sm:right-[2%]" },
+  { id: "resume", label: "Build resume", variant: "check", depth: 1.5, delay: 0.5, className: "left-[4%] top-[14%] sm:left-[0%] sm:top-[16%]" },
+  { id: "listening", label: "AI is listening…", variant: "wave", depth: 0.8, delay: 1.4, className: "right-[4%] top-[2%] sm:right-[4%]" },
+  { id: "jobs", label: "Jobs applied", variant: "default", icon: <Briefcase size={14} />, depth: 1.15, delay: 0.8, className: "right-[2%] top-[36%] sm:right-[-4%] sm:top-[34%]" },
+  { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0, delay: 1.1, className: "left-[2%] bottom-[22%] sm:left-[-1%] sm:bottom-[24%]" },
+  { id: "buddy", label: "Real time buddy support", variant: "avatars", depth: 1.35, delay: 1.7, className: "right-[2%] bottom-[10%] sm:right-[2%] sm:bottom-[12%]" },
 ];
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
@@ -84,7 +84,7 @@ function ParallaxChip({
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 4 + depth * 1.5, repeat: Infinity, ease: "easeInOut", delay }}
         >
-          <FloatingChip {...chip} className="scale-[0.9] sm:scale-100" />
+          <FloatingChip {...chip} className="scale-[0.68] sm:scale-100" />
         </motion.div>
       </motion.div>
     </motion.div>
@@ -194,13 +194,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
-            className="mt-9 flex flex-wrap items-center gap-3"
+            className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-3"
           >
-            <MagneticButton href="#pricing" size="lg" variant="primary">
+            <MagneticButton href="#pricing" size="lg" variant="primary" className="w-full sm:w-auto">
               Get Started Free
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </MagneticButton>
-            <MagneticButton href="#how-it-works" size="lg" variant="ghost" strength={0.2}>
+            <MagneticButton href="#how-it-works" size="lg" variant="ghost" strength={0.2} className="w-full sm:w-auto">
               See How It Works
             </MagneticButton>
           </motion.div>
