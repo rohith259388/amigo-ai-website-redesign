@@ -26,6 +26,7 @@ import amigoMonogram from "@/assets/amigo-monogram.png";
 import { AmigoBot } from "../ui/AmigoBot";
 import { Avatar, Eyebrow } from "../ui/Brand";
 import { Reveal, TextReveal } from "../ui/Reveal";
+import { CreatorStudio } from "../visuals/CreatorStudio";
 
 const STATS = [
   { value: "$300", label: "Max Monthly Earnings" },
@@ -152,10 +153,12 @@ export function CreatorsPage() {
 function ApplyForm({
   id,
   dark,
+  className,
   footnote = "Free to join. Playbook delivered in under 2 minutes.",
 }: {
   id?: string;
   dark?: boolean;
+  className?: string;
   footnote?: string;
 }) {
   const [name, setName] = useState("");
@@ -172,7 +175,7 @@ function ApplyForm({
   };
 
   return (
-    <form id={id} onSubmit={onSubmit} className="mx-auto mt-9 w-full max-w-[420px]">
+    <form id={id} onSubmit={onSubmit} className={cn("mx-auto mt-9 w-full max-w-[420px]", className)}>
       <div className="flex flex-col gap-3">
         <input
           required
@@ -222,20 +225,20 @@ function ApplyForm({
 
 function Hero() {
   return (
-    <section className="relative pb-16 pt-36 lg:pb-20 lg:pt-44">
+    <section className="relative pb-16 pt-32 lg:pb-24 lg:pt-40">
       <div aria-hidden className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[820px] -translate-x-1/2 rounded-full bg-amigo-light/20 blur-[150px]" />
-      <div className="container-x relative">
-        <div className="mx-auto flex max-w-[680px] flex-col items-center text-center">
+      <div className="container-x relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1fr] lg:gap-14">
+        <div className="mx-auto flex min-w-0 max-w-[620px] flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-amigo-purple/15 bg-amigo-pale px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.2em] text-amigo-purple">
             <Sparkles size={14} /> Creator Partner Program
           </span>
           <TextReveal
             as="h1"
-            className="headline mt-6 text-[clamp(2.6rem,5.6vw,4.75rem)] text-amigo-dark"
+            className="headline mt-6 text-[clamp(2.6rem,5vw,4.5rem)] text-amigo-dark"
             lines={["Turn Your Interview", <span key="g" className="text-gradient pr-2">Into Monthly Income.</span>]}
           />
           <Reveal delay={0.15}>
-            <p className="mt-6 max-w-[560px] text-[17px] leading-relaxed text-amigo-dark/65">
+            <p className="mt-6 max-w-[540px] text-[17px] leading-relaxed text-amigo-dark/65">
               Post short clips of Amigo answering live interview questions. Earn{" "}
               <span className="font-bold text-amigo-dark">$50–$300 per month</span> in direct cash payments — no
               followers required.
@@ -246,9 +249,13 @@ function Hero() {
           </Reveal>
 
           <Reveal delay={0.3} className="w-full">
-            <ApplyForm />
+            <ApplyForm className="lg:mx-0 lg:[&_p]:justify-start lg:[&_p]:text-left" />
           </Reveal>
         </div>
+
+        <Reveal delay={0.2} y={40} className="min-w-0">
+          <CreatorStudio />
+        </Reveal>
       </div>
     </section>
   );
