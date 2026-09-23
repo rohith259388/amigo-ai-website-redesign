@@ -1,5 +1,6 @@
 import { MotionConfig } from "framer-motion";
 import { useLayoutEffect } from "react";
+import { AutoApplyAnnouncement } from "./components/AutoApplyAnnouncement";
 import { AutoApplySection } from "./components/AutoApplySection";
 import { BuddySection } from "./components/BuddySection";
 import { CompanionSection } from "./components/CompanionSection";
@@ -16,6 +17,7 @@ import { Navbar } from "./components/Navbar";
 import { CreatorsPage } from "./components/pages/CreatorsPage";
 import { QuestionPage } from "./components/pages/QuestionPage";
 import { QuestionsPage } from "./components/pages/QuestionsPage";
+import { ReferralPage } from "./components/pages/ReferralPage";
 import { Pricing } from "./components/Pricing";
 import { PrivacySection } from "./components/PrivacySection";
 import { QuestionsSection } from "./components/QuestionsSection";
@@ -28,7 +30,13 @@ export default function App() {
   const route = useHashRoute();
   const routeKey = route.name === "question" ? `question/${route.slug}` : route.name;
   const activeHref =
-    route.name === "questions" || route.name === "question" ? "#/questions" : route.name === "creators" ? "#/creators" : null;
+    route.name === "questions" || route.name === "question"
+      ? "#/questions"
+      : route.name === "creators"
+        ? "#/creators"
+        : route.name === "referral"
+          ? "#/referral"
+          : null;
 
   // The browser can't scroll to a section anchor that belongs to a page that isn't rendered yet.
   useLayoutEffect(() => {
@@ -46,6 +54,7 @@ export default function App() {
           {route.name === "questions" && <QuestionsPage />}
           {route.name === "question" && <QuestionPage key={route.slug} slug={route.slug} />}
           {route.name === "creators" && <CreatorsPage />}
+          {route.name === "referral" && <ReferralPage />}
         </main>
         <Footer />
       </div>
@@ -56,6 +65,7 @@ export default function App() {
 function Home() {
   return (
     <>
+      <AutoApplyAnnouncement />
       <Hero />
       <Journey />
       <ResumeSection />

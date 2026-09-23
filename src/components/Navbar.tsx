@@ -14,9 +14,9 @@ export const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] =
   { label: "Auto Apply", href: "#auto-apply" },
   { label: "Interview AI", href: "#interview" },
   { label: "Buddy", href: "#buddy" },
-  { label: "How It Works", href: "#how-it-works" },
   { label: "Questions", href: "#/questions" },
   { label: "Pricing", href: "#pricing" },
+  { label: "Referral Program", href: "#/referral" },
   { label: "Creators Wanted", href: "#/creators", highlight: true },
 ];
 
@@ -65,7 +65,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
               <Logo />
             </a>
 
-            <ul className="hidden items-center gap-1 xl:flex">
+            <ul className="hidden items-center gap-0.5 xl:flex">
               {NAV_LINKS.map((l) => {
                 const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
                 if (l.highlight) {
@@ -74,7 +74,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                       <a
                         href={l.href}
                         className={cn(
-                          "group relative flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-semibold ring-1 transition-all duration-300 whitespace-nowrap",
+                          "group relative flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-semibold ring-1 transition-all duration-300 whitespace-nowrap",
                           isActive
                             ? "bg-amigo-purple text-white shadow-glow ring-transparent"
                             : "bg-amigo-pale text-amigo-purple ring-amigo-purple/25 hover:shadow-glow hover:ring-amigo-purple/50"
@@ -92,7 +92,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                     <a
                       href={l.href}
                       className={cn(
-                        "relative block rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-300 whitespace-nowrap",
+                        "relative block rounded-full px-3 py-2 text-[13px] font-medium transition-colors duration-300 whitespace-nowrap",
                         isActive ? "text-amigo-dark" : "text-amigo-dark/60 hover:text-amigo-dark"
                       )}
                     >
