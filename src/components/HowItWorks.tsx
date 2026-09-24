@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState, type ComponentType } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ComponentType } from "react";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
@@ -40,6 +40,28 @@ export function HowItWorks() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [fit, setFit] = useState(1);
+  const [visEl, setVisEl] = useState<HTMLDivElement | null>(null);
+
+  // On narrow stages the taller previews would run into the step label and the mascot, so scale them to
+  // the free area (stage minus the label band on top and the mascot band below). Paddings mirror the
+  // @max-[520px] classes on the stage. Keyed on the mounted preview element so each step re-measures.
+  useLayoutEffect(() => {
+    const stage = stageRef.current;
+    if (!stage || !visEl) return;
+    const measure = () => {
+      if (stage.clientWidth >= 520) return setFit(1);
+      const availH = stage.clientHeight - 56 - 112;
+      const availW = stage.clientWidth - 48;
+      setFit(Math.min(1, availH / visEl.offsetHeight, availW / visEl.offsetWidth));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(stage);
+    ro.observe(visEl);
+    return () => ro.disconnect();
+  }, [visEl]);
   const inView = useInView(ref, { amount: 0.35 });
   const reduce = useReducedMotion();
 
@@ -128,9 +150,9 @@ export function HowItWorks() {
           </ol>
 
           {/* stage */}
-          <div className="relative">
+          <div className="@container relative">
             <div aria-hidden className="pointer-events-none absolute -inset-8 rounded-[48px] bg-[radial-gradient(closest-side,rgba(108,43,217,0.25),transparent)] blur-2xl" />
-            <div className="relative flex aspect-[16/11] items-center justify-center overflow-hidden rounded-[32px] bg-amigo-dark p-6 shadow-[0_60px_120px_-40px_rgba(108,43,217,0.55)] sm:p-8">
+            <div ref={stageRef} className="relative flex aspect-[16/11] items-center justify-center overflow-hidden rounded-[32px] bg-amigo-dark p-6 shadow-[0_60px_120px_-40px_rgba(108,43,217,0.55)] sm:p-8 @max-[520px]:aspect-[4/5] @max-[520px]:px-6 @max-[520px]:pb-[112px] @max-[520px]:pt-14">
               <div aria-hidden className="grid-lines-dark absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_75%)]" />
               <div aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-purple/30 blur-[80px]" />
 
@@ -143,7 +165,9 @@ export function HowItWorks() {
                   transition={{ duration: 0.5, ease: EASE }}
                   className="relative z-10 flex w-full justify-center"
                 >
-                  <Visual active className="max-w-[320px]" />
+                  <div ref={setVisEl} data-fit className="flex w-full justify-center" style={{ transform: `scale(${fit})` }}>
+                    <Visual active className="max-w-[320px]" />
+                  </div>
                 </motion.div>
               </AnimatePresence>
 
