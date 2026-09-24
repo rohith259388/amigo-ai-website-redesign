@@ -9,9 +9,9 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
-import { ArrowRight, Briefcase, Video } from "lucide-react";
-import { useEffect, useRef } from "react";
-import { useIsDesktop } from "@/hooks/useMediaQuery";
+import { ArrowRight, BookOpen, Briefcase, Video } from "lucide-react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useIsDesktop, useMediaQuery } from "@/hooks/useMediaQuery";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
@@ -29,21 +29,17 @@ const PILLARS = [
   "Real Time Buddy Support",
 ];
 
-const CHIPS: {
-  id: string;
-  label: string;
-  variant: ChipVariant;
-  icon?: React.ReactNode;
-  depth: number;
-  delay: number;
-  className: string;
-}[] = [
-  { id: "resume", label: "Build resume", variant: "check", depth: 1.5, delay: 0.5, className: "left-[4%] top-[14%] sm:left-[0%] sm:top-[16%]" },
-  { id: "listening", label: "AI is listening…", variant: "wave", depth: 0.8, delay: 1.4, className: "right-[4%] top-[2%] sm:right-[4%]" },
-  { id: "jobs", label: "Jobs applied", variant: "default", icon: <Briefcase size={14} />, depth: 1.15, delay: 0.8, className: "right-[2%] top-[36%] sm:right-[-4%] sm:top-[34%]" },
-  { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0, delay: 1.1, className: "left-[2%] bottom-[22%] sm:left-[-1%] sm:bottom-[24%]" },
-  { id: "buddy", label: "Real time buddy support", variant: "avatars", depth: 1.35, delay: 1.7, className: "right-[2%] bottom-[10%] sm:right-[2%] sm:bottom-[12%]" },
+// Numbered clockwise from top-left; the highlight travels 1 → 2 → 3 → 4 around the orbit.
+const ORBIT_CHIPS: { id: string; label: string; variant: ChipVariant; icon?: React.ReactNode; depth: number }[] = [
+  { id: "resume", label: "AI resume builder", variant: "check", depth: 1.5 },
+  { id: "assist", label: "Job assist", variant: "default", icon: <Briefcase size={14} />, depth: 0.8 },
+  { id: "bank", label: "Question bank", variant: "default", icon: <BookOpen size={14} />, depth: 1.15 },
+  { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0 },
 ];
+const ORBIT_ANGLES = [-135, -45, 45, 135];
+const ORBIT_STEP_MS = 2600;
+const ORBIT_RX = 0.43;
+const ORBIT_RY = 0.49;
 
 const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
   left: (i * 37 + 11) % 100,
@@ -53,47 +49,177 @@ const PARTICLES = Array.from({ length: 18 }, (_, i) => ({
   dur: 6 + (i % 4),
 }));
 
-function ParallaxChip({
+// Visual scale of the chips per breakpoint — mirrors the Tailwind classes on FloatingChip below.
+function chipScale(vw: number) {
+  if (vw < 640) return 0.68;
+  if (vw >= 1024 && vw < 1280) return 0.85;
+  return 1;
+}
+
+function ChipOrbit({ sx, sy, reduce }: { sx: MotionValue<number>; sy: MotionValue<number>; reduce: boolean }) {
+  const layerRef = useRef<HTMLDivElement>(null);
+  const chipRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [geo, setGeo] = useState({ w: 0, h: 0, pos: ORBIT_CHIPS.map(() => ({ x: 0, y: 0 })) });
+  const geoRef = useRef(geo);
+  geoRef.current = geo;
+  const [active, setActive] = useState(0);
+  const angle = useMotionValue(ORBIT_ANGLES[0]);
+
+  useLayoutEffect(() => {
+    const el = layerRef.current;
+    if (!el) return;
+    const measure = () => {
+      const w = el.offsetWidth;
+      const h = el.offsetHeight;
+      const k = chipScale(window.innerWidth);
+      const pad = 8;
+      const pos = ORBIT_ANGLES.map((a, i) => {
+        const rad = (a * Math.PI) / 180;
+        const half = ((chipRefs.current[i]?.offsetWidth ?? 0) * k) / 2;
+        const x = w / 2 + w * ORBIT_RX * Math.cos(rad);
+        const y = h / 2 + h * ORBIT_RY * Math.sin(rad);
+        return { x: Math.min(Math.max(x, half + pad), w - half - pad), y };
+      });
+      setGeo({ w, h, pos });
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (reduce) return;
+    const t = setInterval(() => {
+      animate(angle, angle.get() + 90, { duration: 0.9, ease: EASE }).then(() => setActive((i) => (i + 1) % ORBIT_CHIPS.length));
+    }, ORBIT_STEP_MS);
+    return () => clearInterval(t);
+  }, [reduce, angle]);
+
+  const dotX = useTransform(angle, (a) => geoRef.current.w / 2 + geoRef.current.w * ORBIT_RX * Math.cos((a * Math.PI) / 180));
+  const dotY = useTransform(angle, (a) => geoRef.current.h / 2 + geoRef.current.h * ORBIT_RY * Math.sin((a * Math.PI) / 180));
+  // Re-seat the dot when the layout changes size mid-pause.
+  useEffect(() => {
+    angle.jump(angle.get() + 1e-6);
+  }, [geo, angle]);
+
+  const ready = geo.w > 0;
+
+  return (
+    <div ref={layerRef} className="absolute inset-0">
+      {ready && (
+        <svg aria-hidden className="pointer-events-none absolute inset-0 h-full w-full overflow-visible" viewBox={`0 0 ${geo.w} ${geo.h}`}>
+          <ellipse
+            cx={geo.w / 2}
+            cy={geo.h / 2}
+            rx={geo.w * ORBIT_RX}
+            ry={geo.h * ORBIT_RY}
+            fill="none"
+            stroke="rgba(108,43,217,0.22)"
+            strokeWidth="1.2"
+            strokeDasharray="4 7"
+          />
+          {!reduce && (
+            <motion.circle
+              r="5.5"
+              cx={dotX}
+              cy={dotY}
+              fill="#A855F7"
+              style={{ filter: "drop-shadow(0 0 6px rgba(168,85,247,0.95)) drop-shadow(0 0 14px rgba(168,85,247,0.6))" }}
+            />
+          )}
+        </svg>
+      )}
+
+      {ORBIT_CHIPS.map((c, i) => (
+        <OrbitChip
+          key={c.id}
+          chip={c}
+          n={i + 1}
+          active={!reduce && i === active}
+          x={geo.pos[i].x}
+          y={geo.pos[i].y}
+          visible={ready}
+          sx={sx}
+          sy={sy}
+          chipRef={(el) => {
+            chipRefs.current[i] = el;
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function OrbitChip({
+  chip,
+  n,
+  active,
+  x,
+  y,
+  visible,
   sx,
   sy,
-  depth,
-  delay,
-  className,
-  ...chip
+  chipRef,
 }: {
+  chip: (typeof ORBIT_CHIPS)[number];
+  n: number;
+  active: boolean;
+  x: number;
+  y: number;
+  visible: boolean;
   sx: MotionValue<number>;
   sy: MotionValue<number>;
-  depth: number;
-  delay: number;
-  className: string;
-  label: string;
-  variant: ChipVariant;
-  icon?: React.ReactNode;
+  chipRef: (el: HTMLDivElement | null) => void;
 }) {
-  const x = useTransform(sx, (v) => v * depth * -18);
-  const y = useTransform(sy, (v) => v * depth * -13);
+  const px = useTransform(sx, (v) => v * chip.depth * -10);
+  const py = useTransform(sy, (v) => v * chip.depth * -8);
+  const delay = 0.5 + (n - 1) * 0.18;
   return (
-    <motion.div
-      className={cn("absolute z-20", className)}
-      initial={{ opacity: 0, scale: 0.8, y: 14 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ ...SPRING, delay }}
-    >
-      <motion.div style={{ x, y }}>
-        <motion.div
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 4 + depth * 1.5, repeat: Infinity, ease: "easeInOut", delay }}
-        >
-          <FloatingChip {...chip} className="scale-[0.68] sm:scale-100" />
+    <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2" style={{ left: x, top: y, visibility: visible ? "visible" : "hidden" }}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, y: 14 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ ...SPRING, delay }}
+      >
+        <motion.div style={{ x: px, y: py }}>
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{ duration: 4 + chip.depth * 1.5, repeat: Infinity, ease: "easeInOut", delay }}
+          >
+            <motion.div animate={{ scale: active ? 1.07 : 1 }} transition={{ type: "spring", stiffness: 260, damping: 18 }}>
+              <div ref={chipRef} className="relative scale-[0.68] sm:scale-100 lg:scale-[0.85] xl:scale-100">
+                <FloatingChip
+                  label={chip.label}
+                  variant={chip.variant}
+                  icon={chip.icon}
+                  className={cn(
+                    "transition-[background-color,color,box-shadow] duration-500",
+                    active &&
+                      "bg-[linear-gradient(120deg,#6C2BD9,#A855F7)] text-white shadow-[0_0_0_3px_rgba(183,142,255,0.45),0_16px_36px_-10px_rgba(108,43,217,0.7)]"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "absolute -left-1.5 -top-1.5 grid h-5 w-5 place-items-center rounded-full text-[10px] font-extrabold ring-2 ring-white transition-colors duration-500",
+                    active ? "bg-[#111318] text-white" : "bg-white text-amigo-purple"
+                  )}
+                >
+                  {n}
+                </span>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const isDesktop = useIsDesktop();
+  const isWide = useMediaQuery("(min-width: 1280px)");
   const reduce = useReducedMotion();
 
   /* cursor / ambient motion */
@@ -135,7 +261,7 @@ export function Hero() {
   const copyY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const copyOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
 
-  const botSize = isDesktop ? 350 : 236;
+  const botSize = isWide ? 350 : isDesktop ? 290 : 236;
 
   return (
     <section
@@ -151,7 +277,7 @@ export function Hero() {
       />
       <div aria-hidden className="pointer-events-none absolute -left-40 top-1/3 h-[420px] w-[420px] rounded-full bg-amigo-light/25 blur-[120px]" />
 
-      <div className="container-x relative grid min-h-[100svh] grid-cols-1 items-center gap-8 pb-20 pt-28 lg:grid-cols-[1.06fr_0.94fr] lg:gap-6 lg:pb-16 lg:pt-24">
+      <div className="container-x relative grid min-h-[100svh] grid-cols-1 items-center gap-8 pb-20 pt-28 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:gap-6 lg:pb-16 lg:pt-24">
         {/* copy */}
         <motion.div style={{ y: copyY, opacity: copyOpacity }} className="relative z-10 max-w-[680px]">
           <motion.div
@@ -241,12 +367,6 @@ export function Hero() {
             aria-hidden
             className="absolute left-1/2 top-1/2 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-amigo-purple/10"
           />
-          <div
-            aria-hidden
-            className="absolute left-1/2 top-1/2 h-[92%] w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-amigo-purple/15 animate-spin-slow"
-          >
-            <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amigo-vivid shadow-[0_0_16px_4px_rgba(168,85,247,0.55)]" />
-          </div>
 
           {/* particles */}
           <div aria-hidden className="pointer-events-none absolute inset-[6%]">
@@ -279,10 +399,8 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* floating UI */}
-          {CHIPS.map((c) => (
-            <ParallaxChip key={c.id} sx={sx} sy={sy} {...c} />
-          ))}
+          {/* feature chips on an orbit, highlighted 1 → 2 → 3 → 4 */}
+          <ChipOrbit sx={sx} sy={sy} reduce={!!reduce} />
         </motion.div>
       </div>
 

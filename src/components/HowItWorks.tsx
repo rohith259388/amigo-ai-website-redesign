@@ -150,7 +150,7 @@ export function HowItWorks() {
               <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/8 px-3 py-1.5 text-[11px] font-semibold text-white/80 ring-1 ring-white/10 backdrop-blur">
                 <span className="text-amigo-light">Step {step.n}</span> · {step.title}
               </div>
-              <div className="absolute -bottom-2 right-3 w-[72px] sm:w-[88px]">
+              <div className="absolute bottom-3 right-3 w-[72px] sm:w-[88px]">
                 <AmigoBot size={88} mood={step.mood} className="h-auto w-full" image={amigoMonogram} />
               </div>
             </div>

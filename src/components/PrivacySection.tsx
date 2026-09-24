@@ -1,4 +1,4 @@
-import { AlignJustify, ListX, MonitorUp, MousePointer2, Repeat2, ShieldCheck, type LucideIcon } from "lucide-react";
+import { AlignJustify, ListX, MonitorUp, MousePointer2, Repeat2, type LucideIcon } from "lucide-react";
 import { cn } from "@/utils/cn";
 import codesignalLogo from "@/assets/logos/codesignal.svg";
 import googlemeetLogo from "@/assets/logos/googlemeet.svg";
@@ -127,11 +127,11 @@ export function PrivacySection() {
           <div className="mx-auto mt-20 max-w-[980px]">
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-center">
               <span className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-amigo-dark">
-                <ShieldCheck size={17} className="text-emerald-600" />
-                Verified invisible on every platform below
+                <MonitorUp size={17} className="text-amigo-purple" />
+                Real-time AI assistance across every major platform
               </span>
               <span className="hidden text-amigo-dark/30 sm:inline">·</span>
-              <span className="text-[13px] font-medium text-amigo-dark/45">Checked continuously, not once at launch</span>
+              <span className="text-[13px] font-medium text-amigo-dark/45">Compatible with the tools you already use</span>
             </div>
 
             <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">

@@ -156,7 +156,7 @@ export function BuddySection() {
           {/* the interview running behind the window */}
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden max-w-[1180px] overflow-hidden rounded-[28px] border border-amigo-border bg-white opacity-95 shadow-[0_30px_80px_-40px_rgba(17,19,24,0.35)] blur-[2px] sm:block"
+            className="pointer-events-none absolute inset-x-0 top-0 mx-auto hidden max-w-[1180px] overflow-hidden rounded-[28px] border border-amigo-border bg-white opacity-95 shadow-[0_30px_80px_-40px_rgba(17,19,24,0.35)] sm:block"
           >
             <div className="flex items-center justify-between border-b border-amigo-border px-5 py-3 text-[13px] font-medium text-amigo-dark/60">
               <span className="flex items-center gap-2.5">
