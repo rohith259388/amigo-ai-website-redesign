@@ -173,11 +173,12 @@ function ApplyForm({
 }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [handle, setHandle] = useState("");
   const [sent, setSent] = useState(false);
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const body = `Name: ${name}\nEmail: ${email}`;
+    const body = `Name: ${name}\nEmail: ${email}\nInstagram / YouTube / TikTok ID: ${handle}`;
     window.location.href = `mailto:hello@amigo.app?subject=${encodeURIComponent(
       "Creator program application"
     )}&body=${encodeURIComponent(body)}`;
@@ -200,6 +201,18 @@ function ApplyForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Work or personal email address"
+          className={cn("input", dark && "border-white/15 bg-white/[0.06] text-white placeholder:text-white/35")}
+        />
+        <input
+          required
+          value={handle}
+          onChange={(e) => setHandle(e.target.value)}
+          placeholder="Instagram / YouTube / TikTok ID"
+          aria-label="Instagram, YouTube or TikTok ID"
+          autoComplete="off"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           className={cn("input", dark && "border-white/15 bg-white/[0.06] text-white placeholder:text-white/35")}
         />
         <button
