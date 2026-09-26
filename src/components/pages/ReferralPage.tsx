@@ -30,6 +30,7 @@ import {
 import { useState, type FormEvent, type ReactNode } from "react";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
+import { copyText } from "@/utils/copyText";
 import { Reveal } from "../ui/Reveal";
 
 const CONTACT_EMAIL = "hello@amigo.app";
@@ -583,8 +584,8 @@ function PrivacyBand() {
 
 function HowItWorks() {
   const [copied, setCopied] = useState(false);
-  const copy = () => {
-    navigator.clipboard?.writeText(`https://${DEMO_LINK}`).catch(() => {});
+  const copy = async () => {
+    if (!(await copyText(`https://${DEMO_LINK}`))) return;
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
   };

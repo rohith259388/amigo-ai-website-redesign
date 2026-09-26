@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  ArrowRight,
+  BarChart3,
   BookOpen,
   Calendar,
   Check,
@@ -7,17 +9,23 @@ import {
   DollarSign,
   FileText,
   Flag,
+  Gift,
   Globe,
+  Link2,
   Mail,
+  Plus,
   Repeat,
   Rocket,
   Send,
+  Share2,
   ShieldCheck,
   Smartphone,
   Sparkles,
   TrendingUp,
   Users,
   Video,
+  Wallet,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
@@ -25,6 +33,7 @@ import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { AmigoBot } from "../ui/AmigoBot";
 import { Avatar, Eyebrow } from "../ui/Brand";
+import { MagneticButton } from "../ui/MagneticButton";
 import { Reveal, TextReveal } from "../ui/Reveal";
 import { CreatorStudio } from "../visuals/CreatorStudio";
 
@@ -142,6 +151,7 @@ export function CreatorsPage() {
       <Stats />
       <HowItWorks />
       <CashPayments />
+      <ReferralBoost />
       <VideoFormat />
       <BuiltForCreators />
       <Requirements />
@@ -246,6 +256,18 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.22}>
             <p className="mt-2 text-[14px] font-semibold text-amigo-dark/40">Open to all creators globally. New accounts welcome.</p>
+          </Reveal>
+          <Reveal delay={0.26}>
+            <a
+              href="#/referral"
+              className="group mt-5 inline-flex max-w-full items-center gap-2.5 rounded-full border border-amigo-purple/20 bg-amigo-pale py-1.5 pl-1.5 pr-4 text-left text-[13px] font-semibold text-amigo-dark/80 transition-colors hover:border-amigo-purple/45 hover:text-amigo-purple"
+            >
+              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[linear-gradient(90deg,#6C2BD9,#A855F7)] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#ffffff]">
+                <Gift size={11} /> Bonus
+              </span>
+              <span className="min-w-0">Also earn 10% for life with our Referral Program</span>
+              <ArrowRight size={14} className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </a>
           </Reveal>
 
           <Reveal delay={0.3} className="w-full">
@@ -371,6 +393,145 @@ function CashPayments() {
         <p className="mt-10 text-center text-[13px] text-amigo-dark/45">
           Payments processed monthly via bank transfer or PayPal within 5 business days of month close.
         </p>
+      </div>
+    </section>
+  );
+}
+
+const REFERRAL_STEPS: { title: string; text: string; Icon: LucideIcon }[] = [
+  {
+    title: "Apply in a minute",
+    text: "Join the Referral Program with a short application. Once approved, you get a personal referral code and a permanent link.",
+    Icon: Link2,
+  },
+  {
+    title: "Share it with your clips",
+    text: "Put your link in your bio, captions or comments. Friends who use it save up to 20%.",
+    Icon: Share2,
+  },
+  {
+    title: "Earn 10% for life",
+    text: "Get 10% of every purchase they make, renewals and upgrades included, paid out weekly.",
+    Icon: Wallet,
+  },
+];
+
+function ReferralBoost() {
+  const streams: { Icon: LucideIcon; label: string; value: string; unit: string; text: string }[] = [
+    { Icon: Video, label: "Post clips", value: "$50–$300", unit: "per month", text: "Monthly cash payments for verified posts." },
+    { Icon: Gift, label: "Refer friends", value: "10%", unit: "for life", text: "Commission on every purchase they make." },
+  ];
+  return (
+    <section className="relative bg-white pt-20 lg:pt-28">
+      <div className="container-x">
+        <Reveal y={36}>
+          <div className="relative overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#3B1483,#6C2BD9_48%,#A855F7)] p-6 text-white shadow-[0_50px_120px_-40px_rgba(108,43,217,0.6)] min-[420px]:p-8 sm:p-10 lg:p-14">
+            <div aria-hidden className="pointer-events-none absolute -right-24 -top-28 h-[420px] w-[420px] rounded-full bg-white/15 blur-[90px]" />
+            <div aria-hidden className="pointer-events-none absolute -bottom-32 -left-20 h-[340px] w-[340px] rounded-full bg-[#1a0838]/40 blur-[90px]" />
+            <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_70%_40%,black_10%,transparent_70%)]" />
+
+            <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+              <div className="min-w-0">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#ffffff] ring-1 ring-white/20">
+                  <Gift size={13} /> Bonus · Referral program
+                </span>
+                <TextReveal
+                  className="headline mt-5 text-[clamp(2rem,3.8vw,3.25rem)]"
+                  lines={["Creators can earn", <span key="g" className="text-gradient-light pr-2">from referrals too.</span>]}
+                />
+                <p className="mt-5 max-w-[500px] text-[17px] leading-relaxed text-white/75">
+                  Post clips for your monthly payout, and share your personal referral link on the side. Friends get 20% off, and you
+                  earn 10% of every purchase they make, for as long as they stay.
+                </p>
+                <div className="mt-8 inline-block">
+                  <MagneticButton href="#/referral" size="lg" variant="light">
+                    Explore the Referral Program
+                    <ArrowRight size={18} />
+                  </MagneticButton>
+                </div>
+              </div>
+
+              <div className="mx-auto w-full max-w-[460px]">
+                <div className="flex flex-col items-stretch gap-3">
+                  {streams.map((st, i) => (
+                    <div key={st.label} className="contents">
+                      {i > 0 && (
+                        <span className="mx-auto grid h-8 w-8 place-items-center rounded-full bg-white/15 text-[#ffffff] ring-1 ring-white/25" aria-hidden>
+                          <Plus size={16} />
+                        </span>
+                      )}
+                      <div
+                        className={cn(
+                          "flex items-center gap-4 rounded-3xl p-4 ring-1 min-[420px]:p-5",
+                          i === 0 ? "bg-white/10 ring-white/20 backdrop-blur-md" : "bg-[#ffffff] text-[#111318] ring-transparent shadow-[0_18px_44px_-16px_rgba(20,6,50,0.65)]"
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            "grid h-12 w-12 shrink-0 place-items-center rounded-2xl",
+                            i === 0 ? "bg-white/15 text-[#ffffff]" : "bg-[linear-gradient(135deg,#6C2BD9,#A855F7)] text-[#ffffff]"
+                          )}
+                        >
+                          <st.Icon size={22} />
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <div className={cn("text-[11px] font-bold uppercase tracking-[0.16em]", i === 0 ? "text-white/55" : "text-[#4C1D95]/60")}>{st.label}</div>
+                          <div className="mt-0.5 flex flex-wrap items-baseline gap-x-2">
+                            <span className="headline text-[26px] min-[420px]:text-[30px]">{st.value}</span>
+                            <span className={cn("text-[13px] font-semibold", i === 0 ? "text-amigo-lilac" : "text-[#6C2BD9]")}>{st.unit}</span>
+                          </div>
+                          <div className={cn("text-[13px]", i === 0 ? "text-white/65" : "text-[#111318]/60")}>{st.text}</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  <p className="mt-1 flex items-center justify-center gap-2 text-center text-[12.5px] font-medium text-white/65">
+                    <Zap size={14} fill="currentColor" className="shrink-0 text-amigo-lilac" /> Free to join · Weekly referral payouts
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mx-auto mt-14 max-w-[1000px]">
+          <Reveal>
+            <div className="text-center">
+              <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-amigo-purple">How referrals work for creators</div>
+              <p className="mx-auto mt-3 max-w-[560px] text-[15px] leading-relaxed text-amigo-dark/60">
+                The Referral Program is separate from your monthly creator payout, so you can do both at the same time. It's free to
+                join, with no follower minimum.
+              </p>
+            </div>
+          </Reveal>
+          <ol className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {REFERRAL_STEPS.map((st, i) => (
+              <li key={st.title}>
+                <Reveal delay={i * 0.08} className="h-full">
+                  <div className="flex h-full flex-col rounded-[22px] border border-amigo-border bg-amigo-surface p-6">
+                    <div className="flex items-center justify-between">
+                      <span className="grid h-11 w-11 place-items-center rounded-2xl bg-amigo-purple text-[#ffffff] shadow-glow">
+                        <st.Icon size={20} />
+                      </span>
+                      <span className="headline text-[34px] text-amigo-purple/20">0{i + 1}</span>
+                    </div>
+                    <h3 className="mt-4 text-[17px] font-bold text-amigo-dark">{st.title}</h3>
+                    <p className="mt-2 text-[14px] leading-relaxed text-amigo-dark/60">{st.text}</p>
+                  </div>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+          <Reveal delay={0.1}>
+            <p className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[13.5px] text-amigo-dark/55">
+              <BarChart3 size={16} className="shrink-0 text-amigo-purple" />
+              Track clicks, sign-ups and earnings in your partner dashboard.
+              <a href="#/referral" className="inline-flex items-center gap-1 font-bold text-amigo-purple hover:underline">
+                See all the details <ArrowRight size={14} />
+              </a>
+            </p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

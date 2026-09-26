@@ -21,6 +21,7 @@ import { ReferralPage } from "./components/pages/ReferralPage";
 import { Pricing } from "./components/Pricing";
 import { PrivacySection } from "./components/PrivacySection";
 import { QuestionsSection } from "./components/QuestionsSection";
+import { ReferralSection } from "./components/ReferralSection";
 import { ResumeSection } from "./components/ResumeSection";
 import { BoltDivider } from "./components/ui/BoltDivider";
 import { WhyAmigo } from "./components/WhyAmigo";
@@ -87,6 +88,7 @@ function Home() {
       <QuestionsSection />
       <Pricing />
       <FAQ />
+      <ReferralSection />
       <FinalCTA />
     </>
   );
