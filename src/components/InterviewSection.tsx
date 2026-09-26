@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
-import { ArrowRight, Copy, FileText, Minus, Mic, Plus, Sparkles, X } from "lucide-react";
+import { ArrowRight, Copy, Minus, Mic, Plus, Sparkles, X } from "lucide-react";
 import { useRef } from "react";
 import { useSequence } from "@/hooks/useSequence";
 import { EASE, SPRING } from "@/lib/motion";
@@ -7,6 +7,8 @@ import { cn } from "@/utils/cn";
 import { Avatar, Bolt, Eyebrow, LiveDot, Wave } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 import { Reveal, TextReveal } from "./ui/Reveal";
+
+const BRIEF_ICON = "https://res.cloudinary.com/ddr8ylakx/image/upload/v1790406127/Amigo_Help_AI_Favicon_geib8p.svg";
 
 const QA = {
   category: "Frontend & Fullstack",
@@ -119,7 +121,11 @@ export function InterviewSection() {
           >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[13px] font-medium text-white/70">
               <span className="flex items-center gap-2.5">
-                <span className="grid h-6 w-6 place-items-center rounded-md bg-white/10 text-[11px]">▶</span>
+                <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 rounded-md" role="img" aria-label="Zoom">
+                  <rect width="24" height="24" rx="6" fill="#0B5CFF" />
+                  <rect x="4" y="7.5" width="10" height="9" rx="2.2" fill="#ffffff" />
+                  <path d="M15.6 10.9 19.8 8.4a.5.5 0 0 1 .7.4v6.4a.5.5 0 0 1-.7.4l-4.2-2.5Z" fill="#ffffff" />
+                </svg>
                 Technical Interview · Nexa Labs
               </span>
               <span className="flex items-center gap-2.5">
@@ -156,7 +162,7 @@ export function InterviewSection() {
                 {/* toolbar */}
                 <div className="flex flex-wrap items-center gap-2 border-b border-amigo-dark/[0.07] px-3 py-3 sm:px-4">
                   <span className="flex items-center gap-2 rounded-[14px] border border-amigo-border bg-amigo-surface px-3 py-2 text-[12.5px] font-semibold text-amigo-dark/75">
-                    <FileText size={15} className="text-[#f97316]" /> Brief
+                    <img src={BRIEF_ICON} alt="" draggable={false} className="h-[22px] w-auto shrink-0 select-none" /> Brief
                   </span>
                   <span
                     className={cn(
