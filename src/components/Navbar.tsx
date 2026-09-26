@@ -10,11 +10,11 @@ import { LiveDot, Logo } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 
 export const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
-  { label: "Resume", href: "#resume" },
-  { label: "Auto Apply", href: "#auto-apply" },
-  { label: "Interview AI", href: "#interview" },
-  { label: "Buddy", href: "#buddy" },
-  { label: "Questions", href: "#/questions" },
+  { label: "Resume Builder", href: "#resume" },
+  { label: "Auto Apply Jobs", href: "#auto-apply" },
+  { label: "Question Bank", href: "#/questions" },
+  { label: "AI Interview Assist", href: "#interview" },
+  { label: "Buddy Program", href: "#buddy" },
   { label: "Pricing", href: "#pricing" },
   { label: "Referral Program", href: "#/referral" },
   { label: "Creators Wanted", href: "#/creators", highlight: true },
@@ -54,7 +54,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="container-x">
+        <div className="mx-auto w-full max-w-[1560px] px-5 sm:px-8 min-[1360px]:px-5">
           <nav
             className={cn(
               "mt-3 flex h-[60px] items-center justify-between rounded-full px-6 transition-all duration-500 sm:mt-4",
@@ -65,7 +65,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
               <Logo />
             </a>
 
-            <ul className="hidden items-center gap-0.5 xl:flex">
+            <ul className="hidden items-center gap-0.5 min-[1360px]:flex">
               {NAV_LINKS.map((l) => {
                 const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
                 if (l.highlight) {
@@ -92,7 +92,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                     <a
                       href={l.href}
                       className={cn(
-                        "relative block rounded-full px-3 py-2 text-[13px] font-medium transition-colors duration-300 whitespace-nowrap",
+                        "relative block rounded-full px-2 py-2 text-[13px] font-medium transition-colors duration-300 whitespace-nowrap",
                         isActive ? "text-amigo-dark" : "text-amigo-dark/60 hover:text-amigo-dark"
                       )}
                     >
@@ -114,7 +114,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
               <a
                 href="#login"
                 className={cn(
-                  "hidden rounded-full px-4 py-2 text-[13px] font-semibold transition-colors sm:inline-flex whitespace-nowrap",
+                  "hidden rounded-full px-4 py-2 text-[13px] font-semibold transition-colors min-[640px]:max-[1359px]:inline-flex min-[1600px]:inline-flex whitespace-nowrap",
                   open ? "text-white/80 hover:text-white" : "text-amigo-dark/65 hover:text-amigo-dark"
                 )}
               >
@@ -129,7 +129,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-expanded={open}
                 className={cn(
-                  "grid h-11 w-11 place-items-center rounded-full transition-colors xl:hidden",
+                  "grid h-11 w-11 place-items-center rounded-full transition-colors min-[1360px]:hidden",
                   open ? "bg-white/10 text-white" : "glass text-amigo-dark"
                 )}
               >
