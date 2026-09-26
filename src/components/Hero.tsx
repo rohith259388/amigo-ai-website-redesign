@@ -9,9 +9,9 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
-import { ArrowRight, BookOpen, Briefcase, Video } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Send, Video } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useIsDesktop, useMediaQuery } from "@/hooks/useMediaQuery";
+import { useIsDesktop } from "@/hooks/useMediaQuery";
 import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
@@ -29,14 +29,17 @@ const PILLARS = [
   "Real Time Buddy Support",
 ];
 
-// Numbered clockwise from top-left; the highlight travels 1 → 2 → 3 → 4 around the orbit.
+// Numbered clockwise from top-left; the highlight travels 1 → 2 → 3 → 4 → 5 around the orbit.
 const ORBIT_CHIPS: { id: string; label: string; variant: ChipVariant; icon?: React.ReactNode; depth: number }[] = [
   { id: "resume", label: "AI resume builder", variant: "check", depth: 1.5 },
-  { id: "assist", label: "Job assist", variant: "default", icon: <Briefcase size={14} />, depth: 0.8 },
-  { id: "bank", label: "Question bank", variant: "default", icon: <BookOpen size={14} />, depth: 1.15 },
+  { id: "match", label: "Match jobs", variant: "default", icon: <Briefcase size={14} />, depth: 0.8 },
+  { id: "apply", label: "Auto apply", variant: "default", icon: <Send size={14} />, depth: 1.15 },
+  { id: "questions", label: "5K+ interview questions", variant: "default", icon: <BookOpen size={14} />, depth: 0.9 },
   { id: "interview", label: "Realtime AI interview assistant", variant: "live", icon: <Video size={14} />, depth: 1.0 },
 ];
-const ORBIT_ANGLES = [-135, -45, 45, 135];
+const ORBIT_ANGLES = [-140, -50, 18, 48, 130];
+// Small phones have no room beside Amigo's arm, so chips 3 and 4 sit a little lower there.
+const ORBIT_ANGLES_NARROW = [-140, -50, 26, 56, 130];
 const ORBIT_STEP_MS = 2600;
 const ORBIT_RX = 0.43;
 const ORBIT_RY = 0.49;
@@ -56,10 +59,20 @@ function chipScale(vw: number) {
   return 1;
 }
 
-function ChipOrbit({ sx, sy, reduce }: { sx: MotionValue<number>; sy: MotionValue<number>; reduce: boolean }) {
+function ChipOrbit({
+  sx,
+  sy,
+  reduce,
+  botSize,
+}: {
+  sx: MotionValue<number>;
+  sy: MotionValue<number>;
+  reduce: boolean;
+  botSize: number;
+}) {
   const layerRef = useRef<HTMLDivElement>(null);
   const chipRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [geo, setGeo] = useState({ w: 0, h: 0, pos: ORBIT_CHIPS.map(() => ({ x: 0, y: 0 })) });
+  const [geo, setGeo] = useState({ w: 0, h: 0, pos: ORBIT_CHIPS.map(() => ({ x: 0, y: 0 })), ang: ORBIT_ANGLES });
   const geoRef = useRef(geo);
   geoRef.current = geo;
   const [active, setActive] = useState(0);
@@ -73,34 +86,99 @@ function ChipOrbit({ sx, sy, reduce }: { sx: MotionValue<number>; sy: MotionValu
       const h = el.offsetHeight;
       const k = chipScale(window.innerWidth);
       const pad = 8;
-      const pos = ORBIT_ANGLES.map((a, i) => {
+      const gap = 8;
+      const size = ORBIT_CHIPS.map((_, i) => ({
+        w: (chipRefs.current[i]?.offsetWidth ?? 0) * k,
+        h: (chipRefs.current[i]?.offsetHeight ?? 0) * k,
+      }));
+      const clampX = (x: number, i: number) => Math.min(Math.max(x, size[i].w / 2 + pad), w - size[i].w / 2 - pad);
+      const clampY = (y: number, i: number) => Math.min(Math.max(y, size[i].h / 2 + 4), h - size[i].h / 2 - 4);
+      const pos = (w < 400 ? ORBIT_ANGLES_NARROW : ORBIT_ANGLES).map((a, i) => {
         const rad = (a * Math.PI) / 180;
-        const half = ((chipRefs.current[i]?.offsetWidth ?? 0) * k) / 2;
-        const x = w / 2 + w * ORBIT_RX * Math.cos(rad);
-        const y = h / 2 + h * ORBIT_RY * Math.sin(rad);
-        return { x: Math.min(Math.max(x, half + pad), w - half - pad), y };
+        return { x: clampX(w / 2 + w * ORBIT_RX * Math.cos(rad), i), y: h / 2 + h * ORBIT_RY * Math.sin(rad) };
       });
-      setGeo({ w, h, pos });
+
+      // Nudge chips off the mascot silhouette and apart from each other.
+      const chipGap = 12;
+      // Push two chips apart along one axis, half each; if one hits the edge, the other takes the rest.
+      const separate = (i: number, j: number, axis: "x" | "y", need: number, dir: number) => {
+        const clamp = axis === "x" ? clampX : clampY;
+        let ni = clamp(pos[i][axis] + (dir * need) / 2, i);
+        let nj = clamp(pos[j][axis] - (dir * need) / 2, j);
+        let rest = need - Math.abs(ni - pos[i][axis]) - Math.abs(nj - pos[j][axis]);
+        if (rest > 0.5) {
+          const ni2 = clamp(ni + dir * rest, i);
+          rest -= Math.abs(ni2 - ni);
+          ni = ni2;
+          if (rest > 0.5) nj = clamp(nj - dir * rest, j);
+        }
+        pos[i][axis] = ni;
+        pos[j][axis] = nj;
+      };
+      const cx = w / 2;
+      const cy = h / 2;
+      const halfW = botSize * 0.42;
+      const halfH = botSize * 0.5;
+      for (let pass = 0; pass < 10; pass++) {
+        for (let i = 0; i < pos.length; i++) {
+          const dx = pos[i].x - cx;
+          const dy = pos[i].y - cy;
+          const ox = halfW + size[i].w / 2 + gap + 6 - Math.abs(dx);
+          const oy = halfH + size[i].h / 2 + gap + 6 - Math.abs(dy);
+          if (ox > 0 && oy > 0) {
+            if (ox <= oy) pos[i].x = clampX(pos[i].x + (dx < 0 ? -ox : ox), i);
+            else pos[i].y = clampY(pos[i].y + (dy < 0 ? -oy : oy), i);
+          }
+          for (let j = 0; j < i; j++) {
+            const px = pos[i].x - pos[j].x;
+            const py = pos[i].y - pos[j].y;
+            const cox = (size[i].w + size[j].w) / 2 + chipGap - Math.abs(px);
+            const coy = (size[i].h + size[j].h) / 2 + chipGap - Math.abs(py);
+            if (cox > 0 && coy > 0) {
+              separate(i, j, coy <= cox ? "y" : "x", coy <= cox ? coy : cox, (coy <= cox ? py : px) < 0 ? -1 : 1);
+              // Sideways can be impossible when the row is too narrow; stack them instead.
+              const px2 = pos[i].x - pos[j].x;
+              const py2 = pos[i].y - pos[j].y;
+              const cox2 = (size[i].w + size[j].w) / 2 + chipGap - Math.abs(px2);
+              const coy2 = (size[i].h + size[j].h) / 2 + chipGap - Math.abs(py2);
+              if (cox2 > 0 && coy2 > 0) {
+                const wasX = coy > cox;
+                separate(i, j, wasX ? "y" : "x", wasX ? coy2 : cox2, (wasX ? py2 : px2) < 0 ? -1 : 1);
+              }
+            }
+          }
+        }
+      }
+      // Orbit angle each chip ended up at, so the travelling dot lands on the chip even after it was nudged.
+      const ang = pos.map((q) => (Math.atan2((q.y - cy) / (h * ORBIT_RY), (q.x - cx) / (w * ORBIT_RX)) * 180) / Math.PI);
+      setGeo({ w, h, pos, ang });
     };
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
-  }, []);
+  }, [botSize]);
 
   useEffect(() => {
     if (reduce) return;
+    let at = 0;
     const t = setInterval(() => {
-      animate(angle, angle.get() + 90, { duration: 0.9, ease: EASE }).then(() => setActive((i) => (i + 1) % ORBIT_CHIPS.length));
+      const next = (at + 1) % ORBIT_ANGLES.length;
+      const target = geoRef.current.ang[next];
+      const hop = (((target - angle.get()) % 360) + 360) % 360;
+      at = next;
+      animate(angle, angle.get() + (hop < 1 ? 360 : hop), { duration: 0.9, ease: EASE }).then(() => setActive(next));
     }, ORBIT_STEP_MS);
     return () => clearInterval(t);
   }, [reduce, angle]);
 
   const dotX = useTransform(angle, (a) => geoRef.current.w / 2 + geoRef.current.w * ORBIT_RX * Math.cos((a * Math.PI) / 180));
   const dotY = useTransform(angle, (a) => geoRef.current.h / 2 + geoRef.current.h * ORBIT_RY * Math.sin((a * Math.PI) / 180));
-  // Re-seat the dot when the layout changes size mid-pause.
+  // Re-seat the dot on the active chip whenever the layout changes.
+  const activeRef = useRef(0);
+  activeRef.current = active;
   useEffect(() => {
-    angle.jump(angle.get() + 1e-6);
+    angle.jump(geo.ang[activeRef.current]);
   }, [geo, angle]);
 
   const ready = geo.w > 0;
@@ -219,7 +297,8 @@ function OrbitChip({
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const isDesktop = useIsDesktop();
-  const isWide = useMediaQuery("(min-width: 1280px)");
+  const sceneRef = useRef<HTMLDivElement>(null);
+  const [sceneW, setSceneW] = useState(0);
   const reduce = useReducedMotion();
 
   /* cursor / ambient motion */
@@ -261,7 +340,17 @@ export function Hero() {
   const copyY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const copyOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
 
-  const botSize = isWide ? 350 : isDesktop ? 290 : 236;
+  useLayoutEffect(() => {
+    const el = sceneRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setSceneW(el.offsetWidth));
+    setSceneW(el.offsetWidth);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  // Leave room on both sides for the chips: the mascot takes ~54% of the scene, capped at its full size.
+  const botSize = sceneW ? Math.min(350, Math.round(sceneW * 0.54)) : isDesktop ? 290 : 236;
 
   return (
     <section
@@ -355,8 +444,9 @@ export function Hero() {
 
         {/* scene */}
         <motion.div
+          ref={sceneRef}
           style={{ y: sceneY, scale: sceneScale, opacity: sceneOpacity }}
-          className="relative mx-auto h-[460px] w-full max-w-[560px] sm:h-[540px] lg:h-[660px] lg:max-w-none"
+          className="relative mx-auto h-[460px] w-full max-w-[560px] min-[500px]:h-[580px] sm:h-[600px] lg:h-[660px] lg:max-w-none"
         >
           {/* atmosphere */}
           <div
@@ -400,7 +490,7 @@ export function Hero() {
           </div>
 
           {/* feature chips on an orbit, highlighted 1 → 2 → 3 → 4 */}
-          <ChipOrbit sx={sx} sy={sy} reduce={!!reduce} />
+          <ChipOrbit sx={sx} sy={sy} reduce={!!reduce} botSize={botSize} />
         </motion.div>
       </div>
 
