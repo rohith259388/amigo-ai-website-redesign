@@ -16,7 +16,6 @@ import { EASE, SPRING } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { AmigoFloating } from "./ui/AmigoBot";
-import { Bolt } from "./ui/Brand";
 import { FloatingChip, type ChipVariant } from "./ui/FloatingChip";
 import { MagneticButton } from "./ui/MagneticButton";
 
@@ -369,19 +368,7 @@ export function Hero() {
       <div className="container-x relative grid min-h-[100svh] grid-cols-1 items-center gap-8 pb-20 pt-28 lg:grid-cols-[minmax(0,1.06fr)_minmax(0,0.94fr)] lg:gap-6 lg:pb-16 lg:pt-24">
         {/* copy */}
         <motion.div style={{ y: copyY, opacity: copyOpacity }} className="relative z-10 max-w-[680px]">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-            className="glass inline-flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-3.5 text-[12px] font-semibold text-amigo-dark/80"
-          >
-            <span className="grid h-6 w-6 place-items-center rounded-full bg-amigo-dark">
-              <Bolt className="h-3.5 w-3.5" />
-            </span>
-            Meet Amigo — a tiny AI creature with a big purpose
-          </motion.div>
-
-          <h1 className="headline mt-7 text-[clamp(3.3rem,7.4vw,6.75rem)] text-amigo-dark">
+          <h1 className="headline text-[clamp(3.3rem,7.4vw,6.75rem)] text-amigo-dark">
             {["Your AI", "Interview", "Companion."].map((line, i) => (
               <span key={line} className="block overflow-hidden pb-[0.12em] -mb-[0.12em]">
                 <motion.span
