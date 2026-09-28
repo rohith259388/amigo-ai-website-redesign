@@ -25,11 +25,18 @@ export function Bolt({
 /* ---------- Wordmark ---------- */
 export function Logo({ className, compact }: { className?: string; compact?: boolean }) {
   return (
-    <img
-      src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1789971456/Amigo_Logo_4_b1jkuc.png"
-      alt="Amigo Logo"
-      className={cn("object-contain", compact ? "h-8" : "h-10", className)}
-    />
+    <>
+      <img
+        src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1789971456/Amigo_Logo_4_b1jkuc.png"
+        alt="Amigo Logo"
+        className={cn("object-contain dark:hidden", compact ? "h-8" : "h-10", className)}
+      />
+      <img
+        src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1790568980/Amigo_Logo_5_zfvcra.png"
+        alt="Amigo Logo"
+        className={cn("object-contain hidden dark:block", compact ? "h-8" : "h-10", className)}
+      />
+    </>
   );
 }
 

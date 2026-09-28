@@ -121,11 +121,7 @@ export function InterviewSection() {
           >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[13px] font-medium text-white/70">
               <span className="flex items-center gap-2.5">
-                <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 rounded-md" role="img" aria-label="Zoom">
-                  <rect width="24" height="24" rx="6" fill="#0B5CFF" />
-                  <rect x="4" y="7.5" width="10" height="9" rx="2.2" fill="#ffffff" />
-                  <path d="M15.6 10.9 19.8 8.4a.5.5 0 0 1 .7.4v6.4a.5.5 0 0 1-.7.4l-4.2-2.5Z" fill="#ffffff" />
-                </svg>
+                <img src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1790570367/zoom-seeklogo_rqyebs.png" alt="Zoom" className="h-12 w-12 shrink-0 rounded-md object-contain" />
                 Technical Interview · Nexa Labs
               </span>
               <span className="flex items-center gap-2.5">
