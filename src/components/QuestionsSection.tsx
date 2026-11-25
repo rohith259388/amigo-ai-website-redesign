@@ -44,7 +44,7 @@ export function QuestionsSection() {
               <li key={q.slug}>
                 <Reveal delay={i * 0.06} className="h-full">
                   <a
-                    href={`#/questions/${q.slug}`}
+                    href={`/questions/${q.slug}`}
                     className="group flex h-full flex-col rounded-3xl border border-amigo-border bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-amigo-light/60 hover:shadow-glow"
                   >
                     <div className="flex items-center justify-between">
@@ -67,7 +67,7 @@ export function QuestionsSection() {
         </ul>
 
         <Reveal className="mt-12 flex justify-center" delay={0.1}>
-          <MagneticButton href="#/questions" size="lg">
+          <MagneticButton href="/questions" size="lg">
             Browse all {QUESTIONS.length} questions
             <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </MagneticButton>

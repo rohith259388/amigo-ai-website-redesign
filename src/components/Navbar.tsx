@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ArrowUpRight, Menu, Moon, Sparkles, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { sectionId } from "@/hooks/useRoute";
 import { useTheme } from "@/hooks/useTheme";
 import { EASE, SNAPPY } from "@/lib/motion";
 import { cn } from "@/utils/cn";
@@ -10,14 +11,15 @@ import { LiveDot, Logo } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 
 export const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
-  { label: "Resume Builder", href: "#resume" },
-  { label: "Auto Apply Jobs", href: "#auto-apply" },
-  { label: "Question Bank", href: "#/questions" },
-  { label: "AI Interview Assist", href: "#interview" },
-  { label: "Buddy Program", href: "#buddy" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Referral Program", href: "#/referral" },
-  { label: "Creators Wanted", href: "#/creators", highlight: true },
+  { label: "Resume Builder", href: "/#resume" },
+  { label: "Auto Apply Jobs", href: "/#auto-apply" },
+  { label: "Question Bank", href: "/questions" },
+  { label: "AI Interview Assist", href: "/#interview" },
+  { label: "LinkedIn", href: "/linkedin" },
+  { label: "Buddy Program", href: "/#buddy" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Referral Program", href: "/referral" },
+  { label: "Creators Wanted", href: "/creators", highlight: true },
 ];
 
 export function Navbar({ activeHref }: { activeHref: string | null }) {
@@ -36,7 +38,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
   }, [open]);
 
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.href.slice(1));
+    const ids = NAV_LINKS.map((l) => sectionId(l.href)).filter((id): id is string => id !== null);
     const els = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
     if (!els.length) return;
     const io = new IntersectionObserver(
@@ -54,20 +56,20 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto w-full max-w-[1560px] px-5 sm:px-8 min-[1360px]:px-5">
+        <div className="mx-auto w-full max-w-[1560px] px-5 sm:px-8 min-[1400px]:px-5">
           <nav
             className={cn(
               "mt-3 flex h-[60px] items-center justify-between rounded-full px-6 transition-all duration-500 sm:mt-4",
               scrolled && !open ? "glass shadow-card" : "border border-transparent bg-transparent"
             )}
           >
-            <a href="#top" aria-label="Amigo — home" className="relative z-10 flex-shrink-0">
-              <Logo />
+            <a href="/" aria-label="Amigo — home" className="relative z-10 flex-shrink-0">
+              <Logo forceLight={open} />
             </a>
 
-            <ul className="hidden items-center gap-0.5 min-[1360px]:flex">
+            <ul className="hidden items-center gap-0.5 min-[1400px]:flex">
               {NAV_LINKS.map((l) => {
-                const isActive = activeHref ? l.href === activeHref : active === l.href.slice(1);
+                const isActive = activeHref ? l.href === activeHref : active === sectionId(l.href);
                 if (l.highlight) {
                   return (
                     <li key={l.href}>
@@ -114,14 +116,14 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
               <a
                 href="#login"
                 className={cn(
-                  "hidden rounded-full px-4 py-2 text-[13px] font-semibold transition-colors min-[640px]:max-[1359px]:inline-flex min-[1600px]:inline-flex whitespace-nowrap",
+                  "hidden rounded-full px-4 py-2 text-[13px] font-semibold transition-colors min-[640px]:max-[1399px]:inline-flex min-[1600px]:inline-flex whitespace-nowrap",
                   open ? "text-white/80 hover:text-white" : "text-amigo-dark/65 hover:text-amigo-dark"
                 )}
               >
                 Log in
               </a>
               <ThemeToggle onDark={open} />
-              <MagneticButton variant="gradient" size="sm" href="#pricing" className="hidden sm:inline-flex whitespace-nowrap">
+              <MagneticButton variant="gradient" size="sm" href="/#pricing" className="hidden sm:inline-flex whitespace-nowrap">
                 Try for free
               </MagneticButton>
               <button
@@ -129,7 +131,7 @@ export function Navbar({ activeHref }: { activeHref: string | null }) {
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-expanded={open}
                 className={cn(
-                  "grid h-11 w-11 place-items-center rounded-full transition-colors min-[1360px]:hidden",
+                  "grid h-11 w-11 place-items-center rounded-full transition-colors min-[1400px]:hidden",
                   open ? "bg-white/10 text-white" : "glass text-amigo-dark"
                 )}
               >
@@ -206,7 +208,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           <div>
             <p className="mb-4 text-[14px] text-white/50">Your AI job-search companion.</p>
             <div className="flex flex-wrap items-center gap-3">
-              <MagneticButton variant="gradient" href="#pricing" onClick={onClose}>
+              <MagneticButton variant="gradient" href="/#pricing" onClick={onClose}>
                 Try for free
               </MagneticButton>
               <a

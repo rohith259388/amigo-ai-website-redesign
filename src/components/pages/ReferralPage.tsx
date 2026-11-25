@@ -28,6 +28,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { useState, type FormEvent, type ReactNode } from "react";
+import { REFERRAL_FAQS } from "@/data/faqs";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import { copyText } from "@/utils/copyText";
@@ -63,38 +64,8 @@ const TIMELINE = [
   { title: "Upgrades to Pro Plus", when: "Month 9", amt: "+$11.20" },
 ];
 
-const FAQS: { q: string; a: string; Icon: LucideIcon }[] = [
-  {
-    q: "Who can join the referral program?",
-    a: "Anyone who can help job seekers — career coaches, creators, recruiters, student communities, or simply a candidate who loves Amigo. There's no follower minimum and it's free to join.",
-    Icon: Users,
-  },
-  {
-    q: "How much commission do I earn?",
-    a: "You earn 10% of every purchase made by candidates who sign up with your code — their first plan, renewals, upgrades and add-ons included.",
-    Icon: BadgePercent,
-  },
-  {
-    q: "How long does the commission last?",
-    a: "For life. As long as your referral keeps paying for Amigo, you keep earning your share. There's no 12-month cut-off.",
-    Icon: InfinityIcon,
-  },
-  {
-    q: "What do my referrals get?",
-    a: "Candidates who use your code get up to 20% off, so your link offers real value and converts better than a generic share.",
-    Icon: Gift,
-  },
-  {
-    q: "When and how do I get paid?",
-    a: "Payouts go out weekly once you pass the minimum threshold, straight to your account.",
-    Icon: Calendar,
-  },
-  {
-    q: "How do I track my referrals?",
-    a: "Your partner dashboard shows clicks, sign-ups, conversions and earnings in real time, so you always know what's working.",
-    Icon: BarChart3,
-  },
-];
+const FAQ_ICONS: LucideIcon[] = [Users, BadgePercent, InfinityIcon, Gift, Calendar, BarChart3];
+const FAQS = REFERRAL_FAQS.map((faq, i) => ({ ...faq, Icon: FAQ_ICONS[i] }));
 
 function Eyebrow({ children }: { children: ReactNode }) {
   return (

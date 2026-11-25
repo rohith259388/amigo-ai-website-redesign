@@ -87,7 +87,7 @@ export function ReferralSection() {
             <div aria-hidden className="grid-lines-dark pointer-events-none absolute inset-0 opacity-50 [mask-image:radial-gradient(ellipse_at_70%_40%,black_10%,transparent_70%)]" />
 
             {/* the whole card is a link; the button inside is the keyboard-focusable one */}
-            <a href="#/referral" aria-hidden tabIndex={-1} className="absolute inset-0 z-0 rounded-[32px]" />
+            <a href="/referral" aria-hidden tabIndex={-1} className="absolute inset-0 z-0 rounded-[32px]" />
 
             <div className="pointer-events-none relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
               <div className="min-w-0">
@@ -103,7 +103,7 @@ export function ReferralSection() {
                 </p>
 
                 <div className="pointer-events-auto mt-8 inline-block">
-                  <MagneticButton href="#/referral" size="lg" variant="light">
+                  <MagneticButton href="/referral" size="lg" variant="light">
                     Join the Referral Program
                     <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
                   </MagneticButton>

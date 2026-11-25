@@ -3,10 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Defaults for the home page and for anything that reads the HTML without running JS.
+         Every route rewrites these on navigation: see src/seo/. -->
     <meta
       name="description"
-      content="Amigo is your AI job-search companion. Build your CV, apply to jobs, prepare for interviews and get help when it matters."
+      content="Amigo is your AI interview copilot: build a job-ready CV, apply to roles that match and get real-time answers during interviews on Zoom, Meet and Teams."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.amigohelp.ai/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amigo" />
+    <meta property="og:title" content="AI Interview Copilot & Career Companion | Amigo" />
+    <meta
+      property="og:description"
+      content="Amigo is your AI interview copilot: build a job-ready CV, apply to roles that match and get real-time answers during interviews on Zoom, Meet and Teams."
+    />
+    <meta property="og:url" content="https://www.amigohelp.ai/" />
+    <meta property="og:image" content="https://www.amigohelp.ai/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@amigohelp" />
+    <meta name="twitter:title" content="AI Interview Copilot & Career Companion | Amigo" />
+    <meta
+      name="twitter:description"
+      content="Amigo is your AI interview copilot: build a job-ready CV, apply to roles that match and get real-time answers during interviews on Zoom, Meet and Teams."
+    />
+    <meta name="twitter:image" content="https://www.amigohelp.ai/og-image.png" />
     <meta name="theme-color" content="#6C2BD9" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +40,28 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>AMIGO — Your AI Job Search Companion</title>
+    <title>AI Interview Copilot &amp; Career Companion | Amigo</title>
+
+    <!-- Site-level structured data: true on every route, so it stays in the static HTML.
+         Per-route structured data is injected by src/seo/seo.ts. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Amigo",
+        "url": "https://www.amigohelp.ai/",
+        "logo": "https://www.amigohelp.ai/favicon.png",
+        "sameAs": ["https://x.com/amigohelp"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Amigo",
+        "url": "https://www.amigohelp.ai/"
+      }
+    </script>
     <script>
       // Apply the saved (or system) theme before first paint so the page never flashes the wrong one.
       try {

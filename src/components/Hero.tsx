@@ -398,11 +398,11 @@ export function Hero() {
             transition={{ duration: 0.9, ease: EASE, delay: 0.7 }}
             className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-3"
           >
-            <MagneticButton href="#pricing" size="lg" variant="primary" className="w-full sm:w-auto">
+            <MagneticButton href="/#pricing" size="lg" variant="primary" className="w-full sm:w-auto">
               Get Started Free
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </MagneticButton>
-            <MagneticButton href="#how-it-works" size="lg" variant="ghost" strength={0.2} className="w-full sm:w-auto">
+            <MagneticButton href="/#how-it-works" size="lg" variant="ghost" strength={0.2} className="w-full sm:w-auto">
               See How It Works
             </MagneticButton>
           </motion.div>

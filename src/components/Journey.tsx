@@ -283,7 +283,7 @@ function EndCap() {
         <div className="absolute inset-y-0 left-0 w-[40%] bg-[linear-gradient(90deg,#B78EFF,transparent)]" />
       </div>
       <a
-        href="#pricing"
+        href="/#pricing"
         onClick={() => requestPricingView("monthly")}
         className="group absolute left-[3vw] flex -translate-y-[130%] items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg transition-transform duration-300 hover:-translate-y-[136%]"
         style={{ top: pathTop }}
@@ -328,7 +328,7 @@ function JourneyMobile() {
               <span className="h-2.5 w-2.5 rounded-full bg-amigo-light shadow-glow" />
             </span>
             <a
-              href="#pricing"
+              href="/#pricing"
               onClick={() => requestPricingView("monthly")}
               className="group inline-flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-amigo-dark shadow-glow-lg"
             >

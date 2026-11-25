@@ -1,0 +1,5 @@
+# https://www.amigohelp.ai/robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.amigohelp.ai/sitemap.xml

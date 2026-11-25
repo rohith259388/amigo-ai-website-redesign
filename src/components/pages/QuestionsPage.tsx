@@ -33,6 +33,7 @@ import {
 } from "@/data/questions";
 import { cn } from "@/utils/cn";
 import { Eyebrow } from "../ui/Brand";
+import { Breadcrumbs } from "../ui/Breadcrumbs";
 import { CompanyMark } from "../ui/CompanyMark";
 import { MagneticButton } from "../ui/MagneticButton";
 import { Reveal, TextReveal } from "../ui/Reveal";
@@ -104,6 +105,8 @@ export function QuestionsPage() {
 
       <div className="container-x relative">
         <div className="max-w-[720px]">
+          <Breadcrumbs trail={[{ name: "Home", href: "/" }, { name: "Interview questions" }]} />
+          <div className="mt-5" />
           <Eyebrow>Interview questions</Eyebrow>
           <TextReveal
             as="h1"
@@ -310,7 +313,7 @@ export function QuestionsPage() {
               <p className="mt-3 text-[15px] leading-relaxed text-white/70">
                 Rehearse one question a day with Amigo, get instant feedback and keep your streak alive.
               </p>
-              <MagneticButton href="#pricing" variant="light" className="mt-5 w-full justify-center">
+              <MagneticButton href="/#pricing" variant="light" className="mt-5 w-full justify-center">
                 Start practising
                 <ArrowRight size={16} />
               </MagneticButton>
@@ -328,7 +331,7 @@ function QuestionCard({ question: q }: { question: Question }) {
   const rating = averageRating(q);
   return (
     <a
-      href={`#/questions/${q.slug}`}
+      href={`/questions/${q.slug}`}
       className="group block rounded-[22px] border border-amigo-border bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-amigo-light/70 hover:shadow-card sm:p-6"
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

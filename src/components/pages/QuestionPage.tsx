@@ -2,11 +2,29 @@ import { ArrowLeft, ArrowRight, Eye, Heart } from "lucide-react";
 import amigoMonogram from "@/assets/amigo-monogram.png";
 import { averageRating, QUESTIONS } from "@/data/questions";
 import { Avatar } from "../ui/Brand";
+import { Breadcrumbs } from "../ui/Breadcrumbs";
 import { CompanyMark } from "../ui/CompanyMark";
 import { Reveal, TextReveal } from "../ui/Reveal";
 import { Stars } from "../ui/Stars";
 
 const DIFFICULTY_COLOR: Record<string, string> = { Easy: "#16A34A", Medium: "#F59E0B", Hard: "#EF4444" };
+
+function AnswerList({ title, items }: { title: string; items?: string[] }) {
+  if (!items?.length) return null;
+  return (
+    <div>
+      <h2 className="text-[11px] font-bold uppercase tracking-[0.18em] text-amigo-dark/45">{title}</h2>
+      <ul className="mt-3 space-y-3">
+        {items.map((item) => (
+          <li key={item} className="flex gap-3 text-[17px] leading-relaxed text-amigo-dark/80">
+            <span aria-hidden className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-amigo-purple" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function QuestionPage({ slug }: { slug: string }) {
   const index = QUESTIONS.findIndex((q) => q.slug === slug);
@@ -17,7 +35,7 @@ export function QuestionPage({ slug }: { slug: string }) {
       <section className="bg-amigo-surface pb-28 pt-40 text-center">
         <div className="container-x">
           <h1 className="headline text-[clamp(2.25rem,5vw,4rem)] text-amigo-dark">Question not found.</h1>
-          <a href="#/questions" className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-amigo-purple">
+          <a href="/questions" className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-amigo-purple">
             <ArrowLeft size={16} /> All questions
           </a>
         </div>
@@ -33,12 +51,13 @@ export function QuestionPage({ slug }: { slug: string }) {
       <div aria-hidden className="pointer-events-none absolute -right-40 top-0 h-[520px] w-[520px] rounded-full bg-amigo-light/25 blur-[140px]" />
       <div className="container-x relative">
         <div className="mx-auto max-w-[880px]">
-          <a
-            href="#/questions"
-            className="group inline-flex items-center gap-2 text-[14px] font-semibold text-amigo-dark/60 transition-colors hover:text-amigo-purple"
-          >
-            <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-0.5" /> All questions
-          </a>
+          <Breadcrumbs
+            trail={[
+              { name: "Home", href: "/" },
+              { name: "Interview questions", href: "/questions" },
+              { name: question.question.replace(/\.\s*$/, "") },
+            ]}
+          />
 
           <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2">
             <CompanyMark name={question.company} size={30} />
@@ -79,7 +98,7 @@ export function QuestionPage({ slug }: { slug: string }) {
             ))}
           </div>
 
-          <Reveal delay={0.15} className="mt-12">
+          <Reveal delay={0.15} amount={0} className="mt-12">
             <article className="overflow-hidden rounded-[28px] border border-white/80 bg-white shadow-[0_50px_120px_-40px_rgba(108,43,217,0.35)]">
               <header className="flex items-center gap-3 border-b border-amigo-border/70 px-6 py-4 sm:px-8">
                 <span className="grid h-11 w-11 place-items-center rounded-full bg-amigo-dark">
@@ -101,6 +120,8 @@ export function QuestionPage({ slug }: { slug: string }) {
                     “{question.answer.example}”
                   </blockquote>
                 </div>
+                <AnswerList title="Common mistakes" items={question.answer.mistakes} />
+                <AnswerList title="Likely follow-up questions" items={question.answer.followUps} />
               </div>
             </article>
           </Reveal>
@@ -145,7 +166,7 @@ export function QuestionPage({ slug }: { slug: string }) {
           </div>
 
           <a
-            href={`#/questions/${next.slug}`}
+            href={`/questions/${next.slug}`}
             className="group mt-14 flex items-center justify-between gap-6 rounded-3xl bg-amigo-dark px-6 py-6 text-white transition-shadow hover:shadow-glow-lg sm:px-8"
           >
             <div className="min-w-0">

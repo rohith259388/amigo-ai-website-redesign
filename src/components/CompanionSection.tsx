@@ -251,6 +251,8 @@ function TweetCard({ data, compact }: { data: TweetData; compact: boolean }) {
             <img
               src={data.avatar}
               alt={data.name}
+              loading="lazy"
+              decoding="async"
               className="h-8 w-8 rounded-full object-cover shadow-sm shadow-black/5"
             />
             <div>
@@ -268,7 +270,7 @@ function TweetCard({ data, compact }: { data: TweetData; compact: boolean }) {
         </p>
         {data.image && !compact && (
           <div className="mt-2.5 overflow-hidden rounded-[12px] border border-amigo-border/50 bg-amigo-pale">
-            <img src={data.image} alt="Attached media" className="h-36 w-full object-cover" />
+            <img src={data.image} alt="Attached media" loading="lazy" decoding="async" className="h-36 w-full object-cover" />
           </div>
         )}
       </div>

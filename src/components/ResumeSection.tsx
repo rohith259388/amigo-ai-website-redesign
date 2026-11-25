@@ -152,7 +152,7 @@ export function ResumeSection() {
             </ol>
           </Reveal>
           <Reveal delay={0.3}>
-            <MagneticButton href="#pricing" size="lg" className="mt-8">
+            <MagneticButton href="/#pricing" size="lg" className="mt-8">
               Build Resume
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </MagneticButton>

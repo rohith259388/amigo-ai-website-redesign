@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Check, Clock, Gift, Infinity as InfinityIcon, Rocket, Sparkles, Zap, type LucideIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { MINUTE_PLANS as PLAN_PRICING, type MinutePlan } from "@/data/plans";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import { onPricingViewRequest, readRequestedPricingView } from "@/utils/pricingView";
@@ -8,67 +9,9 @@ import { Eyebrow } from "./ui/Brand";
 import { MagneticButton } from "./ui/MagneticButton";
 import { Reveal, TextReveal } from "./ui/Reveal";
 
-type MinutePlan = {
-  key: string;
-  name: string;
-  tag: string;
-  price: string;
-  currency?: string;
-  perMin?: string;
-  save?: string;
-  featured?: boolean;
-  cta: string;
-  Icon: LucideIcon;
-  features: string[];
-};
-
-const MINUTE_PLANS: MinutePlan[] = [
-  {
-    key: "free",
-    name: "Free",
-    tag: "10 Mins Credits",
-    price: "$0",
-    cta: "Try for Free",
-    Icon: Gift,
-    features: ["1 trial interview session", "All Claude AI models", "Credits never expire", "No credit card required"],
-  },
-  {
-    key: "starter",
-    name: "Starter",
-    tag: "2 Hours Credits",
-    price: "₹1,497.43",
-    currency: "INR",
-    perMin: "₹12.479/min",
-    cta: "Get Started",
-    Icon: Zap,
-    features: ["2–4 interviews supported", "All Claude AI models", "Credits never expire", "Priority support"],
-  },
-  {
-    key: "essential",
-    name: "Essential",
-    tag: "5 Hours Credits",
-    price: "₹3,369.22",
-    currency: "INR",
-    perMin: "₹11.231/min",
-    save: "SAVE 10%",
-    featured: true,
-    cta: "Get Started",
-    Icon: Sparkles,
-    features: ["5–10 interviews supported", "All Claude AI models", "Credits never expire", "Priority support"],
-  },
-  {
-    key: "scale",
-    name: "Scale",
-    tag: "20 Hours Credits",
-    price: "₹12,728.18",
-    currency: "INR",
-    perMin: "₹10.607/min",
-    save: "SAVE 15%",
-    cta: "Get Started",
-    Icon: Rocket,
-    features: ["20–40 interviews supported", "All Claude AI models", "Credits never expire", "Priority support"],
-  },
-];
+const PLAN_ICONS: Record<string, LucideIcon> = { free: Gift, starter: Zap, essential: Sparkles, scale: Rocket };
+type PlanCardData = MinutePlan & { Icon: LucideIcon };
+const MINUTE_PLANS: PlanCardData[] = PLAN_PRICING.map((plan) => ({ ...plan, Icon: PLAN_ICONS[plan.key] }));
 
 const MONTHLY_PLAN = {
   name: "Unlimited",
@@ -175,7 +118,7 @@ export function Pricing() {
   );
 }
 
-function PlanCard({ plan: p, delay }: { plan: MinutePlan; delay: number }) {
+function PlanCard({ plan: p, delay }: { plan: PlanCardData; delay: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -234,11 +177,11 @@ function PlanCard({ plan: p, delay }: { plan: MinutePlan; delay: number }) {
 
         <div className="mt-8">
           {p.key === "free" ? (
-            <MagneticButton href="#top" variant={p.featured ? "light" : "ghost"} size="md" className="w-full" strength={0.15}>
+            <MagneticButton href="/" variant={p.featured ? "light" : "ghost"} size="md" className="w-full" strength={0.15}>
               {p.cta} <ArrowRight size={16} />
             </MagneticButton>
           ) : (
-            <MagneticButton href="#top" variant={p.featured ? "gradient" : "primary"} size="md" className="w-full" strength={0.15}>
+            <MagneticButton href="/" variant={p.featured ? "gradient" : "primary"} size="md" className="w-full" strength={0.15}>
               {p.cta} <ArrowRight size={16} />
             </MagneticButton>
           )}
@@ -296,7 +239,7 @@ function MonthlyCard() {
       </ul>
 
       <div className="relative mt-8">
-        <MagneticButton href="#top" variant="gradient" size="md" className="w-full" strength={0.15}>
+        <MagneticButton href="/" variant="gradient" size="md" className="w-full" strength={0.15}>
           {p.cta} <ArrowRight size={16} />
         </MagneticButton>
       </div>

@@ -51,7 +51,7 @@ export function FinalCTA() {
           transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
           className="mt-9"
         >
-          <MagneticButton href="#pricing" variant="light" size="lg">
+          <MagneticButton href="/#pricing" variant="light" size="lg">
             Get Started Free <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </MagneticButton>
         </motion.div>

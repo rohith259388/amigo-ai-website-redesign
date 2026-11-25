@@ -105,7 +105,7 @@ export function InterviewSection() {
               Amigo hears the question, writes the answer and keeps going through technical, behavioural and coding
               rounds alike. Private to you, on top of any call.
             </p>
-            <MagneticButton href="#pricing" size="md" className="mt-6">
+            <MagneticButton href="/#pricing" size="md" className="mt-6">
               Try for Free
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </MagneticButton>
@@ -121,7 +121,7 @@ export function InterviewSection() {
           >
             <div className="flex items-center justify-between border-b border-white/10 px-6 py-3.5 text-[13px] font-medium text-white/70">
               <span className="flex items-center gap-2.5">
-                <img src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1790570367/zoom-seeklogo_rqyebs.png" alt="Zoom" className="h-12 w-12 shrink-0 rounded-md object-contain" />
+                <img src="https://res.cloudinary.com/ddr8ylakx/image/upload/v1790570367/zoom-seeklogo_rqyebs.png" alt="Zoom" loading="lazy" decoding="async" className="h-12 w-12 shrink-0 rounded-md object-contain" />
                 Technical Interview · Nexa Labs
               </span>
               <span className="flex items-center gap-2.5">

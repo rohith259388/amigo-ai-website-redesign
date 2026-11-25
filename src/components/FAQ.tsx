@@ -1,41 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useState } from "react";
+import { HOME_FAQS as FAQS } from "@/data/faqs";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/utils/cn";
 import { Eyebrow } from "./ui/Brand";
 import { Reveal, TextReveal } from "./ui/Reveal";
-
-const FAQS = [
-  {
-    q: "What is Amigo?",
-    a: "Amigo is your AI job-search companion. It helps you build a job-ready CV, discover and apply to relevant roles, prepare for interviews, and get real-time help during them — with the option to bring a trusted friend along.",
-  },
-  {
-    q: "How does the Resume Builder work?",
-    a: "Paste a job description and Amigo analyses what the role really needs, matches it against your experience, rewrites your sections for that position and shows you an ATS score before you send it.",
-  },
-  {
-    q: "How does Auto Apply work?",
-    a: "Auto Apply is coming soon. You set your preferences once; Amigo surfaces roles that fit and drafts applications using your tailored CV. You always review and approve before anything is sent.",
-  },
-  {
-    q: "What is Interview AI?",
-    a: "During an interview, Amigo listens alongside your video call, detects questions and suggests answers grounded in your CV — technical, behavioural, coding or role-specific. Everything it shows is private to you.",
-  },
-  {
-    q: "What is Buddy?",
-    a: "Buddy lets you invite someone you trust — a friend, mentor or former colleague — into your interview session. They see the questions and can send you hints as text, voice notes or images in real time.",
-  },
-  {
-    q: "Does Amigo work on Windows and Mac?",
-    a: "Yes. Amigo runs on both Windows and macOS and works alongside the video tools you already use.",
-  },
-  {
-    q: "How do I get started?",
-    a: "Create a free account, tell Amigo about your experience and goals, and build your first tailored CV in minutes. Upgrade whenever the interviews start rolling in.",
-  },
-];
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);

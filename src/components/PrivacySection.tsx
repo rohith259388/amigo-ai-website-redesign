@@ -140,7 +140,7 @@ export function PrivacySection() {
                   <Reveal delay={0.3 + i * 0.04} className="h-full">
                     <div className="flex h-full flex-col items-center gap-3 rounded-2xl border border-amigo-border bg-white p-4 text-center shadow-card">
                       <span className="grid h-11 w-11 place-items-center rounded-xl bg-amigo-pale/60 p-2.5">
-                        <img src={p.logo} alt={`${p.name} logo`} className="h-full w-full object-contain" />
+                        <img src={p.logo} alt={`${p.name} logo`} loading="lazy" decoding="async" className="h-full w-full object-contain" />
                       </span>
                       <span className="text-[13px] font-bold leading-tight text-amigo-dark">{p.name}</span>
                       <span className="flex items-center gap-1 text-[11px] font-semibold text-emerald-600">

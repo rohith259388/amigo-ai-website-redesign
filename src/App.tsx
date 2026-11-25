@@ -13,8 +13,10 @@ import { HowItWorks } from "./components/HowItWorks";
 import { InterviewPartnerSection } from "./components/InterviewPartnerSection";
 import { InterviewSection } from "./components/InterviewSection";
 import { Journey } from "./components/Journey";
+import { LinkedInSection } from "./components/LinkedInSection";
 import { Navbar } from "./components/Navbar";
 import { CreatorsPage } from "./components/pages/CreatorsPage";
+import { LinkedInPage } from "./components/pages/LinkedInPage";
 import { QuestionPage } from "./components/pages/QuestionPage";
 import { QuestionsPage } from "./components/pages/QuestionsPage";
 import { ReferralPage } from "./components/pages/ReferralPage";
@@ -25,19 +27,24 @@ import { ReferralSection } from "./components/ReferralSection";
 import { ResumeSection } from "./components/ResumeSection";
 import { BoltDivider } from "./components/ui/BoltDivider";
 import { WhyAmigo } from "./components/WhyAmigo";
-import { useHashRoute } from "./hooks/useHashRoute";
+import { useRoute } from "./hooks/useRoute";
+import { useSeo } from "./seo/useSeo";
 
 export default function App() {
-  const route = useHashRoute();
+  const route = useRoute();
   const routeKey = route.name === "question" ? `question/${route.slug}` : route.name;
+  useSeo(route, routeKey);
+
   const activeHref =
     route.name === "questions" || route.name === "question"
-      ? "#/questions"
+      ? "/questions"
       : route.name === "creators"
-        ? "#/creators"
+        ? "/creators"
         : route.name === "referral"
-          ? "#/referral"
-          : null;
+          ? "/referral"
+          : route.name === "linkedin"
+            ? "/linkedin"
+            : null;
 
   // The browser can't scroll to a section anchor that belongs to a page that isn't rendered yet.
   useLayoutEffect(() => {
@@ -56,6 +63,7 @@ export default function App() {
           {route.name === "question" && <QuestionPage key={route.slug} slug={route.slug} />}
           {route.name === "creators" && <CreatorsPage />}
           {route.name === "referral" && <ReferralPage />}
+          {route.name === "linkedin" && <LinkedInPage />}
         </main>
         <Footer />
       </div>
@@ -75,6 +83,7 @@ function Home() {
       </div>
       <AutoApplySection />
       <InterviewSection />
+      <LinkedInSection />
       <InterviewPartnerSection />
       <PrivacySection />
       <BuddySection />
