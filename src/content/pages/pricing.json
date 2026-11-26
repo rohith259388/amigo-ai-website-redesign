@@ -1,0 +1,152 @@
+{
+ "path": "/pricing",
+ "section": "pricing",
+ "title": "AmigoHelp AI Pricing | Plans & Free Trial",
+ "description": "AmigoHelp AI pricing: start free with 10 minutes, then pay-as-you-go minute packs from $15 or an optional monthly Unlimited subscription. Credits never expire.",
+ "ogType": "website",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Product",
+   "name": "Amigo: AI Interview Copilot",
+   "description": "AmigoHelp AI pricing: start free with 10 minutes, then pay-as-you-go minute packs from $15 or an optional monthly Unlimited subscription. Credits never expire.",
+   "url": "https://www.amigohelp.ai/pricing/",
+   "image": "https://www.amigohelp.ai/og-image.png",
+   "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "15.00",
+    "highPrice": "127.50",
+    "offerCount": 3,
+    "offers": [
+     {
+      "@type": "Offer",
+      "name": "Starter: 2 Hours Credits",
+      "price": "15.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.amigohelp.ai/pricing/"
+     },
+     {
+      "@type": "Offer",
+      "name": "Essential: 5 Hours Credits",
+      "price": "33.75",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.amigohelp.ai/pricing/"
+     },
+     {
+      "@type": "Offer",
+      "name": "Scale: 20 Hours Credits",
+      "price": "127.50",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.amigohelp.ai/pricing/"
+     }
+    ]
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does AmigoHelp AI cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start free with 10 minutes, no card required. After that, choose pay-as-you-go minute packs: Starter ($15 / 120 min), Essential ($33.75 / 300 min), or Scale ($127.50 / 1,200 min). Or go unlimited with an optional monthly subscription."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a free trial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Every new account gets 10 free minutes to try Amigo in a real or practice interview, with no credit card required."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do my minutes expire?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Purchased minutes never expire. Unused minutes carry over indefinitely with no monthly reset."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Pay-as-you-go or Unlimited, which should I pick?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For occasional interviews, a minute pack lets you pay only for what you use. For ongoing interviewing, the monthly Unlimited subscription gives unlimited session access. The two are billed and tracked independently."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What payment methods do you accept?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Payments are processed securely via Stripe. All major credit and debit cards are accepted."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I get a refund?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Unused minutes can be refunded within 30 days of purchase. Contact support@amigohelp.ai to request one."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Pricing",
+     "item": "https://www.amigohelp.ai/pricing/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-10-06",
+ "h1": "AmigoHelp AI Pricing",
+ "html": "<h2>Simple Pricing, Your Way.</h2>\n<p>Pay per minute with a minutes pack, or go unlimited with a monthly subscription. No hidden fees either way.</p>\n<p>Trusted by 100,000+ job seekers</p>\n<p>Free 10 minutes No credit card Credits never expire</p>\n<p>Most Popular</p>\n<p>SAVE 50%  Limited time</p>\n<p>Unlimited</p>\n<p>Monthly Subscription, No Annual Contract</p>\n<p>$19.98 $9.99</p>\n<p>USD · Billed monthly, cancel anytime</p>\n<ul><li>Unlimited Live Interviews &amp; Coding Tests</li><li>Unlimited Resume &amp; Cover Letter Downloads</li><li>Full Access to Premium Features &amp; Tools</li><li>Export in PDF &amp; Word Formats</li><li>5K+ Interview &amp; Coding questions</li><li>Cancel anytime, access until period end</li><li>Independent from your minutes pack balance</li></ul>\n<p><a href=\"/signup/\">Get Started</a></p>\n<p>No credit card required · Cancel anytime · Works on Windows &amp; Mac</p>\n<p>Ready when you are</p>\n<h2>From Prep to Job Offer.</h2>\n<p>Start with 10 free minutes and only pay for the interviews you take.</p>\n<p><a href=\"/signup/\">Try Amigo free</a></p>\n<p>Free to start No credit card Credits never expire</p>",
+ "faqs": [
+  {
+   "q": "How much does AmigoHelp AI cost?",
+   "a": "Start free with 10 minutes, no card required. After that, choose pay-as-you-go minute packs: Starter ($15 / 120 min), Essential ($33.75 / 300 min), or Scale ($127.50 / 1,200 min). Or go unlimited with an optional monthly subscription."
+  },
+  {
+   "q": "Is there a free trial?",
+   "a": "Yes. Every new account gets 10 free minutes to try Amigo in a real or practice interview, with no credit card required."
+  },
+  {
+   "q": "Do my minutes expire?",
+   "a": "No. Purchased minutes never expire. Unused minutes carry over indefinitely with no monthly reset."
+  },
+  {
+   "q": "Pay-as-you-go or Unlimited, which should I pick?",
+   "a": "For occasional interviews, a minute pack lets you pay only for what you use. For ongoing interviewing, the monthly Unlimited subscription gives unlimited session access. The two are billed and tracked independently."
+  },
+  {
+   "q": "What payment methods do you accept?",
+   "a": "Payments are processed securely via Stripe. All major credit and debit cards are accepted."
+  },
+  {
+   "q": "Can I get a refund?",
+   "a": "Unused minutes can be refunded within 30 days of purchase. Contact support@amigohelp.ai to request one."
+  }
+ ]
+}

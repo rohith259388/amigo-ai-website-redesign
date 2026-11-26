@@ -1,0 +1,38 @@
+{
+ "path": "/docs/stealth-mode",
+ "section": "docs",
+ "title": "Stealth Mode: Undetectable Overlay | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Amigo stays invisible to interview platforms and proctoring tools: system-level overlay, screen-share-safe, no recordings, no transcripts stored.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Stealth Mode",
+     "item": "https://www.amigohelp.ai/docs/stealth-mode/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Stealth Mode",
+ "category": "Core Features",
+ "html": "<p>Stealth Mode is Amigo's most critical feature. The overlay and all Amigo UI elements are rendered in a way that makes them completely invisible to screen-sharing, screen-recording, and remote desktop software, while remaining fully visible to you on your local display.</p>\n<p>Stealth Mode is always on. There is nothing to enable or configure; Amigo's window is excluded from capture at the OS level from the moment it launches. Before every session, Amigo's system readiness check automatically verifies that stealth mode and always-on-top are active, so you'll be alerted if anything needs attention.</p>\n<hr>\n<h2 id=\"how-it-works\">How It Works</h2>\n<p>Amigo creates a native operating-system window with a specific flag that instructs the OS to exclude it from any screen capture pipeline:</p>\n<ul><li><strong>macOS</strong>: The overlay uses <code>NSWindowSharingNone</code> (Core Graphics window sharing level), which tells macOS to omit the window from any CGDisplayStream or ReplayKit capture.</li><li><strong>Windows</strong>: The overlay applies the <code>WDA_EXCLUDEFROMCAPTURE</code> flag via the SetWindowDisplayAffinity API, removing it from all DirectX and GDI capture hooks.</li></ul>\n<p>Because exclusion happens at the OS display driver level, it cannot be overridden by the video-call application. Zoom, Google Meet, Teams, and every other conferencing tool relies on the same OS capture APIs and therefore sees a blank region where the Amigo overlay sits.</p>\n<hr>\n<h2 id=\"verified-platforms\">Verified Platforms</h2>\n<p>Stealth Mode has been tested and verified against the following screen-sharing technologies:</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Software</th><th>macOS</th><th>Windows</th><th>Notes</th></tr>\n</thead>\n<tbody><tr><td>Zoom (screen share)</td><td>✓</td><td>✓</td><td>Tested on Zoom 5.x and 6.x</td></tr>\n<tr><td>Google Meet</td><td>✓</td><td>✓</td><td>Chrome, Edge, and Firefox tabs</td></tr>\n<tr><td>Microsoft Teams</td><td>✓</td><td>✓</td><td>Classic and new Teams clients</td></tr>\n<tr><td>Webex</td><td>✓</td><td>✓</td><td>N/A</td></tr>\n<tr><td>Loom</td><td>✓</td><td>✓</td><td>Recording and camera-only modes</td></tr>\n<tr><td>OBS Studio</td><td>✓</td><td>✓</td><td>Window capture and display capture sources</td></tr>\n<tr><td>QuickTime (macOS)</td><td>✓</td><td>N/A</td><td>Screen recording via QuickTime</td></tr>\n<tr><td>Xbox Game Bar (Windows)</td><td>N/A</td><td>✓</td><td>Win + G capture</td></tr>\n</tbody>\n</table></div>\n<hr>\n<h2 id=\"audio\">Audio Privacy</h2>\n<p>Stealth Mode covers the visual overlay. For audio, Amigo captures the system audio output internally. It does not inject any sound into your microphone stream, so the interviewer cannot hear any audio from Amigo.</p>\n<p>Amigo also captures your candidate microphone on a separate native thread. This stream is transcribed through the same secure pipeline as the interviewer's audio, allowing Amigo to identify your voice and filter it out, so your own answers never trigger new suggestions. Candidate transcripts are discarded immediately after classification and are never stored, recorded, or used to generate AI responses.</p>\n<p>Amigo reads the audio from both sides of the call (your microphone input and the call audio output) for transcription. Neither stream is transmitted to the interviewer. All transcription runs securely on the native backend. Audio is never processed in the browser and is not retained after the session ends.</p>\n<hr>\n<h2 id=\"faq\">Common Questions</h2>\n<h3 id=\"faq-vm\">Does Stealth Mode work inside a virtual machine?</h3>\n<p>No. If you are running Amigo inside a VM (e.g. Parallels, VMware, VirtualBox), the host OS can capture the entire VM display including the Amigo overlay. Always run Amigo on the physical host machine, not inside a VM.</p>\n<h3 id=\"faq-phone\">Can the interviewer see Amigo if they point a phone at my screen?</h3>\n<p>Stealth Mode only prevents capture through software. A physical camera pointed at your monitor will record everything visible on the screen. Position your monitor so it is not in the frame of any external camera during your interview.</p>\n<h3 id=\"faq-remote\">What about remote-access software like TeamViewer or AnyDesk?</h3>\n<p>Remote desktop tools that operate at the display driver level (before the OS capture API) may be able to see the overlay. We recommend not running Amigo while another person has active remote control of your machine.</p>"
+}

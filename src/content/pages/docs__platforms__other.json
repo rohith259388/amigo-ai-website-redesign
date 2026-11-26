@@ -1,0 +1,38 @@
+{
+ "path": "/docs/platforms/other",
+ "section": "docs",
+ "title": "Other Interview Platforms | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Use Amigo with Webex, Skype, BlueJeans, HireVue, and other interview platforms. Real-time AI copilot, fully invisible to platforms and proctors.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Other Platforms",
+     "item": "https://www.amigohelp.ai/docs/platforms/other/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Other Platforms",
+ "category": "Platform Guide",
+ "html": "<p>Beyond Zoom and Teams, Amigo works with any video conferencing or interview tool that routes audio through your operating system's standard audio stack. This covers Google Meet, Webex, Skype, and most browser-based platforms.</p>\n<hr>\n<h2 id=\"compatibility\">Platform Compatibility</h2>\n<div class=\"table-wrap\"><table><thead><tr><th>Platform</th><th>macOS</th><th>Windows</th><th>Notes</th></tr>\n</thead>\n<tbody><tr><td>Google Meet</td><td>✓</td><td>✓</td><td>Chrome recommended for lowest CPU; no browser extension needed</td></tr>\n<tr><td>Webex (desktop)</td><td>✓</td><td>✓</td><td>Full support; use desktop client for best audio quality</td></tr>\n<tr><td>Webex (browser)</td><td>✓</td><td>✓</td><td>Chrome recommended</td></tr>\n<tr><td>Skype</td><td>✓</td><td>✓</td><td>Consumer and Skype for Business both supported</td></tr>\n<tr><td>BlueJeans</td><td>✓</td><td>✓</td><td>N/A</td></tr>\n<tr><td>Whereby</td><td>✓</td><td>✓</td><td>Browser-only platform; Chrome/Edge recommended</td></tr>\n<tr><td>Amazon Chime</td><td>✓</td><td>✓</td><td>N/A</td></tr>\n<tr><td>GoTo Meeting</td><td>✓</td><td>✓</td><td>N/A</td></tr>\n<tr><td>Discord (video call)</td><td>✓</td><td>✓</td><td>Works in desktop app; not in browser</td></tr>\n<tr><td>FaceTime (macOS)</td><td>✓</td><td>N/A</td><td>Audio captured; FaceTime is macOS-only</td></tr>\n</tbody>\n</table></div>\n<p>Google Meet runs entirely in a browser tab, so Amigo's desktop overlay is never captured by Meet's screen share. No browser extension is required; Amigo captures system audio directly. Chrome is recommended. If transcription quality is poor, check that Meet's built-in noise suppression is not too aggressive (disable it in Meet Settings → Audio).</p>\n<hr>\n<h2 id=\"general-setup\">General Setup for Any Platform</h2>\n<p>If your interview platform is not listed above, follow this checklist to verify Amigo will work:</p>\n<ol><li>Open Amigo and sign in. The system readiness check will verify stealth mode and audio are configured correctly.</li><li>Open the video call platform (desktop app or browser).</li><li>Join or start a test call (most platforms have a \"test call\" option).</li><li>Speak aloud and check that Amigo's audio meter shows activity in the overlay.</li><li>If there is no activity, open Amigo Settings → Audio and try selecting a different input device.</li></ol>\n<p>Most issues with lesser-known platforms are audio routing problems. If the platform uses a virtual audio device (common with browser-based tools), select that device in Amigo's audio settings instead of your physical microphone.</p>\n<hr>\n<h2 id=\"browser-based\">Browser-Based Interview Tools</h2>\n<p>Some companies use custom browser-based interview platforms that combine video, coding editor, and whiteboard in a single tab. Amigo works alongside these:</p>\n<ul><li><strong>CoderPad / CodeSignal (browser)</strong>: Amigo captures the audio and can assist with coding questions. Set your profile to Coding Test mode for best results. See <a href=\"/docs/coding-interviews/\">Coding Interviews</a> for details.</li><li><strong>Karat</strong>: Browser-based; video and audio are captured by Amigo normally. Stealth Mode is effective against Karat's screen share.</li><li><strong>HireVue (async video)</strong>: Amigo can assist with HireVue's asynchronous one-way video questions. Launch a session and speak your answer as normal; Amigo listens and provides suggestions in real time.</li><li><strong>Pymetrics / game-based assessments</strong>: Amigo does not provide support for gamified assessments; these do not involve verbal questions.</li></ul>\n<hr>\n<h2 id=\"troubleshooting\">Troubleshooting Any Platform</h2>\n<ul><li><strong>No audio captured</strong>: Go to Amigo Settings → Audio and cycle through the available input devices. The correct device is usually labelled \"System Audio\", \"Stereo Mix\", or the platform name.</li><li><strong>Overlay not appearing</strong>: Ensure Amigo has Screen Recording (macOS) or Display Capture (Windows) permission. Restart Amigo after granting permissions.</li><li><strong>System readiness check fails</strong>: If the pre-flight check flags an issue, follow the on-screen instructions to fix it. Common causes are missing permissions or a VPN blocking network access.</li><li><strong>High latency</strong>: Close other resource-intensive applications. Amigo's transcription pipeline competes for CPU with video encoding in the call app.</li><li><strong>Platform not working at all</strong>: Email us at <a href=\"mailto:support@amigohelp.ai\">support@amigohelp.ai</a> with the platform name and OS version. We add support for new platforms regularly.</li></ul>"
+}

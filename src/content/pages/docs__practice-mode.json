@@ -1,0 +1,38 @@
+{
+ "path": "/docs/practice-mode",
+ "section": "docs",
+ "title": "Practice Mode: Amigo | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Use Amigo's Practice Mode to warm up before any interview. Get AI-generated questions, real-time answers, and build confidence before the real thing.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Practice Mode",
+     "item": "https://www.amigohelp.ai/docs/practice-mode/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Practice Mode",
+ "category": "Core Features",
+ "html": "<p>Practice Mode lets you run a full mock interview session before the real thing, without needing a live interviewer. Amigo generates a set of interview questions, you answer them one by one, and the AI responds in real time just like it would during a live session.</p>\n<p>It uses the same AI engine and your same Copilot Profile context as Live Mode, so the questions and answers are tailored to your background and the role you're preparing for.</p>\n<p>Run at least one Practice session before any important interview. It warms up your delivery, surfaces gaps in your preparation, and lets you test your Copilot Profile context before it matters.</p>\n<hr>\n<h2 id=\"how-it-works\">How It Works</h2>\n<p>When you start a Practice session, Amigo streams a set of interview questions one at a time. Each question appears in your overlay just as an interviewer's transcript would in Live Mode.</p>\n<ol><li><strong>Start a Practice session</strong>: Select Practice from the session type selector in the Amigo overlay before starting.</li><li><strong>Questions stream in</strong>: Amigo generates 10 questions by default, tailored to your Copilot Profile and session format (behavioural, technical, or coding).</li><li><strong>Answer each question</strong>: The AI responds in real time, just like Live Mode. Read the suggestion, adapt it in your own words, and speak your answer aloud.</li><li><strong>Move to the next</strong>: Press <strong>Next</strong> to advance. You control the pace, and there's no time pressure.</li><li><strong>Review and repeat</strong>: After the last question, review which answers felt natural and which needed more work. Adjust your Copilot Profile if needed, then run another session.</li></ol>\n<hr>\n<h2 id=\"question-count\">Question Count</h2>\n<p>The default session length is 10 questions. Sessions can range from 5 to 20 questions depending on how much time you have.</p>\n<p>Questions are generated based on your active Copilot Profile. Make sure your resume, job description, and session format are set correctly before starting a Practice session. The same context drives both Practice and Live Mode.</p>\n<hr>\n<h2 id=\"vs-live-mode\">Practice Mode vs Live Mode</h2>\n<p>Both modes use the same AI and consume credits at the same rate. The difference is where the questions come from:</p>\n<ul><li><strong>Live Mode</strong>: Amigo listens to your actual interviewer and responds to their questions in real time. The interviewer drives the session.</li><li><strong>Practice Mode</strong>: Amigo generates the questions itself. You control the pace with the Next button. No live interviewer needed.</li></ul>\n<p>Use Practice Mode the day before an interview to run through your talking points. Use Live Mode on the day. The two complement each other: Practice builds confidence, Live Mode is your safety net.</p>\n<hr>\n<h2 id=\"credits\">Credits &amp; Usage</h2>\n<p>Practice Mode consumes credits the same way Live Mode does, based on the number of AI responses generated during the session. Each question answered uses one AI call.</p>\n<p>A 10-question Practice session typically uses 5–10 minutes of credit depending on response length. See <a href=\"/docs/billing/tokens/\">Minutes &amp; Credits</a> for a full breakdown.</p>\n<hr>\n<h2 id=\"tips\">Tips for Getting the Most from Practice</h2>\n<ul><li>Set your Copilot Profile to the specific role and company before starting; generic profiles give generic questions.</li><li>Speak your answers aloud, not just in your head. The muscle memory of saying words out loud is different from reading them.</li><li>If an AI suggestion does not fit your experience, note it and adjust your profile text to add the missing context.</li><li>Run the same session format as your upcoming interview: behavioural for HR rounds, coding for technical rounds.</li><li>After finishing, ask yourself which questions caught you off guard. Those are your weak spots to research before the real interview.</li></ul>"
+}

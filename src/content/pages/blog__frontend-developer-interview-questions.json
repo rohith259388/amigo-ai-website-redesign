@@ -1,0 +1,173 @@
+{
+ "path": "/blog/frontend-developer-interview-questions",
+ "section": "blog",
+ "title": "Frontend Developer Interview Questions: JS & React (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "The frontend loop explained: JavaScript fundamentals, React internals, the live UI build, frontend system design, and what interviewers score in each round.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=800&fit=crop&crop=center",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/frontend-developer-interview-questions/#article",
+   "headline": "Frontend Developer Interview Questions: JS & React (2026)",
+   "description": "The frontend loop explained: JavaScript fundamentals, React internals, the live UI build, frontend system design, and what interviewers score in each round.",
+   "datePublished": "2026-07-28",
+   "dateModified": "2026-07-28",
+   "url": "https://www.amigohelp.ai/blog/frontend-developer-interview-questions/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=800&fit=crop&crop=center",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "David Park"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What rounds are in a frontend developer interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A typical loop has five rounds: a JavaScript fundamentals screen, a framework round on React or your primary library, a UI build exercise where you implement a component live, a frontend system design round at mid-level and above, and a behavioral round. Some companies fold the build exercise and framework round together."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What JavaScript topics come up most in frontend interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Closures, the event loop and microtask ordering, promises and async/await, this binding, prototypal inheritance, event delegation and bubbling, and debounce versus throttle. Closures and the event loop appear in the majority of loops because they explain so much downstream behaviour."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What React questions do interviewers ask?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Reconciliation and why keys matter, the difference between state and refs, when useEffect runs and how to avoid dependency-array bugs, why derived state is usually an anti-pattern, memoisation with useMemo and useCallback and when it actually helps, and how context re-rendering works. Expect at least one question where the honest answer is that memoisation would not help."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a frontend system design interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A 45-minute round where you design the client architecture of a feature: an infinite-scroll feed, an autocomplete, or a collaborative editor. You cover component boundaries, state ownership, data fetching and caching, rendering strategy, error and loading states, accessibility, and performance budgets. Backend depth is not the focus."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you prepare for a live UI coding exercise?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Practise building four or five components from scratch without a component library: an autocomplete with debounced fetch and keyboard navigation, a modal with focus trapping, an infinite-scroll list, a multi-step form with validation, and a star rating. Narrate as you type, and handle loading, empty, and error states before adding polish."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do frontend interviews still ask about CSS?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, though less as trivia and more as applied layout. Expect flexbox versus grid choices, stacking contexts and z-index behaviour, containing blocks for position fixed and absolute, specificity, and responsive strategy. A common live task is reproducing a layout under a constraint such as no fixed pixel heights."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How important is accessibility in a frontend interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Increasingly decisive at mid-level and above. Interviewers watch whether you reach for a semantic button rather than a clickable div, manage focus in overlays, and label inputs, usually without asking. Unprompted accessibility awareness is one of the clearest seniority signals in the whole loop."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/frontend-developer-interview-questions/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "Frontend Developer Interview Questions: JS & React (2026)",
+ "lead": "The frontend loop explained: JavaScript fundamentals, React internals, the live UI build, frontend system design, and what interviewers score in each round.",
+ "category": "Role & Skills",
+ "readTime": "8 min read",
+ "date": "28 July 2026",
+ "author": "David Park",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=800&fit=crop&crop=center",
+  "alt": "People working in a spacious open-plan office."
+ },
+ "html": "<p>Frontend interviews have diverged from general software interviews. Instead of one algorithm round repeated four times, a modern frontend loop tests five distinct things: whether you understand JavaScript at the runtime level, whether you know your framework's model rather than just its API, whether you can build a working component under time pressure, whether you can reason about client architecture, and whether you handle accessibility and performance without being prompted. This guide covers each round, the questions that recur, and what the interviewer is actually scoring.</p>\n <h2>The Five Rounds of a Frontend Loop</h2>\n <p>1</p>\n<p>JavaScript fundamentals: 45 to 60 minutes</p>\n<p>Closures, the event loop, promises, this binding, prototypes. Often delivered as small \"what does this log, and why\" exercises rather than definitions. The why carries most of the score, since naming the behaviour correctly but explaining it wrongly reads as memorisation.</p>\n<p>2</p>\n<p>Framework round: 45 to 60 minutes</p>\n<p>React for most companies. Reconciliation, hook semantics, render behaviour, state placement, and a debugging exercise on a component that re-renders too often or has a stale closure in an effect.</p>\n<p>3</p>\n<p>Live UI build: 60 to 90 minutes</p>\n<p>Implement a real component from scratch, usually without a component library and often without internet access. Autocomplete, modal, infinite scroll, and multi-step form are the perennials. Working and accessible beats feature-complete and broken.</p>\n<p>4</p>\n<p>Frontend system design: 45 minutes, mid-level and above</p>\n<p>Design the client side of a feature: component boundaries, where state lives, data fetching and caching, rendering strategy, and how it degrades on a slow network. Some loops replace this with a code review exercise instead.</p>\n<p>5</p>\n<p>Behavioral round: 45 minutes</p>\n<p>Standard STAR-format questions, often weighted toward cross-functional work with designers and product, since that is the defining collaboration pattern of the role.</p>\n <h2>JavaScript Fundamentals: The Topics That Actually Recur</h2>\n <div class=\"table-wrap\"><table><thead><tr><th>Topic</th><th>How it gets asked</th><th>What is being scored</th></tr>\n</thead>\n<tbody><tr><td>Closures</td><td>A loop that creates functions capturing the wrong variable</td><td>Whether you understand scope capture, not just the var/let fix</td></tr>\n<tr><td>Event loop</td><td>Ordering of setTimeout, a resolved promise, and sync code</td><td>Macrotask versus microtask queues, and that microtasks drain first</td></tr>\n<tr><td>Promises</td><td>Implement a small promise utility, or explain chaining vs nesting</td><td>Error propagation and that a then callback returns a new promise</td></tr>\n<tr><td>this binding</td><td>A method extracted from an object and called bare</td><td>Call-site determines this; arrow functions capture lexically</td></tr>\n<tr><td>Prototypes</td><td>Explain lookup, or extend a built-in safely</td><td>The prototype chain as delegation, not classical inheritance</td></tr>\n<tr><td>Event delegation</td><td>One listener on a parent for many dynamic children</td><td>Bubbling, event.target versus currentTarget, and why it scales</td></tr>\n<tr><td>Debounce vs throttle</td><td>Implement both from scratch</td><td>That you know which one a resize, scroll, or search box needs</td></tr>\n</tbody>\n</table></div>\n <p>The pattern behind all of these</p>\n<p>Every item above is asked as behaviour first and definition second. Interviewers show you code and ask what happens. Reciting a textbook definition of a closure scores poorly if you then predict the wrong output. Practise by predicting output before running it, because that is the exact skill being tested.</p>\n <h2>React Round: Model Knowledge, Not API Knowledge</h2>\n <p>Anyone can look up a hook signature. Interviewers are probing whether you understand React's rendering model well enough to debug something unfamiliar. Six questions cover most of the round:</p>\n <p>✦</p>\n<p>Why do keys matter, and why not the array index?</p>\n<p>Keys let reconciliation match elements across renders. Index keys break the moment the list reorders or an item is removed, because component state and DOM nodes stay attached to positions rather than items, producing the classic bug where a deleted row leaves the wrong input value behind.</p>\n<p>✦</p>\n<p>State or ref?</p>\n<p>State when the value should drive rendering; a ref when it should not. A scroll position you display needs state; a timer id, a previous value, or a DOM node needs a ref. Storing render-irrelevant data in state is one of the most common causes of unnecessary re-renders.</p>\n<p>✦</p>\n<p>When does an effect run, and what breaks?</p>\n<p>After commit, and again whenever a dependency changes by reference. The two bugs interviewers plant are a stale closure reading an old value, and an object or function dependency recreated every render causing an infinite loop. Say out loud that you would check the dependency array first.</p>\n<p>✦</p>\n<p>Why is derived state an anti-pattern?</p>\n<p>Copying a prop into state creates two sources of truth that drift. Derive during render instead. The legitimate exception is a deliberately uncontrolled input seeded once from a prop. Knowing that exception is itself a seniority signal.</p>\n<p>✦</p>\n<p>When does memoisation actually help?</p>\n<p>When the memoised work is genuinely expensive, or when a stable reference is required by a memoised child or an effect dependency. Wrapping every callback adds allocation and cache overhead for no gain. Expect at least one question where the correct answer is that memoising would not help and the real fix is moving state down.</p>\n<p>✦</p>\n<p>Why does context cause wide re-renders?</p>\n<p>Every consumer re-renders when the provider value changes identity, regardless of which part of the value it reads. Fixes: split contexts by update frequency, memoise the provider value, or move to a store with selector-based subscriptions.</p>\n <h2>The Live UI Build: What Separates Passes From Fails</h2>\n <p>This round has the widest spread in outcomes, and the differentiator is rarely raw coding speed. It is order of operations. Candidates who build the happy path, then loading, then error, then keyboard support, then polish, consistently outperform those who chase features and leave a broken component at the buzzer.</p>\n <p>Five components cover most of what gets asked. Build each one from scratch, no library, before your loop:</p>\n <p>Autocomplete</p>\n<ul><li>Debounced fetch, cancel stale requests</li><li>Arrow key navigation and Enter to select</li><li>Loading, empty, and error states</li><li>Combobox roles and active-option announcement</li></ul>\n<p>Modal / dialog</p>\n<ul><li>Focus moves in, focus trapped, focus restored</li><li>Escape closes, backdrop click closes</li><li>Body scroll locked while open</li><li>Rendered via portal, correct dialog role</li></ul>\n<p>Infinite scroll list</p>\n<ul><li>IntersectionObserver sentinel, not a scroll handler</li><li>No duplicate fetch while one is in flight</li><li>Page-level error retained, retry available</li><li>Announce new items to assistive tech</li></ul>\n <p>The other two worth rehearsing are a multi-step form with per-step validation and a back button that preserves entered data, and a star rating that is keyboard operable and works as a real radio group rather than clickable spans.</p>\n <p>Narrate, and state your trade-offs</p>\n<p>Silence is unscoreable in this round as much as in system design. Say what you are doing and why you are deferring things: \"I'm using local state here rather than a store because nothing outside this component needs it. If it grew, I'd lift it.\" That sentence is worth more than the ten lines you could have typed in the same time.</p>\n <h2>Frontend System Design</h2>\n <p>This round confuses candidates who prepare with backend material. Nobody is asking you to shard a database. The subject is the client: where state lives, how data arrives, what renders when, and how it behaves when things go wrong. Work through six areas in order:</p>\n <p>1</p>\n<p>Requirements and constraints</p>\n<p>Which devices and networks, whether SEO matters, whether the data is real-time or polled, and roughly how large the datasets are. As in backend design, do not draw before you scope: a feed for 50 items and a feed for 50,000 are different designs.</p>\n<p>2</p>\n<p>Component boundaries and state ownership</p>\n<p>Draw the tree and mark where each piece of state lives. Server data, URL state, and ephemeral UI state are three different categories with three different homes, and conflating them is the most common structural mistake in this round.</p>\n<p>3</p>\n<p>Data fetching and caching</p>\n<p>Request lifecycle, deduplication, cache invalidation, optimistic updates and their rollback path, and pagination strategy: cursor rather than offset for anything that mutates while being read.</p>\n<p>4</p>\n<p>Rendering strategy</p>\n<p>Client, server, or static rendering, and why. Tie it to a requirement: SEO and first-paint pressure push toward server rendering; a highly interactive authenticated dashboard usually does not need it.</p>\n<p>5</p>\n<p>Performance budget</p>\n<p>Name concrete targets and the techniques that hit them: route-level code splitting, virtualisation for long lists, image sizing and lazy loading, avoiding layout thrash. Mention the Core Web Vitals you are optimising and which technique moves which metric.</p>\n<p>6</p>\n<p>Failure, accessibility, and instrumentation</p>\n<p>Error boundaries and what the user sees, offline and slow-network behaviour, focus and announcement handling, and what you would log to know the feature is healthy in production.</p>\n <p>The five-phase discipline from our <a href=\"/blog/system-design-interview-questions-framework/\">general system design framework</a> transfers directly here: scope, estimate, structure, design, then stress your own design. Only the subject matter changes.</p>\n <h2>Accessibility and Performance: The Unprompted Signals</h2>\n <p>Most frontend interviewers do not have an accessibility question on their list. They watch for it instead, throughout the loop. The behaviours that register:</p>\n <ul><li><strong>Reaching for semantic elements first.</strong> A real button rather than a clickable div, because the button gives you keyboard activation, focus, and the correct role for free.</li><li><strong>Managing focus in overlays.</strong> Focus into the dialog on open, trapped while open, restored to the trigger on close. This is the most commonly missed detail in the modal exercise.</li><li><strong>Labelling inputs properly</strong> rather than relying on placeholder text, which disappears the moment someone types.</li><li><strong>Naming a performance metric rather than a vibe.</strong> \"This list needs virtualisation above a few hundred rows or scroll frame time suffers\" lands; \"this could get slow\" does not.</li><li><strong>Measuring before optimising.</strong> Saying you would profile first, and being able to name what you would look at, is a stronger signal than reciting optimisation techniques.</li></ul>\n <h2>A Two-Week Preparation Plan</h2>\n <p>1</p>\n<p>Days 1–3: JavaScript behaviour drills</p>\n<p>Work through output-prediction exercises on closures, the event loop, this, and promises. Predict first, run second, and write down every time you were wrong; those are your real gaps.</p>\n<p>2</p>\n<p>Days 4–6: implement the utilities from scratch</p>\n<p>Debounce, throttle, a small event emitter, a promise-limiting helper, and deep clone. These appear directly in screens and they force the fundamentals into your hands rather than your notes.</p>\n<p>3</p>\n<p>Days 7–10: build the five components, timed</p>\n<p>Autocomplete, modal, infinite scroll, multi-step form, star rating. Sixty minutes each, no component library, accessibility included. Build each one twice, since the second pass is where the pace comes from.</p>\n<p>4</p>\n<p>Days 11–12: frontend system design out loud</p>\n<p>Design a feed, an autocomplete-backed search page, and a collaborative editor. Forty-five minutes each, spoken, using the six-area structure above.</p>\n<p>5</p>\n<p>Days 13–14: behavioral stories and light review</p>\n<p>Write out eight STAR stories weighted toward design and product collaboration, then stop. Our behavioral guide covers the format.</p>\n <p>The hard part of this plan is not the material. It is doing it out loud, timed, and getting interrupted mid-answer the way a real interviewer interrupts. That is where AI practice earns its place: unlimited repetitions on the same exercise, at any hour, without booking anyone's time. <a href=\"/blog/ai-vs-traditional-interview-coaching/\">We have written honestly about where AI helps and where a human still wins</a>, and the <a href=\"/blog/behavioral-interview-questions-answers/\">behavioral question guide</a> covers the final round.</p>\n <p>Practise the frontend loop out loud, as many times as you need</p>\n<p>Amigo runs unlimited timed practice from your resume and target role, then supports you live during the real interview with structured answers in real time.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "What rounds are in a frontend developer interview?",
+   "a": "A typical loop has five rounds: a JavaScript fundamentals screen, a framework round on React or your primary library, a UI build exercise where you implement a component live, a frontend system design round at mid-level and above, and a behavioral round. Some companies fold the build exercise and framework round together."
+  },
+  {
+   "q": "What JavaScript topics come up most in frontend interviews?",
+   "a": "Closures, the event loop and microtask ordering, promises and async/await, this binding, prototypal inheritance, event delegation and bubbling, and debounce versus throttle. Closures and the event loop appear in the majority of loops because they explain so much downstream behaviour."
+  },
+  {
+   "q": "What React questions do interviewers ask?",
+   "a": "Reconciliation and why keys matter, the difference between state and refs, when useEffect runs and how to avoid dependency-array bugs, why derived state is usually an anti-pattern, memoisation with useMemo and useCallback and when it actually helps, and how context re-rendering works. Expect at least one question where the honest answer is that memoisation would not help."
+  },
+  {
+   "q": "What is a frontend system design interview?",
+   "a": "A 45-minute round where you design the client architecture of a feature: an infinite-scroll feed, an autocomplete, or a collaborative editor. You cover component boundaries, state ownership, data fetching and caching, rendering strategy, error and loading states, accessibility, and performance budgets. Backend depth is not the focus."
+  },
+  {
+   "q": "How do you prepare for a live UI coding exercise?",
+   "a": "Practise building four or five components from scratch without a component library: an autocomplete with debounced fetch and keyboard navigation, a modal with focus trapping, an infinite-scroll list, a multi-step form with validation, and a star rating. Narrate as you type, and handle loading, empty, and error states before adding polish."
+  },
+  {
+   "q": "Do frontend interviews still ask about CSS?",
+   "a": "Yes, though less as trivia and more as applied layout. Expect flexbox versus grid choices, stacking contexts and z-index behaviour, containing blocks for position fixed and absolute, specificity, and responsive strategy. A common live task is reproducing a layout under a constraint such as no fixed pixel heights."
+  },
+  {
+   "q": "How important is accessibility in a frontend interview?",
+   "a": "Increasingly decisive at mid-level and above. Interviewers watch whether you reach for a semantic button rather than a clickable div, manage focus in overlays, and label inputs, usually without asking. Unprompted accessibility awareness is one of the clearest seniority signals in the whole loop."
+  }
+ ],
+ "related": [
+  "/blog/how-to-explain-a-project-in-an-interview",
+  "/blog/data-scientist-interview-questions",
+  "/blog/backend-developer-interview-questions"
+ ]
+}

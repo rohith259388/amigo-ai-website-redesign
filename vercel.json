@@ -1,4 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "trailingSlash": false
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/referral-program/", "destination": "/referral/", "statusCode": 301 },
+    { "source": "/questions/explain-the-gap-in-your-cv/", "destination": "/questions/explain-the-gap-in-your-resume/", "statusCode": 301 }
+  ]
 }

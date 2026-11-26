@@ -1,0 +1,38 @@
+{
+ "path": "/docs/billing/tokens",
+ "section": "docs",
+ "title": "Interview Credits (Tokens) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Amigo interview credits work: purchasing, usage, and tracking. Pay only for the interview minutes you use; purchased credits never expire.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Minutes & Credits",
+     "item": "https://www.amigohelp.ai/docs/billing/tokens/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Minutes & Credits",
+ "category": "Account & Billing",
+ "html": "<p>Amigo uses a minutes-based credit system. Every pack you purchase gives you a balance of minutes that are drawn down as the AI generates suggestions during your interviews. Credits stay in your account until you use them, with no monthly reset. If you'd rather not track a balance at all, Amigo also offers an optional monthly <a href=\"/docs/billing/subscription/#unlimited-subscription\">Unlimited subscription</a> with unlimited session access; the two are billed and tracked completely independently.</p>\n<hr>\n<h2 id=\"how-minutes-work\">How Minutes Work</h2>\n<p>Minutes are only consumed when Amigo is actively generating an AI response. Idle time, such as waiting between questions, listening to the interviewer, or keeping the app open in the background, does not cost anything.</p>\n<ul><li>Credits deducted: only when a suggestion is generated.</li><li>Credits not deducted: audio listening, idle time, navigating the app.</li><li>Credits never expire; unused minutes carry over indefinitely.</li><li>Credits are not tied to a plan tier; all packs give access to the same AI models.</li></ul>\n<p>Check your current balance at any time on your <a href=\"/dashboard/\">Dashboard</a>. It updates in real time after each session.</p>\n<hr>\n<h2 id=\"buying-credits\">Buying More Credits</h2>\n<p>When you need more minutes, visit the <a href=\"/tokens/purchase/\">Buy Minutes</a> page to purchase a pack. Packs are one-time payments, so there is no recurring charge. Your new balance is available immediately after checkout.</p>\n<ul><li>Free: 10 minutes to try Amigo at no cost.</li><li>Starter: 2 hours (120 minutes) for $15.00.</li><li>Essential: 5 hours (300 minutes) for $33.75. Most popular.</li><li>Scale: 20 hours (1,200 minutes) for $127.50. Lowest per-minute rate.</li></ul>\n<p>See <a href=\"/docs/billing/plans/\">Plans &amp; Pricing</a> for a full breakdown of what each pack includes.</p>\n<hr>\n<h2 id=\"depletion\">When Your Balance Runs Low</h2>\n<p>This section applies to minutes pack purchases. If you have an active Unlimited subscription, session access isn't limited by your minutes pack balance at all; see <a href=\"/docs/billing/subscription/#unlimited-subscription\">Unlimited Subscription</a>.</p>\n<p>Otherwise, if your minute balance reaches zero during an active interview session:</p>\n<ol><li>New AI suggestions are paused.</li><li>Your interview call is not interrupted, so you can continue speaking normally.</li><li>Purchase a top-up from the Buy Minutes page; your balance is restored immediately.</li></ol>\n<p>We recommend topping up before a scheduled interview if your balance is running low. Check your balance on your <a href=\"/dashboard/\">Dashboard</a>.</p>\n<hr>\n<h2 id=\"tracking\">Tracking Usage</h2>\n<p>Every session is logged with a per-session breakdown of minutes consumed. Review your history on the <a href=\"/token-usage/\">Sessions</a> page to understand your typical usage and plan purchases accordingly.</p>\n<hr>\n<h2 id=\"refunds\">Refunds</h2>\n<p>Unused minutes can be refunded within 30 days of purchase. Contact <a href=\"mailto:support@amigohelp.ai\">support@amigohelp.ai</a> to request a refund.</p>"
+}

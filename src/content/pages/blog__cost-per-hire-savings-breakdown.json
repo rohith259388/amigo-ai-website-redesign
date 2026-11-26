@@ -1,0 +1,125 @@
+{
+ "path": "/blog/cost-per-hire-savings-breakdown",
+ "section": "blog",
+ "title": "Where the 22% Cost-Per-Hire Savings Actually Comes From | Amigo — AI Career Companion & Interview Copilot",
+ "description": "A component-level breakdown of the directional 22% cost-per-hire figure from Amigo's Q2 2026 employer partner cohort: what's driving it, and what isn't.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/cost-per-hire-savings-breakdown/c552baec2a2c.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/cost-per-hire-savings-breakdown/#article",
+   "headline": "Where the 22% Cost-Per-Hire Savings Actually Comes From",
+   "description": "A component-level breakdown of the directional 22% cost-per-hire figure from Amigo's Q2 2026 employer partner cohort: what's driving it, and what isn't.",
+   "datePublished": "2026-07-12",
+   "dateModified": "2026-07-12",
+   "url": "https://www.amigohelp.ai/blog/cost-per-hire-savings-breakdown/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/cost-per-hire-savings-breakdown/c552baec2a2c.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Jordan Williams"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is the 22% figure a controlled or audited result?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. As covered in our earlier post, it's self-reported, directional data from an early partner cohort measured against each partner's own prior-quarter baseline, not a randomized study."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's the single biggest driver of the reduction?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Partner feedback points to fewer repeat or extended interview rounds as the largest component — ambiguous first-round signal that used to trigger an extra cycle per hire."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's explicitly NOT part of the 22%?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Headcount reduction. Partners didn't report hiring fewer people; they reported spending less per hire on the same hiring volume."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/cost-per-hire-savings-breakdown/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Where the 22% Cost-Per-Hire Savings Actually Comes From",
+ "lead": "A component-level breakdown of the directional 22% cost-per-hire figure from Amigo's Q2 2026 employer partner cohort: what's driving it, and what isn't.",
+ "category": "Interview Prep",
+ "readTime": "1 min read",
+ "date": "12 July 2026",
+ "author": "Jordan Williams",
+ "hero": {
+  "src": "/images/blog/cost-per-hire-savings-breakdown/c552baec2a2c.jpg",
+  "alt": "Colleagues reviewing hiring figures with a calculator and printed chart."
+ },
+ "html": "<p>We <a href=\"/blog/roi-of-ai-interview-prep-for-hr-leaders/\">flagged a 22% cost-per-hire reduction</a> from Amigo's Q2 2026 employer partner cohort and promised the component breakdown rather than just the headline. Here it is, with the same caveat repeated: this is self-reported, directional data against each partner's own baseline, not an audited or controlled result.</p>\n <h2>The Three Components</h2>\n <p>1</p>\n<p>Fewer repeat or extended interview rounds (largest component)</p>\n<p>Partners most often cited a drop in 'bring them back for another round' decisions, the extra cycle triggered by an ambiguous first-round read rather than a clear structured signal.</p>\n<p>2</p>\n<p>Lower early-stage attrition on new hires (smaller component)</p>\n<p>A secondary factor: candidates who understood the role and format going in were reported as a better fit once hired, reducing the cost of re-running a search within 90 days.</p>\n<p>3</p>\n<p>Reduced time-to-fill (mostly a byproduct)</p>\n<p>Fewer repeat rounds and fewer early departures both shorten how long a requisition stays open, which carries its own cost in lost productivity, separate from direct recruiting spend.</p>\n <h2>What This Isn't</h2>\n <p>It isn't a reduction in how many people a partner needs to hire, and it isn't a claim that AI-assisted candidates are inherently better candidates. It's a claim about wasted cycles per hire going down. Those are different claims, and conflating them is exactly the kind of overreach we're trying to avoid by publishing the breakdown at all.</p>\n <p>Talk to us about your own hiring funnel</p>\n<p>See whether the same pattern holds against your own cost-per-hire baseline.</p>\n<p><a href=\"/signup/\">Talk to our partnership team →</a></p>",
+ "faqs": [
+  {
+   "q": "Is the 22% figure a controlled or audited result?",
+   "a": "No. As covered in our earlier post, it's self-reported, directional data from an early partner cohort measured against each partner's own prior-quarter baseline, not a randomized study."
+  },
+  {
+   "q": "What's the single biggest driver of the reduction?",
+   "a": "Partner feedback points to fewer repeat or extended interview rounds as the largest component — ambiguous first-round signal that used to trigger an extra cycle per hire."
+  },
+  {
+   "q": "What's explicitly NOT part of the 22%?",
+   "a": "Headcount reduction. Partners didn't report hiring fewer people; they reported spending less per hire on the same hiring volume."
+  }
+ ],
+ "related": [
+  "/blog/google-hr-interview-questions-and-preparation",
+  "/blog/second-round-interview-questions",
+  "/blog/google-interview-process-2026"
+ ]
+}

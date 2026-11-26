@@ -35,7 +35,7 @@ export function QuestionPage({ slug }: { slug: string }) {
       <section className="bg-amigo-surface pb-28 pt-40 text-center">
         <div className="container-x">
           <h1 className="headline text-[clamp(2.25rem,5vw,4rem)] text-amigo-dark">Question not found.</h1>
-          <a href="/questions" className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-amigo-purple">
+          <a href="/questions/" className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-amigo-purple">
             <ArrowLeft size={16} /> All questions
           </a>
         </div>
@@ -54,7 +54,7 @@ export function QuestionPage({ slug }: { slug: string }) {
           <Breadcrumbs
             trail={[
               { name: "Home", href: "/" },
-              { name: "Interview questions", href: "/questions" },
+              { name: "Interview questions", href: "/questions/" },
               { name: question.question.replace(/\.\s*$/, "") },
             ]}
           />
@@ -166,7 +166,7 @@ export function QuestionPage({ slug }: { slug: string }) {
           </div>
 
           <a
-            href={`/questions/${next.slug}`}
+            href={`/questions/${next.slug}/`}
             className="group mt-14 flex items-center justify-between gap-6 rounded-3xl bg-amigo-dark px-6 py-6 text-white transition-shadow hover:shadow-glow-lg sm:px-8"
           >
             <div className="min-w-0">

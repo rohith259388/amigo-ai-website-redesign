@@ -1,0 +1,137 @@
+{
+ "path": "/blog/buddy-system-for-job-interviews",
+ "section": "blog",
+ "title": "The Interview Buddy System: How a Trusted Friend Can Coach You Live | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Amigo's Buddy feature lets a trusted friend, mentor, or coach watch your live interview transcript in real-time and send hints only you can see.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&crop=faces",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/buddy-system-for-job-interviews/#article",
+   "headline": "The Interview Buddy System: How a Trusted Friend Can Coach You Live",
+   "description": "How Amigo's Buddy feature lets a trusted friend, mentor, or coach watch your live interview transcript in real-time and send hints only you can see.",
+   "datePublished": "2026-06-14",
+   "dateModified": "2026-06-25",
+   "url": "https://www.amigohelp.ai/blog/buddy-system-for-job-interviews/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&crop=faces",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Sam O'Brien"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is the buddy system for interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amigo's Buddy feature lets you share a live transcript link with a trusted person. They watch your interview in real-time and send you hints that only you can see."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can the interviewer see buddy messages?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Buddy messages appear only in your Amigo overlay, which is excluded from screen capture. The interviewer has no visibility into the buddy channel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does my buddy need to download anything?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Your buddy opens the invite link in any browser on any device. No download or account required."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who can be my interview buddy?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Anyone you trust: a friend in the industry, a former colleague, a career coach, or a mentor. The more they know about your target company or role, the more useful their hints will be."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/buddy-system-for-job-interviews/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "The Interview Buddy System: How a Trusted Friend Can Coach You Live",
+ "lead": "How Amigo's Buddy feature lets a trusted friend, mentor, or coach watch your live interview transcript in real-time and send hints only you can see.",
+ "category": "AI & Tools",
+ "readTime": "2 min read",
+ "date": "14 June 2026",
+ "author": "Amigo Team",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&crop=faces",
+  "alt": "A group collaborating around laptops at a shared table."
+ },
+ "html": "<p>Imagine you are halfway through a technical interview. The interviewer asks about a system design trade-off you haven't touched in two years. In your ear, or rather on the screen beside your video call, a message appears from your friend, a senior engineer at a FAANG company: <em>\"Talk about eventual consistency. They love that.\"</em></p>\n <p>That is Amigo's Buddy feature. A real human, watching your live interview in real-time, sending you exactly the hint you need. It is not AI guessing what might help. It is a person who knows you, who knows the industry, watching and coaching in the moment.</p>\n <h2>How Does the Buddy Feature Work?</h2>\n <p>1</p>\n<p>You generate an invite link</p>\n<p>From the Amigo app, create a Buddy invite link with a unique code. Takes 10 seconds.</p>\n<p>2</p>\n<p>Your buddy opens it</p>\n<p>They open the link on any device: phone, tablet, laptop. No download required. They see a live transcript window.</p>\n<p>3</p>\n<p>They watch your interview unfold</p>\n<p>As the interviewer speaks, your buddy sees the transcript appear in real-time. They watch the questions as they're asked and can see your responses building.</p>\n<p>4</p>\n<p>They send hints whenever useful</p>\n<p>Your buddy can type messages, send emoji reactions, or paste code snippets. These appear instantly in your Amigo overlay, visible only to you.</p>\n<p>5</p>\n<p>You deliver a stronger answer</p>\n<p>Their hint lands in the natural conversational pause. You weave the suggestion into your answer in your own voice, building on the prompt with your specific experience and context.</p>\n <h2>Who Should Be Your Buddy?</h2>\n <p>The right buddy depends on the interview type. A few strong options:</p>\n <ul><li><strong>A friend in the same industry</strong>: knows what interviewers at that company actually want to hear</li><li><strong>A former colleague</strong>: knows your work history and can prompt you with specific examples from projects you did together</li><li><strong>A career coach</strong>: <a href=\"/blog/ai-vs-traditional-interview-coaching/\">professional interview coach</a> now has real-time visibility into the live conversation, not just a post-hoc review</li><li><strong>A mentor</strong>: someone senior who has been through many of these interviews and knows what differentiates candidates</li></ul>\n <h2>Why Are AI and a Human Buddy Stronger Together?</h2>\n <p>Amigo gives you both <a href=\"/blog/real-time-interview-assistance-explained/\">AI responses</a> and a human buddy at the same time. They serve different needs:</p>\n <p>AI is best for</p>\n<ul><li>Instant structured answers</li><li>Technical facts and definitions</li><li>STAR format structure</li><li>Always available, zero latency</li></ul>\n<p>Human buddy is best for</p>\n<ul><li>Reading the room and tone</li><li>Knowing your specific stories</li><li>Industry-specific insider knowledge</li><li>Emotional support under pressure</li></ul>\n <p>Set up your interview buddy today</p>\n<p>Download Amigo, create an invite link, and do a practice run with a friend before the real interview.</p>\n<p><a href=\"/signup/\">Get started free →</a></p>",
+ "faqs": [
+  {
+   "q": "What is the buddy system for interviews?",
+   "a": "Amigo's Buddy feature lets you share a live transcript link with a trusted person. They watch your interview in real-time and send you hints that only you can see."
+  },
+  {
+   "q": "Can the interviewer see buddy messages?",
+   "a": "No. Buddy messages appear only in your Amigo overlay, which is excluded from screen capture. The interviewer has no visibility into the buddy channel."
+  },
+  {
+   "q": "Does my buddy need to download anything?",
+   "a": "No. Your buddy opens the invite link in any browser on any device. No download or account required."
+  },
+  {
+   "q": "Who can be my interview buddy?",
+   "a": "Anyone you trust: a friend in the industry, a former colleague, a career coach, or a mentor. The more they know about your target company or role, the more useful their hints will be."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "path": "/blog/microsoft-interview-process-explained",
+ "section": "blog",
+ "title": "Microsoft Interview Process: Rounds, Levels & the AA Round (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Microsoft's loop works: the recruiter screen, phone screen, four-round onsite, the As-Appropriate round that can end it, and how levels 59–65 are set.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/microsoft-interview-process-explained/d979d43b4c9a.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/microsoft-interview-process-explained/#article",
+   "headline": "Microsoft Interview Process: Rounds, Levels & the AA Round (2026)",
+   "description": "How Microsoft's loop works: the recruiter screen, phone screen, four-round onsite, the As-Appropriate round that can end it, and how levels 59–65 are set.",
+   "datePublished": "2026-08-11",
+   "dateModified": "2026-08-11",
+   "url": "https://www.amigohelp.ai/blog/microsoft-interview-process-explained/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/microsoft-interview-process-explained/d979d43b4c9a.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Jordan Williams"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How long does Microsoft's interview process take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Commonly three to six weeks from recruiter screen to offer. Because you interview for a specific team rather than a general pool, there is no separate team-matching stage to wait on, which keeps the timeline shorter than Google's. The main source of delay is scheduling the loop around a hiring manager's availability."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How many rounds are in a Microsoft onsite loop?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Typically four to five rounds of 45 to 60 minutes, usually on the same day. A common shape is two coding rounds, one design or architecture round, one round with the hiring manager, and a final As-Appropriate round with a senior engineer or leader from outside the team."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the As-Appropriate round at Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The AA round is the final interview, run by a senior person outside the hiring team who acts as a calibration check on the bar. It is loosely analogous to Amazon's Bar Raiser. It is usually a mix of coding, design, and behavioral questions, and reaching it is a positive signal: teams do not spend a senior leader's time on a candidate the earlier rounds already rejected."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Microsoft's coding bar easier than Google's or Meta's?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The algorithm problems are generally more moderate, with fewer hard dynamic programming or advanced graph questions, but the round is not easier overall. Microsoft weights practical engineering more heavily: how you handle edge cases, how you debug your own code when it breaks, and whether you write code someone could maintain."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are Microsoft's engineering levels?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Level 59 and 60 are SDE, 61 and 62 are SDE II, 63 and 64 are Senior SDE, and 65 and above are Principal. Level is set by loop performance rather than years served, and the design round is usually what separates SDE II from Senior."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you interview for a specific team at Microsoft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost always, yes. Roles are posted by individual teams and the hiring manager typically interviews you directly, so questions often reflect that team's actual domain. This is the opposite of Google, where team matching happens after the hiring committee approves you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Microsoft's growth mindset and does it matter in interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Growth mindset is Microsoft's stated cultural principle: the belief that ability develops through effort rather than being fixed. It shows up in interviews through how you respond to hints, whether you can say plainly what you got wrong on a past project, and how you handle a problem you have not seen before. Defensiveness under a hint is scored badly."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How soon can you reapply to Microsoft after a rejection?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The typical cooldown is six months, and it applies per role rather than company-wide in every case. Because hiring is team-driven, a rejection from one team does not always bar you from a different team's posting, though your prior feedback is visible to recruiters."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/microsoft-interview-process-explained/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Microsoft Interview Process: Rounds, Levels & the AA Round (2026)",
+ "lead": "How Microsoft's loop works: the recruiter screen, phone screen, four-round onsite, the As-Appropriate round that can end it, and how levels 59–65 are set.",
+ "category": "Company Guides",
+ "readTime": "9 min read",
+ "date": "11 August 2026",
+ "author": "Jordan Williams",
+ "hero": {
+  "src": "/images/blog/microsoft-interview-process-explained/d979d43b4c9a.jpg",
+  "alt": "A candidate and engineer discussing a technical problem across a laptop."
+ },
+ "html": "<p>Microsoft's loop is the least theatrical of the big-tech processes, and that is precisely what candidates get wrong about it. There is no compressed two-problems-in-45-minutes sprint like Meta's, no hiring committee that never meets you like Google's, and no published list of sixteen principles to rehearse against like Amazon's. What Microsoft has instead is a team-driven loop that ends with a senior outsider whose job is to check whether the team is about to lower the bar. Candidates who prepare only algorithms tend to clear the early rounds and stall in that final one. This guide covers each stage, what the As-Appropriate round is actually testing, how levels 59 through 65 get decided, and where preparation should differ from a Google or Meta loop.</p>\n <h2>The Full Pipeline, Stage by Stage</h2>\n <p>1</p>\n<p>Application, referral, or recruiter outreach</p>\n<p>Microsoft hires per team, so you are applying to a specific posting rather than a general engineering pool. A referral moves your CV faster and gives you something more useful than speed: a person who can tell you what the team actually works on before you interview with its manager.</p>\n<p>2</p>\n<p>Recruiter screen: 30 minutes</p>\n<p>Background, target level, location, and visa or relocation logistics. Ask which level the loop is calibrated to, which team and org the role sits in, and whether the loop includes a design round. All three change how you prepare.</p>\n<p>3</p>\n<p>Online assessment (university and some early-career roles)</p>\n<p>A timed Codility-style test with two or three problems. Standard for campus hiring and less common for experienced roles. Practise in the assessment platform itself rather than in your own IDE, because the editor is plain and the clock is unforgiving.</p>\n<p>4</p>\n<p>Technical phone screen: 45 to 60 minutes</p>\n<p>One coding problem in a shared editor with a real conversation around it. Expect follow-ups that extend the problem rather than a second unrelated question. Passing means working code, stated complexity, and handled edge cases.</p>\n<p>5</p>\n<p>The onsite loop: 4 to 5 rounds</p>\n<p>Usually one day, frequently virtual. A common shape: two coding rounds, one design or architecture round, one round with the hiring manager, and the AA round last. Rounds run 45 to 60 minutes and you often meet the team between them.</p>\n<p>6</p>\n<p>The As-Appropriate round</p>\n<p>A senior engineer or leader from outside the hiring team, scheduled last. Their role is calibration: checking that the team is holding the company bar rather than hiring for immediate need. Being scheduled for it is a good sign.</p>\n<p>7</p>\n<p>Debrief and offer</p>\n<p>Interviewers submit written feedback and the hiring manager drives the decision with the AA interviewer carrying disproportionate weight. Because you interviewed for a specific team, an offer is an offer to that team, and there is no separate matching stage.</p>\n <p>Why team-driven hiring changes your preparation</p>\n<p>At Google you are assessed against a general engineering bar and placed afterwards. At Microsoft the hiring manager is usually in your loop and is hiring for work they need done next quarter. That makes the team's domain genuinely worth researching. An Azure infrastructure team and a Microsoft 365 product team will weight the same design answer differently. Read the posting closely, then ask the recruiter what the team ships.</p>\n <h2>The Coding Rounds: Moderate Problems, Higher Craft Bar</h2>\n <p>The persistent myth is that Microsoft's coding bar is soft. The algorithm problems genuinely are more moderate than Google's or Meta's, and you are far less likely to meet hard dynamic programming or an advanced graph algorithm. What replaces that difficulty is scrutiny of the code itself. Microsoft interviewers are unusually likely to ask what happens on a null input, to point at a line and ask you to walk it, or to introduce a bug and watch you find it.</p>\n <p>Very common</p>\n<ul><li>Strings and arrays, in-place manipulation</li><li>Hash maps and frequency counting</li><li>Trees: traversal, BST validation, LCA</li><li>Linked lists: reversal, cycle detection</li><li>Recursion and backtracking basics</li><li>Two pointers and sliding window</li></ul>\n<p>Common</p>\n<ul><li>Graphs: BFS, DFS, topological sort</li><li>Stacks, queues, and parsing</li><li>Binary search on answer</li><li>Matrix traversal</li><li>Design a class with clean APIs</li><li>Concurrency basics, for infra teams</li></ul>\n<p>Rare</p>\n<ul><li>Hard dynamic programming</li><li>Segment trees, advanced tries</li><li>Competitive-programming mathematics</li><li>Two unrelated problems in one round</li></ul>\n <p>What separates a pass from a fail here, ranked by how often it decides the outcome:</p>\n <ul><li><strong>Edge cases named before you are asked.</strong> Empty input, single element, duplicates, integer overflow, null. Saying \"let me handle the empty case first\" costs eight seconds and is scored explicitly at Microsoft in a way it is not everywhere.</li><li><strong>Debugging your own code calmly.</strong> If the interviewer finds a bug, the round is not over. How you respond to it is the actual measurement. Re-read the line, trace a concrete input out loud, and fix it. Guessing at random edits is the failure mode.</li><li><strong>Code someone could maintain.</strong> Real variable names, a helper function where the logic deserves one, no clever one-liners that need a paragraph of explanation. Microsoft is hiring for a codebase that has existed for decades.</li><li><strong>Taking the hint.</strong> An interviewer nudge is information, not an insult. Candidates who argue with a hint or ignore it score badly on the growth-mindset dimension even when they eventually reach a correct answer.</li><li><strong>Complexity stated without being asked.</strong> Time and space, out loud, as soon as you finish. Then say whether you think it can be improved and at what cost.</li></ul>\n <h2>The Design Round and the SDE II / Senior Line</h2>\n <p>A design round appears from SDE II upward and gets heavier at Senior. It is usually the round that sets your level, because it is the only one where scope of thinking is visible. Two candidates who wrote equally correct code separate here: the one who pins down requirements, puts real numbers on scale, justifies each component, and names their own bottleneck lands the higher level. The one who draws a correct but unexamined diagram lands the lower one.</p>\n <p>Microsoft's version of this round is more likely than Meta's to be grounded in the hiring team's actual domain. An Azure team may ask you to design a storage or queueing service; a Teams or Office team is likelier to hand you something product-shaped. Some teams also run a variant that is closer to object-oriented design than distributed systems: design the classes for a parking garage, an elevator bank, or a card game, where the assessment is interface quality, responsibility boundaries, and extensibility rather than throughput. Ask the recruiter which flavour to expect, because preparing for the wrong one is a genuinely bad use of a week.</p>\n <p>The five-phase structure in our <a href=\"/blog/system-design-interview-questions-framework/\">system design framework</a> applies directly to the distributed-systems flavour. For the object-oriented variant, spend your clarification time on who uses the system and which parts are expected to change later, because extensibility is what that version scores.</p>\n <h2>The As-Appropriate Round: What It Actually Tests</h2>\n <p>The AA round is the part of Microsoft's process candidates most often misread. It is not a harder coding round. The interviewer is deliberately from outside the hiring team, and the question they are answering is not \"can this person do the job the team needs\". The earlier rounds covered that. It is \"would I be comfortable with this person representing Microsoft's engineering bar three levels of promotion from now.\"</p>\n <p>In practice that produces a round that moves across modes without warning. A coding problem that turns into a design discussion. A question about a past project that turns into a values question. Candidates who have prepared three separate rehearsed modes tend to sound disjointed here. What travels well is being able to explain your own technical decisions to a senior person who has no context on your work.</p>\n <ul><li><strong>Reaching the AA round is a positive signal.</strong> Teams do not spend a principal engineer's hour on a candidate the loop has already decided against.</li><li><strong>Ambiguity is intentional.</strong> Underspecified questions are there to see whether you ask or assume. Ask.</li><li><strong>They will drill your proudest project.</strong> Not the summary, but the specific decisions you made, the alternatives you rejected, and what you would do differently. Vague ownership is exposed quickly by someone senior.</li><li><strong>Disagreement is allowed, defensiveness is not.</strong> You can hold a position under pressure if you can say what evidence would change your mind. That distinction is the round in miniature.</li></ul>\n <p>Argue for your level before the loop, not after</p>\n<p>Ask your recruiter at the screen which level the loop is calibrated to. Loops are calibrated in advance and the questions follow from that calibration, so a level-63 case cannot be made inside a loop built for 61. If the target sits below where you believe you are, make the case then, because reopening it after the debrief means asking a group to overturn a decision they have already written down.</p>\n <h2>Levels, Briefly</h2>\n <div class=\"table-wrap\"><table><thead><tr><th>Level</th><th>Title</th><th>Roughly</th><th>What the loop is checking</th></tr>\n</thead>\n<tbody><tr><td>59–60</td><td>SDE</td><td>New grad to ~2 years</td><td>Fundamentals, clean code, coachability</td></tr>\n<tr><td>61–62</td><td>SDE II</td><td>~2–5 years</td><td>Independent delivery, first real design signal</td></tr>\n<tr><td>63–64</td><td>Senior SDE</td><td>~5–10 years</td><td>System ownership, influence beyond your own code</td></tr>\n<tr><td>65+</td><td>Principal</td><td>10+ years</td><td>Ambiguous problems, cross-team technical direction</td></tr>\n</tbody>\n</table></div>\n <p>Years are a rough guide and not a rule. Level is decided by what the loop saw, which is why a candidate with four years of genuine system ownership can land 63 and one with nine years of narrow feature work can land 61.</p>\n <h2>Microsoft vs Google vs Meta vs Amazon</h2>\n <div class=\"table-wrap\"><table><thead><tr><th></th><th>Microsoft</th><th>Google</th><th>Meta</th><th>Amazon</th></tr>\n</thead>\n<tbody><tr><td>Coding load</td><td>One problem, deep follow-ups</td><td>One problem per 45 min</td><td>Two problems per 45 min</td><td>One to two, plus behavioral</td></tr>\n<tr><td>Who decides</td><td>Hiring manager, AA carries weight</td><td>Hiring committee, never meets you</td><td>Debrief with your interviewers</td><td>Loop debrief, Bar Raiser veto</td></tr>\n<tr><td>Calibration check</td><td>As-Appropriate round</td><td>Hiring committee</td><td>Debrief group</td><td>Bar Raiser</td></tr>\n<tr><td>Rubric</td><td>Unpublished, growth-mindset themes</td><td>Four broad attributes</td><td>Unpublished, culture-aligned</td><td>16 named Leadership Principles</td></tr>\n<tr><td>Team matching</td><td>Team-specific from the start</td><td>After the committee</td><td>After the offer</td><td>Team-specific from the start</td></tr>\n<tr><td>Timeline</td><td>Three to six weeks</td><td>Six to ten weeks</td><td>Three to six weeks</td><td>Two to six weeks</td></tr>\n<tr><td>What most often fails candidates</td><td>Sloppy edge cases, rigidity under hints</td><td>Silent reasoning</td><td>Coding speed</td><td>Thin, undrilled stories</td></tr>\n</tbody>\n</table></div>\n <p>If you are running more than one of these loops, the coding preparation transfers almost entirely and the round strategy does not. Read our <a href=\"/blog/google-interview-process-explained/\">Google process guide</a>, <a href=\"/blog/meta-interview-process-explained/\">Meta process guide</a>, and <a href=\"/blog/amazon-interview-leadership-principles-guide/\">Amazon Leadership Principles guide</a> alongside this one, so you know which mode you are in on the day rather than defaulting to whichever loop you prepared for most recently.</p>\n <h2>A Realistic Five-Week Preparation Plan</h2>\n <p>1</p>\n<p>Week 1: fundamentals, out loud</p>\n<p>Work the very common column until recognition is automatic. Narrate every solution as though someone is listening, because at Microsoft someone is going to interrupt and ask why you chose that data structure.</p>\n<p>2</p>\n<p>Week 2: craft and edge cases</p>\n<p>Re-solve twenty problems you have already solved, this time optimising only for readable code and enumerated edge cases before writing a line. This is the week that maps most directly to Microsoft's actual bar and the one candidates skip.</p>\n<p>3</p>\n<p>Week 3: debugging under observation</p>\n<p>Have someone introduce a bug into your working solution and fix it while explaining your reasoning. If nobody is available, come back to yesterday's code cold and find the fault you left in it. Composure while wrong is a trained skill.</p>\n<p>4</p>\n<p>Week 4: design, in the right flavour</p>\n<p>Confirm with your recruiter whether the round is distributed systems or object-oriented, then do eight to ten prompts of that type, spoken and timed to 45 minutes. Repeat three a second time, since the second pass is where structure becomes reflex.</p>\n<p>5</p>\n<p>Week 5: full loops and the AA simulation</p>\n<p>Two complete four-round loops in single sittings. Then one deliberately mixed session where the questioner switches between coding, design, and behavioral without warning, which is the AA round's actual texture.</p>\n<p>6</p>\n<p>Final days: taper</p>\n<p>Light review, confirm logistics and your editor setup, research what the team ships, and sleep. Cramming degrades the fluency this loop measures.</p>\n <p>Almost all of that plan is spoken and timed rather than read, because Microsoft's two real failure modes, careless edge cases and rigidity when corrected, only appear when someone is watching and interrupting. That is the practical case for unlimited AI practice: the same problem, narrated, interrupted, and repeated as many times as it takes, at any hour. We have <a href=\"/blog/ai-vs-traditional-interview-coaching/\">compared AI and human coaching honestly</a>, including where a human coach still wins, and our <a href=\"/blog/how-to-prepare-faang-software-engineer-interview/\">FAANG preparation roadmap</a> covers how to sequence coding, design, and behavioral work without burning out before the loop.</p>\n <p>Practise being interrupted, not just being correct</p>\n<p>Amigo runs unlimited timed practice from your resume and target level, then supports you live during the real interview with structured answers streamed in real time.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "How long does Microsoft's interview process take?",
+   "a": "Commonly three to six weeks from recruiter screen to offer. Because you interview for a specific team rather than a general pool, there is no separate team-matching stage to wait on, which keeps the timeline shorter than Google's. The main source of delay is scheduling the loop around a hiring manager's availability."
+  },
+  {
+   "q": "How many rounds are in a Microsoft onsite loop?",
+   "a": "Typically four to five rounds of 45 to 60 minutes, usually on the same day. A common shape is two coding rounds, one design or architecture round, one round with the hiring manager, and a final As-Appropriate round with a senior engineer or leader from outside the team."
+  },
+  {
+   "q": "What is the As-Appropriate round at Microsoft?",
+   "a": "The AA round is the final interview, run by a senior person outside the hiring team who acts as a calibration check on the bar. It is loosely analogous to Amazon's Bar Raiser. It is usually a mix of coding, design, and behavioral questions, and reaching it is a positive signal: teams do not spend a senior leader's time on a candidate the earlier rounds already rejected."
+  },
+  {
+   "q": "Is Microsoft's coding bar easier than Google's or Meta's?",
+   "a": "The algorithm problems are generally more moderate, with fewer hard dynamic programming or advanced graph questions, but the round is not easier overall. Microsoft weights practical engineering more heavily: how you handle edge cases, how you debug your own code when it breaks, and whether you write code someone could maintain."
+  },
+  {
+   "q": "What are Microsoft's engineering levels?",
+   "a": "Level 59 and 60 are SDE, 61 and 62 are SDE II, 63 and 64 are Senior SDE, and 65 and above are Principal. Level is set by loop performance rather than years served, and the design round is usually what separates SDE II from Senior."
+  },
+  {
+   "q": "Do you interview for a specific team at Microsoft?",
+   "a": "Almost always, yes. Roles are posted by individual teams and the hiring manager typically interviews you directly, so questions often reflect that team's actual domain. This is the opposite of Google, where team matching happens after the hiring committee approves you."
+  },
+  {
+   "q": "What is Microsoft's growth mindset and does it matter in interviews?",
+   "a": "Growth mindset is Microsoft's stated cultural principle: the belief that ability develops through effort rather than being fixed. It shows up in interviews through how you respond to hints, whether you can say plainly what you got wrong on a past project, and how you handle a problem you have not seen before. Defensiveness under a hint is scored badly."
+  },
+  {
+   "q": "How soon can you reapply to Microsoft after a rejection?",
+   "a": "The typical cooldown is six months, and it applies per role rather than company-wide in every case. Because hiring is team-driven, a rejection from one team does not always bar you from a different team's posting, though your prior feedback is visible to recruiters."
+  }
+ ],
+ "related": [
+  "/blog/google-ai-assisted-coding-interview",
+  "/blog/meta-ai-enabled-coding-interview",
+  "/blog/meta-interview-process-explained"
+ ]
+}

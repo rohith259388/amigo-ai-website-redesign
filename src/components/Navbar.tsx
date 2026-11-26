@@ -13,13 +13,13 @@ import { MagneticButton } from "./ui/MagneticButton";
 export const NAV_LINKS: { label: string; href: string; highlight?: boolean }[] = [
   { label: "Resume Builder", href: "/#resume" },
   { label: "Auto Apply Jobs", href: "/#auto-apply" },
-  { label: "Question Bank", href: "/questions" },
+  { label: "Question Bank", href: "/questions/" },
   { label: "AI Interview Assist", href: "/#interview" },
-  { label: "LinkedIn", href: "/linkedin" },
+  { label: "LinkedIn", href: "/linkedin/" },
   { label: "Buddy Program", href: "/#buddy" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "Referral Program", href: "/referral" },
-  { label: "Creators Wanted", href: "/creators", highlight: true },
+  { label: "Referral Program", href: "/referral/" },
+  { label: "Creators Wanted", href: "/creators/", highlight: true },
 ];
 
 export function Navbar({ activeHref }: { activeHref: string | null }) {

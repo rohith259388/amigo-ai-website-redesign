@@ -1,0 +1,149 @@
+{
+ "path": "/blog/how-amigo-works-guide",
+ "section": "blog",
+ "title": "How Amigo Works: A Complete Guide to Real-Time AI Interview Support | Amigo — AI Career Companion & Interview Copilot",
+ "description": "A first-time walkthrough of Amigo end to end: account setup, the desktop app, building a Copilot Profile, and what happens when you join a live interview.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/how-amigo-works-guide/8831a0498d15.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/how-amigo-works-guide/#article",
+   "headline": "How Amigo Works: A Complete Guide to Real-Time AI Interview Support",
+   "description": "A first-time walkthrough of Amigo end to end: account setup, the desktop app, building a Copilot Profile, and what happens when you join a live interview.",
+   "datePublished": "2026-07-09",
+   "dateModified": "2026-07-09",
+   "url": "https://www.amigohelp.ai/blog/how-amigo-works-guide/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/how-amigo-works-guide/8831a0498d15.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Sam O'Brien"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How long does it take to set up Amigo before a first interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "About 5 minutes: create an account and upload your resume and job description, install the desktop app for Windows 10/11 (64-bit) or macOS 12+, build a Copilot Profile, then launch Amigo before you join your call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do I need before I start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A resume and the job description for the role you're interviewing for, in PDF, Word, or plain text (up to 10 MB each). Both get uploaded from All My Docs and linked into your Copilot Profile."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I try Amigo without a real interview first?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Practice Mode runs a full mock session using the same AI engine and your same Copilot Profile, no interviewer required. It generates 10 questions by default (5–20 range) and you control the pace."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to open Amigo before joining the video call, or can I launch it mid-interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Launch it first. Amigo needs to complete its audio and stealth readiness check before your call starts, so opening it after you've already joined can delay audio capture."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does billing work once I start using it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amigo runs on a minutes-based credit system: credits are only drawn down while the AI is actively generating a suggestion, not while it's idle or just listening. New accounts start with a 10-minute free credit, and purchased minutes never expire."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/how-amigo-works-guide/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "How Amigo Works: A Complete Guide to Real-Time AI Interview Support",
+ "lead": "A first-time walkthrough of Amigo end to end: account setup, the desktop app, building a Copilot Profile, and what happens when you join a live interview.",
+ "category": "AI & Tools",
+ "readTime": "2 min read",
+ "date": "9 July 2026",
+ "author": "Sam O'Brien",
+ "hero": {
+  "src": "/images/blog/how-amigo-works-guide/8831a0498d15.jpg",
+  "alt": "A professional setting up a laptop and desk microphone for an interview."
+ },
+ "html": "<p>Most guides to AI interview tools explain the technology. This one is a walkthrough: what to actually do, in order, from creating an account to seeing your first AI-generated answer appear during a live call. The whole setup takes about 5 minutes the first time.</p>\n <h2>Before You Start</h2>\n <p>What you'll need</p>\n<ul><li>Your resume and the job description, in PDF, Word, or plain text (max 10 MB each)</li><li>Windows 10/11 (64-bit) or macOS 12+ (Intel or Apple Silicon)</li><li>A stable internet connection, since Amigo's transcription and AI services run in the cloud, so it doesn't work fully offline</li></ul>\n <h2>Setting Up Amigo, Step by Step</h2>\n <p>1</p>\n<p>Create your account and upload your documents</p>\n<p>Sign up with your email, verify it, then upload your resume and job description from All My Docs. These become the context Amigo uses to personalize every answer.</p>\n<p>2</p>\n<p>Download and install the desktop app</p>\n<p>Grab the installer for your platform, Windows 10/11 (64-bit) or macOS 12+, and run it. This is the part that actually listens during your interview; nothing runs in a browser tab.</p>\n<p>3</p>\n<p>Build your Copilot Profile</p>\n<p>Link your resume and job description, pick a session format (Live Interview or Coding Test), and set a response length. Turn on \"Use this profile\" so it's active for your next session. Optionally add a Brief with your own prep notes.</p>\n<p>4</p>\n<p>Launch Amigo, then join your call</p>\n<p>Open the desktop app and sign in before you join Zoom, Teams, or Meet, not after. Amigo runs an automatic readiness check (stealth mode, audio permissions, network) and then listens automatically once you're on the call.</p>\n <h2>Not Ready for a Real Interview Yet? Use Practice Mode</h2>\n <p>If you'd rather test everything before it counts, <a href=\"/docs/practice-mode/\">Practice Mode</a> runs a full mock interview with no interviewer needed. Amigo streams questions one at a time (10 by default, adjustable from 5 to 20) using the same AI engine and the same Copilot Profile context as a live session. It's the fastest way to confirm your resume and job description are producing the answers you'd actually want to see mid-interview.</p>\n <h2>What Happens the Moment You're in the Interview</h2>\n <p>Once the interviewer asks a question, Amigo listens, transcribes, and streams a tailored answer to your overlay in <a href=\"/blog/real-time-interview-assistance-explained/\">roughly 200 milliseconds</a>, fast enough to arrive inside a normal conversational pause. You're not reading a script; you're using the streamed answer as a scaffold and speaking in your own words.</p>\n <p>🛡️ Invisible to screen share</p>\n<p>Amigo's overlay is <a href=\"/blog/can-interviewers-detect-ai-tools/\">excluded from screen capture at the OS level</a>. If you share your screen, it's not there.</p>\n<p>👥 Bring a human Buddy</p>\n<p><a href=\"/blog/buddy-system-for-job-interviews/\">Invite a mentor or friend</a> to watch your live transcript and send you private hints alongside the AI.</p>\n <figure><iframe src=\"https://www.youtube-nocookie.com/embed/SO3PZ4RBebI?rel=0&amp;modestbranding=1\" title=\"Amigo demo video\" loading=\"lazy\" allow=\"encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>\n<figcaption>Setup to first streamed answer: what the full flow looks like in practice.</figcaption></figure>\n <h2>Credits and the Free Trial</h2>\n <p>New accounts start with a 10-minute free credit, no card required. Beyond that, Amigo uses a minutes-based credit system, and you're only charged while the AI is actively generating a suggestion, not while it's idle or just listening, and purchased minutes never expire.</p>\n <p>Set up Amigo before your next interview</p>\n<p>Create an account, upload your resume, and run a Practice session to see how it feels. Takes about 5 minutes.</p>\n<p><a href=\"/signup/\">Get started free →</a></p>",
+ "faqs": [
+  {
+   "q": "How long does it take to set up Amigo before a first interview?",
+   "a": "About 5 minutes: create an account and upload your resume and job description, install the desktop app for Windows 10/11 (64-bit) or macOS 12+, build a Copilot Profile, then launch Amigo before you join your call."
+  },
+  {
+   "q": "What do I need before I start?",
+   "a": "A resume and the job description for the role you're interviewing for, in PDF, Word, or plain text (up to 10 MB each). Both get uploaded from All My Docs and linked into your Copilot Profile."
+  },
+  {
+   "q": "Can I try Amigo without a real interview first?",
+   "a": "Yes. Practice Mode runs a full mock session using the same AI engine and your same Copilot Profile, no interviewer required. It generates 10 questions by default (5–20 range) and you control the pace."
+  },
+  {
+   "q": "Do I need to open Amigo before joining the video call, or can I launch it mid-interview?",
+   "a": "Launch it first. Amigo needs to complete its audio and stealth readiness check before your call starts, so opening it after you've already joined can delay audio capture."
+  },
+  {
+   "q": "How does billing work once I start using it?",
+   "a": "Amigo runs on a minutes-based credit system: credits are only drawn down while the AI is actively generating a suggestion, not while it's idle or just listening. New accounts start with a 10-minute free credit, and purchased minutes never expire."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

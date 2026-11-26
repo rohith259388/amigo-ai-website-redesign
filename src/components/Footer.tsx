@@ -24,6 +24,18 @@ const SOCIALS = [
   },
 ];
 
+const RESOURCES = [
+  { label: "Pricing plans", href: "/pricing/" },
+  { label: "Blog", href: "/blog/" },
+  { label: "Compare", href: "/compare/" },
+  { label: "Docs", href: "/docs/" },
+];
+
+const LEGAL = [
+  { label: "Privacy", href: "/docs/privacy-policy/" },
+  { label: "Terms", href: "/docs/terms/" },
+];
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-amigo-ink text-white">
@@ -32,7 +44,7 @@ export function Footer() {
       <div aria-hidden className="pointer-events-none absolute -right-20 bottom-0 h-[260px] w-[260px] rounded-full bg-amigo-vivid/20 blur-[100px] animate-pulse-soft" />
 
       <div className="container-x relative pb-10 pt-20">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div>
             <Logo />
             <p className="mt-4 max-w-[280px] text-[15px] leading-relaxed text-white/55">Your AI job-search companion.</p>
@@ -42,6 +54,18 @@ export function Footer() {
             <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/35">Product</div>
             <ul className="mt-4 space-y-2.5">
               {NAV_LINKS.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-[15px] text-white/70 transition-colors hover:text-white">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/35">Resources</div>
+            <ul className="mt-4 space-y-2.5">
+              {RESOURCES.map((l) => (
                 <li key={l.href}>
                   <a href={l.href} className="text-[15px] text-white/70 transition-colors hover:text-white">
                     {l.label}
@@ -65,10 +89,10 @@ export function Footer() {
           <div>
             <div className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/35">Legal</div>
             <ul className="mt-4 space-y-2.5">
-              {["Privacy", "Terms"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-[15px] text-white/70 transition-colors hover:text-white">
-                    {l}
+              {LEGAL.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-[15px] text-white/70 transition-colors hover:text-white">
+                    {l.label}
                   </a>
                 </li>
               ))}

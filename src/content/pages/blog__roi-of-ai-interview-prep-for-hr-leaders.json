@@ -1,0 +1,137 @@
+{
+ "path": "/blog/roi-of-ai-interview-prep-for-hr-leaders",
+ "section": "blog",
+ "title": "The ROI of AI-Assisted Interview Prep: A Data-Driven Look for HR Leaders | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Cost-per-hire averages $4,700. Early data from Amigo's Q2 2026 partner cohort points to a 22% cut: where that number comes from, and how to pressure-test it.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/roi-of-ai-interview-prep-for-hr-leaders/f7e7efc56960.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/roi-of-ai-interview-prep-for-hr-leaders/#article",
+   "headline": "The ROI of AI-Assisted Interview Prep: A Data-Driven Look for HR Leaders",
+   "description": "Cost-per-hire averages $4,700. Early data from Amigo's Q2 2026 partner cohort points to a 22% cut: where that number comes from, and how to pressure-test it.",
+   "datePublished": "2026-07-08",
+   "dateModified": "2026-07-08",
+   "url": "https://www.amigohelp.ai/blog/roi-of-ai-interview-prep-for-hr-leaders/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/roi-of-ai-interview-prep-for-hr-leaders/f7e7efc56960.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Jordan Williams"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What does the average hire actually cost today?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recruiting benchmark data puts average cost-per-hire at roughly $4,700 for non-executive roles, with candidates now going through about 20 interviews per hire, up from 14 just a few years ago. Both numbers have been climbing, which is what makes any real reduction in wasted interview cycles financially meaningful."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does the 22% cost-per-hire reduction figure come from?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Early, self-reported data from Amigo's Q2 2026 employer partner cohort, measured against each partner's own prior-quarter baseline. It is directional, not a controlled study, and we're publishing a full breakdown of the underlying components in a follow-up post rather than presenting the headline number without its inputs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the savings coming from hiring fewer people, or hiring better?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "From the partner feedback so far, it's mostly the latter: fewer repeat interview rounds triggered by ambiguous first-round signal, and fewer early departures from roles filled under time pressure. It is not a reduction in headcount need. It's a reduction in wasted cycles per hire."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Should HR leaders be skeptical of vendor-reported ROI numbers like this one?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, as a default. SHRM's 2025 Talent Trends report found 89% of HR professionals say AI saves them time, but only 17% call their implementation highly successful, a large gap between perceived and proven value. Any vendor-reported number, including this one, should be treated as a hypothesis worth testing against your own hiring data, not a guarantee."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/roi-of-ai-interview-prep-for-hr-leaders/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "The ROI of AI-Assisted Interview Prep: A Data-Driven Look for HR Leaders",
+ "lead": "Cost-per-hire averages $4,700. Early data from Amigo's Q2 2026 partner cohort points to a 22% cut: where that number comes from, and how to pressure-test it.",
+ "category": "Interview Prep",
+ "readTime": "2 min read",
+ "date": "8 July 2026",
+ "author": "Jordan Williams",
+ "hero": {
+  "src": "/images/blog/roi-of-ai-interview-prep-for-hr-leaders/f7e7efc56960.jpg",
+  "alt": "HR colleagues discussing hiring plans and printed charts at a meeting table."
+ },
+ "html": "<p>Average cost-per-hire for a non-executive role sits at roughly <strong>$4,700</strong>, and candidates now go through about 20 interviews per hire to get there, up from 14 just a few years ago, according to recruiting benchmark data. Early, self-reported data from Amigo's Q2 2026 employer partner cohort points to a <strong>22% reduction</strong> in that cost, measured against each partner's own prior-quarter baseline. That's roughly $1,000 saved per hire, if it holds, but the number is only useful to an HR leader if they know exactly where it comes from, so that's what this post walks through.</p>\n <h2>The Cost Structure This Is Actually Attacking</h2>\n <p>Cost-per-hire isn't one line item. It's the sum of every wasted cycle in the funnel: interview rounds that get repeated because the first one gave an ambiguous read, onsite hours spent evaluating candidates who turn out to be a poor fit once the offer stage arrives, and the cost of re-running the whole process when an early hire doesn't work out. None of that shows up as a single number until it's aggregated at the end of a quarter, which is part of why it's historically been hard for HR leaders to see where the money is actually going.</p>\n <p>Better-prepared candidates change that math at the individual-interview level. A candidate who gives a structured, complete answer on the first pass is less likely to trigger an extra clarifying round, and structured evaluation already saves interviewers time independent of this: Google's re:Work research found standardized questions and rubrics save roughly 40 minutes per interview on average.</p>\n <h2>Where the 22% Breaks Down</h2>\n <p>1</p>\n<p>Fewer repeat or extended interview rounds</p>\n<p>The largest reported component. Partners cited fewer 'let's bring them back for another round to be sure' decisions, the kind of ambiguous first-round signal that adds a full extra cycle to a single hire.</p>\n<p>2</p>\n<p>Lower early-stage attrition on new hires</p>\n<p>A smaller but real share. Candidates who understood the role and format going in were reported as a better fit once in the seat, reducing the cost of re-running the search within the first 90 days.</p>\n<p>3</p>\n<p>Reduced time-to-fill</p>\n<p>Partly a byproduct of the first two: fewer repeat rounds and fewer early departures both shorten the average time a requisition stays open, which itself carries a cost in lost productivity.</p>\n <h2>How Skeptical Should You Be of This Number?</h2>\n <p>Reasonably skeptical, and we'd rather say that directly than let the headline number stand alone. This is self-reported data from an early partner cohort, measured against each partner's own baseline rather than a randomized control. It is a hypothesis with early support behind it, not a peer-reviewed result.</p>\n <p>That caution is consistent with the broader picture: SHRM's 2025 Talent Trends report found 89% of HR professionals say AI saves them time, but only 17% call their implementation highly successful. Time-saved and value-delivered are not the same claim, and any vendor, including us, should be expected to show the difference rather than assume it away. We're publishing the full component-level breakdown behind the 22% figure in a follow-up post so HR leaders can evaluate the inputs, not just the headline.</p>\n <p>See if the same pattern holds for your pipeline</p>\n<p>Amigo helps candidates arrive at interviews prepared and composed, which is the lever behind fewer repeat rounds and clearer first-pass signal.</p>\n<p><a href=\"/signup/\">Talk to us about employer partnership →</a></p>",
+ "faqs": [
+  {
+   "q": "What does the average hire actually cost today?",
+   "a": "Recruiting benchmark data puts average cost-per-hire at roughly $4,700 for non-executive roles, with candidates now going through about 20 interviews per hire, up from 14 just a few years ago. Both numbers have been climbing, which is what makes any real reduction in wasted interview cycles financially meaningful."
+  },
+  {
+   "q": "Where does the 22% cost-per-hire reduction figure come from?",
+   "a": "Early, self-reported data from Amigo's Q2 2026 employer partner cohort, measured against each partner's own prior-quarter baseline. It is directional, not a controlled study, and we're publishing a full breakdown of the underlying components in a follow-up post rather than presenting the headline number without its inputs."
+  },
+  {
+   "q": "Is the savings coming from hiring fewer people, or hiring better?",
+   "a": "From the partner feedback so far, it's mostly the latter: fewer repeat interview rounds triggered by ambiguous first-round signal, and fewer early departures from roles filled under time pressure. It is not a reduction in headcount need. It's a reduction in wasted cycles per hire."
+  },
+  {
+   "q": "Should HR leaders be skeptical of vendor-reported ROI numbers like this one?",
+   "a": "Yes, as a default. SHRM's 2025 Talent Trends report found 89% of HR professionals say AI saves them time, but only 17% call their implementation highly successful, a large gap between perceived and proven value. Any vendor-reported number, including this one, should be treated as a hypothesis worth testing against your own hiring data, not a guarantee."
+  }
+ ],
+ "related": [
+  "/blog/google-hr-interview-questions-and-preparation",
+  "/blog/second-round-interview-questions",
+  "/blog/google-interview-process-2026"
+ ]
+}

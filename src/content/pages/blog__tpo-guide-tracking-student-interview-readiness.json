@@ -1,0 +1,137 @@
+{
+ "path": "/blog/tpo-guide-tracking-student-interview-readiness",
+ "section": "blog",
+ "title": "The TPO's Guide to Tracking Student Interview Readiness | Amigo — AI Career Companion & Interview Copilot",
+ "description": "A framework for placement cells to spot which students are genuinely interview ready: practice volume, skill gap signals, and a simple readiness score.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&h=800&fit=crop&crop=faces",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/tpo-guide-tracking-student-interview-readiness/#article",
+   "headline": "The TPO's Guide to Tracking Student Interview Readiness",
+   "description": "A framework for placement cells to spot which students are genuinely interview ready: practice volume, skill gap signals, and a simple readiness score.",
+   "datePublished": "2026-07-07",
+   "dateModified": "2026-07-07",
+   "url": "https://www.amigohelp.ai/blog/tpo-guide-tracking-student-interview-readiness/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&h=800&fit=crop&crop=faces",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "David Park"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Why isn't attending a placement workshop the same as being interview-ready?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Workshops build awareness and give students a framework, but readiness is built through repeated individual practice under mild pressure, something a one-time group session can't provide at the volume any one student actually needs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What signals should a placement cell track for interview readiness?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Four practical signals: how many mock interviews a student has actually completed, whether they've covered all the round types they'll face (technical, HR, group discussion), results from a skill-gap assessment against target roles, and a qualitative confidence or mentor sign-off."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Amigo offer a dashboard for placement cells to track student readiness?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not currently. Amigo is a per-student AI mock interview and live interview support tool, not an institute-level analytics dashboard. This guide covers the readiness signals worth tracking regardless of which specific tools a placement cell uses."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How should a placement cell prioritize limited one-on-one coaching time in the final weeks?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Toward students flagged as 'at risk' by low practice volume or unresolved skill gaps, rather than spreading time evenly. A simple three-tier readiness flag (ready / needs practice / at risk) makes that triage decision much faster than reviewing each student individually from scratch."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/tpo-guide-tracking-student-interview-readiness/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "The TPO's Guide to Tracking Student Interview Readiness",
+ "lead": "A framework for placement cells to spot which students are genuinely interview ready: practice volume, skill gap signals, and a simple readiness score.",
+ "category": "Career Strategy",
+ "readTime": "2 min read",
+ "date": "7 July 2026",
+ "author": "David Park",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&h=800&fit=crop&crop=faces",
+  "alt": "Three young colleagues discussing work around a table."
+ },
+ "html": "<p>Every placement cell runs into the same problem in the final weeks before interviews start: a few hundred students, uneven readiness, and no easy way to tell who actually needs attention versus who's already solid. The instinct is to run more workshops. The better fix is visibility: a small set of concrete signals that tell you, per student, whether \"they've had training\" has actually turned into \"they're ready.\"</p>\n <h2>Why Training Attendance Isn't a Readiness Signal</h2>\n <p>Attending a mock interview workshop tells you a student showed up. It doesn't tell you they've internalized anything. Readiness comes from repetition under mild pressure, not exposure to a framework once. This is the same gap that shows up across the wider shift in campus recruiting toward <a href=\"/blog/ai-campus-placements-2026-guide/\">skill-gap analysis and role-based assessment</a>: recruiters are looking past a single data point (a score, a workshop certificate) toward evidence of actual demonstrated ability. Placement cells benefit from applying the same standard internally.</p>\n <h2>Four Signals Worth Tracking</h2>\n <p>1</p>\n<p>Mock interview volume completed, not just scheduled</p>\n<p>A student who has run five full mock interviews is in a meaningfully different position than one who attended a single workshop demo. Track completions, not sign-ups.</p>\n<p>2</p>\n<p>Coverage across round types</p>\n<p>A student who has only practiced the technical round is frequently blindsided by the more open-ended HR or group discussion round. Track whether each round type has been rehearsed at least once, not just total practice count.</p>\n<p>3</p>\n<p>Skill-gap assessment results against target roles</p>\n<p>Compare each student's demonstrated skills against the actual requirements of the roles they're targeting. Gaps identified early leave time to close them before interviews; gaps found on placement day don't.</p>\n<p>4</p>\n<p>Self-reported confidence plus a mentor or senior sign-off</p>\n<p>Quantitative signals miss things a five-minute conversation catches immediately. Pair the numbers with a quick qualitative check from someone who has actually watched the student practice.</p>\n <h2>Building a Simple Readiness Score</h2>\n <p>You don't need sophisticated tooling to make this actionable: a lightweight three-tier flag is usually enough to triage attention in the final weeks:</p>\n <ul><li><strong>Ready</strong>: strong practice volume, all round types covered, no unresolved skill gaps against target roles</li><li><strong>Needs practice</strong>: decent volume but gaps in round-type coverage, or an unresolved skill gap with time left to close it</li><li><strong>At risk</strong>: low or no completed mock interviews, or a skill gap that's unlikely to close before placement day without direct intervention</li></ul>\n <p>This kind of flag turns \"review every student individually\" into \"spend one-on-one coaching time on the at-risk list first\", a much faster triage decision when time before placement day is the scarcest resource in the room.</p>\n <h2>Where Tools Like Amigo Fit In</h2>\n <p>To be direct about scope: Amigo doesn't currently offer a cohort-level dashboard for placement cells. It's a per-student tool for unlimited, self-paced AI mock interview practice with instant feedback on structure and delivery. What it does solve is the practice-volume signal above: a placement cell can recommend it as one input students use between scheduled workshops, and gauge engagement through direct conversation rather than an institute-wide report. The readiness framework in this guide holds regardless of which specific tools your cell uses to get students there.</p>\n <p>Give every student unlimited practice reps</p>\n<p>Amigo lets any student run unlimited AI mock interviews with instant feedback, no scheduling, no per-session cost.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "Why isn't attending a placement workshop the same as being interview-ready?",
+   "a": "Workshops build awareness and give students a framework, but readiness is built through repeated individual practice under mild pressure, something a one-time group session can't provide at the volume any one student actually needs."
+  },
+  {
+   "q": "What signals should a placement cell track for interview readiness?",
+   "a": "Four practical signals: how many mock interviews a student has actually completed, whether they've covered all the round types they'll face (technical, HR, group discussion), results from a skill-gap assessment against target roles, and a qualitative confidence or mentor sign-off."
+  },
+  {
+   "q": "Does Amigo offer a dashboard for placement cells to track student readiness?",
+   "a": "Not currently. Amigo is a per-student AI mock interview and live interview support tool, not an institute-level analytics dashboard. This guide covers the readiness signals worth tracking regardless of which specific tools a placement cell uses."
+  },
+  {
+   "q": "How should a placement cell prioritize limited one-on-one coaching time in the final weeks?",
+   "a": "Toward students flagged as 'at risk' by low practice volume or unresolved skill gaps, rather than spreading time evenly. A simple three-tier readiness flag (ready / needs practice / at risk) makes that triage decision much faster than reviewing each student individually from scratch."
+  }
+ ],
+ "related": [
+  "/blog/how-to-follow-up-after-an-interview",
+  "/blog/salary-negotiation-scripts-after-job-offer",
+  "/blog/student-placement-stories-composite"
+ ]
+}

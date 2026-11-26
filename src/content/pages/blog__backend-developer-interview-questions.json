@@ -1,0 +1,185 @@
+{
+ "path": "/blog/backend-developer-interview-questions",
+ "section": "blog",
+ "title": "Backend Developer Interview Questions: APIs, Databases & Scale (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "The backend loop explained: coding, API and schema design, databases, concurrency, the production-debugging round, and what interviewers score in each.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&crop=center",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/backend-developer-interview-questions/#article",
+   "headline": "Backend Developer Interview Questions: APIs, Databases & Scale (2026)",
+   "description": "The backend loop explained: coding, API and schema design, databases, concurrency, the production-debugging round, and what interviewers score in each.",
+   "datePublished": "2026-08-14",
+   "dateModified": "2026-08-14",
+   "url": "https://www.amigohelp.ai/blog/backend-developer-interview-questions/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&crop=center",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "David Park"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What rounds are in a backend developer interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A typical loop has four to five rounds: a coding screen on data structures and algorithms, an API and data-modelling round, a system design round from mid-level upward, often a production-debugging or operational round, and a behavioral round. Smaller companies frequently merge the API round into system design."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What database topics come up most in backend interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indexing and why a query is not using an index, normalisation versus denormalisation, transactions and isolation levels, the N+1 query problem, connection pooling, and when a relational database is the wrong choice. Indexing and transaction isolation appear most often because they explain so much production behaviour downstream."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between a backend and a system design interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "System design is one round inside a backend loop, not the whole loop. Design asks how components fit together at scale. The rest of the backend loop goes narrower: the exact schema, the exact API contract, the exact failure mode when a request is retried, where the answers are concrete rather than architectural."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you answer an API design question?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with the resources and their lifecycle rather than the endpoints. Name the nouns, then the operations on them, then the contract for each: method, path, request and response shape, status codes, error format, pagination, and what happens when the same request arrives twice. Interviewers score whether idempotency, versioning, and errors were designed or forgotten."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are database isolation levels and why do interviewers ask?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Isolation levels define which concurrency anomalies a transaction can observe: read uncommitted, read committed, repeatable read, and serializable, in increasing strictness and decreasing throughput. Interviewers ask because the answer reveals whether you have debugged real concurrent-write bugs or only read about transactions."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is idempotency and why does it matter in backend interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An idempotent operation produces the same result whether it runs once or five times. It matters because networks retry: a payment request that times out may already have succeeded. Interviewers ask about idempotency keys in almost any question involving payments, queues, or webhooks, and forgetting it is one of the most common ways to fail an API design round."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much DevOps do backend engineers need for interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Enough to reason about what happens after deploy: how you would find the cause of a latency spike, what metrics and logs you would want, how a rollback works, and roughly what a container orchestrator does. You are rarely asked to write infrastructure code, but a candidate who has never thought past the merge shows it immediately in the operational round."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do backend interviews still ask LeetCode-style questions?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, at most companies of any size. The coding screen is usually still data structures and algorithms, weighted toward hash maps, strings, trees, and graphs rather than exotic dynamic programming. The backend-specific rounds come after it, which means algorithm practice gets you through the door and is not sufficient once inside."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/backend-developer-interview-questions/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "Backend Developer Interview Questions: APIs, Databases & Scale (2026)",
+ "lead": "The backend loop explained: coding, API and schema design, databases, concurrency, the production-debugging round, and what interviewers score in each.",
+ "category": "Role & Skills",
+ "readTime": "11 min read",
+ "date": "14 August 2026",
+ "author": "David Park",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&crop=center",
+  "alt": "Close-up of the circuits and components on a computer board."
+ },
+ "html": "<p>Backend interviews have a structural trap in them. The coding screen looks identical to every other engineering loop, so candidates prepare for it the same way, with algorithm practice timed until the patterns are automatic, and then meet three rounds that measure something completely different. Those rounds ask what your schema looks like, what happens when the same request arrives twice, why a query that was fast last month is slow now, and how you would find the cause of a latency spike at two in the morning. This guide covers each round in a backend loop, the topics that come up most inside them, and the specific answers that separate an engineer who has operated a system from one who has only built features on top of it.</p>\n <h2>The Shape of a Backend Loop</h2>\n <p>1</p>\n<p>Coding screen: 45 to 60 minutes</p>\n<p>Data structures and algorithms in a shared editor, usually easy-to-medium. Hash maps, strings, trees, graphs, and intervals dominate. This round is a filter rather than a differentiator: passing it gets you to the rounds that actually decide the outcome.</p>\n<p>2</p>\n<p>API and data modelling: 45 to 60 minutes</p>\n<p>Design the endpoints and the schema for a concrete feature. Narrower than system design and far more specific: real column types, real status codes, real error shapes. The most common backend round that candidates have never practised.</p>\n<p>3</p>\n<p>System design: 45 to 60 minutes, mid-level and above</p>\n<p>The architectural round. Scale estimation, component choices, data flow, bottlenecks, and trade-offs stated out loud. Usually the round that sets your level.</p>\n<p>4</p>\n<p>Production debugging or operational round</p>\n<p>A symptom is described (latency spiked, the queue is backing up, the error rate tripled after a deploy) and you diagnose it out loud. Not every company runs this, and the ones that do weight it heavily because it is hard to fake.</p>\n<p>5</p>\n<p>Behavioral: 45 minutes</p>\n<p>Ownership, incidents, disagreement, and how you work with the people who consume your APIs. Backend versions skew toward on-call and postmortems, so have an outage story that ends in a specific systemic change.</p>\n <p>Where backend candidates actually lose loops</p>\n<p>Rarely in the algorithm screen, which most prepared candidates pass. The losses cluster in two places: an API design round where idempotency, pagination, and error contracts were never mentioned, and a debugging round where the candidate jumped to a fix without first proposing how they would confirm the cause. Both are preparable, and neither is helped by another fifty algorithm problems.</p>\n <h2>Databases: The Highest-Yield Topic</h2>\n <p>If you have limited preparation time, spend it here. Database questions appear in nearly every backend loop, they appear inside other rounds rather than only in their own, and the answers reveal experience faster than any other topic. The questions below come up repeatedly.</p>\n <p>✦</p>\n<p>Why is this query slow, and how would you confirm it?</p>\n<p>The expected first move is reading the query plan, EXPLAIN or its equivalent, rather than guessing at an index. Then: is there an index, is the query able to use it, is it a sequential scan on a large table, is the join order sensible, and are you selecting far more rows than you need. Candidates who name the plan before the fix are scored differently from those who say \"add an index\".</p>\n<p>✦</p>\n<p>How does an index actually work, and what does it cost?</p>\n<p>A B-tree keeping values sorted so lookups are logarithmic instead of linear. The cost is the part interviewers listen for: every index slows writes, consumes storage, and is useless if the query does not match its leading columns. A composite index on (a, b) helps a query filtering on a, and generally does not help one filtering only on b.</p>\n<p>✦</p>\n<p>When would you denormalise?</p>\n<p>When the read pattern is dominant and the join cost is measured rather than assumed. The good answer names the price you accept: duplicated data that can drift, and the write path that now has to keep it consistent — and says what would make you reverse it.</p>\n<p>✦</p>\n<p>Explain transaction isolation levels</p>\n<p>Read uncommitted, read committed, repeatable read, serializable, in increasing strictness and decreasing concurrency, with the anomalies each one permits: dirty reads, non-repeatable reads, phantom reads. The strongest version of this answer includes a real bug you saw at the default isolation level of a database you have actually used.</p>\n<p>✦</p>\n<p>What is the N+1 query problem?</p>\n<p>One query fetches a list, then one query per item fetches its relation. Fine with ten rows in development, ruinous with ten thousand in production. Fix by fetching the relations in a single query or batching the lookups. Extremely common in ORM-heavy codebases, which is exactly why it is asked.</p>\n<p>✦</p>\n<p>SQL or NoSQL for this feature?</p>\n<p>A question about access patterns, not about preference. Relational when relationships and multi-entity transactions matter; a document or key-value store when the access pattern is well known, the shape is self-contained, and horizontal scale matters more than ad hoc querying. Answering with a blanket preference for either scores poorly.</p>\n<p>✦</p>\n<p>What is connection pooling and why does it matter?</p>\n<p>Database connections are expensive to open and finite in number, so the pool reuses them. It matters because pool exhaustion is a classic production incident: a slow query holds connections, requests queue for the pool, and latency across every endpoint rises even though only one query is broken.</p>\n <h2>The API and Data Modelling Round</h2>\n <p>A typical prompt: design the API and schema for a booking feature, a commenting system, a notification service, or a payments flow. It is narrower than system design and it rewards a completely different instinct: specificity. Interviewers want the actual contract, and the fastest way to lose the round is to stay at the level of boxes and arrows.</p>\n <p>Work in this order and say each step out loud:</p>\n <p>1</p>\n<p>Resources and lifecycle before endpoints</p>\n<p>Name the nouns and how each one changes state over its life. A booking that moves through pending, confirmed, and cancelled tells you more about the required endpoints than any list of routes you could write first.</p>\n<p>2</p>\n<p>The schema, with real types and constraints</p>\n<p>Tables, columns, types, nullability, foreign keys, and unique constraints. Say which columns you would index and why. This is where interviewers find out whether you have designed a schema someone else had to migrate later.</p>\n<p>3</p>\n<p>The contract for each operation</p>\n<p>Method, path, request body, response body, and status codes that mean what they say: 201 for creation, 409 for a conflicting state, 422 for a validation failure. A consistent error shape with a machine-readable code, not a bare string.</p>\n<p>4</p>\n<p>Idempotency and retries</p>\n<p>What happens when the same request arrives twice because a client timed out and retried. An idempotency key on writes that move money or create resources. Forgetting this is the single most common reason candidates fail this round.</p>\n<p>5</p>\n<p>Pagination, filtering, and limits</p>\n<p>Cursor-based pagination over offset for large or frequently changing collections, and be ready to say why: offset pagination skips and duplicates rows when the underlying data shifts between pages. Mention a maximum page size.</p>\n<p>6</p>\n<p>Authorisation at the object level</p>\n<p>Not just whether the caller is authenticated, but whether this caller may act on this specific record. Say it explicitly, because object-level authorisation is a real and frequently exploited gap, and interviewers notice when a candidate designs for it unprompted.</p>\n<p>7</p>\n<p>Versioning and change</p>\n<p>How you would add a field without breaking existing clients, and what you would do for a genuinely breaking change. Additive-by-default with a versioning strategy in reserve is the answer most teams actually live by.</p>\n <p>The question that separates senior candidates</p>\n<p>\"What happens if this request is retried?\" is worth asking yourself at every endpoint you design in the round, out loud. Networks time out, clients retry, queues deliver at least once. A candidate who designs a double-charge into a payment API and never notices is answering a different question from the one being asked, no matter how clean the routes look.</p>\n <h2>Concurrency, Caching, and Queues</h2>\n <p>These three show up as follow-ups more often than as standalone rounds, usually the moment you mention scale. The questions are predictable:</p>\n <p>Concurrency</p>\n<ul><li>Race conditions on read-modify-write</li><li>Optimistic vs pessimistic locking</li><li>Deadlocks and consistent lock ordering</li><li>Atomic operations vs application locks</li><li>Distributed locks and why they leak</li><li>Thread pools and blocking I/O</li></ul>\n<p>Caching</p>\n<ul><li>Cache-aside vs write-through</li><li>Invalidation, and why it is the hard part</li><li>TTL choice and staleness tolerance</li><li>Stampede on a cold or expired key</li><li>What must never be cached</li><li>Cache key design</li></ul>\n<p>Queues</p>\n<ul><li>At-least-once delivery and duplicates</li><li>Consumer idempotency</li><li>Dead-letter queues and poison messages</li><li>Ordering guarantees and partitioning</li><li>Backpressure when consumers fall behind</li><li>Retry with exponential backoff</li></ul>\n <p>A pattern connects all three columns and it is worth naming explicitly in the interview: each one trades a correctness guarantee for throughput, and the interviewer is checking whether you know which guarantee you gave up. Caching trades freshness. Queues trade ordering and exactly-once delivery. Optimistic locking trades a guaranteed write for a retry the caller has to handle. Candidates who say what they traded score above candidates who only say what they gained.</p>\n <h2>The Production Debugging Round</h2>\n <p>You are given a symptom and asked what you would do. \"P99 latency on checkout went from 200 milliseconds to four seconds this morning. Nothing was deployed. Go.\" There is no correct answer to reach, because the round is measuring method — whether you narrow systematically or reach for the first plausible cause and start fixing it.</p>\n <p>A structure that holds up under any variation of the prompt:</p>\n <ul><li><strong>Establish scope first.</strong> All endpoints or one? All users or one region or one tenant? Started gradually or all at once? This costs a minute and eliminates most of the hypothesis space.</li><li><strong>Ask what changed.</strong> No deploy is not the same as no change: config, feature flags, a dependency's behaviour, a data volume crossing a threshold, a certificate, a cron job, someone else's release upstream.</li><li><strong>Say which signal would confirm or kill each hypothesis.</strong> This is the sentence the round is actually scoring. \"If it is the database I would expect connection pool wait time and slow-query count to be up together. If pool wait is flat, it is not that.\"</li><li><strong>Work down the request path.</strong> Load balancer, application, database, cache, external dependencies. Boring and effective, and it prevents the tunnel vision that comes from a favourite theory.</li><li><strong>Separate mitigation from diagnosis.</strong> Stop the bleeding first (roll back, shed load, raise a limit), then find the cause. Candidates who insist on full root cause before mitigating are answering as though the site is not currently down.</li><li><strong>Close with prevention.</strong> The alert that should have fired sooner, the dashboard that was missing, the load test that would have caught it. One sentence is enough and it lands well.</li></ul>\n <p>If you have never been on call, this round is the hardest to fake and the most worth preparing deliberately. Read a few public postmortems from engineering blogs and practise narrating the diagnosis path aloud. The vocabulary transfers even when the incidents were not yours — and be honest about that if asked directly, because claiming operational experience you do not have collapses under one follow-up question.</p>\n <h2>System Design in a Backend Loop</h2>\n <p>From mid-level upward this round usually determines your level. Backend prompts skew toward data-heavy systems rather than product surfaces: a rate limiter, a URL shortener, a notification service, a payment ledger, an event pipeline, a job scheduler. The five-phase structure in our <a href=\"/blog/system-design-interview-questions-framework/\">system design framework</a> applies directly.</p>\n <p>Two adjustments for the backend version specifically. First, spend longer on the data model than you would in a frontend or general loop, because for most backend prompts the schema and the access patterns are the design, and the boxes around them follow from that. Second, name your own bottleneck before the interviewer does. Saying \"the write path is the constraint here, and at ten times this volume the ledger table is what breaks first\" is the clearest available signal that you have operated something rather than only drawn it.</p>\n <h2>How to Prepare, in Priority Order</h2>\n <p>1</p>\n<p>Keep algorithm practice on maintenance, not on centre stage</p>\n<p>You need to pass the screen, not to win it. Two or three problems a week through the whole preparation period is usually enough if the patterns are already familiar; the marginal value of your hundredth problem is far below the first hour you spend on schema design.</p>\n<p>2</p>\n<p>Design five APIs end to end, written out</p>\n<p>Booking, comments with threading, notifications, a payment flow, and a file upload. Full schema, full contracts, idempotency, pagination, and authorisation. Written rather than imagined, because the gaps only appear when you have to name the column types.</p>\n<p>3</p>\n<p>Be able to explain your own production database</p>\n<p>Whatever you work on now: its schema, its slowest query, its indexes, what would break first under ten times the load. Interviewers reach for your real experience constantly, and \"I have not looked\" is a bad answer to a question about your own system.</p>\n<p>4</p>\n<p>Read three public postmortems and narrate them</p>\n<p>Out loud, as though you are diagnosing them live. This is the cheapest way to build the operational vocabulary the debugging round tests.</p>\n<p>5</p>\n<p>Do eight to ten system design prompts, spoken and timed</p>\n<p>Data-heavy prompts, 45 minutes, out loud. Repeat three of them a second time, since the second pass is where the structure becomes reflex rather than recall.</p>\n<p>6</p>\n<p>Write six to eight behavioral stories, on-call weighted</p>\n<p>An outage you owned, a disagreement about a technical direction, a migration you ran, and a mistake with a specific systemic fix afterwards. Rehearse them spoken and timed to two minutes.</p>\n <p>Almost every item on that list is spoken rather than read, which is deliberate. The backend rounds that decide loops — API design, debugging, design — are all conversations where you are interrupted, and the gap between knowing an answer and delivering it under questioning is exactly where prepared candidates still lose. That is the practical case for unlimited practice: the same prompt, narrated, interrupted, and repeated until the structure holds. Our <a href=\"/blog/behavioral-interview-questions-answers/\">behavioral interview guide</a> covers the story structure and the two-minute delivery target, our <a href=\"/blog/frontend-developer-interview-questions/\">frontend interview guide</a> covers the mirror image of this loop if you are interviewing across both, and the <a href=\"/blog/how-to-prepare-faang-software-engineer-interview/\">FAANG preparation roadmap</a> covers sequencing when you are running several processes at once.</p>\n <p>Practise the rounds that actually decide backend loops</p>\n<p>Amigo runs unlimited timed practice from your resume and target role, then supports you live during the real interview with structured answers streamed in real time.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "What rounds are in a backend developer interview?",
+   "a": "A typical loop has four to five rounds: a coding screen on data structures and algorithms, an API and data-modelling round, a system design round from mid-level upward, often a production-debugging or operational round, and a behavioral round. Smaller companies frequently merge the API round into system design."
+  },
+  {
+   "q": "What database topics come up most in backend interviews?",
+   "a": "Indexing and why a query is not using an index, normalisation versus denormalisation, transactions and isolation levels, the N+1 query problem, connection pooling, and when a relational database is the wrong choice. Indexing and transaction isolation appear most often because they explain so much production behaviour downstream."
+  },
+  {
+   "q": "What is the difference between a backend and a system design interview?",
+   "a": "System design is one round inside a backend loop, not the whole loop. Design asks how components fit together at scale. The rest of the backend loop goes narrower: the exact schema, the exact API contract, the exact failure mode when a request is retried, where the answers are concrete rather than architectural."
+  },
+  {
+   "q": "How do you answer an API design question?",
+   "a": "Start with the resources and their lifecycle rather than the endpoints. Name the nouns, then the operations on them, then the contract for each: method, path, request and response shape, status codes, error format, pagination, and what happens when the same request arrives twice. Interviewers score whether idempotency, versioning, and errors were designed or forgotten."
+  },
+  {
+   "q": "What are database isolation levels and why do interviewers ask?",
+   "a": "Isolation levels define which concurrency anomalies a transaction can observe: read uncommitted, read committed, repeatable read, and serializable, in increasing strictness and decreasing throughput. Interviewers ask because the answer reveals whether you have debugged real concurrent-write bugs or only read about transactions."
+  },
+  {
+   "q": "What is idempotency and why does it matter in backend interviews?",
+   "a": "An idempotent operation produces the same result whether it runs once or five times. It matters because networks retry: a payment request that times out may already have succeeded. Interviewers ask about idempotency keys in almost any question involving payments, queues, or webhooks, and forgetting it is one of the most common ways to fail an API design round."
+  },
+  {
+   "q": "How much DevOps do backend engineers need for interviews?",
+   "a": "Enough to reason about what happens after deploy: how you would find the cause of a latency spike, what metrics and logs you would want, how a rollback works, and roughly what a container orchestrator does. You are rarely asked to write infrastructure code, but a candidate who has never thought past the merge shows it immediately in the operational round."
+  },
+  {
+   "q": "Do backend interviews still ask LeetCode-style questions?",
+   "a": "Yes, at most companies of any size. The coding screen is usually still data structures and algorithms, weighted toward hash maps, strings, trees, and graphs rather than exotic dynamic programming. The backend-specific rounds come after it, which means algorithm practice gets you through the door and is not sufficient once inside."
+  }
+ ],
+ "related": [
+  "/blog/how-to-explain-a-project-in-an-interview",
+  "/blog/data-scientist-interview-questions",
+  "/blog/frontend-developer-interview-questions"
+ ]
+}

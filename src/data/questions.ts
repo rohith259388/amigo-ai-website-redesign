@@ -448,7 +448,7 @@ export const QUESTIONS: Question[] = [
     ],
   },
   {
-    slug: "explain-the-gap-in-your-cv",
+    slug: "explain-the-gap-in-your-resume",
     category: "Motivation",
     question: "Can you explain the gap in your CV?",
     company: "Microsoft",

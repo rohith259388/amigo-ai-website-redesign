@@ -1,0 +1,38 @@
+{
+ "path": "/docs/platforms/meet",
+ "section": "docs",
+ "title": "Using Amigo with Google Meet | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Connect Amigo to Google Meet interviews. Setup, audio capture, and tips for a real-time AI copilot that stays out of Meet's screen share.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Google Meet",
+     "item": "https://www.amigohelp.ai/docs/platforms/meet/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-10-16",
+ "h1": "Google Meet",
+ "category": "Platform Guide",
+ "html": "<p>Google Meet is a common choice for interviews at tech companies and startups. Because Meet runs entirely in a browser tab, Amigo's desktop overlay is never captured by Meet's screen share, and audio works out of the box on both macOS and Windows.</p>\n<hr>\n<h2 id=\"setup\">Setup</h2>\n<ol><li>Install the Amigo desktop app; see the <a href=\"/docs/installation/\">Installation guide</a>.</li><li>On macOS, grant <strong>Accessibility</strong> and <strong>Screen Recording</strong> permissions when prompted on first launch.</li><li>Open Amigo and run the <strong>Audio Check</strong> to verify system audio is captured.</li><li>Open Google Meet in Chrome, Firefox, or Edge; any Chromium-based browser works best.</li><li>Join your meeting. Amigo will begin listening automatically.</li></ol>\n<p>Chrome is recommended for Google Meet. It uses the least CPU among supported browsers, leaving more resources for Amigo's transcription process.</p>\n<hr>\n<h2 id=\"screen-share\">Screen Sharing</h2>\n<p>Google Meet offers three share modes. All three are safe to use with Amigo:</p>\n<ul><li><strong>Your entire screen</strong>: Amigo is excluded at the OS level; the interviewer will not see the overlay.</li><li><strong>A window</strong>: Only the selected window is shared. Amigo is never in scope.</li><li><strong>A Chrome tab</strong>: Tab sharing is isolated to that browser tab. Amigo is not captured.</li></ul>\n<hr>\n<h2 id=\"browser-audio\">Browser Audio Permissions</h2>\n<p>Google Meet requires microphone access from the browser. This is separate from Amigo's system audio capture. You do not need to give Amigo access to your browser microphone; Amigo reads the audio at the OS level, independently.</p>\n<ul><li>Allow microphone access to Meet in the browser prompt (this is for your call audio only).</li><li>Amigo captures system audio independently; no browser extension is required.</li><li>If Meet asks you to \"allow screen sharing audio\", you can skip this; Amigo handles audio separately.</li></ul>\n<hr>\n<h2 id=\"known-issues\">Known Issues</h2>\n<ul><li><strong>macOS: audio not captured in Incognito mode</strong>: Chrome Incognito tabs may not route audio through the system audio device Amigo listens to. Use a regular Chrome window for Meet.</li><li><strong>Firefox on Windows: slight latency increase</strong>: Firefox routes audio differently from Chromium on Windows, which can add ~200 ms to transcription. Switch to Chrome if latency is noticeable.</li><li><strong>Meet noise cancellation</strong>: Google Meet's built-in noise suppression is applied before audio reaches Amigo. If transcription quality is poor, disable noise suppression in Meet Settings → Audio.</li></ul>\n<p>No browser extension is needed. Amigo is a native desktop application and captures system audio directly, so there is nothing to install in Chrome, Firefox, or Edge.</p>"
+}

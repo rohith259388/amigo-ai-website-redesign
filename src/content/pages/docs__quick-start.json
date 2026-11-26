@@ -1,0 +1,145 @@
+{
+ "path": "/docs/quick-start",
+ "section": "docs",
+ "title": "Quick Start Guide | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Get Amigo running in under 5 minutes. Sign up, install the desktop copilot, and start your first AI-assisted live interview.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "HowTo",
+   "name": "How to set up Amigo for a live AI-assisted interview",
+   "description": "Get Amigo running in under 5 minutes: create an account, install the desktop copilot, set up a Copilot Profile, then sign in and join your interview with the invisible overlay listening in real time.",
+   "totalTime": "PT5M",
+   "inLanguage": "en",
+   "image": "https://www.amigohelp.ai/og-image.png",
+   "supply": [
+    {
+     "@type": "HowToSupply",
+     "name": "Resume (PDF, Word, or text, max 10 MB)"
+    },
+    {
+     "@type": "HowToSupply",
+     "name": "Job description"
+    }
+   ],
+   "tool": [
+    {
+     "@type": "HowToTool",
+     "name": "Windows 10/11 64-bit or macOS 12+"
+    },
+    {
+     "@type": "HowToTool",
+     "name": "Internet connection"
+    }
+   ],
+   "step": [
+    {
+     "@type": "HowToStep",
+     "position": 1,
+     "name": "Create your account",
+     "url": "https://www.amigohelp.ai/docs/quick-start/#step-1",
+     "itemListElement": [
+      {
+       "@type": "HowToDirection",
+       "text": "Visit amigohelp.ai/signup and sign up with your email."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Verify your email via the confirmation link."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Log in and upload your resume and job description from All My Docs (PDF, Word, or plain text, max 10 MB)."
+      }
+     ]
+    },
+    {
+     "@type": "HowToStep",
+     "position": 2,
+     "name": "Download and install the desktop app",
+     "url": "https://www.amigohelp.ai/docs/quick-start/#step-2",
+     "itemListElement": [
+      {
+       "@type": "HowToDirection",
+       "text": "Download Amigo for Windows 10/11 (64-bit) or macOS 12+ (Intel and Apple Silicon)."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Run the installer for your platform."
+      }
+     ]
+    },
+    {
+     "@type": "HowToStep",
+     "position": 3,
+     "name": "Set up your Copilot Profile",
+     "url": "https://www.amigohelp.ai/docs/quick-start/#step-3",
+     "itemListElement": [
+      {
+       "@type": "HowToDirection",
+       "text": "Create a Copilot Profile linking your resume and job description; pick session format (Live Interview or Coding Test) and response length."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Turn on \"Use this profile\" to make it your active interview setup."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Optionally create a Brief with interview-prep notes."
+      }
+     ]
+    },
+    {
+     "@type": "HowToStep",
+     "position": 4,
+     "name": "Join your interview",
+     "url": "https://www.amigohelp.ai/docs/quick-start/#join-interview",
+     "itemListElement": [
+      {
+       "@type": "HowToDirection",
+       "text": "Launch the Amigo desktop app and sign in with your Amigo account."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Wait for the automatic system readiness check (stealth mode, audio permissions, network)."
+      },
+      {
+       "@type": "HowToDirection",
+       "text": "Join your video call. The overlay appears on your screen, invisible to the interviewer, and begins listening automatically. Launch Amigo before joining, not after."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Quick Start",
+     "item": "https://www.amigohelp.ai/docs/quick-start/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Quick Start",
+ "category": "Getting Started",
+ "html": "<p>Get Amigo up and running in under 5 minutes. Follow the steps below to start your first live interview session.</p>\n<p>Already installed Amigo? Skip to <a href=\"#join-interview\">Step 3: Join Your Interview</a>.</p>\n<h2 id=\"step-1\">Step 1: Create Your Account</h2>\n<ol><li>Visit <a href=\"/signup/\">amigohelp.ai/signup</a> and sign up with your email.</li><li>Verify your email address via the confirmation link sent to your inbox.</li><li>Log in and upload your resume and job description from <a href=\"/my-docs/\">All My Docs</a> (PDF, Word, or plain text, max 10 MB).</li></ol>\n<hr>\n<h2 id=\"step-2\">Step 2: Download &amp; Install</h2>\n<p>Download the Amigo desktop app for your operating system.</p>\n<div class=\"card\"><p>Download for Windows</p>\n<p>Windows 10 / 11 · 64-bit</p>\n<p><a href=\"/signup/\">Download for Windows →</a></p></div>\n<div class=\"card\"><p>Download for macOS</p>\n<p>macOS 12+ (Intel &amp; Apple Silicon)</p>\n<p><a href=\"/signup/\">Download for macOS →</a></p></div>\n<hr>\n<h2 id=\"step-3\">Step 3: Set Up Your Profile</h2>\n<p>Before your first interview, set up your Copilot Profile:</p>\n<ol><li>Go to <a href=\"/copilot-profiles/\">Copilot Profiles</a> and create a profile. Link your resume and job description, choose your session format (Live Interview or Coding Test), and set your response length. Turn on <strong>Use this profile</strong> to make it your active interview setup.</li><li>Optionally, create a <a href=\"/my-briefs/\">Brief</a> with interview prep notes. You'll be able to view it inside the desktop app during your session.</li></ol>\n<p>No setup codes needed. Amigo Copilot signs in with your Amigo account and picks up your active profile automatically.</p>\n<hr>\n<h2 id=\"join-interview\">Step 4: Join Your Interview</h2>\n<ol><li>Launch the Amigo desktop app and sign in with your <strong>Amigo account</strong>.</li><li>Amigo will run an automatic system readiness check, verifying stealth mode, audio permissions, and network connectivity.</li><li>Once everything is green, join your video call. The overlay will appear on your screen, invisible to your interviewer, and begin listening automatically.</li></ol>\n<p>Make sure Amigo is launched <strong>before</strong> you join the video call, not after. Launching mid-session may delay audio capture initialization.</p>"
+}

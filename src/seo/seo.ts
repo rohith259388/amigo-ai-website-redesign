@@ -39,13 +39,19 @@ export type SeoMeta = {
   ogType?: string;
   /** Keep the route out of the index (nothing uses this yet). */
   noindex?: boolean;
+  /** A page's own share image; the site-wide one otherwise. */
+  image?: string;
+  /** Use the description exactly as written, for pages that carried one over from the live site. */
+  verbatim?: boolean;
 };
+
+export const describe = (seo: SeoMeta) => (seo.verbatim ? seo.description : clamp(seo.description));
 
 /** The URL this route is reachable at today. */
 export function urlFor(path: string): string {
-  const clean = path === "/" ? "" : path.replace(/\/+$/, "");
+  const clean = path.replace(/\/+$/, "");
   if (!clean) return `${SITE_URL}/`;
-  return CLEAN_URLS ? `${SITE_URL}${clean}` : `${SITE_URL}/#${clean}`;
+  return CLEAN_URLS ? `${SITE_URL}${clean}/` : `${SITE_URL}/#${clean}`;
 }
 
 /** Cut text to `max` characters on a sentence boundary, falling back to a word boundary. */
@@ -106,7 +112,8 @@ const JSON_LD_MARK = "data-seo-route";
 /** Write a route's head tags. Safe to call on every route change. */
 export function applySeo(seo: SeoMeta) {
   const url = urlFor(seo.path);
-  const description = clamp(seo.description);
+  const description = describe(seo);
+  const image = seo.image ?? OG_IMAGE;
 
   document.title = seo.title;
   meta("name", "description", description);
@@ -118,15 +125,19 @@ export function applySeo(seo: SeoMeta) {
   meta("property", "og:title", seo.title);
   meta("property", "og:description", description);
   meta("property", "og:url", url);
-  meta("property", "og:image", OG_IMAGE);
-  meta("property", "og:image:width", "1200");
-  meta("property", "og:image:height", "630");
+  meta("property", "og:image", image);
+  // The size is only known for the site-wide image.
+  if (seo.image) document.head.querySelectorAll('meta[property^="og:image:"]').forEach((el) => el.remove());
+  else {
+    meta("property", "og:image:width", "1200");
+    meta("property", "og:image:height", "630");
+  }
 
   meta("name", "twitter:card", "summary_large_image");
   meta("name", "twitter:site", TWITTER_HANDLE);
   meta("name", "twitter:title", seo.title);
   meta("name", "twitter:description", description);
-  meta("name", "twitter:image", OG_IMAGE);
+  meta("name", "twitter:image", image);
 
   document.head.querySelectorAll(`script[${JSON_LD_MARK}]`).forEach((el) => el.remove());
   for (const block of seo.jsonLd ?? []) {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { contentSummary } from "@/content";
 
 export type Route =
   | { name: "home" }
@@ -6,7 +7,8 @@ export type Route =
   | { name: "question"; slug: string }
   | { name: "creators" }
   | { name: "referral" }
-  | { name: "linkedin" };
+  | { name: "linkedin" }
+  | { name: "content"; path: string };
 
 /**
  * Routes are real paths ("/questions/tell-me-about-yourself"), so each page is a
@@ -25,6 +27,9 @@ export function parsePath(pathname: string): Route {
 
   const question = path.match(/^\/questions(?:\/([\w-]+))?$/);
   if (question) return question[1] ? { name: "question", slug: question[1] } : { name: "questions" };
+
+  const content = contentSummary(path);
+  if (content) return { name: "content", path: content.path };
 
   return { name: "home" };
 }
@@ -56,11 +61,20 @@ function shouldRouteClick(event: MouseEvent): URL | null {
   // mailto:, tel: and anything off-site.
   if (url.origin !== window.location.origin) return null;
 
+  // Leave to the browser: content pages are documents of their own, and paths this router
+  // does not know (/signup/, /login/, the app) belong to whatever else the host serves.
+  const path = url.pathname.replace(/\/+$/, "");
+  if (path !== window.location.pathname.replace(/\/+$/, "")) {
+    const next = parsePath(url.pathname).name;
+    if (next === "content" || (next === "home" && path !== "")) return null;
+  }
+
   return url;
 }
 
-export function useRoute() {
-  const [route, setRoute] = useState(() => parsePath(window.location.pathname));
+/** `initialPath` is only passed when prerendering, where there is no window. */
+export function useRoute(initialPath?: string) {
+  const [route, setRoute] = useState(() => parsePath(initialPath ?? window.location.pathname));
 
   useEffect(() => {
     const onPopState = () => setRoute(parsePath(window.location.pathname));

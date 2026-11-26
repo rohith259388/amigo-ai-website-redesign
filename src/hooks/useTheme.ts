@@ -20,7 +20,7 @@ function apply(theme: Theme) {
 /** The initial class is set by the inline script in index.html; this keeps it in sync afterwards. */
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.classList.contains("dark") ? "dark" : "light"
+    typeof document !== "undefined" && document.documentElement.classList.contains("dark") ? "dark" : "light"
   );
 
   // Follow the OS setting until the visitor picks a theme themselves.

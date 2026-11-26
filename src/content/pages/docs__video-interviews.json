@@ -1,0 +1,38 @@
+{
+ "path": "/docs/video-interviews",
+ "section": "docs",
+ "title": "Live Video Interviews with Amigo | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Use Amigo's invisible overlay during live video interviews on Zoom, Microsoft Teams, Google Meet, Webex, and more. Real-time AI guidance, end-to-end private.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Video Interviews",
+     "item": "https://www.amigohelp.ai/docs/video-interviews/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Video Interviews",
+ "category": "Core Features",
+ "html": "<p>Amigo is designed for live video interviews. Whether it's a 30-minute behavioural screen or a multi-round technical loop, the copilot surfaces the right answer at the right moment, while remaining completely hidden from your interviewer.</p>\n<hr>\n<h2 id=\"before-session\">Before the Session</h2>\n<p>A little preparation goes a long way. Before joining your call:</p>\n<ol><li>Open Amigo and verify your resume and target role are up to date in Account Settings.</li><li>Make sure your Copilot Profile has the right <strong>session format</strong>: use <strong>Live Interview</strong> for behavioural, technical, or mixed-format rounds, or <strong>Coding Test</strong> for timed coding assessments.</li><li>Set your preferred <strong>response length</strong> (Concise, Balanced, or Detailed) from your profile or the overlay toolbar. You can change it mid-session too.</li><li>Amigo will run an automatic <strong>system readiness check</strong> when you sign in, verifying stealth mode, audio permissions, and network connectivity. Fix any issues it flags before proceeding.</li><li>Join the video call. Amigo begins listening automatically once the session is active.</li></ol>\n<p>Always launch Amigo <strong>before</strong> joining the video call. Starting it after the call is connected may delay audio capture by up to 10 seconds.</p>\n<hr>\n<h2 id=\"during-session\">During the Session</h2>\n<p>Once a question is detected, the Amigo overlay updates within 2 seconds. The overlay is a floating panel that sits above all other windows, only on your screen. Amigo automatically filters out your own voice using candidate microphone detection, so your answers won't accidentally trigger new suggestions.</p>\n<ul><li><strong>Answer card</strong>: The top section shows a full suggested answer that streams in token by token. Scroll within the card if the response is long.</li><li><strong>Follow-up prompts</strong>: Below the main answer, Amigo lists two or three follow-up questions the interviewer is likely to ask next.</li><li><strong>Response length pill</strong>: Tap the pill in the toolbar to cycle between Concise, Balanced, and Detailed response lengths on the fly.</li><li><strong>Dismiss</strong>: Press <kbd>Esc</kbd> or click the × to clear the current suggestion and wait for the next question.</li></ul>\n<hr>\n<h2 id=\"behavioural\">Behavioural Questions</h2>\n<p>Amigo recognises the language patterns of competency-based questions (\"Tell me about a time…\", \"Give me an example of…\", \"Describe a situation where…\") and automatically applies the STAR structure:</p>\n<ul><li><strong>Situation</strong>: Sets the scene with context from your resume (company, project, time period).</li><li><strong>Task</strong>: Describes your specific responsibility or challenge.</li><li><strong>Action</strong>: Details the steps you took, focusing on your individual contribution.</li><li><strong>Result</strong>: Quantifies the outcome where possible (\"reduced load time by 40%\", \"shipped two weeks early\").</li></ul>\n<p>The more achievements and metrics you include in your uploaded resume, the more specific and compelling the STAR answers will be.</p>\n<hr>\n<h2 id=\"technical\">Technical Questions</h2>\n<p>For system design, architecture, and concept questions, Amigo switches to bullet-point mode and structures the answer around a framework:</p>\n<ul><li>Clarify requirements and constraints before diving in.</li><li>Outline the high-level components and how they interact.</li><li>Discuss trade-offs (e.g. consistency vs. availability, latency vs. throughput).</li><li>Highlight the approach you would recommend and why.</li></ul>\n<hr>\n<h2 id=\"tips\">Tips for Best Results</h2>\n<ul><li>Position the Amigo overlay in a corner of your primary screen, keeping it close to the video call window so your eye movement stays natural and undetectable.</li><li>Speak naturally; Amigo detects your microphone separately and filters out your voice, filler words, and conversational fillers automatically.</li><li>Glance at the suggestion, then respond in your own words; don't read it verbatim.</li><li>Use the follow-up prompts to anticipate the interviewer's next question and prepare mentally.</li><li>Switch to Concise response length during rapid-fire rounds to keep suggestions short and scannable.</li></ul>\n<p><strong>Windows:</strong> Some antivirus programs may flag Amigo on first launch. If Amigo does not start, check your antivirus quarantine and add <code>helpamigo.exe</code> to the exclusion list.<br> <br> <strong>macOS:</strong> If macOS blocks the app on first launch, go to <strong>System Settings → Privacy &amp; Security</strong>, scroll down to the security section, and click <strong>Open Anyway</strong>.<br> <br>See the <a href=\"/docs/installation/\">Installation guide</a> for full details.</p>"
+}

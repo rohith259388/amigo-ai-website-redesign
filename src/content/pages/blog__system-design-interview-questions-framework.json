@@ -1,0 +1,161 @@
+{
+ "path": "/blog/system-design-interview-questions-framework",
+ "section": "blog",
+ "title": "System Design Interview Questions: 45-Min Framework (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "A repeatable five-phase framework for system design interviews, the 12 questions that cover almost everything, and the mistakes that sink strong engineers.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/system-design-interview-questions-framework/0fd22bebc424.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/system-design-interview-questions-framework/#article",
+   "headline": "System Design Interview Questions: 45-Min Framework (2026)",
+   "description": "A repeatable five-phase framework for system design interviews, the 12 questions that cover almost everything, and the mistakes that sink strong engineers.",
+   "datePublished": "2026-07-17",
+   "dateModified": "2026-07-17",
+   "url": "https://www.amigohelp.ai/blog/system-design-interview-questions-framework/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/system-design-interview-questions-framework/0fd22bebc424.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Marcus Walker"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a system design interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A system design interview is a 45–60 minute open-ended round where you design a large-scale system, such as a URL shortener, news feed, or chat app, while explaining your reasoning. It assesses how you handle ambiguity, make trade-offs, and reason about scale, not whether you recall a specific architecture."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you structure a system design interview answer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use five phases with a rough time budget: clarify requirements (5–8 min), estimate scale (3–5 min), define the API and data model (8–10 min), draw the high-level architecture (10–12 min), then deep-dive on bottlenecks and trade-offs (10–15 min). Announce each phase out loud so the interviewer can redirect you early."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What are the most common system design interview questions?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Design a URL shortener, a news feed, a chat application, a rate limiter, a distributed cache, a notification service, a ride-hailing dispatch system, a video streaming platform, a payment ledger, a search autocomplete, a web crawler, and a metrics/monitoring pipeline. Most other prompts are variations on these primitives."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need to memorise numbers for capacity estimation?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You need about six: roughly 100 bytes per short database row, 1 KB per text post, 1 MB per photo, ~86,400 seconds in a day, ~2.5 million seconds in a month, and 1 server handling on the order of 1,000 requests/second. Everything else you derive out loud from the interviewer's stated numbers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the most common reason candidates fail system design interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jumping straight to a diagram without clarifying requirements. Designing a globally distributed system when the interviewer wanted 10,000 users, or a single-server design when they wanted 100 million, both read as an inability to scope. Spend the first five minutes on questions."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How senior do you need to be for a system design round?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most companies introduce system design at mid-level (roughly 3+ years) and weight it heavily from senior upward. At staff level and above it is often the round that determines your final level, because it is the clearest signal of judgment on ambiguous problems."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/system-design-interview-questions-framework/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "System Design Interview Questions: 45-Min Framework (2026)",
+ "lead": "A repeatable five-phase framework for system design interviews, the 12 questions that cover almost everything, and the mistakes that sink strong engineers.",
+ "category": "Interview Prep",
+ "readTime": "7 min read",
+ "date": "17 July 2026",
+ "author": "Marcus Walker",
+ "hero": {
+  "src": "/images/blog/system-design-interview-questions-framework/0fd22bebc424.jpg",
+  "alt": "An engineer explaining a system diagram on a whiteboard to an interviewer."
+ },
+ "html": "<p>A system design interview is an open-ended 45–60 minute round where you design a large-scale system out loud while an interviewer probes your reasoning. It is not a memory test. Interviewers are scoring how you scope an ambiguous problem, justify trade-offs, and recognise where your own design breaks. This guide gives you a five-phase framework that fits the clock, the 12 prompts that cover almost every real question, and the specific failure modes that sink otherwise strong engineers.</p>\n <h2>What System Design Interviews Actually Measure</h2>\n <p>Coding rounds have a right answer. System design rounds do not, which is exactly why candidates find them harder to prepare for. Interviewers at every major company evaluate roughly the same four signals:</p>\n <p>✦</p>\n<p>Scoping under ambiguity</p>\n<p>The prompt is deliberately vague. \"Design Twitter\" has no single answer until you establish read/write ratio, user count, and which features are in scope. Strong candidates narrow the problem before designing. Weak candidates start drawing boxes.</p>\n<p>✦</p>\n<p>Trade-off reasoning</p>\n<p>There is no correct database choice, only a defensible one. Saying \"I will use Cassandra because writes dominate 100:1 and I can accept eventual consistency on the feed\" scores. Saying \"I will use Cassandra because it scales\" does not.</p>\n<p>✦</p>\n<p>Depth on at least one component</p>\n<p>Interviewers want to see you go three levels deep somewhere. A design that stays at the box-and-arrow layer for 45 minutes reads as surface knowledge, however broad.</p>\n<p>✦</p>\n<p>Awareness of your own weak points</p>\n<p>Naming the bottleneck before the interviewer does is the single strongest signal available to you. \"The fan-out on write will break for celebrity accounts, and here is how I would handle that\" is what a senior engineer sounds like.</p>\n <h2>The Five-Phase Framework</h2>\n <p>Announce each phase out loud as you enter it. This does two things: it shows structure, and it gives the interviewer a cheap moment to redirect you before you spend ten minutes in the wrong place.</p>\n <p>1</p>\n<p>Clarify requirements: 5 to 8 minutes</p>\n<p>Separate functional from non-functional. Functional: what can a user do? Non-functional: how many users, read/write ratio, latency target, consistency tolerance, availability target. Write the answers where you both can see them. Never skip this phase, even if the prompt seems obvious.</p>\n<p>2</p>\n<p>Estimate scale: 3 to 5 minutes</p>\n<p>Convert the user count into requests per second, storage per year, and bandwidth. You are not trying to be accurate; you are establishing which order of magnitude the design has to survive. 1,000 writes/second and 1,000,000 writes/second lead to genuinely different architectures, and this is where you find out which one you are building.</p>\n<p>3</p>\n<p>Define the API and data model: 8 to 10 minutes</p>\n<p>List three to five endpoints with their parameters, then the core entities with their key fields and access patterns. The access patterns are the point: they determine your storage choice, so derive the database from them rather than announcing it up front.</p>\n<p>4</p>\n<p>Draw the high-level architecture: 10 to 12 minutes</p>\n<p>Client, load balancer, application tier, cache, primary datastore, async workers, object storage. Draw the request path for one write and one read end to end. Keep it deliberately boring; this phase should contain no clever ideas, only a correct baseline you can then stress.</p>\n<p>5</p>\n<p>Deep-dive and stress the design: 10 to 15 minutes</p>\n<p>Pick the component most likely to break and go deep: sharding key and its hot-spot risk, cache invalidation strategy, what happens when a worker dies mid-job, how you handle the 99th-percentile user. If the interviewer has a favourite area they will steer here; otherwise choose the bottleneck you already identified.</p>\n <p>Time discipline is part of the score</p>\n<p>Candidates who spend 25 minutes on requirements and never reach an architecture fail the round even when their questions were excellent. Keep a rough eye on the clock and force yourself forward. An imperfect complete design beats a perfect third of one.</p>\n <h2>Capacity Estimation: The Six Numbers Worth Memorising</h2>\n <p>You do not need to memorise system architectures. You do need enough arithmetic anchors to do back-of-envelope maths without stalling.</p>\n <div class=\"table-wrap\"><table><thead><tr><th>Quantity</th><th>Anchor</th><th>Use it for</th></tr>\n</thead>\n<tbody><tr><td>Seconds per day</td><td>~86,400 (round to 100,000)</td><td>Daily events → requests/second</td></tr>\n<tr><td>Seconds per month</td><td>~2.5 million</td><td>Monthly volume → storage growth</td></tr>\n<tr><td>Short DB row</td><td>~100 bytes</td><td>Metadata, follows, likes, IDs</td></tr>\n<tr><td>Text post</td><td>~1 KB</td><td>Tweets, messages, comments</td></tr>\n<tr><td>Photo / thumbnail</td><td>~1 MB / ~10 KB</td><td>Media storage and CDN bandwidth</td></tr>\n<tr><td>One app server</td><td>~1,000 requests/second</td><td>How many servers the tier needs</td></tr>\n</tbody>\n</table></div>\n <p>A worked example, said out loud in about 40 seconds: <em>\"100 million daily active users, each posting twice a day, is 200 million writes per day. Divided by 100,000 seconds, that's 2,000 writes per second average, so call it 6,000 at peak. At 1 KB per post that's 200 GB per day, roughly 70 TB per year before replication. Reads are 100 times writes, so 600,000 reads per second at peak, and that number tells me the read path has to be cache-first, and it is where I will spend my deep-dive.\"</em></p>\n <h2>The 12 Questions That Cover Almost Everything</h2>\n <p>Most prompts are recombinations of a small set of primitives. Prepare these twelve and you will recognise the underlying shape of nearly any question you are given.</p>\n <p>Write-heavy / fan-out</p>\n<ul><li>Design a news feed (Twitter, Instagram)</li><li>Design a chat application (WhatsApp, Slack)</li><li>Design a notification service</li><li>Design a metrics and monitoring pipeline</li></ul>\n<p>Read-heavy / lookup</p>\n<ul><li>Design a URL shortener</li><li>Design search autocomplete</li><li>Design a distributed cache</li><li>Design a video streaming platform</li></ul>\n<p>Coordination / correctness</p>\n<ul><li>Design a rate limiter</li><li>Design a payment ledger</li><li>Design ride-hailing dispatch</li><li>Design a web crawler</li></ul>\n <p>The grouping matters more than the list. Write-heavy fan-out problems turn on <strong>whether you fan out on write or on read</strong>. Read-heavy lookup problems turn on <strong>cache strategy and invalidation</strong>. Coordination problems turn on <strong>what you do when two nodes disagree</strong>. Identify which family a prompt belongs to in the first two minutes and you already know where your deep-dive will land.</p>\n <h2>Six Failure Modes That Sink Strong Engineers</h2>\n <p>✦</p>\n<p>Designing before scoping</p>\n<p>The most common failure by a wide margin. Drawing an architecture for 100 million users when the interviewer wanted an internal tool for 10,000 does not read as ambitious. It reads as an inability to scope. Ask first.</p>\n<p>✦</p>\n<p>Reciting a memorised architecture</p>\n<p>Interviewers ask these questions dozens of times and can spot a rehearsed answer immediately. They will then push on an unusual constraint specifically to see whether you understood what you recited. Derive your design from the requirements you just established, in the room.</p>\n<p>✦</p>\n<p>Adding components with no justification</p>\n<p>Kafka, Redis, Elasticsearch, and a service mesh in the first diagram signals pattern-matching rather than reasoning. Every box needs a one-sentence reason tied to a requirement. If you cannot give one, remove the box.</p>\n<p>✦</p>\n<p>Staying at the box-and-arrow layer</p>\n<p>Breadth without a single deep-dive reads as shallow. Choose one component and go three levels down: the actual sharding key, the actual eviction policy, the actual failure behaviour.</p>\n<p>✦</p>\n<p>Going silent while thinking</p>\n<p>Thirty seconds of silence is unscoreable. Narrate the dead ends too: \"I considered a single Postgres primary here, but 6,000 writes per second with this row size will saturate it, so I need to shard.\" The rejected option is itself a signal.</p>\n<p>✦</p>\n<p>Defending a design after it breaks</p>\n<p>When an interviewer surfaces a flaw, they are usually testing whether you can update. Concede quickly and adapt. \"You are right, celebrity fan-out breaks this, so let me switch those accounts to fan-out on read\" scores far better than justification.</p>\n <h2>How to Practise So It Transfers</h2>\n <p>Reading system design content builds recognition, not fluency. The round is a live performance under time pressure, so practise the performance rather than the material. Three rules make the difference:</p>\n <ul><li><strong>Always out loud, always timed.</strong> Set 45 minutes and talk through the whole thing, even alone. Silent reading builds an illusion of readiness that collapses the moment you have to narrate.</li><li><strong>Repeat the same prompt three times.</strong> The first run finds your gaps, the second builds structure, the third builds pace. Repetition on one prompt beats single passes on ten.</li><li><strong>Get interrupted.</strong> Real interviewers cut in with \"why not SQL here?\" at the worst moment. Practising without interruption trains a monologue, and the round is a conversation.</li></ul>\n <p>That last point is the hardest to arrange alone, which is where AI practice is genuinely useful, since you can run the same prompt repeatedly, at any hour, and be pushed on your reasoning without booking anyone's time. <a href=\"/blog/ai-vs-traditional-interview-coaching/\">We have compared AI and human coaching honestly here</a>, including where a human still wins: reading how you come across under pressure is not something a model does well yet.</p>\n <p>If you are preparing for big-tech loops specifically, the system design round rarely stands alone. It sits alongside coding and behavioral rounds that carry their own scoring rubrics. Our <a href=\"/blog/how-to-prepare-faang-software-engineer-interview/\">FAANG preparation roadmap</a> covers how to sequence all three without burning out, and the <a href=\"/blog/behavioral-interview-questions-answers/\">behavioral question guide</a> covers the STAR structure that the non-technical rounds are graded against.</p>\n <p>Practise system design out loud, as often as you need</p>\n<p>Amigo runs unlimited timed practice from your resume and target role, then supports you in the live interview with structured answers streamed in real time.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "What is a system design interview?",
+   "a": "A system design interview is a 45–60 minute open-ended round where you design a large-scale system, such as a URL shortener, news feed, or chat app, while explaining your reasoning. It assesses how you handle ambiguity, make trade-offs, and reason about scale, not whether you recall a specific architecture."
+  },
+  {
+   "q": "How do you structure a system design interview answer?",
+   "a": "Use five phases with a rough time budget: clarify requirements (5–8 min), estimate scale (3–5 min), define the API and data model (8–10 min), draw the high-level architecture (10–12 min), then deep-dive on bottlenecks and trade-offs (10–15 min). Announce each phase out loud so the interviewer can redirect you early."
+  },
+  {
+   "q": "What are the most common system design interview questions?",
+   "a": "Design a URL shortener, a news feed, a chat application, a rate limiter, a distributed cache, a notification service, a ride-hailing dispatch system, a video streaming platform, a payment ledger, a search autocomplete, a web crawler, and a metrics/monitoring pipeline. Most other prompts are variations on these primitives."
+  },
+  {
+   "q": "Do I need to memorise numbers for capacity estimation?",
+   "a": "You need about six: roughly 100 bytes per short database row, 1 KB per text post, 1 MB per photo, ~86,400 seconds in a day, ~2.5 million seconds in a month, and 1 server handling on the order of 1,000 requests/second. Everything else you derive out loud from the interviewer's stated numbers."
+  },
+  {
+   "q": "What is the most common reason candidates fail system design interviews?",
+   "a": "Jumping straight to a diagram without clarifying requirements. Designing a globally distributed system when the interviewer wanted 10,000 users, or a single-server design when they wanted 100 million, both read as an inability to scope. Spend the first five minutes on questions."
+  },
+  {
+   "q": "How senior do you need to be for a system design round?",
+   "a": "Most companies introduce system design at mid-level (roughly 3+ years) and weight it heavily from senior upward. At staff level and above it is often the round that determines your final level, because it is the clearest signal of judgment on ambiguous problems."
+  }
+ ],
+ "related": [
+  "/blog/google-hr-interview-questions-and-preparation",
+  "/blog/second-round-interview-questions",
+  "/blog/google-interview-process-2026"
+ ]
+}

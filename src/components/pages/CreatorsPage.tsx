@@ -272,7 +272,7 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.26}>
             <a
-              href="/referral"
+              href="/referral/"
               className="group mt-5 inline-flex max-w-full items-center gap-2.5 rounded-full border border-amigo-purple/20 bg-amigo-pale py-1.5 pl-1.5 pr-4 text-left text-[13px] font-semibold text-amigo-dark/80 transition-colors hover:border-amigo-purple/45 hover:text-amigo-purple"
             >
               <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[linear-gradient(90deg,#6C2BD9,#A855F7)] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#ffffff]">
@@ -457,7 +457,7 @@ function ReferralBoost() {
                   earn 10% of every purchase they make, for as long as they stay.
                 </p>
                 <div className="mt-8 inline-block">
-                  <MagneticButton href="/referral" size="lg" variant="light">
+                  <MagneticButton href="/referral/" size="lg" variant="light">
                     Explore the Referral Program
                     <ArrowRight size={18} />
                   </MagneticButton>
@@ -539,7 +539,7 @@ function ReferralBoost() {
             <p className="mt-6 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-[13.5px] text-amigo-dark/55">
               <BarChart3 size={16} className="shrink-0 text-amigo-purple" />
               Track clicks, sign-ups and earnings in your partner dashboard.
-              <a href="/referral" className="inline-flex items-center gap-1 font-bold text-amigo-purple hover:underline">
+              <a href="/referral/" className="inline-flex items-center gap-1 font-bold text-amigo-purple hover:underline">
                 See all the details <ArrowRight size={14} />
               </a>
             </p>

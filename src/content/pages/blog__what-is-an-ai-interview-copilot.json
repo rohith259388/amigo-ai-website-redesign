@@ -1,0 +1,149 @@
+{
+ "path": "/blog/what-is-an-ai-interview-copilot",
+ "section": "blog",
+ "title": "What Is an AI Interview Copilot and How Does It Work? | Amigo — AI Career Companion & Interview Copilot",
+ "description": "A plain-English breakdown of real-time AI interview assistance: how speech is captured, transcribed, and turned into streamed answers in under 200ms.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/what-is-an-ai-interview-copilot/fbe8a2ed0322.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/what-is-an-ai-interview-copilot/#article",
+   "headline": "What Is an AI Interview Copilot and How Does It Work?",
+   "description": "A plain-English breakdown of real-time AI interview assistance: how speech is captured, transcribed, and turned into streamed answers in under 200ms.",
+   "datePublished": "2026-06-12",
+   "dateModified": "2026-06-25",
+   "url": "https://www.amigohelp.ai/blog/what-is-an-ai-interview-copilot/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/what-is-an-ai-interview-copilot/fbe8a2ed0322.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Maya Chen"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is an AI interview copilot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An AI interview copilot is a real-time assistant that listens to your live interview, transcribes what the interviewer says, and streams AI-generated answers. It works during the actual interview, not just before it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is this different from interview practice apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Practice apps simulate interviews before the real event. An AI copilot like Amigo works live, during the real interview, responding to the actual questions your interviewer asks."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast does Amigo respond?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amigo begins streaming an answer within approximately 200ms of detecting the end of the interviewer's speech. Words appear one by one so you can start reading immediately."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work for coding interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Amigo supports both behavioral and technical coding interview formats. For coding sessions, it can suggest approaches, explain trade-offs, and help you articulate your reasoning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Amigo store my interview audio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Audio is processed locally on your device first. API keys are stored in the app's secure Rust backend, never exposed to the browser. Check the privacy policy for full details."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/what-is-an-ai-interview-copilot/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "What Is an AI Interview Copilot and How Does It Work?",
+ "lead": "A plain-English breakdown of real-time AI interview assistance: how speech is captured, transcribed, and turned into streamed answers in under 200ms.",
+ "category": "AI & Tools",
+ "readTime": "2 min read",
+ "date": "12 June 2026",
+ "author": "Amigo Team",
+ "hero": {
+  "src": "/images/blog/what-is-an-ai-interview-copilot/fbe8a2ed0322.jpg",
+  "alt": "A professional wearing earbuds concentrating on a laptop interview call."
+ },
+ "html": "<p><strong>An AI interview copilot</strong> is a real-time AI assistant that runs on your computer during a live job interview. It listens to what the interviewer says, transcribes it instantly, and streams AI-generated answer suggestions that you can use to guide your response, all in <a href=\"/blog/real-time-interview-assistance-explained/\">under 200 milliseconds</a>.</p>\n <p>Think of it as having a brilliant colleague whispering answers in your ear, but through software rather than an earpiece. Unlike interview prep apps or mock interview simulators, a copilot works during the actual interview, not just before it.</p>\n <h2>Copilot vs Practice Tool: The Critical Difference</h2>\n <p>Most AI tools marketed as \"interview coaches\" are really practice simulators. They let you run mock interviews on your own time, then give feedback. That is useful, but it stops the moment you enter the real interview.</p>\n <p>Practice tools (FinalRound, etc.)</p>\n<ul><li>Used before the interview</li><li>Simulated questions only</li><li>Feedback after you answer</li><li>Stops at the interview door</li></ul>\n<p>AI Copilot (Amigo)</p>\n<ul><li>Active during the live interview</li><li>Real interviewer's actual questions</li><li>Real-time streamed answers</li><li>Excluded from screen capture</li></ul>\n <h2>How Does an AI Interview Copilot Work?</h2>\n <p>Here is what happens in the seconds between an interviewer asking a question and Amigo displaying an answer:</p>\n <p>1</p>\n<p>Audio capture</p>\n<p>Amigo captures your system audio locally using platform audio APIs. No data is sent externally during capture; it stays on your machine. The interviewer's voice comes through your speakers or headphones, and Amigo picks it up.</p>\n<p>2</p>\n<p>Voice activity detection</p>\n<p>A voice activity detector (VAD) identifies when the interviewer stops speaking. This triggers the transcription step immediately, with no waiting for a timeout.</p>\n<p>3</p>\n<p>Real-time transcription</p>\n<p>The captured audio is sent to Deepgram's speech-to-text API, which returns a transcript typically within milliseconds. Interim results appear even before the interviewer finishes their sentence.</p>\n<p>4</p>\n<p>AI answer generation</p>\n<p>The transcript is sent to an LLM (OpenAI's models) along with your personalized context: your resume, the job description, and any preparation notes you loaded. The model streams back a tailored answer.</p>\n<p>5</p>\n<p>Answer display</p>\n<p>Words appear on your Amigo overlay one by one, just like ChatGPT's streaming output. You read it, adapt it in your own voice, and deliver your answer to the interviewer.</p>\n <figure><iframe src=\"https://www.youtube-nocookie.com/embed/SO3PZ4RBebI?rel=0&amp;modestbranding=1\" title=\"Amigo demo video\" loading=\"lazy\" allow=\"encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>\n<figcaption>Amigo listening in real time and streaming an answer during a live interview.</figcaption></figure>\n <h2>What Makes Amigo Different?</h2>\n <p>Beyond the technical pipeline, Amigo has two features that no other AI interview tool has:</p>\n <p>🛡️ OS-level stealth</p>\n<p>Amigo's window is <a href=\"/blog/can-interviewers-detect-ai-tools/\">excluded from screen capture at the operating system level</a>. When you share your screen, it is literally not there. Zoom, Teams, and Meet cannot see it.</p>\n<p>👥 Human Buddy</p>\n<p><a href=\"/blog/buddy-system-for-job-interviews/\">Share an invite link</a> with a trusted friend, mentor, or coach. They see your live interview transcript in real-time and can send you hints, reactions, and messages that only you see. AI plus a real human, simultaneously.</p>\n <p>Try Amigo before your next interview</p>\n<p>See how real-time AI assistance feels on a practice session. No credit card required.</p>\n<p><a href=\"/signup/\">Start free →</a></p>",
+ "faqs": [
+  {
+   "q": "What is an AI interview copilot?",
+   "a": "An AI interview copilot is a real-time assistant that listens to your live interview, transcribes what the interviewer says, and streams AI-generated answers. It works during the actual interview, not just before it."
+  },
+  {
+   "q": "How is this different from interview practice apps?",
+   "a": "Practice apps simulate interviews before the real event. An AI copilot like Amigo works live, during the real interview, responding to the actual questions your interviewer asks."
+  },
+  {
+   "q": "How fast does Amigo respond?",
+   "a": "Amigo begins streaming an answer within approximately 200ms of detecting the end of the interviewer's speech. Words appear one by one so you can start reading immediately."
+  },
+  {
+   "q": "Does it work for coding interviews?",
+   "a": "Yes. Amigo supports both behavioral and technical coding interview formats. For coding sessions, it can suggest approaches, explain trade-offs, and help you articulate your reasoning."
+  },
+  {
+   "q": "Does Amigo store my interview audio?",
+   "a": "Audio is processed locally on your device first. API keys are stored in the app's secure Rust backend, never exposed to the browser. Check the privacy policy for full details."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

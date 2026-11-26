@@ -1,0 +1,38 @@
+{
+ "path": "/docs/installation",
+ "section": "docs",
+ "title": "Installation: Windows & macOS | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Step-by-step installation of the Amigo desktop copilot on Windows 10/11 and macOS 12+. System requirements, download links, and first-run setup.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Installation",
+     "item": "https://www.amigohelp.ai/docs/installation/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Installation",
+ "category": "Getting Started",
+ "html": "<p>Amigo is a lightweight desktop application. Installation takes under 2 minutes on either Windows or macOS.</p>\n<h2 id=\"requirements\">System Requirements</h2>\n<div class=\"table-wrap\"><table><thead><tr><th></th><th>Windows</th><th>macOS</th></tr>\n</thead>\n<tbody><tr><td>OS Version</td><td>Windows 10 / 11 (64-bit)</td><td>macOS 12 Monterey or later</td></tr>\n<tr><td>RAM</td><td>4 GB minimum (8 GB recommended)</td><td>4 GB minimum (8 GB recommended)</td></tr>\n<tr><td>Storage</td><td>200 MB free</td><td>200 MB free</td></tr>\n<tr><td>Internet</td><td>Required for AI features</td><td>Required for AI features</td></tr>\n<tr><td>Microphone</td><td>Required</td><td>Required</td></tr>\n</tbody>\n</table></div>\n<hr>\n<h2 id=\"windows\">Installing on Windows</h2>\n<ol><li>Download the installer from your <a href=\"/dashboard/\">Amigo dashboard</a> or directly from <a href=\"/signup/\">amigohelp.ai</a>.</li><li>Run the <code>helpamigo.exe</code> installer.</li><li>Follow the installation wizard and click <strong>Install</strong>.</li><li>Amigo will launch automatically after installation. Sign in with your <strong>Amigo account</strong>, the same email and password you use on the web app.</li></ol>\n<p>Windows SmartScreen may show a security prompt on first launch. Click <strong>More info → Run anyway</strong> to proceed. Amigo is signed and verified software.</p>\n<p>Some antivirus programs (e.g. Windows Defender, Malwarebytes) may flag or quarantine <code>helpamigo.exe</code> on first run. This is a false positive. Amigo does not collect or transmit personal data beyond what is required for AI features. If this happens, add <code>helpamigo.exe</code> to your antivirus exclusion list and re-run the installer.</p>\n<hr>\n<h2 id=\"macos\">Installing on macOS</h2>\n<ol><li>Download the <code>helpamigo.dmg</code> file from your <a href=\"/dashboard/\">dashboard</a>.</li><li>Open the DMG and drag the Amigo app into your Applications folder.</li><li>On first launch, macOS will prompt for Microphone, Accessibility, and Screen Recording permissions; grant all three.</li><li>Sign in with your <strong>Amigo account</strong>, the same email and password you use on the web app. Amigo will run a system readiness check before starting your session.</li></ol>\n<hr>\n<h2 id=\"permissions\">Required Permissions</h2>\n<p>Amigo requires the following system permissions to function correctly:</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>\n</thead>\n<tbody><tr><td>Microphone Access</td><td>Capture interview audio for real-time transcription</td><td>Yes</td></tr>\n<tr><td>Accessibility (macOS)</td><td>Allows overlay to render above other windows</td><td>Yes (macOS)</td></tr>\n<tr><td>Screen Recording (macOS)</td><td>Captures system audio for transcription</td><td>Yes (macOS)</td></tr>\n<tr><td>Notification Access</td><td>Alerts when Amigo detects a new question</td><td>Optional</td></tr>\n<tr><td>Auto-Start on Login</td><td>Launch Amigo automatically with your computer</td><td>Optional</td></tr>\n</tbody>\n</table></div>"
+}

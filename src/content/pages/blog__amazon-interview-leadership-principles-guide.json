@@ -1,0 +1,173 @@
+{
+ "path": "/blog/amazon-interview-leadership-principles-guide",
+ "section": "blog",
+ "title": "Amazon Interview Guide: Leadership Principles (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Amazon's loop works: all 16 Leadership Principles, the Bar Raiser's veto, the STAR-L answer format, and the follow-ups that expose weak stories.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1200&h=800&fit=crop&crop=center",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/amazon-interview-leadership-principles-guide/#article",
+   "headline": "Amazon Interview Guide: Leadership Principles (2026)",
+   "description": "How Amazon's loop works: all 16 Leadership Principles, the Bar Raiser's veto, the STAR-L answer format, and the follow-ups that expose weak stories.",
+   "datePublished": "2026-07-21",
+   "dateModified": "2026-07-21",
+   "url": "https://www.amigohelp.ai/blog/amazon-interview-leadership-principles-guide/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1200&h=800&fit=crop&crop=center",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Anika Reddy"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How many Leadership Principles does Amazon have?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amazon publishes 16 Leadership Principles. The first 14 have been stable for years; 'Strive to be Earth's Best Employer' and 'Success and Scale Bring Broad Responsibility' were added in 2021. Amazon has revised the list before, so check amazon.jobs for the current wording before your loop."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a Bar Raiser at Amazon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Bar Raiser is a trained interviewer from outside the hiring team, deliberately included so someone in the room has no stake in filling the role. They hold an effective veto: a hiring manager who wants to hire cannot overrule a Bar Raiser's no. Their job is to protect the long-term hiring bar rather than close the requisition."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How should I structure an Amazon behavioral answer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use STAR plus an explicit Learning: Situation, Task, Action, Result, Learning. Amazon weights Action and Result most heavily, so spend roughly 60% of your answer on what you personally did and quantify the outcome. Say 'I' rather than 'we': the interviewer is scoring your contribution, not your team's."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How many stories do I need for an Amazon interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Prepare 10 to 14 substantial stories rather than one per principle. A single strong story can be framed against three or four different principles depending on which part you emphasise, and you will be asked follow-up questions on the same story for several minutes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What questions do Amazon interviewers ask after your answer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Expect three to five follow-ups drilling into specifics: what the exact numbers were, what you would do differently, who disagreed with you and how you handled it, and what the trade-off cost. This is 'Dive Deep' in action, and vague or inflated stories collapse under this questioning."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does Amazon's interview process take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Typically two to six weeks: a recruiter screen, one or two technical or hiring-manager phone screens, then a full loop of four to six interviews. Amazon has largely consolidated loops into a single day, often virtual, with a debrief and written feedback afterwards."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is Amazon's interview mostly technical or mostly behavioral?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Both, blended. Even in technical rounds, part of your score comes from Leadership Principle signals, and most interviewers open with 15 to 20 minutes of behavioral questions before the technical portion. Candidates who prepare only the coding side routinely fail on the behavioral axis."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/amazon-interview-leadership-principles-guide/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "Amazon Interview Guide: Leadership Principles (2026)",
+ "lead": "How Amazon's loop works: all 16 Leadership Principles, the Bar Raiser's veto, the STAR-L answer format, and the follow-ups that expose weak stories.",
+ "category": "Company Guides",
+ "readTime": "7 min read",
+ "date": "21 July 2026",
+ "author": "Anika Reddy",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1200&h=800&fit=crop&crop=center",
+  "alt": "Two business professionals reviewing a tablet in an office."
+ },
+ "html": "<p>Amazon's interview process is the most explicitly rubric-driven loop in big tech. Interviewers are not forming general impressions. Each one is assigned specific Leadership Principles to assess, takes near-verbatim notes on your answers, and submits written evidence against those principles before the debrief. Understanding that mechanism changes how you should prepare: your job is to supply quotable, specific, quantified evidence that an interviewer can write down. This guide covers all 16 principles, how the Bar Raiser's veto works, the answer format Amazon grades against, and the follow-up questioning that catches weak stories.</p>\n <h2>How Amazon's Loop Is Structured</h2>\n <p>1</p>\n<p>Recruiter screen: 30 minutes</p>\n<p>Role alignment, compensation range, and timeline. Lightweight, but your recruiter is also the person who tells you which principles your loop will focus on and who your Bar Raiser is. Ask directly. Most recruiters will tell you, and it is the single most useful piece of prep information available.</p>\n<p>2</p>\n<p>Phone screen: 45 to 60 minutes, sometimes two rounds</p>\n<p>For engineering roles, one or two coding problems plus 15 to 20 minutes of behavioral questions. For non-engineering roles, a case or functional exercise plus behavioral. The behavioral portion is scored, not small talk.</p>\n<p>3</p>\n<p>The loop: 4 to 6 interviews, usually one day</p>\n<p>Each interviewer is assigned two to three Leadership Principles and covers their technical or functional area alongside them. Interviewers deliberately do not discuss you with each other beforehand, so repeating a story across rounds is acceptable, though fresh material reads as more depth.</p>\n<p>4</p>\n<p>The Bar Raiser round</p>\n<p>One interviewer in the loop is a Bar Raiser from a different organisation, trained to hold the long-term hiring bar. This round is usually the most behavioral and the most persistent on follow-ups. You will not always be told which round it is.</p>\n<p>5</p>\n<p>Debrief and decision</p>\n<p>All interviewers submit written feedback with evidence before discussing you, then meet to reconcile. The Bar Raiser can block a hire the manager wants. Outcome typically lands within a week, though level calibration can add time.</p>\n <p>Why interviewers write so much during your answer</p>\n<p>Amazon interviewers are trained to capture your answers close to verbatim, because the debrief requires written evidence rather than impressions. Practically, this means: pause slightly after your key result so it can be written down, and give numbers rather than adjectives. \"Cut p99 latency from 1.2 seconds to 280 milliseconds\" is recordable evidence. \"Significantly improved performance\" is not.</p>\n <h2>All 16 Leadership Principles, and What Each One Is Actually Probing</h2>\n <p>The published one-line descriptions are aspirational. What matters in an interview is the specific evidence each principle is looking for.</p>\n <div class=\"table-wrap\"><table><thead><tr><th>Leadership Principle</th><th>What the interviewer is looking for</th></tr>\n</thead>\n<tbody><tr><td>Customer Obsession</td><td>You changed a decision because of specific customer evidence, not internal preference</td></tr>\n<tr><td>Ownership</td><td>You acted beyond your remit on something nobody assigned you, and stayed with it</td></tr>\n<tr><td>Invent and Simplify</td><td>You removed complexity or found a non-obvious approach; simplification counts as much as invention</td></tr>\n<tr><td>Are Right, A Lot</td><td>You made a judgement call on incomplete information and can explain the reasoning, including when you were wrong</td></tr>\n<tr><td>Learn and Be Curious</td><td>You taught yourself something outside your job description and applied it</td></tr>\n<tr><td>Hire and Develop the Best</td><td>You raised someone else’s performance, or made a hard call on someone who was not working out</td></tr>\n<tr><td>Insist on the Highest Standards</td><td>You refused to ship something acceptable, and can name what it cost you</td></tr>\n<tr><td>Think Big</td><td>You proposed something larger in scope than you were asked for, and got it funded</td></tr>\n<tr><td>Bias for Action</td><td>You moved with 70% of the information rather than waiting for certainty</td></tr>\n<tr><td>Frugality</td><td>You achieved the outcome with materially fewer resources: headcount, budget, or time</td></tr>\n<tr><td>Earn Trust</td><td>You admitted a mistake or delivered hard feedback, and the relationship survived it</td></tr>\n<tr><td>Dive Deep</td><td>You went to the raw data or logs yourself and found something the summary hid</td></tr>\n<tr><td>Have Backbone; Disagree and Commit</td><td>You disagreed with someone more senior, then committed fully once the decision went the other way</td></tr>\n<tr><td>Deliver Results</td><td>You hit a hard commitment under real constraints, with the number to prove it</td></tr>\n<tr><td>Strive to be Earth’s Best Employer</td><td>You improved your team’s working conditions, growth, or safety, not just its output</td></tr>\n<tr><td>Success and Scale Bring Broad Responsibility</td><td>You weighed second-order effects on users, community, or environment before shipping</td></tr>\n</tbody>\n</table></div>\n <p>Amazon has revised this list before — the final two were added in 2021 — so confirm the current wording on amazon.jobs before your loop rather than trusting any third-party list, including this one.</p>\n <h2>The Answer Format Amazon Grades Against: STAR-L</h2>\n <p>Standard STAR is the baseline. Amazon interviewers consistently push for a fifth element (what you learned) and weight the middle two most heavily. A well-proportioned two-minute answer looks roughly like this:</p>\n <p>1</p>\n<p>Situation: about 15 seconds</p>\n<p>Enough context to make the stakes legible, and no more. Company, team size, what was at risk. Candidates routinely burn 45 seconds here and then rush the part that is actually scored.</p>\n<p>2</p>\n<p>Task: about 15 seconds</p>\n<p>Your specific responsibility, stated as yours. \"I owned the migration path for three services\" not \"the team was asked to migrate.\"</p>\n<p>3</p>\n<p>Action: about 60 seconds, the core of the answer</p>\n<p>What you personally did, sequenced, with the decisions and trade-offs visible. Say \"I\" throughout. This is where the interviewer collects most of their evidence, so give them detail: the option you rejected, the person you convinced, the constraint you worked around.</p>\n<p>4</p>\n<p>Result: about 20 seconds, quantified</p>\n<p>A number, a timeframe, and a comparison to the prior state. If you genuinely have no metric, use scope and durability instead: \"still in production three years later, handling 40 teams.\"</p>\n<p>5</p>\n<p>Learning: about 15 seconds</p>\n<p>What you would do differently, stated without self-flagellation. This element separates senior-sounding answers from competent ones, and it is often the thing the Bar Raiser is waiting for.</p>\n <h2>Prepare a Story Matrix, Not One Story Per Principle</h2>\n <p>Sixteen principles do not require sixteen stories. A single substantial project can supply evidence for four principles depending on which part you emphasise: the customer research is Customer Obsession, the pushback against your director is Have Backbone, the log-level investigation is Dive Deep, and the shipped metric is Deliver Results.</p>\n <p>Build a matrix instead — 10 to 14 real stories down one axis, the 16 principles across the other, and mark which stories can credibly serve which principle. Two things fall out of it immediately: your genuinely uncovered principles, which is where your remaining prep time should go, and your over-used stories, which you need alternates for because you will be asked in multiple rounds.</p>\n <p>Stories that hold up</p>\n<ul><li>You can name the actual numbers</li><li>You can name who disagreed and why</li><li>You can explain the option you rejected</li><li>You were personally, individually involved</li><li>Something went wrong that you can discuss</li></ul>\n<p>Stories that collapse</p>\n<ul><li>Told entirely in \"we\"</li><li>No metric, or an inflated one</li><li>Frictionless: nobody objected to anything</li><li>You were adjacent to the work, not in it</li><li>You cannot answer \"what would you change?\"</li></ul>\n <h2>The Follow-Up Questions That Catch Weak Stories</h2>\n <p>Amazon interviewers spend far longer on each story than most companies — commonly five to eight minutes with three to five follow-ups. The questioning is consistent enough that you can rehearse against it directly. Take your three strongest stories and answer all six of these out loud:</p>\n <ul><li><strong>\"What was the actual number?\"</strong> If you said \"improved conversion,\" expect to be asked by how much, from what baseline, measured over what window.</li><li><strong>\"What was your specific contribution?\"</strong> Asked when you have drifted into \"we.\" Have the boundary of your own work ready.</li><li><strong>\"Who disagreed with you?\"</strong> A story with no opposition reads as either low-stakes or sanitised. Name the disagreement and how you resolved it.</li><li><strong>\"What did you trade off?\"</strong> Every real decision cost something. Naming the cost demonstrates judgement; claiming there was none reads as not having understood the decision.</li><li><strong>\"What would you do differently?\"</strong> The answer cannot be \"nothing.\" Have a genuine, specific revision.</li><li><strong>\"How did you know that was the right call?\"</strong> This is Dive Deep. The answer should reference data you personally looked at, not a conclusion you were handed.</li></ul>\n <p>The most common Amazon-specific failure</p>\n<p>Strong engineers who prepare only coding problems fail Amazon loops at a notable rate, because Leadership Principle evidence is scored in every round including the technical ones. If you have spent 40 hours on algorithms and zero hours writing out stories, your preparation is misallocated for this company specifically.</p>\n <h2>A Two-Week Preparation Plan</h2>\n <p>1</p>\n<p>Days 1–3: extract your raw material</p>\n<p>Write out 12 to 14 stories in bullet form, no polishing. Pull from performance reviews, old project docs, and commit history to recover the numbers you have forgotten. Recovering real metrics is the highest-value work in this entire plan.</p>\n<p>2</p>\n<p>Days 4–6: build the matrix and find the gaps</p>\n<p>Map stories to principles and identify which have no coverage. Frugality, Think Big, and Strive to be Earth’s Best Employer are the usual blanks. Go find smaller genuine examples rather than stretching a large story to fit.</p>\n<p>3</p>\n<p>Days 7–10: rehearse out loud, timed to two minutes</p>\n<p>Reading them back is not preparation. Speak each story to a two-minute target, then answer the six follow-ups above for each. Record yourself once. Most people discover they spend half the answer on Situation.</p>\n<p>4</p>\n<p>Days 11–13: technical or functional prep in parallel</p>\n<p>Amazon coding rounds skew toward practical data-structure problems over exotic algorithms, and design rounds follow the standard structure covered in our system design framework. Keep this to half your remaining time, not all of it.</p>\n<p>5</p>\n<p>Day 14: light review only</p>\n<p>Reread your matrix, confirm the current Leadership Principle wording on amazon.jobs, and stop. Cramming the night before a full loop measurably degrades performance in the rounds that matter.</p>\n <p>If you want structured practice on the behavioral side specifically, our <a href=\"/blog/behavioral-interview-questions-answers/\">50 behavioral questions with STAR answers</a> covers the format in depth, and the <a href=\"/blog/system-design-interview-questions-framework/\">system design framework</a> handles the architecture round. For the loop itself, <a href=\"/blog/interview-confidence-not-memorization/\">confidence comes from structure rather than memorised scripts</a>, which matters more at Amazon than most places, because rehearsed-sounding answers invite exactly the follow-up questioning that exposes them.</p>\n <p>Rehearse your Leadership Principle stories out loud</p>\n<p>Amigo runs unlimited timed practice against your resume and target role, pushes follow-up questions the way a Bar Raiser would, and supports you live during the real interview.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "How many Leadership Principles does Amazon have?",
+   "a": "Amazon publishes 16 Leadership Principles. The first 14 have been stable for years; 'Strive to be Earth's Best Employer' and 'Success and Scale Bring Broad Responsibility' were added in 2021. Amazon has revised the list before, so check amazon.jobs for the current wording before your loop."
+  },
+  {
+   "q": "What is a Bar Raiser at Amazon?",
+   "a": "A Bar Raiser is a trained interviewer from outside the hiring team, deliberately included so someone in the room has no stake in filling the role. They hold an effective veto: a hiring manager who wants to hire cannot overrule a Bar Raiser's no. Their job is to protect the long-term hiring bar rather than close the requisition."
+  },
+  {
+   "q": "How should I structure an Amazon behavioral answer?",
+   "a": "Use STAR plus an explicit Learning: Situation, Task, Action, Result, Learning. Amazon weights Action and Result most heavily, so spend roughly 60% of your answer on what you personally did and quantify the outcome. Say 'I' rather than 'we': the interviewer is scoring your contribution, not your team's."
+  },
+  {
+   "q": "How many stories do I need for an Amazon interview?",
+   "a": "Prepare 10 to 14 substantial stories rather than one per principle. A single strong story can be framed against three or four different principles depending on which part you emphasise, and you will be asked follow-up questions on the same story for several minutes."
+  },
+  {
+   "q": "What questions do Amazon interviewers ask after your answer?",
+   "a": "Expect three to five follow-ups drilling into specifics: what the exact numbers were, what you would do differently, who disagreed with you and how you handled it, and what the trade-off cost. This is 'Dive Deep' in action, and vague or inflated stories collapse under this questioning."
+  },
+  {
+   "q": "How long does Amazon's interview process take?",
+   "a": "Typically two to six weeks: a recruiter screen, one or two technical or hiring-manager phone screens, then a full loop of four to six interviews. Amazon has largely consolidated loops into a single day, often virtual, with a debrief and written feedback afterwards."
+  },
+  {
+   "q": "Is Amazon's interview mostly technical or mostly behavioral?",
+   "a": "Both, blended. Even in technical rounds, part of your score comes from Leadership Principle signals, and most interviewers open with 15 to 20 minutes of behavioral questions before the technical portion. Candidates who prepare only the coding side routinely fail on the behavioral axis."
+  }
+ ],
+ "related": [
+  "/blog/google-ai-assisted-coding-interview",
+  "/blog/meta-ai-enabled-coding-interview",
+  "/blog/microsoft-interview-process-explained"
+ ]
+}

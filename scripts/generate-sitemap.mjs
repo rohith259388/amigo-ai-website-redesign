@@ -29,13 +29,17 @@ function isoDate(value) {
   return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
 }
 
+// Blog, docs, comparison and pricing pages carried over from the live site.
+const content = JSON.parse(readFileSync(resolve(root, "src/content/manifest.json"), "utf8"));
+
 const urls = [
   { path: "/", priority: "1.0" },
-  { path: "/questions", priority: "0.9" },
-  { path: "/linkedin", priority: "0.8" },
-  { path: "/referral", priority: "0.6" },
-  { path: "/creators", priority: "0.6" },
-  ...questions.map((q) => ({ path: `/questions/${q.slug}`, priority: "0.7", lastmod: isoDate(q.date) })),
+  { path: "/questions/", priority: "0.9" },
+  { path: "/linkedin/", priority: "0.8" },
+  { path: "/referral/", priority: "0.6" },
+  { path: "/creators/", priority: "0.6" },
+  ...questions.map((q) => ({ path: `/questions/${q.slug}/`, priority: "0.7", lastmod: isoDate(q.date) })),
+  ...content.map((page) => ({ path: `${page.path}/`, priority: page.path.split("/").length > 2 ? "0.6" : "0.8", lastmod: page.lastmod })),
 ];
 
 const body = urls
@@ -59,4 +63,4 @@ ${body}
 `;
 
 writeFileSync(resolve(root, "public/sitemap.xml"), xml);
-console.log(`sitemap.xml: ${urls.length} URLs (${questions.length} question pages)`);
+console.log(`sitemap.xml: ${urls.length} URLs (${questions.length} question pages, ${content.length} content pages)`);

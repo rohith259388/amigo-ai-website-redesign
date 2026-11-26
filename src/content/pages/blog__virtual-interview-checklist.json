@@ -1,0 +1,150 @@
+{
+ "path": "/blog/virtual-interview-checklist",
+ "section": "blog",
+ "title": "Virtual Interview Checklist: Setup, Practice, and Backup Plan | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Prepare for a video interview with a practical checklist for audio, camera, screen sharing, notes, and connection problems, from the day before to the call.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/virtual-interview-checklist/be3920d220ed.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/virtual-interview-checklist/#article",
+   "headline": "Virtual Interview Checklist: Setup, Practice, and Backup Plan",
+   "description": "Prepare for a video interview with a practical checklist for audio, camera, screen sharing, notes, and connection problems, from the day before to the call.",
+   "datePublished": "2026-09-03",
+   "dateModified": "2026-09-03",
+   "url": "https://www.amigohelp.ai/blog/virtual-interview-checklist/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/virtual-interview-checklist/be3920d220ed.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What should I check before a virtual interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Confirm the time zone, meeting link, platform, and contact person. Test the microphone, speakers, camera, and any required screen sharing on the device you will use. Keep the charger and a way to contact the recruiter nearby."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How early should I join a video interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Follow the invitation's instructions. As a practical default, be ready about ten minutes beforehand and open the meeting a few minutes before the start, using the waiting room if one is available. Avoid interrupting another meeting in a reused room."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use notes during a virtual interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ask about the rules for the round. When notes are allowed, use brief reminders and your questions rather than reading prepared answers. Coding tests and other assessments may have different restrictions from conversational interviews."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should I do if the interview connection fails?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Try rejoining once, then contact the recruiter or interviewer through the agreed channel. Use a dial-in or another device if the invitation supports it. Explain what happened briefly and confirm whether to continue or reschedule."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use AI during a video interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Check the employer's rules for that specific round and tool. Permission to use AI for preparation does not establish permission during an assessment. Ask beforehand if the instructions are unclear."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/virtual-interview-checklist/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Virtual Interview Checklist: Setup, Practice, and Backup Plan",
+ "lead": "Prepare for a video interview with a practical checklist for audio, camera, screen sharing, notes, and connection problems, from the day before to the call.",
+ "category": "Interview Prep",
+ "readTime": "5 min read",
+ "date": "3 September 2026",
+ "author": "Amigo Team",
+ "hero": {
+  "src": "/images/blog/virtual-interview-checklist/be3920d220ed.jpg",
+  "alt": "A candidate checking her headset at a home desk before a video interview."
+ },
+ "html": "<p>Before a virtual interview, verify the meeting details, test the equipment you will actually use, and agree on a way to reconnect if the call fails. Then rehearse the conversation in that setup. Good preparation means you can focus on the question instead of wondering whether anyone can hear you.</p>\n<p>The camera light turns on. Your headphones are connected, but the meeting has selected the laptop microphone. You share a screen and discover that the document you need is on a different desktop. These are small problems, yet they can take up your attention at exactly the wrong moment.</p>\n<p>Use this checklist in order. You do not need to buy equipment to get started; test what you have and address the problems you actually find.</p>\n<h2>The day before: confirm the interview details</h2>\n<p>Check the date, time zone, expected duration, meeting link, and interviewer or recruiting contact. If there are several rounds, note whether each has a different link. Read any instructions about coding platforms, presentations, identification, or permitted materials.</p>\n<p>If the format is unclear, send one focused question: “Could you confirm whether this round includes screen sharing or a live exercise, and which tools or notes are permitted?” That is more useful than assuming every video interview works the same way.</p>\n<p>Ask about any access needs early enough to make arrangements. You do not have to solve a platform limitation alone.</p>\n<h2>Test your audio and camera in the actual setup</h2>\n<p>Use the device, browser or application, headset, and room you plan to use. Run the platform's available test or make a short call with someone you trust. Check which microphone and speaker the meeting selected; a connected headset is not proof that the app is using it.</p>\n<p>Confirm that your camera and microphone permissions work. Check the camera angle and light with a preview. The goal is a clear view of your face, not a studio setup. Listen to a short recording or ask your test partner whether your voice is clear at a normal speaking volume.</p>\n<p><a href=\"https://careers.microsoft.com/v2/global/en/hiring-tips/virtual-interviewing\" target=\"_blank\" rel=\"noopener noreferrer\">Microsoft's virtual-interview guidance</a> similarly recommends testing the meeting technology, camera and microphone access, connection, and selected headphones. Follow the instructions for your own interview platform rather than assuming Microsoft's setup applies to every employer.</p>\n<p>If an update or installation is required, handle it before the interview morning where possible. Charge the device and keep the charger within reach.</p>\n<h2>If you need to share your screen</h2>\n<p>Open the material you expect to use and test sharing it. Make sure the text is readable at the size the interviewer will see. For a coding exercise, check that you can access the specified editor or platform and that your normal shortcuts work there.</p>\n<p>Close unrelated documents and pause notifications. When the format allows it, share the relevant window rather than an entire desktop. Check what is visible before beginning your explanation.</p>\n<p>Do not put confidential work into a demonstration. Prepare a permitted example or a general diagram if you need to explain a previous project. Our <a href=\"/blog/how-to-explain-a-project-in-an-interview/\">project-explanation guide</a> covers how to discuss your contribution without exposing private details.</p>\n<h2>Practice one answer on camera</h2>\n<p>Choose an opening answer or project explanation and say it aloud in the setup you tested. Check whether your notes make you read off-screen for long stretches. A few short reminders are easier to use conversationally than a paragraph of prepared text.</p>\n<p>If notes are permitted, keep the job requirements, a few project reminders, and your questions nearby. For assessments, follow the stated rules about notes, search, and AI tools. Ask if you are unsure; permission for one round or tool may not cover another.</p>\n<p>Leave space for the other person to finish speaking. If there is a delay and you talk over each other, a simple “Please go ahead” is enough. You do not need to apologize repeatedly for the ordinary friction of a video call.</p>\n<h2>Ten minutes before the call</h2>\n<ul><li>Open the invitation and confirm that you are using the correct link.</li><li>Connect power and check the selected microphone and speaker again.</li><li>Close bandwidth-heavy activity you control and pause notifications.</li><li>Have water, a pen, and the recruiting contact details nearby.</li><li>Open permitted materials and close anything you would not want to share.</li><li>Take a moment to review the role and the two questions you most want answered.</li></ul>\n<p>Follow the invitation's joining instructions. A practical default is to be ready about ten minutes early and open the meeting a few minutes before the start. If the link is a reused room with another meeting in progress, wait rather than entering early.</p>\n<h2>What to do when the connection fails</h2>\n<p>Make a backup plan before you need it: who will you contact, and can you use a dial-in number or another device? Keep the plan short enough to use under pressure.</p>\n<p>If the call drops, try rejoining once. If it still does not work, contact the recruiter or interviewer. Microsoft advises candidates who cannot reconnect to contact their recruiting representative; the exact fallback for your interview depends on the invitation and platform.</p>\n<p>A message can be brief: “My connection dropped and I have tried rejoining. I am available by phone at the number on my application. Would you prefer to continue by phone or arrange another time?”</p>\n<p>If audio cuts out during a question, ask for the missing part instead of guessing. “I heard the first part about the migration, but missed the constraint you mentioned” tells the interviewer exactly where to resume.</p>\n<h2>After the call</h2>\n<p>Note the topics discussed, any information you promised to provide, and the next-step timeline. If a technical problem cut short the conversation, explain that fact to the recruiter and ask how to complete the missing part. Do not assume it has decided the outcome.</p>\n<p>Our <a href=\"/blog/how-to-follow-up-after-an-interview/\">follow-up guide</a> can help with the next message. For your next rehearsal, use the same setup again: familiarity with the equipment leaves you more attention for the conversation itself.</p>",
+ "faqs": [
+  {
+   "q": "What should I check before a virtual interview?",
+   "a": "Confirm the time zone, meeting link, platform, and contact person. Test the microphone, speakers, camera, and any required screen sharing on the device you will use. Keep the charger and a way to contact the recruiter nearby."
+  },
+  {
+   "q": "How early should I join a video interview?",
+   "a": "Follow the invitation's instructions. As a practical default, be ready about ten minutes beforehand and open the meeting a few minutes before the start, using the waiting room if one is available. Avoid interrupting another meeting in a reused room."
+  },
+  {
+   "q": "Can I use notes during a virtual interview?",
+   "a": "Ask about the rules for the round. When notes are allowed, use brief reminders and your questions rather than reading prepared answers. Coding tests and other assessments may have different restrictions from conversational interviews."
+  },
+  {
+   "q": "What should I do if the interview connection fails?",
+   "a": "Try rejoining once, then contact the recruiter or interviewer through the agreed channel. Use a dial-in or another device if the invitation supports it. Explain what happened briefly and confirm whether to continue or reschedule."
+  },
+  {
+   "q": "Can I use AI during a video interview?",
+   "a": "Check the employer's rules for that specific round and tool. Permission to use AI for preparation does not establish permission during an assessment. Ask beforehand if the instructions are unclear."
+  }
+ ],
+ "related": [
+  "/blog/google-hr-interview-questions-and-preparation",
+  "/blog/second-round-interview-questions",
+  "/blog/google-interview-process-2026"
+ ]
+}

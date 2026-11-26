@@ -1,0 +1,137 @@
+{
+ "path": "/blog/data-behind-ai-assisted-hiring-500-interviews",
+ "section": "blog",
+ "title": "The Data Behind AI-Assisted Hiring: 500 Interviews Analysed | Amigo — AI Career Companion & Interview Copilot",
+ "description": "We reviewed 500 sessions from Amigo's Q2 2026 usage data to see how candidates use AI mid-interview. The breakdown, plus the methodology caveats.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/data-behind-ai-assisted-hiring-500-interviews/494004b87997.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/data-behind-ai-assisted-hiring-500-interviews/#article",
+   "headline": "The Data Behind AI-Assisted Hiring: 500 Interviews Analysed",
+   "description": "We reviewed 500 sessions from Amigo's Q2 2026 usage data to see how candidates use AI mid-interview. The breakdown, plus the methodology caveats.",
+   "datePublished": "2026-07-10",
+   "dateModified": "2026-07-10",
+   "url": "https://www.amigohelp.ai/blog/data-behind-ai-assisted-hiring-500-interviews/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/data-behind-ai-assisted-hiring-500-interviews/494004b87997.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Anika Reddy"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What exactly was analysed for this report?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A sample of 500 completed interview sessions from Amigo's own Q2 2026 usage data: session format, length, feature usage, and question-category mix. It's descriptive usage data from our own product, not a third-party or peer-reviewed study."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is this a controlled study comparing AI-assisted candidates to unassisted ones?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. There's no control group of non-AI-assisted candidates in this sample, since every session in it used Amigo. This report describes how candidates who chose to use AI assistance actually used it, not whether using it changed their outcome."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should a recruiter actually take away from this?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mostly the question-category mix and format split, since those describe what recruiters are increasingly seeing on the other side of the table regardless of which specific tool a candidate used. The safest response, structured questions and scoring rubrics, doesn't depend on which AI tool was involved."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why publish usage data instead of an outcome study?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Because we don't have a rigorous outcome study to publish yet, and we'd rather show descriptive data with its limitations stated plainly than imply causation we can't support. A properly designed outcome comparison is a harder, longer-term research project."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/data-behind-ai-assisted-hiring-500-interviews/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "The Data Behind AI-Assisted Hiring: 500 Interviews Analysed",
+ "lead": "We reviewed 500 sessions from Amigo's Q2 2026 usage data to see how candidates use AI mid-interview. The breakdown, plus the methodology caveats.",
+ "category": "AI & Tools",
+ "readTime": "2 min read",
+ "date": "10 July 2026",
+ "author": "Anika Reddy",
+ "hero": {
+  "src": "/images/blog/data-behind-ai-assisted-hiring-500-interviews/494004b87997.jpg",
+  "alt": "Two recruiting analysts reviewing printed charts together in an office."
+ },
+ "html": "<p>We pulled a sample of <strong>500 completed interview sessions</strong> from Amigo's own Q2 2026 usage data to see how candidates actually use AI assistance once they're in a real interview, rather than how vendors, including us, tend to describe it. Worth being upfront about what this is and isn't: it's descriptive usage data from our own product, with no control group of unassisted candidates. It tells you what AI-assisted candidates did, not whether it changed their outcome.</p>\n <h2>What We Looked At</h2>\n <p>Every session in the sample used Amigo's Live Interview or Coding Test format between April and June 2026. We tagged each session by format, length, which optional features were active (Practice Mode beforehand, Buddy during the call), and the rough category of questions asked. No transcript content or personal data was reviewed manually; categorization ran on session metadata only.</p>\n <h2>The Format and Feature Breakdown</h2>\n <p>1</p>\n<p>Live Interview sessions made up the majority</p>\n<p>Most sessions in the sample were behavioral/conversational Live Interview format rather than Coding Test, consistent with candidates reaching for AI support most often in open-ended, harder-to-script rounds.</p>\n<p>2</p>\n<p>A majority ran at least one Practice session first</p>\n<p>More than half of candidates in the sample had run at least one Practice Mode session, Amigo's mock-interview mode, before their tagged live session, suggesting most usage isn't purely reactive.</p>\n<p>3</p>\n<p>Buddy usage was a small but consistent minority</p>\n<p>A single-digit percentage of sessions had a human Buddy connected. Small in volume, but it's a distinct usage pattern worth tracking rather than folding into 'AI-assisted' as one undifferentiated category.</p>\n <h2>What This Means If You're Evaluating AI Tools as a Recruiter</h2>\n <p>The most useful signal here isn't a specific percentage. It's the shape of usage. Candidates are overwhelmingly using AI support in the rounds that are hardest to prepare a script for in advance, and a majority are rehearsing with it before the interview even starts, not improvising with it live for the first time. That's consistent with the broader trend <a href=\"/blog/ai-assisted-candidates-recruiter-screening/\">covered in our screening-speed piece</a>: firms using AI to screen were 86% more likely to place a candidate in under 20 days, per Bullhorn's 2025 GRID report, and structured evaluation is the response that holds up regardless of how the candidate prepared.</p>\n <p>That last point matters more than any usage statistic: standardized questions and scoring rubrics reduce how much an interview outcome depends on a candidate's tools, nerves, or polish. Whether a candidate used Amigo, a competitor, or nothing at all, the same evaluation discipline is the safeguard.</p>\n <p>See what structured, AI-aware screening looks like</p>\n<p>Talk to us about how employer and recruiting partners are adapting their process alongside candidate-side AI adoption.</p>\n<p><a href=\"/signup/\">Talk to our partnership team →</a></p>",
+ "faqs": [
+  {
+   "q": "What exactly was analysed for this report?",
+   "a": "A sample of 500 completed interview sessions from Amigo's own Q2 2026 usage data: session format, length, feature usage, and question-category mix. It's descriptive usage data from our own product, not a third-party or peer-reviewed study."
+  },
+  {
+   "q": "Is this a controlled study comparing AI-assisted candidates to unassisted ones?",
+   "a": "No. There's no control group of non-AI-assisted candidates in this sample, since every session in it used Amigo. This report describes how candidates who chose to use AI assistance actually used it, not whether using it changed their outcome."
+  },
+  {
+   "q": "What should a recruiter actually take away from this?",
+   "a": "Mostly the question-category mix and format split, since those describe what recruiters are increasingly seeing on the other side of the table regardless of which specific tool a candidate used. The safest response, structured questions and scoring rubrics, doesn't depend on which AI tool was involved."
+  },
+  {
+   "q": "Why publish usage data instead of an outcome study?",
+   "a": "Because we don't have a rigorous outcome study to publish yet, and we'd rather show descriptive data with its limitations stated plainly than imply causation we can't support. A properly designed outcome comparison is a harder, longer-term research project."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

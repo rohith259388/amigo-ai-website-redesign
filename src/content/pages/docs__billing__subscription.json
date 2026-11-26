@@ -1,0 +1,38 @@
+{
+ "path": "/docs/billing/subscription",
+ "section": "docs",
+ "title": "Subscription & Account Management | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Manage your Amigo account, payment methods, and billing history. View plans, top up interview credits, subscribe for unlimited access, and update preferences.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Managing Your Account",
+     "item": "https://www.amigohelp.ai/docs/billing/subscription/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Managing Your Account",
+ "category": "Account & Billing",
+ "html": "<p>Amigo offers two independent ways to pay: a pay-as-you-go credit system, and an optional monthly Unlimited subscription. You can use either on its own, or both at once; a credit pack balance and an active subscription never affect each other. This page covers how to manage your purchases, subscription, payment method, and account settings.</p>\n<hr>\n<h2 id=\"buying-minutes\">Buying Minutes</h2>\n<ol><li>Log in and navigate to <a href=\"/tokens/purchase/\">Buy Minutes</a> from the sidebar.</li><li>Choose a pack: Free (10 min), Starter (2 hrs), Essential (5 hrs), or Scale (20 hrs). See <a href=\"/docs/billing/plans/\">Plans &amp; Pricing</a> for details.</li><li>Complete the one-time payment via Stripe. Your card is stored securely by Stripe and never touches our servers.</li><li>Your new minutes are available instantly. Start or resume a session right away.</li></ol>\n<p>You can buy additional packs at any time. Credits from different purchases are combined into a single balance, and there is no limit on stacking.</p>\n<hr>\n<h2 id=\"unlimited-subscription\">Unlimited Subscription</h2>\n<p>Instead of (or alongside) buying minutes packs, you can subscribe to Unlimited from the same <a href=\"/tokens/purchase/\">Buy Minutes</a> page, switching to the \"Unlimited\" tab and choosing a plan. Subscriptions auto-renew monthly by default and can be cancelled at any time; access continues until the end of the current billing period. Your minutes pack balance is never touched while a subscription is active, and you automatically fall back to any remaining credits if the subscription ends.</p>\n<ol><li>Manage your plan from <a href=\"/account/\">Account Settings → Subscription</a>, where you can view status, renewal date, and minutes used this period.</li><li>Cancel or re-enable auto-renewal at any time from the same page.</li><li>Use <strong>Manage Billing</strong> to update your card or view invoices via the Stripe Customer Portal.</li></ol>\n<p>A monthly usage figure is shown for your own visibility only. It is not a hard cap, and your access is never restricted because of it.</p>\n<hr>\n<h2 id=\"copilot-profiles\">Managing Copilot Profiles</h2>\n<p>Copilot Profiles let you customise how Amigo responds during different types of interviews. Each profile can have its own session format (Live Interview or Coding Test), response length (Concise, Balanced, or Detailed), resume, and job description.</p>\n<ol><li>Go to <a href=\"/copilot-profiles/\">Copilot Profiles</a> from the sidebar.</li><li>Click <strong>Create Profile</strong> and give it a name (e.g. \"Frontend Interview\", \"System Design\").</li><li>Set the session format, response length, and upload your resume and job description.</li><li>Turn on <strong>Use this profile</strong> to make it your active interview setup before signing in on the desktop app.</li></ol>\n<p>You can create multiple profiles for different interview types and switch between them by making a different profile your active interview setup before each session.</p>\n<hr>\n<h2 id=\"payment-methods\">Updating Payment Method</h2>\n<p>If you have an active Unlimited subscription, go to <a href=\"/account/\">Account Settings → Subscription</a> and click <strong>Manage Billing</strong> to be redirected to the Stripe Customer Portal, where you can add, update, or remove a card. One-time minutes pack purchases don't store a card on file; you enter payment details fresh at each Stripe checkout.</p>\n<hr>\n<h2 id=\"invoices\">Invoices &amp; Receipts</h2>\n<p>A receipt is emailed automatically to your registered address after each successful purchase. You can also view your full purchase history from <a href=\"/my-purchases/\">My Purchases</a> at any time.</p>\n<p>Need a VAT invoice or a custom billing address? Email <a href=\"mailto:support@amigohelp.ai\">support@amigohelp.ai</a> with your request and we'll update the invoice within one business day.</p>\n<hr>\n<h2 id=\"account-deletion\">Deleting Your Account</h2>\n<p>To delete your account and all associated data, contact <a href=\"mailto:support@amigohelp.ai\">support@amigohelp.ai</a>. Account deletion is permanent, and your session history, profiles, and any remaining credits will be removed. Unused minutes can be refunded within 30 days of purchase before deletion.</p>"
+}

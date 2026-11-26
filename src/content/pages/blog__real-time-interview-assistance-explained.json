@@ -1,0 +1,137 @@
+{
+ "path": "/blog/real-time-interview-assistance-explained",
+ "section": "blog",
+ "title": "Real-Time Interview Assistance: The 200ms Pipeline Behind Amigo | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How the Deepgram → OpenAI streaming pipeline works, why latency under 200ms matters in a live interview, and what it actually feels like to use.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/real-time-interview-assistance-explained/17a9191baec5.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/real-time-interview-assistance-explained/#article",
+   "headline": "Real-Time Interview Assistance: The 200ms Pipeline Behind Amigo",
+   "description": "How the Deepgram → OpenAI streaming pipeline works, why latency under 200ms matters in a live interview, and what it actually feels like to use.",
+   "datePublished": "2026-06-13",
+   "dateModified": "2026-06-25",
+   "url": "https://www.amigohelp.ai/blog/real-time-interview-assistance-explained/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/real-time-interview-assistance-explained/17a9191baec5.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "David Park"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How fast is real-time interview assistance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amigo begins streaming an answer within approximately 200ms of the interviewer stopping speaking, fast enough to appear during the natural conversational pause."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What transcription service does Amigo use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Deepgram's streaming STT API, running through Amigo's Rust backend. API keys are never exposed to the browser."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work offline?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. An internet connection is required to access transcription and AI services. Audio is processed locally first."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I use my own resume and job description?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Amigo lets you upload your resume and job description into a Copilot Profile. Every AI response is generated with that context, so answers are personalized to your background and the specific role."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/real-time-interview-assistance-explained/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Real-Time Interview Assistance: The 200ms Pipeline Behind Amigo",
+ "lead": "How the Deepgram → OpenAI streaming pipeline works, why latency under 200ms matters in a live interview, and what it actually feels like to use.",
+ "category": "AI & Tools",
+ "readTime": "2 min read",
+ "date": "13 June 2026",
+ "author": "Amigo Team",
+ "hero": {
+  "src": "/images/blog/real-time-interview-assistance-explained/17a9191baec5.jpg",
+  "alt": "A professional wearing earbuds listening during a video call at his home desk."
+ },
+ "html": "<p>The gap between an interviewer finishing their question and you beginning your answer is roughly 1–3 seconds in a natural conversation. That window is where <a href=\"/blog/what-is-an-ai-interview-copilot/\">real-time AI assistance</a> either succeeds or fails. At <strong>200ms from speech-end to first streamed word</strong>, Amigo fits comfortably inside that natural pause, so you read the start of an answer before you would normally have begun speaking.</p>\n <h2>Why Does Latency Matter So Much?</h2>\n <p>In a live interview, a two-second pause is normal. A five-second pause is awkward. A ten-second pause signals you are stuck. The entire value of real-time assistance collapses if the AI takes longer to respond than the silence budget allows.</p>\n <p>This is why <a href=\"/docs/ai-copilot/\">Amigo's architecture</a> is built around a single constraint: the first AI word must arrive before the natural conversational pause ends. Everything in the technical pipeline is optimized around that target.</p>\n <h2>What's Inside the Real-Time Pipeline?</h2>\n <p>1</p>\n<p>Audio capture</p>\n<p>Amigo captures system audio using platform-native APIs (WASAPI on Windows, CoreAudio on macOS). This runs in Rust for performance and security. No audio is stored to disk.</p>\n<p>2</p>\n<p>Voice Activity Detection (VAD)</p>\n<p>A lightweight VAD engine runs locally and detects the moment the interviewer stops speaking. This fires the transcription request immediately. Crucially, Amigo doesn't wait for a fixed timeout.</p>\n<p>3</p>\n<p>Deepgram transcription</p>\n<p>The audio buffer is sent to Deepgram's streaming STT API. Deepgram returns interim results as the person speaks (so you see partial transcripts live) and a final result when they stop. Amigo uses the last interim result to fire the AI request immediately, without waiting for the final transcript.</p>\n<p>4</p>\n<p>OpenAI streaming response</p>\n<p>The transcript is combined with your Copilot Profile context (resume, job description, brief notes) and sent to an OpenAI model. The model streams tokens back. The first token typically arrives within 200ms of the VAD trigger.</p>\n<p>5</p>\n<p>Word-by-word display</p>\n<p>Tokens are rendered into the Amigo overlay in real-time, word by word. You start reading the answer as it generates, with no waiting for a complete response.</p>\n <h2>What Does It Feel Like to Use?</h2>\n <p>In practice, the experience is closer to having a very fast research assistant than to reading from a script:</p>\n <ul><li>The interviewer finishes their question</li><li>You take a natural 1-second breath (completely normal in conversation)</li><li>The first sentence of an answer is already visible on your Amigo overlay</li><li>You glance at the opening line, take its structure, and speak in your own words</li><li>The rest of the answer continues streaming as you talk, available if you need it</li></ul>\n <p>You do not read the AI output verbatim. You use it as a scaffold: it gives you the structure and key points; you add your personality, your specific examples, and your natural voice on top.</p>\n <figure><iframe src=\"https://www.youtube-nocookie.com/embed/SO3PZ4RBebI?rel=0&amp;modestbranding=1\" title=\"Amigo demo video\" loading=\"lazy\" allow=\"encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>\n<figcaption>The full pipeline in action: from question to streamed answer in under 200ms.</figcaption></figure>\n <p>Experience 200ms AI response yourself</p>\n<p>Run a practice session with Amigo before your next interview and feel how real-time assistance works.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "How fast is real-time interview assistance?",
+   "a": "Amigo begins streaming an answer within approximately 200ms of the interviewer stopping speaking, fast enough to appear during the natural conversational pause."
+  },
+  {
+   "q": "What transcription service does Amigo use?",
+   "a": "Deepgram's streaming STT API, running through Amigo's Rust backend. API keys are never exposed to the browser."
+  },
+  {
+   "q": "Does it work offline?",
+   "a": "No. An internet connection is required to access transcription and AI services. Audio is processed locally first."
+  },
+  {
+   "q": "Can I use my own resume and job description?",
+   "a": "Yes. Amigo lets you upload your resume and job description into a Copilot Profile. Every AI response is generated with that context, so answers are personalized to your background and the specific role."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

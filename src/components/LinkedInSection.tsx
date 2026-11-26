@@ -563,7 +563,7 @@ export function LinkedInSection() {
                 <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </MagneticButton>
               <a
-                href="/linkedin"
+                href="/linkedin/"
                 className="text-[14px] font-semibold text-amigo-purple underline-offset-4 transition-colors hover:underline"
               >
                 See how it works

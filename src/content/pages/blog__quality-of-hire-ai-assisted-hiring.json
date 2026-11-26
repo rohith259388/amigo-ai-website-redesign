@@ -1,0 +1,125 @@
+{
+ "path": "/blog/quality-of-hire-ai-assisted-hiring",
+ "section": "blog",
+ "title": "Beyond Speed: What AI-Assisted Hiring Does for Quality-of-Hire | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Screening speed is easy to measure. Whether AI-assisted candidates become better long-term hires is the harder question, and the signal is only directional.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/quality-of-hire-ai-assisted-hiring/7ee63c064dfe.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/quality-of-hire-ai-assisted-hiring/#article",
+   "headline": "Beyond Speed: What AI-Assisted Hiring Does for Quality-of-Hire",
+   "description": "Screening speed is easy to measure. Whether AI-assisted candidates become better long-term hires is the harder question, and the signal is only directional.",
+   "datePublished": "2026-07-14",
+   "dateModified": "2026-07-14",
+   "url": "https://www.amigohelp.ai/blog/quality-of-hire-ai-assisted-hiring/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/quality-of-hire-ai-assisted-hiring/7ee63c064dfe.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "David Park"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What does 'quality-of-hire' actually measure?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "There's no single industry-standard definition, but it commonly combines early performance ratings, retention past the first 90-180 days, and hiring-manager satisfaction, all distinct from how fast or cheaply someone was hired."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there solid evidence AI-assisted candidates become better long-term hires?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not yet, as a rigorous causal finding. That requires tracking hires well past the interview, which most of the industry (including us) hasn't published at scale. What exists is early, directional partner feedback pointing toward lower early attrition, not a controlled study."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Should hiring speed and quality-of-hire be optimized for separately?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. A faster screen that produces a worse-fit hire isn't a win: the two need separate tracking, and any tool (AI or otherwise) that only reports speed gains should be pushed to show quality data too."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/quality-of-hire-ai-assisted-hiring/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Beyond Speed: What AI-Assisted Hiring Does for Quality-of-Hire",
+ "lead": "Screening speed is easy to measure. Whether AI-assisted candidates become better long-term hires is the harder question, and the signal is only directional.",
+ "category": "AI & Tools",
+ "readTime": "1 min read",
+ "date": "14 July 2026",
+ "author": "David Park",
+ "hero": {
+  "src": "/images/blog/quality-of-hire-ai-assisted-hiring/7ee63c064dfe.jpg",
+  "alt": "A manager and colleagues reviewing a project at an office workstation."
+ },
+ "html": "<p>Screening speed is the metric every AI hiring tool reports first, because it's the easiest to measure. It's also the least important one on its own, because a faster screen that produces worse-fit hires isn't progress. The harder, more useful question is what happens to <em>quality-of-hire</em> once AI enters the funnel on both sides of the table.</p>\n <h2>Why This Is Harder to Measure Than Speed</h2>\n <p>Speed shows up the day a role closes. Quality-of-hire (performance ratings, 90-to-180-day retention, hiring-manager satisfaction) only shows up months later, which is exactly why most vendor claims (this one included) lean on speed metrics: they're available sooner and easier to report cleanly.</p>\n <h2>What the Early Signal Actually Says</h2>\n <p>Early, directional feedback from Amigo's employer partners points toward lower early-stage attrition among candidates who arrived at interviews well-prepared and clear on role expectations, consistent with the idea that <a href=\"/blog/interview-confidence-not-memorization/\">composure and clarity, not memorized answers</a>, correlate with a better fit once someone is actually in the seat. That is not a controlled comparison, and we're not presenting it as proof.</p>\n <h2>The Right Question for Any HR Leader Evaluating AI Tools</h2>\n <p>Ask every vendor, including us, for retention and performance data past the first quarter, not just time-to-fill. A tool that only ever reports speed is telling you it hasn't tracked (or doesn't want to share) what happens after the hire.</p>\n <p>Ask us for the numbers past day one</p>\n<p>We'll walk you through what we do and don't have data on yet.</p>\n<p><a href=\"/signup/\">Talk to our partnership team →</a></p>",
+ "faqs": [
+  {
+   "q": "What does 'quality-of-hire' actually measure?",
+   "a": "There's no single industry-standard definition, but it commonly combines early performance ratings, retention past the first 90-180 days, and hiring-manager satisfaction, all distinct from how fast or cheaply someone was hired."
+  },
+  {
+   "q": "Is there solid evidence AI-assisted candidates become better long-term hires?",
+   "a": "Not yet, as a rigorous causal finding. That requires tracking hires well past the interview, which most of the industry (including us) hasn't published at scale. What exists is early, directional partner feedback pointing toward lower early attrition, not a controlled study."
+  },
+  {
+   "q": "Should hiring speed and quality-of-hire be optimized for separately?",
+   "a": "Yes. A faster screen that produces a worse-fit hire isn't a win: the two need separate tracking, and any tool (AI or otherwise) that only reports speed gains should be pushed to show quality data too."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer",
+  "/blog/data-behind-ai-assisted-hiring-500-interviews"
+ ]
+}

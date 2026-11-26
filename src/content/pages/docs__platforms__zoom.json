@@ -1,0 +1,38 @@
+{
+ "path": "/docs/platforms/zoom",
+ "section": "docs",
+ "title": "Using Amigo with Zoom | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Connect Amigo to Zoom interviews. Setup, audio routing, and tips to keep the AI copilot fully invisible during live calls.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Zoom",
+     "item": "https://www.amigohelp.ai/docs/platforms/zoom/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Zoom",
+ "category": "Platform Guide",
+ "html": "<p>Zoom is the most widely used platform for technical interviews. Amigo works seamlessly alongside Zoom. The overlay stays hidden from any screen share, and audio capture requires no special configuration beyond a one-time permissions grant.</p>\n<hr>\n<h2 id=\"setup\">Initial Setup</h2>\n<ol><li>Install the Amigo desktop app if you haven't already; see the <a href=\"/docs/installation/\">Installation guide</a>.</li><li>On first launch, macOS will prompt for <strong>Accessibility</strong> and <strong>Screen Recording</strong> permissions. Grant both; they are required for audio capture and overlay positioning.</li><li>On Windows, confirm the User Account Control (UAC) prompt if shown. No additional permissions are needed.</li><li>Open Amigo and sign in with your Amigo account. The system readiness check will verify stealth mode and audio permissions automatically. You can also check your audio device in Settings → Audio.</li><li>Join your Zoom meeting. The Amigo overlay will appear automatically.</li></ol>\n<p>Launch Amigo <em>before</em> opening Zoom. This ensures the audio capture driver initialises before the Zoom audio stack starts, giving more reliable transcription from the first word.</p>\n<hr>\n<h2 id=\"screen-share\">Screen Sharing with Zoom</h2>\n<p>When an interviewer asks you to share your screen, the Amigo overlay is automatically excluded from the capture stream. You can share your entire screen or a specific window, and in both cases the overlay remains invisible.</p>\n<ul><li><strong>Share entire screen</strong>: Amigo's overlay is excluded at the OS level. The interviewer sees your desktop but not the overlay.</li><li><strong>Share a specific window</strong> (e.g. your code editor): Only that window is shared; Amigo is not captured regardless.</li><li><strong>Share a browser tab</strong>: Tab-sharing is handled by the browser and does not capture Amigo at all.</li></ul>\n<hr>\n<h2 id=\"audio-settings\">Recommended Zoom Audio Settings</h2>\n<p>To ensure Amigo captures audio clearly, use these Zoom settings:</p>\n<ul><li>In Zoom → Settings → Audio, disable \"Suppress background noise\" if you notice transcription gaps.</li><li>Enable \"Original Sound for Musicians\" only if you are experiencing heavy audio processing that degrades transcript quality.</li><li>Use a wired headset or AirPods Pro (in transparency mode) for the cleanest microphone and speaker isolation.</li></ul>\n<hr>\n<h2 id=\"known-issues\">Known Issues</h2>\n<ul><li><strong>Zoom 6 on macOS Sequoia</strong>: A permissions prompt may reappear after OS update. Re-grant Screen Recording permission in System Settings → Privacy &amp; Security.</li><li><strong>Virtual backgrounds</strong>: Zoom's virtual background processing does not affect Amigo. Both can run simultaneously.</li><li><strong>End-to-end encrypted meetings</strong>: Zoom E2EE meetings add extra audio processing latency. Amigo transcription latency may increase by ~300 ms.</li></ul>\n<p>If you experience audio drop-outs in the Amigo overlay during a Zoom call, check that no other app (e.g. OBS, a DAW) is exclusively locking the audio device.</p>"
+}

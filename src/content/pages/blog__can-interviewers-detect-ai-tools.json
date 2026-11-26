@@ -1,0 +1,149 @@
+{
+ "path": "/blog/can-interviewers-detect-ai-tools",
+ "section": "blog",
+ "title": "Can Interviewers Detect AI Tools During Video Interviews? | Amigo — AI Career Companion & Interview Copilot",
+ "description": "The honest answer, and how Amigo uses OS-level window exclusion to stay out of Zoom, Teams, and Meet screen capture entirely.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/can-interviewers-detect-ai-tools/bfabfb8b051f.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/can-interviewers-detect-ai-tools/#article",
+   "headline": "Can Interviewers Detect AI Tools During Video Interviews?",
+   "description": "The honest answer, and how Amigo uses OS-level window exclusion to stay out of Zoom, Teams, and Meet screen capture entirely.",
+   "datePublished": "2026-06-11",
+   "dateModified": "2026-06-25",
+   "url": "https://www.amigohelp.ai/blog/can-interviewers-detect-ai-tools/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/can-interviewers-detect-ai-tools/bfabfb8b051f.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Jordan Williams"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can Zoom detect if I have another app open during an interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Zoom only sees what you choose to share. It cannot scan your taskbar, running processes, or other open windows."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Amigo show up on screen share?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Amigo uses OS-level window exclusion flags (NSWindowSharingNone on macOS and equivalent flags on Windows) that instruct the operating system to omit the window from any screen capture. When you share your screen, Amigo's window is not visible."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can interviewers see what apps are running on my computer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Standard video conferencing tools cannot enumerate your running processes. Only invasive proctoring software, which must be installed in advance, can do this."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What platforms does stealth mode work on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Amigo's stealth mode works across Zoom, Microsoft Teams, Google Meet, and other video platforms on both Windows and macOS."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is using AI assistance during an interview cheating?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on the interview. Some companies explicitly prohibit AI assistance; others expect candidates to use tools they would normally use on the job. Read the interview instructions carefully. Amigo is built for practice, preparation, and interviews that permit AI assistance."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/can-interviewers-detect-ai-tools/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Can Interviewers Detect AI Tools During Video Interviews?",
+ "lead": "The honest answer, and how Amigo uses OS-level window exclusion to stay out of Zoom, Teams, and Meet screen capture entirely.",
+ "category": "AI & Tools",
+ "readTime": "3 min read",
+ "date": "11 June 2026",
+ "author": "Amigo Team",
+ "hero": {
+  "src": "/images/blog/can-interviewers-detect-ai-tools/bfabfb8b051f.jpg",
+  "alt": "A recruiter listening carefully to a candidate on a video call."
+ },
+ "html": "<p><strong>Short answer: no.</strong> Standard video interview platforms (Zoom, Microsoft Teams, Google Meet) cannot detect <a href=\"/blog/what-is-an-ai-interview-copilot/\">AI tools</a> running on your computer. They have no access to your running processes, installed apps, or open windows outside of what you explicitly share. The only exception is invasive proctoring software, which must be installed by you in advance and is rare in standard job interviews.</p>\n <h2>What Zoom, Teams, and Meet Can Actually See</h2>\n <p>Video conferencing tools operate within a narrow permission scope granted by your operating system. Here is exactly what they can and cannot access:</p>\n <p>What they CAN see:</p>\n<ul><li>Your webcam feed</li><li>Your microphone audio</li><li>Any window or screen you explicitly choose to share</li><li>Your virtual background if enabled</li></ul>\n<p>What they CANNOT see:</p>\n<ul><li>Running processes or installed applications</li><li>Windows you have not shared</li><li>Your clipboard contents</li><li>Other browser tabs or windows</li><li>Anything outside the shared screen area</li></ul>\n <h2>How Does Amigo's Stealth Mode Actually Work?</h2>\n <p>Amigo is not simply minimized or hidden behind another window. It instructs the operating system directly to exclude its window from all screen capture, so when Zoom, Teams, or Meet request what's on your screen, Amigo's window is never handed to them in the first place.</p>\n <p>Most apps that claim to be \"invisible\" only use one layer of protection, enough to block a basic screenshot but not the deeper capture methods that Zoom and Teams use under the hood. Amigo uses <strong>two independent layers</strong> of <a href=\"/docs/stealth-mode/\">OS-level protection</a> on both macOS (via Apple's <a href=\"https://developer.apple.com/documentation/appkit/nswindow/sharingtype\" target=\"_blank\" rel=\"noopener noreferrer\"><code>NSWindow.SharingType</code></a> API) and Windows, which is why it stays hidden even when video conferencing tools are actively capturing your screen.</p>\n <p>Think of it like a two-lock door. Even if a screen capture tool bypasses the first lock, the second one catches it. The result is the same on both platforms: Amigo's pixels are simply not present in whatever the interviewer sees.</p>\n <figure><iframe src=\"https://www.youtube-nocookie.com/embed/2aCvr-IgS3w?rel=0&amp;modestbranding=1\" title=\"Amigo demo video\" loading=\"lazy\" allow=\"encrypted-media; picture-in-picture; fullscreen\" allowfullscreen></iframe>\n<figcaption>Amigo running in a live Zoom interview, invisible to the interviewer's screen share.</figcaption></figure>\n <p>The result</p>\n<p>When an interviewer asks you to share your screen, Amigo's window is excluded from the capture stream. The interviewer sees your desktop exactly as you want them to, with no trace of the app.</p>\n <h2>What About Proctoring Software?</h2>\n <p>A small number of online assessments, typically automated coding tests rather than live interviews with a human, use dedicated proctoring software like HackerRank's proctoring module or similar tools. These work differently: they are installed on your machine and request elevated OS permissions to monitor running processes.</p>\n <p>Key points about proctoring software:</p>\n <ul><li>You must explicitly install it and grant it permissions before the session</li><li>It is used for automated assessments, not live human-led interviews</li><li>Companies that use it will tell you in advance</li><li>Standard Zoom/Teams video interviews do <strong>not</strong> use proctoring software</li></ul>\n <p>If an assessment explicitly instructs you to install proctoring software, that context is different. Amigo is designed for live human-led video interviews where proctoring is not involved.</p>\n <h2>Where Amigo Fits, and Where It Does Not</h2>\n <p>Amigo is built for three contexts: practice runs before the real interview, live interviews where the company explicitly permits AI assistance (an increasing number of engineering and consulting roles do), and accessibility cases where rapid recall during a 45-minute call is a barrier to showing your actual ability.</p>\n <p>If an interview prohibits AI assistance, the right choice is to follow that rule. Stealth mode in Amigo exists to keep the overlay private on your own screen, not as cover for ignoring an interviewer's explicit policy. When in doubt, read the interview instructions and ask the recruiter.</p>\n <p>See Amigo's stealth mode in action</p>\n<p>Real-time AI answers, invisible on screen share. Download free and try it before your next interview.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "Can Zoom detect if I have another app open during an interview?",
+   "a": "No. Zoom only sees what you choose to share. It cannot scan your taskbar, running processes, or other open windows."
+  },
+  {
+   "q": "Does Amigo show up on screen share?",
+   "a": "No. Amigo uses OS-level window exclusion flags (NSWindowSharingNone on macOS and equivalent flags on Windows) that instruct the operating system to omit the window from any screen capture. When you share your screen, Amigo's window is not visible."
+  },
+  {
+   "q": "Can interviewers see what apps are running on my computer?",
+   "a": "No. Standard video conferencing tools cannot enumerate your running processes. Only invasive proctoring software, which must be installed in advance, can do this."
+  },
+  {
+   "q": "What platforms does stealth mode work on?",
+   "a": "Amigo's stealth mode works across Zoom, Microsoft Teams, Google Meet, and other video platforms on both Windows and macOS."
+  },
+  {
+   "q": "Is using AI assistance during an interview cheating?",
+   "a": "It depends on the interview. Some companies explicitly prohibit AI assistance; others expect candidates to use tools they would normally use on the job. Read the interview instructions carefully. Amigo is built for practice, preparation, and interviews that permit AI assistance."
+  }
+ ],
+ "related": [
+  "/blog/ai-resume-builder-guide",
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer"
+ ]
+}

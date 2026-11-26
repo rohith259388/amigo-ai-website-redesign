@@ -220,8 +220,9 @@ export function QuestionsPage() {
             {results.length ? (
               <>
                 <ul className="mt-6 space-y-4">
-                  {results.slice(0, visible).map((q, i) => (
-                    <li key={q.slug}>
+                  {/* All results are in the DOM so every question page is linked from the HTML. */}
+                  {results.map((q, i) => (
+                    <li key={q.slug} className={i < visible ? undefined : "hidden"}>
                       <Reveal delay={Math.min(i, 4) * 0.05} y={18}>
                         <QuestionCard question={q} />
                       </Reveal>
@@ -331,7 +332,7 @@ function QuestionCard({ question: q }: { question: Question }) {
   const rating = averageRating(q);
   return (
     <a
-      href={`/questions/${q.slug}`}
+      href={`/questions/${q.slug}/`}
       className="group block rounded-[22px] border border-amigo-border bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-amigo-light/70 hover:shadow-card sm:p-6"
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">

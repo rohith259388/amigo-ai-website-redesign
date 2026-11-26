@@ -7,6 +7,7 @@
  * structured data never claims something a visitor cannot see.
  */
 
+import { contentFor } from "@/content";
 import { HOME_FAQS, LINKEDIN_FAQS, REFERRAL_FAQS } from "@/data/faqs";
 import { MINUTE_PLANS } from "@/data/plans";
 import { QUESTIONS } from "@/data/questions";
@@ -123,6 +124,20 @@ export function seoForRoute(route: Route): SeoMeta {
 
     case "question":
       return questionSeo(route.slug);
+
+    case "content": {
+      const page = contentFor(route.path);
+      if (!page) throw new Error(`Content for ${route.path} has not been loaded.`);
+      return {
+        title: page.title,
+        description: page.description,
+        verbatim: true,
+        path: page.path,
+        ogType: page.ogType,
+        image: page.image ?? undefined,
+        jsonLd: page.jsonLd,
+      };
+    }
 
     case "linkedin":
       return {

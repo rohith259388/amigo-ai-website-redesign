@@ -15,6 +15,7 @@ import { InterviewSection } from "./components/InterviewSection";
 import { Journey } from "./components/Journey";
 import { LinkedInSection } from "./components/LinkedInSection";
 import { Navbar } from "./components/Navbar";
+import { ContentPage } from "./components/pages/ContentPage";
 import { CreatorsPage } from "./components/pages/CreatorsPage";
 import { LinkedInPage } from "./components/pages/LinkedInPage";
 import { QuestionPage } from "./components/pages/QuestionPage";
@@ -30,25 +31,27 @@ import { WhyAmigo } from "./components/WhyAmigo";
 import { useRoute } from "./hooks/useRoute";
 import { useSeo } from "./seo/useSeo";
 
-export default function App() {
-  const route = useRoute();
-  const routeKey = route.name === "question" ? `question/${route.slug}` : route.name;
+export default function App({ path }: { path?: string }) {
+  const route = useRoute(path);
+  const routeKey =
+    route.name === "question" ? `question/${route.slug}` : route.name === "content" ? `content${route.path}` : route.name;
   useSeo(route, routeKey);
 
   const activeHref =
     route.name === "questions" || route.name === "question"
-      ? "/questions"
+      ? "/questions/"
       : route.name === "creators"
-        ? "/creators"
+        ? "/creators/"
         : route.name === "referral"
-          ? "/referral"
+          ? "/referral/"
           : route.name === "linkedin"
-            ? "/linkedin"
+            ? "/linkedin/"
             : null;
 
   // The browser can't scroll to a section anchor that belongs to a page that isn't rendered yet.
   useLayoutEffect(() => {
-    const section = routeKey === "home" ? document.getElementById(window.location.hash.slice(1)) : null;
+    const anchored = routeKey === "home" || routeKey.startsWith("content");
+    const section = anchored ? document.getElementById(window.location.hash.slice(1)) : null;
     if (section) section.scrollIntoView({ behavior: "instant" });
     else window.scrollTo({ top: 0, behavior: "instant" });
   }, [routeKey]);
@@ -64,6 +67,7 @@ export default function App() {
           {route.name === "creators" && <CreatorsPage />}
           {route.name === "referral" && <ReferralPage />}
           {route.name === "linkedin" && <LinkedInPage />}
+          {route.name === "content" && <ContentPage path={route.path} />}
         </main>
         <Footer />
       </div>

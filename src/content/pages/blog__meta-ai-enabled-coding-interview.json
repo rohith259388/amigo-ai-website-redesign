@@ -1,0 +1,185 @@
+{
+ "path": "/blog/meta-ai-enabled-coding-interview",
+ "section": "blog",
+ "title": "Meta's AI-Enabled Coding Interview: Format, Rules & Prep (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Meta now runs a 60-minute coding round where you are expected to use an AI assistant. The format, which models you get, what is scored, and how to prepare.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop&crop=center",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/meta-ai-enabled-coding-interview/#article",
+   "headline": "Meta's AI-Enabled Coding Interview: Format, Rules & Prep (2026)",
+   "description": "Meta now runs a 60-minute coding round where you are expected to use an AI assistant. The format, which models you get, what is scored, and how to prepare.",
+   "datePublished": "2026-08-12",
+   "dateModified": "2026-08-12",
+   "url": "https://www.amigohelp.ai/blog/meta-ai-enabled-coding-interview/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop&crop=center",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Jordan Williams"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Meta's AI-enabled coding interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A 60-minute onsite coding round run in a CoderPad environment with a built-in AI assistant that candidates are permitted to use. Instead of two algorithmic problems, you work on a multi-file project in an existing simplified codebase. Meta began piloting it in October 2025 and is rolling it out across software engineering roles through 2026."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is using AI actually allowed in a Meta interview now?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In this specific round, yes. The AI assistant is built into the interview environment and using it is sanctioned. This is a narrow exception rather than a general policy change. Meta's other coding round remains a conventional shared-editor round with no AI, and using outside tools there is not permitted."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which AI models are available in the round?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Reported model options include GPT-5 and GPT-4o mini, Claude Sonnet 4 and 4.5, Claude Haiku 3.5 and 4.5, Gemini 2.5 Pro, and Llama 4 Maverick. The exact list varies as Meta updates the environment, so treat any published list as indicative and confirm with your recruiter."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who gets the AI-enabled round?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Reporting indicates candidates at E6 and below receive it in addition to a conventional coding round, while E7 and above and M1 candidates have a single coding round which is the AI-enabled one. Ask your recruiter to confirm, since the rollout is still in progress and varies by role and level."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can the AI write the code for you?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The assistant cannot directly edit your files: you write or paste every line yourself, and you are expected to own and understand all of it. Interviewers routinely ask you to explain or justify code the AI produced, and being unable to is a fast way to fail the round."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is the AI-enabled round scored?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On judgment rather than typing speed: whether you use the assistant strategically, whether you critically review what it returns instead of accepting it, whether you communicate your reasoning before and after using it, and whether you demonstrably own the final code. Comprehension of the existing codebase carries real weight."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the AI-enabled round easier than a normal coding round?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Different rather than easier. The algorithmic difficulty drops, but it is replaced by code comprehension, navigation of an unfamiliar multi-file project, and integration work across layers such as API endpoints, shell scripts, and configuration. Candidates who only practised algorithm problems often find it harder, not easier."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Meta say AI use affects the outcome?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Meta's stated position is that using the assistant is optional and does not affect the result. Practitioners who have studied the round argue that in practice skilled AI use produces a productivity advantage within a fixed 60 minutes. Both things can be true: it is not scored directly, and candidates who use it well finish more."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/meta-ai-enabled-coding-interview/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "Meta's AI-Enabled Coding Interview: Format, Rules & Prep (2026)",
+ "lead": "Meta now runs a 60-minute coding round where you are expected to use an AI assistant. The format, which models you get, what is scored, and how to prepare.",
+ "category": "Company Guides",
+ "readTime": "7 min read",
+ "date": "12 August 2026",
+ "author": "Jordan Williams",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop&crop=center",
+  "alt": "A bright office corridor with glass-walled meeting rooms."
+ },
+ "html": "<p>For years the rule in a Meta coding interview was simple: no autocomplete, no compiler, no outside help. That rule now has a documented exception. Since October 2025 Meta has been piloting an AI-enabled coding round that replaces one of the traditional coding interviews, and it is rolling out across software engineering roles through 2026. It is a 60-minute session in a CoderPad environment with an AI assistant built in, and you are expected to use it. The round is not a softer version of the old one. The algorithmic difficulty comes down and is replaced by something most candidates have never rehearsed: reading an unfamiliar multi-file codebase, directing a model usefully, and defending code you did not write from scratch. This guide covers the format, the rules, what is actually scored, and how to prepare for it.</p>\n <h2>What the Round Actually Is</h2>\n <p>1</p>\n<p>60 minutes, not 45</p>\n<p>Longer than the conventional coding round, because the task is larger. The extra fifteen minutes are not slack; they are there because reading and integrating code takes time that solving two isolated algorithm problems does not.</p>\n<p>2</p>\n<p>A CoderPad environment with the assistant built in</p>\n<p>Reported as a three-panel layout: a file explorer on the left, the code editor in the middle, and the AI assistant alongside the problem instructions on the right. The assistant is part of the interview surface rather than something you bring.</p>\n<p>3</p>\n<p>A multi-file project, not two problems</p>\n<p>You iterate on an existing but simplified codebase rather than writing two self-contained functions. Expect to navigate files you did not write and to make a change that touches more than one of them.</p>\n<p>4</p>\n<p>Integration across layers</p>\n<p>Reported tasks span API endpoints, shell scripts, and configuration such as Dockerfiles, rather than staying inside a single language file. The work looks more like a small ticket than like a puzzle.</p>\n<p>5</p>\n<p>It replaces one coding round, not the loop</p>\n<p>The rest of the onsite is unchanged: a conventional coding round, the behavioral round, and system design at E5 and above.</p>\n <p>Our <a href=\"/blog/meta-interview-process-explained/\">full Meta process guide</a> covers the surrounding stages: the recruiter screen, the behavioral round, levels E3 through E6, and team matching after the offer.</p>\n <p>Who gets this round</p>\n<p>Reporting on the rollout indicates candidates at E6 and below receive the AI-enabled round <em>in addition</em> to a conventional coding round, while E7 and above and M1 candidates have a single coding round and it is the AI-enabled one. The rollout is still in progress and the details vary by role, level, and office, so this is exactly the sort of thing to confirm at the recruiter screen rather than assume from a blog post, including this one.</p>\n <h2>The Rules, Precisely</h2>\n <p>The permissions in this round are narrower than \"you can use AI\" suggests, and the boundaries are where candidates get into trouble.</p>\n <ul><li><strong>The assistant cannot edit your files.</strong> It answers, suggests, and explains. Every line that lands in the editor is written or pasted by you. There is no agent mode, and no \"apply this change\" button to lean on.</li><li><strong>You own everything on screen.</strong> Interviewers ask you to explain code the model produced. \"The AI wrote that part\" is not an available answer, and reaching for it effectively ends the round.</li><li><strong>Model choice is provided, not brought.</strong> Reported options include GPT-5 and GPT-4o mini, Claude Sonnet 4 and 4.5, Claude Haiku 3.5 and 4.5, Gemini 2.5 Pro, and Llama 4 Maverick. You are working inside their environment with their list, which changes over time.</li><li><strong>This exception does not generalise.</strong> Your other coding round is still the conventional shared editor with no assistance. Treating the AI-enabled round as a signal that Meta's loop is now broadly AI-permissive is a misreading that will cost you the other round.</li></ul>\n <h2>What Is Actually Scored</h2>\n <p>Meta's stated position is that using the assistant is optional and has no bearing on the outcome. Practitioners who have studied the round argue that in practice skilled use produces a real advantage inside a fixed 60 minutes. Both can be true at once: AI use is not a scored line item, and the candidate who uses it well simply gets further through the task. What interviewers are watching is narrower and more human than tool proficiency:</p>\n <p>✦</p>\n<p>Judgment about when to reach for it</p>\n<p>Strong candidates use the assistant for the parts where it is genuinely faster (boilerplate, unfamiliar syntax, summarising what a file does) and think for themselves about the design decision at the centre of the task. Candidates who prompt first and think second produce plausible code that solves the wrong problem.</p>\n<p>✦</p>\n<p>Critical review of what comes back</p>\n<p>The single clearest positive signal is catching something wrong in the model output and saying so. Reading a suggestion, noticing it mishandles an edge case, and correcting it out loud demonstrates precisely the skill the round exists to measure.</p>\n<p>✦</p>\n<p>Comprehension of the existing code</p>\n<p>You cannot direct a model usefully around a codebase you have not read. Time spent at the start understanding the file layout and where the change belongs is not lost time. It is the round's actual first task.</p>\n<p>✦</p>\n<p>Communication before and after</p>\n<p>Say what you are about to ask the assistant and why, then say what you got and whether you trust it. Silent prompting reads the same as silent coding did in the old format: the interviewer cannot score reasoning they cannot hear.</p>\n<p>✦</p>\n<p>Ownership at the end</p>\n<p>Be able to walk any line of the final code and explain why it is there. This is the check that separates a candidate who used a tool from one who was used by it.</p>\n <h2>Why Algorithm Practice Alone Prepares You Badly</h2>\n <p>The instinct on hearing \"AI-enabled\" is that the round must be easier. For candidates whose entire preparation is timed algorithm problems, it is usually harder. The difficulty has moved rather than disappeared.</p>\n <div class=\"table-wrap\"><table><thead><tr><th></th><th>Conventional round</th><th>AI-enabled round</th></tr>\n</thead>\n<tbody><tr><td>Length</td><td>45 minutes</td><td>60 minutes</td></tr>\n<tr><td>Task</td><td>Two self-contained problems</td><td>One multi-file project</td></tr>\n<tr><td>Starting point</td><td>An empty editor</td><td>An existing codebase to read</td></tr>\n<tr><td>Main difficulty</td><td>Algorithmic insight under time pressure</td><td>Comprehension, navigation, integration</td></tr>\n<tr><td>Tools</td><td>No autocomplete, no compiler</td><td>Built-in AI assistant, several models</td></tr>\n<tr><td>Failure mode</td><td>Too slow to finish both problems</td><td>Accepting output you did not verify</td></tr>\n<tr><td>Prepares you</td><td>LeetCode-style drilling</td><td>Working in unfamiliar repositories</td></tr>\n</tbody>\n</table></div>\n <p>Note the last row. The best preparation for this round is the ordinary work of a software engineer: opening a repository you did not write, finding where a change belongs, and making it without breaking the parts you have not read. Most candidates have far more of that experience than they have LeetCode experience, and almost none of them think to practise it.</p>\n <h2>How to Prepare</h2>\n <p>1</p>\n<p>Practise in unfamiliar repositories, timed</p>\n<p>Clone a mid-sized open-source project you have never seen. Give yourself 60 minutes to add a small feature or fix a real issue, with an assistant open. The discomfort of the first ten minutes is exactly the discomfort of the round.</p>\n<p>2</p>\n<p>Rehearse reading before prompting</p>\n<p>Force a rule on yourself: no prompt until you can say out loud what the project does, where the relevant code lives, and what your change needs to touch. This single habit prevents the most common failure in the round.</p>\n<p>3</p>\n<p>Train the review reflex deliberately</p>\n<p>Ask a model for code you already know how to write, then find the flaw in it: a missed edge case, a wrong assumption, an unnecessary dependency. Catching model errors is a skill that improves quickly with practice and is directly scored here.</p>\n<p>4</p>\n<p>Narrate your prompting out loud</p>\n<p>Say why you are asking, what you expect back, and whether the answer earned your trust. Practise this until it is automatic, because doing it for the first time in front of an interviewer is awkward enough to disrupt the work.</p>\n<p>5</p>\n<p>Keep the conventional round sharp</p>\n<p>You almost certainly still face a traditional 45-minute two-problem coding round. Speed and clean first-pass code still matter there. Preparing only for the new format is a way to fail the old one.</p>\n<p>6</p>\n<p>Confirm your loop with the recruiter</p>\n<p>Ask directly whether your onsite includes the AI-enabled round, how many coding rounds you have in total, and which level the loop is calibrated for. The rollout is uneven and this is a thirty-second question with a large effect on how you prepare.</p>\n <h2>The Wider Shift</h2>\n <p>Meta is not alone. Google has been running its own AI-assisted coding interview format, and the underlying logic is the same at both companies: if engineers now work with these tools every day, an interview that forbids them measures something increasingly unlike the job. Expect the direction to continue, and expect the emphasis to keep moving from recall toward judgment: whether you can tell good output from plausible output, and whether you can own what you ship.</p>\n <p>That is also the honest case for practising with AI rather than around it. The skill being tested is not prompting; it is staying the engineer in the loop while working faster than you could alone. Our <a href=\"/blog/what-is-an-ai-interview-copilot/\">explainer on how real-time AI assistance works</a> covers the mechanics, and our <a href=\"/blog/can-interviewers-detect-ai-tools/\">piece on where AI use is and is not permitted</a> is worth reading alongside this one, because the boundary matters and it is not the same at every company or in every round.</p>\n <p>Practise the round that is actually coming</p>\n<p>Amigo runs unlimited timed practice from your resume and target level, so you can rehearse working out loud under a clock before the real loop.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "What is Meta's AI-enabled coding interview?",
+   "a": "A 60-minute onsite coding round run in a CoderPad environment with a built-in AI assistant that candidates are permitted to use. Instead of two algorithmic problems, you work on a multi-file project in an existing simplified codebase. Meta began piloting it in October 2025 and is rolling it out across software engineering roles through 2026."
+  },
+  {
+   "q": "Is using AI actually allowed in a Meta interview now?",
+   "a": "In this specific round, yes. The AI assistant is built into the interview environment and using it is sanctioned. This is a narrow exception rather than a general policy change. Meta's other coding round remains a conventional shared-editor round with no AI, and using outside tools there is not permitted."
+  },
+  {
+   "q": "Which AI models are available in the round?",
+   "a": "Reported model options include GPT-5 and GPT-4o mini, Claude Sonnet 4 and 4.5, Claude Haiku 3.5 and 4.5, Gemini 2.5 Pro, and Llama 4 Maverick. The exact list varies as Meta updates the environment, so treat any published list as indicative and confirm with your recruiter."
+  },
+  {
+   "q": "Who gets the AI-enabled round?",
+   "a": "Reporting indicates candidates at E6 and below receive it in addition to a conventional coding round, while E7 and above and M1 candidates have a single coding round which is the AI-enabled one. Ask your recruiter to confirm, since the rollout is still in progress and varies by role and level."
+  },
+  {
+   "q": "Can the AI write the code for you?",
+   "a": "No. The assistant cannot directly edit your files: you write or paste every line yourself, and you are expected to own and understand all of it. Interviewers routinely ask you to explain or justify code the AI produced, and being unable to is a fast way to fail the round."
+  },
+  {
+   "q": "How is the AI-enabled round scored?",
+   "a": "On judgment rather than typing speed: whether you use the assistant strategically, whether you critically review what it returns instead of accepting it, whether you communicate your reasoning before and after using it, and whether you demonstrably own the final code. Comprehension of the existing codebase carries real weight."
+  },
+  {
+   "q": "Is the AI-enabled round easier than a normal coding round?",
+   "a": "Different rather than easier. The algorithmic difficulty drops, but it is replaced by code comprehension, navigation of an unfamiliar multi-file project, and integration work across layers such as API endpoints, shell scripts, and configuration. Candidates who only practised algorithm problems often find it harder, not easier."
+  },
+  {
+   "q": "Does Meta say AI use affects the outcome?",
+   "a": "Meta's stated position is that using the assistant is optional and does not affect the result. Practitioners who have studied the round argue that in practice skilled AI use produces a productivity advantage within a fixed 60 minutes. Both things can be true: it is not scored directly, and candidates who use it well finish more."
+  }
+ ],
+ "related": [
+  "/blog/google-ai-assisted-coding-interview",
+  "/blog/microsoft-interview-process-explained",
+  "/blog/meta-interview-process-explained"
+ ]
+}

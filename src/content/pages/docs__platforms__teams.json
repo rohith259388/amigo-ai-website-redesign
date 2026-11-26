@@ -1,0 +1,38 @@
+{
+ "path": "/docs/platforms/teams",
+ "section": "docs",
+ "title": "Using Amigo with Microsoft Teams | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Connect Amigo to Microsoft Teams interviews. Setup, audio routing, and tips for an undetectable real-time AI copilot during live calls.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Microsoft Teams",
+     "item": "https://www.amigohelp.ai/docs/platforms/teams/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Microsoft Teams",
+ "category": "Platform Guide",
+ "html": "<p>Microsoft Teams is standard at enterprise companies and many consulting firms. Amigo works with both the classic Teams desktop client and the new Teams (2024+). Stealth Mode is fully effective with all Teams screen-sharing methods.</p>\n<hr>\n<h2 id=\"setup\">Setup</h2>\n<ol><li>Install the Amigo desktop app; see the <a href=\"/docs/installation/\">Installation guide</a>.</li><li>On macOS, grant <strong>Accessibility</strong> and <strong>Screen Recording</strong> permissions in System Settings → Privacy &amp; Security.</li><li>Open Amigo and sign in with your Amigo account. The system readiness check will run automatically. Check your audio device in Settings → Audio if needed.</li><li>Download and install Microsoft Teams if not already installed (Teams web app also works; see below).</li><li>Launch Amigo first, then open Teams and join your meeting.</li></ol>\n<p>On Windows, if Teams is running as a work or school account with company-managed device policies, the IT policy may restrict which applications can run alongside Teams. Check with your interviewer's company if you are connecting from a corporate-managed machine.</p>\n<hr>\n<h2 id=\"screen-share\">Screen Sharing in Teams</h2>\n<p>Teams offers several sharing modes, all compatible with Amigo's Stealth Mode:</p>\n<ul><li><strong>Desktop</strong>: Your full desktop is shared, but Amigo's overlay is excluded by the OS. The interviewer sees your desktop without the Amigo panel.</li><li><strong>Window</strong>: Only the selected application window is shared. Amigo is never in scope.</li><li><strong>PowerPoint Live</strong>: Presentation mode; your screen is not shared. Amigo works normally in the background.</li><li><strong>Whiteboard</strong>: Uses Teams' built-in whiteboard; Amigo is not captured.</li></ul>\n<hr>\n<h2 id=\"web-app\">Using Teams in a Browser</h2>\n<p>If you join a Teams meeting via the web app (teams.microsoft.com) instead of the desktop client, Amigo still works. Browser-based Teams uses the same system audio path that Amigo taps into.</p>\n<ul><li>Chrome and Edge are recommended. Firefox has limited support for Teams web features.</li><li>Screen sharing from a browser tab is isolated to that tab; Amigo is not captured.</li><li>Audio quality may be slightly lower in the web app compared to the desktop client.</li></ul>\n<hr>\n<h2 id=\"known-issues\">Known Issues</h2>\n<ul><li><strong>Teams background noise suppression</strong>: Teams applies aggressive noise cancellation by default. If transcription quality is poor, go to Teams Settings → Devices → Noise suppression and set it to <em>Low</em> or <em>Off</em>.</li><li><strong>macOS: Teams audio routing</strong>: Some macOS versions route Teams audio through a virtual device. If Amigo isn't capturing audio during a Teams call, go to Settings → Audio and select \"Microsoft Teams Audio\" as the monitored device.</li><li><strong>New Teams on Windows 11</strong>: The new Teams client (2024+) is fully supported. No additional steps required.</li></ul>\n<p>Teams' \"Record this meeting\" feature records the call audio server-side and creates a transcript via Microsoft's AI. This is separate from Amigo, and neither affects the other.</p>"
+}

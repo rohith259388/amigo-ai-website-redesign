@@ -1,0 +1,32 @@
+{
+ "path": "/docs",
+ "section": "docs",
+ "title": "Documentation | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Learn how to use Amigo, the real-time AI copilot for live video and coding interviews. Setup guides, platform support, billing, and best practices.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-10-05",
+ "h1": "Introduction to Amigo",
+ "category": "Getting Started",
+ "html": "<p><strong>Amigo</strong> is a real-time AI copilot designed to give you an undetectable competitive edge during live job interviews, video, behavioral, and coding alike. Whether you're interviewing at a FAANG company or a fast-growing startup, Amigo listens, understands, and delivers personalized guidance in seconds.</p>\n<p>New to Amigo? Start with the <a href=\"/docs/quick-start/\">Quick Start</a> guide to get set up in under 5 minutes.</p>\n<h2 id=\"what-is-amigo\">What is Amigo?</h2>\n<p>Amigo is a desktop application (Windows &amp; macOS) that runs invisibly alongside your interview window. It uses advanced audio processing to detect questions in real time and surfaces suggested answers through a discreet overlay that is completely hidden from screen sharing and recording software.</p>\n<ul><li>Real-time question detection with smart filler filtering, so only genuine questions trigger suggestions</li><li>AI-generated, personalized answers based on your resume, role, and copilot profile preferences</li><li>100% invisible, not captured by Zoom, Google Meet, or Teams screen sharing, verified by automatic system readiness checks</li><li>Lightning-fast responses in under 2 seconds, streamed token by token so you can start reading immediately</li><li>Two session formats: Live Interview for behavioural and technical rounds, Coding Test for timed assessments with maximum AI capability</li><li>Adjustable response length (Concise, Balanced, Detailed), changeable on the fly during your interview</li></ul>\n<h2 id=\"key-features\">Key Features</h2>\n<p>Stealth Mode</p>\n<p>Invisible to all screen sharing &amp; recording tools. Verified by automatic system checks.</p>\n<p>&lt;2s Response</p>\n<p>AI suggestions stream in token by token, so you can start reading before the answer finishes generating.</p>\n<p>Personalized AI</p>\n<p>Tailored to your resume, role, copilot profile, and adjustable response length.</p>\n<p>Smart Filtering</p>\n<p>Multi-layer filtering strips fillers, detects your voice, and only triggers on real questions.</p>\n<p>Coding Test Mode</p>\n<p>Dedicated mode for LeetCode &amp; system design that bypasses classification for max AI capability.</p>\n<p>Privacy First</p>\n<p>Audio processing secured on the native backend. Zero recordings, zero logs, sessions wiped instantly.</p>\n<h2 id=\"supported-platforms\">Supported Platforms</h2>\n<p>Amigo operates as a system-level overlay and works seamlessly with all major interview and video conferencing platforms:</p>\n<ul><li>Zoom (all versions)</li><li>Google Meet</li><li>Microsoft Teams</li><li>Cisco Webex</li><li>Skype</li><li>LeetCode (browser-based)</li><li>HackerRank</li><li>CoderPad</li><li>Any browser-based video platform</li></ul>\n<p>Amigo is currently available for <strong>Windows 10/11</strong> and <strong>macOS 12+</strong>. Mobile support is not available at this time.</p>\n<hr>\n<h2 id=\"how-it-works\">How It Works</h2>\n<p>Amigo uses a multi-stage pipeline to deliver real-time assistance:</p>\n<ol><li><strong>System Check:</strong> Before every session, Amigo verifies stealth mode, always-on-top, audio permissions, and network connectivity so you never start with a misconfigured setup.</li><li><strong>Audio Capture:</strong> Amigo captures system audio and your candidate microphone on separate native threads. Your voice is identified and filtered out so only interviewer questions trigger responses.</li><li><strong>Speech Recognition:</strong> Audio is sent to a low-latency cloud transcription service via the secure native backend, with progressive interim transcripts streamed back in real time. A filler-rejection layer strips out \"umm\", \"you know\", and 100+ other conversational fillers before anything reaches the AI.</li><li><strong>Smart Classification:</strong> An NLP engine with grammar-aware pattern matching classifies each question as coding or conversational, with a theory-frame guard and dialog-context awareness for follow-up questions.</li><li><strong>AI Generation:</strong> The question is routed to the right model tier based on your session format and intent. Responses stream in token by token, personalised to your resume and copilot profile.</li><li><strong>Overlay Rendering:</strong> The answer appears in a floating, screen-share-safe overlay that only you can see.</li></ol>\n<hr>\n<h2 id=\"quick-links\">Quick Links</h2>\n<div class=\"card\"><p>Quick Start</p>\n<p>Set up Amigo in 5 minutes</p>\n<p><a href=\"/docs/quick-start/\">Quick Start →</a></p></div>\n<div class=\"card\"><p>Installation</p>\n<p>Download &amp; install the app</p>\n<p><a href=\"/docs/installation/\">Installation →</a></p></div>\n<div class=\"card\"><p>Privacy Policy</p>\n<p>How we handle your data</p>\n<p><a href=\"/docs/privacy-policy/\">Privacy Policy →</a></p></div>\n<div class=\"card\"><p>Terms &amp; Conditions</p>\n<p>Usage terms and agreements</p>\n<p><a href=\"/docs/terms/\">Terms &amp; Conditions →</a></p></div>"
+}

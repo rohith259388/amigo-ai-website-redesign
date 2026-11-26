@@ -1,0 +1,161 @@
+{
+ "path": "/blog/ai-resume-builder-guide",
+ "section": "blog",
+ "title": "Amigo's AI Resume Builder: Tailor Your Resume to Any Job | Amigo — AI Career Companion & Interview Copilot",
+ "description": "How Amigo's AI Resume Builder works: generate a keyword-matched resume from any job description, score your fit, rewrite sections, and export a clean PDF.",
+ "ogType": "article",
+ "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop&crop=center",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/ai-resume-builder-guide/#article",
+   "headline": "Amigo's AI Resume Builder: Tailor Your Resume to Any Job",
+   "description": "How Amigo's AI Resume Builder works: generate a keyword-matched resume from any job description, score your fit, rewrite sections, and export a clean PDF.",
+   "datePublished": "2026-08-06",
+   "dateModified": "2026-08-06",
+   "url": "https://www.amigohelp.ai/blog/ai-resume-builder-guide/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop&crop=center",
+    "width": 1200,
+    "height": 800
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Maya Chen"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Does Amigo's Resume Builder create a resume from scratch or improve an existing one?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Both. If you paste a job description, Amigo generates a fully tailored resume from your profile and uploaded documents. You can also paste in your existing resume content and use the section-rewrite feature to improve specific bullets or sections against the new job description."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is a resume match score and why does it matter?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The match score shows how well your resume's language aligns with the keywords and requirements in the job description. Most ATS (applicant tracking systems) filter resumes by keyword presence before a human ever reads them. A low score usually means missing keywords that the JD repeatedly uses, and the score panel tells you exactly which ones."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do the section-by-section AI rewrites work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Click Regenerate on any section (summary, experience bullet, or skills list) and Amigo produces an alternative version optimized for the active job description. A before/after diff shows you exactly what changed. Accept it, ask for another version, or keep your original."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What resume templates does Amigo support?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Two templates: Classic (single-column, traditional formatting preferred by most ATS) and Modern (two-column layout with a stronger visual hierarchy for roles where design matters). You can switch templates at any time without losing your content."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the exported PDF ATS-compatible?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Both templates export text-layer PDFs: no images of text, no embedded fonts that strip on parse. ATS systems can read every field. Classic is the safer choice for large company ATS pipelines; Modern works well for agencies and startups."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need a different resume for every job I apply to?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You don't need to rebuild from scratch each time. The typical workflow is to keep a master version and run a quick re-score against each new JD, then use targeted section rewrites on just the bullets or summary that need updating. Most tailoring takes under 10 minutes."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/ai-resume-builder-guide/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-08-13",
+ "h1": "Amigo's AI Resume Builder: Tailor Your Resume to Any Job",
+ "lead": "How Amigo's AI Resume Builder works: generate a keyword-matched resume from any job description, score your fit, rewrite sections, and export a clean PDF.",
+ "category": "AI & Tools",
+ "readTime": "5 min read",
+ "date": "6 August 2026",
+ "author": "Maya Chen",
+ "hero": {
+  "src": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop&crop=center",
+  "alt": "A blank clipboard and pen beside a laptop on a desk."
+ },
+ "html": "<p>Sending the same resume to every job is one of the most common reasons applications go nowhere. Applicant tracking systems scan for keywords before a recruiter sees your name, and a generic resume routinely fails that scan even when your experience is a strong match. Amigo's Resume Builder closes that gap: paste in a job description, and it generates a resume with the right keywords in the right places, then scores how well it fits before you send it.</p>\n <h2>Why Generic Resumes Get Filtered Out</h2>\n <p>Most mid-size and large employers route applications through an ATS before human review. These systems rank candidates by how closely the resume language matches the job description: specific titles, required skills, and repeated phrases. A resume that uses \"managed cross-functional teams\" where the JD says \"led cross-functional collaboration\" may score lower than one with an identical background but matched phrasing.</p>\n <p>Tailoring used to mean rewriting manually for every role, tedious enough that most candidates skipped it. AI changes the time cost. What used to take 30–45 minutes now takes under 10.</p>\n <h2>What the Resume Builder Does</h2>\n <p>What you'll need to get started</p>\n<ul><li>The job description for the role you're applying to (paste as text or upload as PDF)</li><li>Your existing resume or career history (the builder uses your uploaded documents from All My Docs)</li><li>An Amigo account, since the Resume Builder is available from your dashboard</li></ul>\n <p>1</p>\n<p>Paste the job description</p>\n<p>Go to Resume Builder in your dashboard and paste the full JD. The more complete the description, the more accurate the keyword analysis, so include the responsibilities and requirements sections, not just the title.</p>\n<p>2</p>\n<p>Generate your tailored resume</p>\n<p>Amigo reads your uploaded resume and documents alongside the JD and generates a full resume (summary, experience bullets, and skills list) with language aligned to the role. Generation takes about 15–20 seconds.</p>\n<p>3</p>\n<p>Review your match score</p>\n<p>The score panel shows a keyword match percentage and a breakdown of which JD keywords appear in your resume (green) and which are missing (orange). Missing keywords are ranked by how often they appear in the JD, and the ones at the top matter most.</p>\n<p>4</p>\n<p>Rewrite sections you want to improve</p>\n<p>Click Regenerate on any section. Amigo produces an alternative version, and a diff view highlights exactly what changed line by line. Accept it, request another version, or keep your original. You stay in control of every word.</p>\n<p>5</p>\n<p>Choose a template and export</p>\n<p>Pick Classic (single-column, ATS-safe) or Modern (two-column, stronger visual hierarchy) and export as PDF. Both produce text-layer PDFs that ATS systems can parse cleanly.</p>\n <h2>The Match Score in Detail</h2>\n <p>The score is not a vanity metric. It maps directly to the keywords an ATS would scan for. A score in the 85–95% range generally means your resume uses the same language as the job description for the core requirements. Below 70% usually signals meaningful gaps: either missing technical skills you do have but haven't surfaced, or terminology mismatches where you've used different words for the same thing.</p>\n <p>✅ Matched keywords</p>\n<p>Terms from the JD that already appear in your resume. These confirm alignment, so you don't need to change them.</p>\n<p>⚠️ Missing keywords</p>\n<p>Terms the JD uses that don't appear in your resume. If you have the underlying experience, a targeted section rewrite will surface it. If you genuinely lack the skill, don't add the keyword, because misrepresentation creates problems in the interview.</p>\n <h2>Section-by-Section Rewrites: How to Use Them Well</h2>\n <p>The most useful application of section rewrites is not wholesale replacement. It's fixing the bullets that are most underspecific. A bullet like \"Worked on backend services\" doesn't tell an ATS or a recruiter much. A rewrite for a senior backend role might produce \"Designed and maintained high-availability microservices handling 2M+ daily requests, reducing p99 latency by 30%.\" If that matches your actual work, accept it. If the scale is off, edit the numbers before exporting.</p>\n <p>The diff view makes this fast. You can see at a glance whether the rewrite adds the right keywords, changes the framing in a useful way, or occasionally misses the mark. In that case, hit Regenerate again; each generation is independent.</p>\n <h2>Classic vs. Modern Template: Which to Use</h2>\n <div class=\"table-wrap\"><table><thead><tr><th>Template</th><th>Best for</th><th>ATS compatibility</th></tr>\n</thead>\n<tbody><tr><td>Classic</td><td>Enterprise, finance, government, large-company ATS pipelines</td><td>Highest: single column, standard section order</td></tr>\n<tr><td>Modern</td><td>Startups, agencies, design-adjacent roles, direct recruiter submissions</td><td>High: text-layer PDF, parseable by all major ATS</td></tr>\n</tbody>\n</table></div>\n <p>When in doubt, use Classic. It passes through every ATS pipeline without issue and reads cleanly on screen. Switch to Modern only when the role or company suggests design awareness is a signal: product roles at consumer startups, for instance, or UX-adjacent positions.</p>\n <h2>A Realistic Workflow for Active Job Seekers</h2>\n <p>The mistake most candidates make is treating the resume as a static document, written once and sent everywhere. A more effective pattern:</p>\n <ol><li><strong>Keep one master resume</strong> in All My Docs. This is your source of truth: complete, unedited, every role and project included.</li><li><strong>For each application</strong>, run a new generation against the specific JD and check the score. If you're above 85%, you can usually apply as-is. Between 70–85%, run targeted rewrites on the two or three sections with the most missing keywords. Below 70%, either the role isn't a match or there's significant terminology work to do.</li><li><strong>Export a separate PDF per application.</strong> Don't send a resume titled \"Software Engineer — Google\" to a different company. File names matter less than content, but it's a small professionalism signal.</li></ol>\n <h2>Connecting Resume and Interview Prep</h2>\n <p>The resume builder integrates with the rest of Amigo's workflow. Once your tailored resume is exported, upload it to All My Docs and link it to a <a href=\"/docs/copilot-profiles/\">Copilot Profile</a> along with the JD. Amigo's interview copilot then uses both to generate answers that reference your actual experience in the right framing for the role.</p>\n <p>The result is consistency between application and interview, because the keywords and framing on your resume match the way Amigo helps you answer questions about it. Recruiters notice when those don't align.</p>\n <h2>Getting Started</h2>\n <p>The Resume Builder is available from your Amigo dashboard. If you don't have an account yet, new users start with a free credit, and no payment is required to try it. The full workflow from JD paste to exported PDF takes most people under 15 minutes the first time.</p>\n <p><a href=\"/resume-builder/\">Open the Resume Builder →</a></p>",
+ "faqs": [
+  {
+   "q": "Does Amigo's Resume Builder create a resume from scratch or improve an existing one?",
+   "a": "Both. If you paste a job description, Amigo generates a fully tailored resume from your profile and uploaded documents. You can also paste in your existing resume content and use the section-rewrite feature to improve specific bullets or sections against the new job description."
+  },
+  {
+   "q": "What is a resume match score and why does it matter?",
+   "a": "The match score shows how well your resume's language aligns with the keywords and requirements in the job description. Most ATS (applicant tracking systems) filter resumes by keyword presence before a human ever reads them. A low score usually means missing keywords that the JD repeatedly uses, and the score panel tells you exactly which ones."
+  },
+  {
+   "q": "How do the section-by-section AI rewrites work?",
+   "a": "Click Regenerate on any section (summary, experience bullet, or skills list) and Amigo produces an alternative version optimized for the active job description. A before/after diff shows you exactly what changed. Accept it, ask for another version, or keep your original."
+  },
+  {
+   "q": "What resume templates does Amigo support?",
+   "a": "Two templates: Classic (single-column, traditional formatting preferred by most ATS) and Modern (two-column layout with a stronger visual hierarchy for roles where design matters). You can switch templates at any time without losing your content."
+  },
+  {
+   "q": "Is the exported PDF ATS-compatible?",
+   "a": "Yes. Both templates export text-layer PDFs: no images of text, no embedded fonts that strip on parse. ATS systems can read every field. Classic is the safer choice for large company ATS pipelines; Modern works well for agencies and startups."
+  },
+  {
+   "q": "Do I need a different resume for every job I apply to?",
+   "a": "You don't need to rebuild from scratch each time. The typical workflow is to keep a master version and run a quick re-score against each new JD, then use targeted section rewrites on just the bullets or summary that need updating. Most tailoring takes under 10 minutes."
+  }
+ ],
+ "related": [
+  "/blog/quality-of-hire-ai-assisted-hiring",
+  "/blog/5-curveball-interview-questions-amigo-helps-answer",
+  "/blog/data-behind-ai-assisted-hiring-500-interviews"
+ ]
+}

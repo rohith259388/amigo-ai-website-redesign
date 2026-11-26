@@ -56,7 +56,7 @@ function CreatorsPanel({ onClose }: { onClose: () => void }) {
       </div>
 
       <a
-        href="/creators"
+        href="/creators/"
         onClick={onClose}
         className="group relative mt-6 inline-flex h-11 w-fit items-center justify-center gap-2 rounded-full bg-white px-5 text-[14px] font-semibold text-[#6C2BD9] shadow-sm transition-transform hover:scale-[1.03]"
       >

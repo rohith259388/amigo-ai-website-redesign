@@ -1,0 +1,817 @@
+[
+ {
+  "path": "/blog",
+  "section": "blog",
+  "h1": "Interview advice worth reading.",
+  "description": "Practical guides on interview preparation, real-time AI assistance, and how to use every advantage available to land your next role.",
+  "lastmod": "2026-10-05"
+ },
+ {
+  "path": "/blog/5-curveball-interview-questions-amigo-helps-answer",
+  "section": "blog",
+  "h1": "5 Curveball Interview Questions Amigo Helps You Answer Better",
+  "description": "The questions candidates never see coming, and a structured way to approach each one, with or without real-time AI support.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "1 min read",
+  "date": "13 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "A computer display with line charts and analytics panels."
+  }
+ },
+ {
+  "path": "/blog/ai-assisted-candidates-recruiter-screening",
+  "section": "blog",
+  "h1": "How AI-Assisted Candidates Are Speeding Up Recruiter Screening",
+  "description": "Recruiters using AI screen faster, and candidates are arriving better prepared. How the two trends intersect, and where the evidence is still thin.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "6 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1200&h=800&fit=crop&crop=center",
+   "alt": "A laptop on a bright desk beside large office windows."
+  }
+ },
+ {
+  "path": "/blog/ai-campus-placements-2026-guide",
+  "section": "blog",
+  "h1": "Placement Season 2026: How AI Is Reshaping Campus Interview Prep",
+  "description": "AI mock interviews, skill-gap analysis, and project-based hiring are reshaping India's campus placement season. What students should know before it starts.",
+  "lastmod": "2026-08-13",
+  "category": "Interview Prep",
+  "readTime": "3 min read",
+  "date": "3 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "A smiling professional standing in a bright office."
+  }
+ },
+ {
+  "path": "/blog/ai-interview-prep-trends-2026",
+  "section": "blog",
+  "h1": "5 Ways AI Is Changing How Candidates Prepare for Interviews in 2026",
+  "description": "Five concrete ways AI reshaped interview prep in 2026, from unlimited mock practice to real-time in-interview support, backed by current survey data.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "3 min read",
+  "date": "1 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&h=800&fit=crop&crop=center",
+   "alt": "A brain-shaped circuit pattern against a blue electronic background."
+  }
+ },
+ {
+  "path": "/blog/ai-interview-tools-guide-for-recruiters-2026",
+  "section": "blog",
+  "h1": "AI Interview Tools in 2026: What Every Recruiter Needs to Know",
+  "description": "87% of companies now use AI somewhere in hiring, and candidates are using AI too. A recruiter's guide to what's actually changed in interview screening in 2026.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "3 min read",
+  "date": "2 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=800&fit=crop&crop=center",
+   "alt": "An opened laptop showing its internal electronic components."
+  }
+ },
+ {
+  "path": "/blog/ai-resume-builder-guide",
+  "section": "blog",
+  "h1": "Amigo's AI Resume Builder: Tailor Your Resume to Any Job",
+  "description": "How Amigo's AI Resume Builder works: generate a keyword-matched resume from any job description, score your fit, rewrite sections, and export a clean PDF.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "5 min read",
+  "date": "6 August 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=800&fit=crop&crop=center",
+   "alt": "A blank clipboard and pen beside a laptop on a desk."
+  }
+ },
+ {
+  "path": "/blog/ai-vs-traditional-interview-coaching",
+  "section": "blog",
+  "h1": "AI vs Human Interview Coaching: An Honest Comparison (2026)",
+  "description": "An honest breakdown of AI vs human interview coaching: cost, availability, live support, where humans still win, and why strong candidates use both.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "3 min read",
+  "date": "18 June 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&h=800&fit=crop&crop=center",
+   "alt": "Rows of green computer characters on a dark screen."
+  }
+ },
+ {
+  "path": "/blog/amazon-interview-leadership-principles-guide",
+  "section": "blog",
+  "h1": "Amazon Interview Guide: Leadership Principles (2026)",
+  "description": "How Amazon's loop works: all 16 Leadership Principles, the Bar Raiser's veto, the STAR-L answer format, and the follow-ups that expose weak stories.",
+  "lastmod": "2026-08-13",
+  "category": "Company Guides",
+  "readTime": "7 min read",
+  "date": "21 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1200&h=800&fit=crop&crop=center",
+   "alt": "Two business professionals reviewing a tablet in an office."
+  }
+ },
+ {
+  "path": "/blog/backend-developer-interview-questions",
+  "section": "blog",
+  "h1": "Backend Developer Interview Questions: APIs, Databases & Scale (2026)",
+  "description": "The backend loop explained: coding, API and schema design, databases, concurrency, the production-debugging round, and what interviewers score in each.",
+  "lastmod": "2026-08-13",
+  "category": "Role & Skills",
+  "readTime": "11 min read",
+  "date": "14 August 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&crop=center",
+   "alt": "Close-up of the circuits and components on a computer board."
+  }
+ },
+ {
+  "path": "/blog/behavioral-interview-questions-answers",
+  "section": "blog",
+  "h1": "50 Behavioral Interview Questions With Sample Answers (2026)",
+  "description": "The most common behavioral interview questions with full STAR method answers. Covering leadership, conflict, failure, teamwork, and more.",
+  "lastmod": "2026-08-13",
+  "category": "Interview Prep",
+  "readTime": "9 min read",
+  "date": "16 June 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "A professional woman standing beside an office window and brick wall."
+  }
+ },
+ {
+  "path": "/blog/buddy-system-for-job-interviews",
+  "section": "blog",
+  "h1": "The Interview Buddy System: How a Trusted Friend Can Coach You Live",
+  "description": "How Amigo's Buddy feature lets a trusted friend, mentor, or coach watch your live interview transcript in real-time and send hints only you can see.",
+  "lastmod": "2026-08-13",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "14 June 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "A group collaborating around laptops at a shared table."
+  }
+ },
+ {
+  "path": "/blog/campus-placement-season-case-study-composite",
+  "section": "blog",
+  "h1": "Case Study: What a Strong Campus Placement Season with Amigo Looks Like",
+  "description": "A composite case study from patterns across partner institutes: how placement cells structure practice volume and readiness tracking through a busy season.",
+  "lastmod": "2026-08-13",
+  "category": "Company Guides",
+  "readTime": "1 min read",
+  "date": "11 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&crop=center",
+   "alt": "A quiet modern office with desks and meeting spaces."
+  }
+ },
+ {
+  "path": "/blog/can-interviewers-detect-ai-tools",
+  "section": "blog",
+  "h1": "Can Interviewers Detect AI Tools During Video Interviews?",
+  "description": "The honest answer, and how Amigo uses OS-level window exclusion to stay out of Zoom, Teams, and Meet screen capture entirely.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "3 min read",
+  "date": "11 June 2026",
+  "hero": {
+   "src": "/images/blog/can-interviewers-detect-ai-tools/bfabfb8b051f.jpg",
+   "alt": "A recruiter listening carefully to a candidate on a video call."
+  }
+ },
+ {
+  "path": "/blog/cost-of-interview-anxiety-for-employers",
+  "section": "blog",
+  "h1": "The Hidden Cost of Interview Anxiety: Why Employers Should Care",
+  "description": "93% of candidates get interview anxiety, and research links it to lower scores. Why that is an employer problem, not just a candidate one.",
+  "lastmod": "2026-08-13",
+  "category": "Interview Prep",
+  "readTime": "2 min read",
+  "date": "4 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "Close-up of two professionals shaking hands."
+  }
+ },
+ {
+  "path": "/blog/cost-per-hire-savings-breakdown",
+  "section": "blog",
+  "h1": "Where the 22% Cost-Per-Hire Savings Actually Comes From",
+  "description": "A component-level breakdown of the directional 22% cost-per-hire figure from Amigo's Q2 2026 employer partner cohort: what's driving it, and what isn't.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "1 min read",
+  "date": "12 July 2026",
+  "hero": {
+   "src": "/images/blog/cost-per-hire-savings-breakdown/c552baec2a2c.jpg",
+   "alt": "Colleagues reviewing hiring figures with a calculator and printed chart."
+  }
+ },
+ {
+  "path": "/blog/data-behind-ai-assisted-hiring-500-interviews",
+  "section": "blog",
+  "h1": "The Data Behind AI-Assisted Hiring: 500 Interviews Analysed",
+  "description": "We reviewed 500 sessions from Amigo's Q2 2026 usage data to see how candidates use AI mid-interview. The breakdown, plus the methodology caveats.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "10 July 2026",
+  "hero": {
+   "src": "/images/blog/data-behind-ai-assisted-hiring-500-interviews/494004b87997.jpg",
+   "alt": "Two recruiting analysts reviewing printed charts together in an office."
+  }
+ },
+ {
+  "path": "/blog/data-scientist-interview-questions",
+  "section": "blog",
+  "h1": "Data Scientist Interview Questions: SQL, Stats & Product Cases (2026)",
+  "description": "The data science loop explained: the SQL screen, probability and inference, the modelling case, the product-metrics round, and what interviewers actually score in each.",
+  "lastmod": "2026-09-07",
+  "category": "Role & Skills",
+  "readTime": "12 min read",
+  "date": "18 August 2026",
+  "hero": {
+   "src": "/images/blog/data-scientist-interview-questions/b3320d47c81f.jpg",
+   "alt": "A data scientist explaining a scatterplot on a whiteboard to an interviewer."
+  }
+ },
+ {
+  "path": "/blog/frontend-developer-interview-questions",
+  "section": "blog",
+  "h1": "Frontend Developer Interview Questions: JS & React (2026)",
+  "description": "The frontend loop explained: JavaScript fundamentals, React internals, the live UI build, frontend system design, and what interviewers score in each round.",
+  "lastmod": "2026-08-13",
+  "category": "Role & Skills",
+  "readTime": "8 min read",
+  "date": "28 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=800&fit=crop&crop=center",
+   "alt": "People working in a spacious open-plan office."
+  }
+ },
+ {
+  "path": "/blog/google-ai-assisted-coding-interview",
+  "section": "blog",
+  "h1": "Google's AI-Assisted Coding Interview: What Changes in 2026",
+  "description": "Google is piloting a Gemini-assisted code comprehension round for junior and mid-level SWE roles. What is confirmed, what is not, and how to prepare.",
+  "lastmod": "2026-08-13",
+  "category": "Company Guides",
+  "readTime": "6 min read",
+  "date": "13 August 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop&crop=center",
+   "alt": "Looking upward between modern glass office buildings."
+  }
+ },
+ {
+  "path": "/blog/google-hr-interview-questions-and-preparation",
+  "section": "blog",
+  "h1": "Google HR Interview Round: Questions, What to Expect & How to Prepare",
+  "description": "Prepare for Google's HR interview with common behavioural questions, sample answers, Googleyness, leadership tips and practical preparation strategies.",
+  "lastmod": "2026-11-24",
+  "category": "Interview Prep",
+  "readTime": "9 min read",
+  "date": "24 November 2026",
+  "hero": {
+   "src": "/images/blog/google-hr-interview-questions-and-preparation/178b7a566f77.jpg",
+   "alt": "A candidate in a behavioural interview conversation with a recruiter."
+  }
+ },
+ {
+  "path": "/blog/google-interview-process-2026",
+  "section": "blog",
+  "h1": "Google Interview Process 2026: All Rounds, Stages and Preparation Tips",
+  "description": "Understand the typical Google hiring process, from resume screening and online assessments to technical and behavioural interviews, with practical preparation tips.",
+  "lastmod": "2026-11-23",
+  "category": "Interview Prep",
+  "readTime": "8 min read",
+  "date": "21 November 2026",
+  "hero": {
+   "src": "/images/blog/google-interview-process-2026/59ca5899069a.jpg",
+   "alt": "A candidate preparing for a Google interview with notes and a laptop."
+  }
+ },
+ {
+  "path": "/blog/google-interview-process-explained",
+  "section": "blog",
+  "h1": "Google Interview Process: Rounds, Timeline & Levels (2026)",
+  "description": "How Google's loop works: phone screens, onsite rounds, the four attributes you're scored on, hiring committee, team matching, and why the timeline runs long.",
+  "lastmod": "2026-09-07",
+  "category": "Company Guides",
+  "readTime": "8 min read",
+  "date": "31 July 2026",
+  "hero": {
+   "src": "/images/blog/google-interview-process-explained/31018adcf4ee.jpg",
+   "alt": "A candidate carrying a laptop sleeve toward a modern office entrance."
+  }
+ },
+ {
+  "path": "/blog/how-amigo-works-guide",
+  "section": "blog",
+  "h1": "How Amigo Works: A Complete Guide to Real-Time AI Interview Support",
+  "description": "A first-time walkthrough of Amigo end to end: account setup, the desktop app, building a Copilot Profile, and what happens when you join a live interview.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "9 July 2026",
+  "hero": {
+   "src": "/images/blog/how-amigo-works-guide/8831a0498d15.jpg",
+   "alt": "A professional setting up a laptop and desk microphone for an interview."
+  }
+ },
+ {
+  "path": "/blog/how-to-explain-a-project-in-an-interview",
+  "section": "blog",
+  "h1": "How to Explain a Project in an Interview Without Rambling",
+  "description": "Explain a resume project with a clear problem, your contribution, a decision, and the result. Includes software and student examples plus follow-up questions.",
+  "lastmod": "2026-09-07",
+  "category": "Role & Skills",
+  "readTime": "5 min read",
+  "date": "1 September 2026",
+  "hero": {
+   "src": "/images/blog/how-to-explain-a-project-in-an-interview/972a1b00f844.jpg",
+   "alt": "An engineer explaining a project diagram to a colleague at a meeting table."
+  }
+ },
+ {
+  "path": "/blog/how-to-follow-up-after-an-interview",
+  "section": "blog",
+  "h1": "How to Follow Up After an Interview: Timing, Templates & Silence (2026)",
+  "description": "When to send the thank-you note, what to write, how often to follow up during silence, and how to nudge a stalled process without damaging your position.",
+  "lastmod": "2026-08-21",
+  "category": "Career Strategy",
+  "readTime": "10 min read",
+  "date": "20 August 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "Two colleagues celebrating with a high five at an office table."
+  }
+ },
+ {
+  "path": "/blog/how-to-prepare-faang-software-engineer-interview",
+  "section": "blog",
+  "h1": "How to Prepare for a FAANG Software Engineer Interview (Step-by-Step)",
+  "description": "A complete preparation roadmap covering data structures, system design, behavioral rounds, and how to use AI assistance on interview day.",
+  "lastmod": "2026-08-13",
+  "category": "Role & Skills",
+  "readTime": "2 min read",
+  "date": "17 June 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=800&fit=crop&crop=center",
+   "alt": "Colleagues discussing work beside an open laptop."
+  }
+ },
+ {
+  "path": "/blog/interview-confidence-not-memorization",
+  "section": "blog",
+  "h1": "Why Interview Confidence Isn't About Memorising Answers",
+  "description": "Scripted answers collapse under follow-ups. Real interview confidence comes from structure and practice volume, not memorization. Here is the research.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "3 min read",
+  "date": "5 July 2026",
+  "hero": {
+   "src": "/images/blog/interview-confidence-not-memorization/6022ebf2ed56.jpg",
+   "alt": "A woman practicing a spoken answer with a mentor at a cafe table."
+  }
+ },
+ {
+  "path": "/blog/meta-ai-enabled-coding-interview",
+  "section": "blog",
+  "h1": "Meta's AI-Enabled Coding Interview: Format, Rules & Prep (2026)",
+  "description": "Meta now runs a 60-minute coding round where you are expected to use an AI assistant. The format, which models you get, what is scored, and how to prepare.",
+  "lastmod": "2026-08-13",
+  "category": "Company Guides",
+  "readTime": "7 min read",
+  "date": "12 August 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop&crop=center",
+   "alt": "A bright office corridor with glass-walled meeting rooms."
+  }
+ },
+ {
+  "path": "/blog/meta-interview-process-explained",
+  "section": "blog",
+  "h1": "Meta Interview Process: Rounds, Signals & Levels (2026)",
+  "description": "How Meta's loop works: the recruiter screen, technical screen, four onsite rounds including Ninja and Jedi, how E3–E6 are set, and team matching.",
+  "lastmod": "2026-09-07",
+  "category": "Company Guides",
+  "readTime": "8 min read",
+  "date": "4 August 2026",
+  "hero": {
+   "src": "/images/blog/meta-interview-process-explained/5f8aab3d0d0b.jpg",
+   "alt": "A candidate and recruiter walking through a bright office corridor."
+  }
+ },
+ {
+  "path": "/blog/microsoft-interview-process-explained",
+  "section": "blog",
+  "h1": "Microsoft Interview Process: Rounds, Levels & the AA Round (2026)",
+  "description": "How Microsoft's loop works: the recruiter screen, phone screen, four-round onsite, the As-Appropriate round that can end it, and how levels 59–65 are set.",
+  "lastmod": "2026-09-07",
+  "category": "Company Guides",
+  "readTime": "9 min read",
+  "date": "11 August 2026",
+  "hero": {
+   "src": "/images/blog/microsoft-interview-process-explained/d979d43b4c9a.jpg",
+   "alt": "A candidate and engineer discussing a technical problem across a laptop."
+  }
+ },
+ {
+  "path": "/blog/quality-of-hire-ai-assisted-hiring",
+  "section": "blog",
+  "h1": "Beyond Speed: What AI-Assisted Hiring Does for Quality-of-Hire",
+  "description": "Screening speed is easy to measure. Whether AI-assisted candidates become better long-term hires is the harder question, and the signal is only directional.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "1 min read",
+  "date": "14 July 2026",
+  "hero": {
+   "src": "/images/blog/quality-of-hire-ai-assisted-hiring/7ee63c064dfe.jpg",
+   "alt": "A manager and colleagues reviewing a project at an office workstation."
+  }
+ },
+ {
+  "path": "/blog/real-time-interview-assistance-explained",
+  "section": "blog",
+  "h1": "Real-Time Interview Assistance: The 200ms Pipeline Behind Amigo",
+  "description": "How the Deepgram → OpenAI streaming pipeline works, why latency under 200ms matters in a live interview, and what it actually feels like to use.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "13 June 2026",
+  "hero": {
+   "src": "/images/blog/real-time-interview-assistance-explained/17a9191baec5.jpg",
+   "alt": "A professional wearing earbuds listening during a video call at his home desk."
+  }
+ },
+ {
+  "path": "/blog/roi-of-ai-interview-prep-for-hr-leaders",
+  "section": "blog",
+  "h1": "The ROI of AI-Assisted Interview Prep: A Data-Driven Look for HR Leaders",
+  "description": "Cost-per-hire averages $4,700. Early data from Amigo's Q2 2026 partner cohort points to a 22% cut: where that number comes from, and how to pressure-test it.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "2 min read",
+  "date": "8 July 2026",
+  "hero": {
+   "src": "/images/blog/roi-of-ai-interview-prep-for-hr-leaders/f7e7efc56960.jpg",
+   "alt": "HR colleagues discussing hiring plans and printed charts at a meeting table."
+  }
+ },
+ {
+  "path": "/blog/salary-negotiation-scripts-after-job-offer",
+  "section": "blog",
+  "h1": "Salary Negotiation Scripts After a Job Offer (2026)",
+  "description": "Word-for-word scripts for negotiating an offer: deflecting the salary question, making a counter, and handling 'this is our best offer' without a rival bid.",
+  "lastmod": "2026-09-07",
+  "category": "Career Strategy",
+  "readTime": "7 min read",
+  "date": "24 July 2026",
+  "hero": {
+   "src": "/images/blog/salary-negotiation-scripts-after-job-offer/23470e105644.jpg",
+   "alt": "A candidate and hiring manager discussing an offer document at a table."
+  }
+ },
+ {
+  "path": "/blog/second-round-interview-questions",
+  "section": "blog",
+  "h1": "Second-Round Interview Questions: What to Expect and How to Answer",
+  "description": "Learn what to expect in a second-round interview, with 15 common questions, sample answers, the STAR method, preparation steps and a handy checklist.",
+  "lastmod": "2026-11-24",
+  "category": "Interview Prep",
+  "readTime": "10 min read",
+  "date": "23 November 2026",
+  "hero": {
+   "src": "/images/blog/second-round-interview-questions/17d1149f8a6b.jpg",
+   "alt": "A candidate preparing notes for a second-round job interview."
+  }
+ },
+ {
+  "path": "/blog/student-placement-stories-composite",
+  "section": "blog",
+  "h1": "5 Student Placement Patterns We See Again and Again",
+  "description": "Five composite student profiles built from patterns across Amigo's users, not verified testimonials, illustrating different paths to a placement offer.",
+  "lastmod": "2026-09-07",
+  "category": "Career Strategy",
+  "readTime": "1 min read",
+  "date": "15 July 2026",
+  "hero": {
+   "src": "/images/blog/student-placement-stories-composite/04bc170e0b17.jpg",
+   "alt": "University students preparing for recruitment together in a campus study room."
+  }
+ },
+ {
+  "path": "/blog/system-design-interview-questions-framework",
+  "section": "blog",
+  "h1": "System Design Interview Questions: 45-Min Framework (2026)",
+  "description": "A repeatable five-phase framework for system design interviews, the 12 questions that cover almost everything, and the mistakes that sink strong engineers.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "7 min read",
+  "date": "17 July 2026",
+  "hero": {
+   "src": "/images/blog/system-design-interview-questions-framework/0fd22bebc424.jpg",
+   "alt": "An engineer explaining a system diagram on a whiteboard to an interviewer."
+  }
+ },
+ {
+  "path": "/blog/tell-me-about-yourself-interview-answer",
+  "section": "blog",
+  "h1": "\"Tell Me About Yourself\": A Framework + 5 Example Answers (2026)",
+  "description": "A 90-second structure for \"tell me about yourself\", with examples for engineers, freshers, and career switchers, plus six mistakes that lose the room.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "9 min read",
+  "date": "7 August 2026",
+  "hero": {
+   "src": "/images/blog/tell-me-about-yourself-interview-answer/88fdd7039d2f.jpg",
+   "alt": "A candidate introducing himself to an interviewer across a round table."
+  }
+ },
+ {
+  "path": "/blog/tpo-guide-tracking-student-interview-readiness",
+  "section": "blog",
+  "h1": "The TPO's Guide to Tracking Student Interview Readiness",
+  "description": "A framework for placement cells to spot which students are genuinely interview ready: practice volume, skill gap signals, and a simple readiness score.",
+  "lastmod": "2026-08-13",
+  "category": "Career Strategy",
+  "readTime": "2 min read",
+  "date": "7 July 2026",
+  "hero": {
+   "src": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&h=800&fit=crop&crop=faces",
+   "alt": "Three young colleagues discussing work around a table."
+  }
+ },
+ {
+  "path": "/blog/virtual-interview-checklist",
+  "section": "blog",
+  "h1": "Virtual Interview Checklist: Setup, Practice, and Backup Plan",
+  "description": "Prepare for a video interview with a practical checklist for audio, camera, screen sharing, notes, and connection problems, from the day before to the call.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "5 min read",
+  "date": "3 September 2026",
+  "hero": {
+   "src": "/images/blog/virtual-interview-checklist/be3920d220ed.jpg",
+   "alt": "A candidate checking her headset at a home desk before a video interview."
+  }
+ },
+ {
+  "path": "/blog/what-is-an-ai-interview-copilot",
+  "section": "blog",
+  "h1": "What Is an AI Interview Copilot and How Does It Work?",
+  "description": "A plain-English breakdown of real-time AI interview assistance: how speech is captured, transcribed, and turned into streamed answers in under 200ms.",
+  "lastmod": "2026-09-07",
+  "category": "AI & Tools",
+  "readTime": "2 min read",
+  "date": "12 June 2026",
+  "hero": {
+   "src": "/images/blog/what-is-an-ai-interview-copilot/fbe8a2ed0322.jpg",
+   "alt": "A professional wearing earbuds concentrating on a laptop interview call."
+  }
+ },
+ {
+  "path": "/blog/why-do-you-want-to-work-here-answer",
+  "section": "blog",
+  "h1": "Why Do You Want to Work Here? Research and Answer Examples",
+  "description": "Answer why do you want to work here with specific company research, an honest reason for your interest, and examples for graduates and career changers.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "5 min read",
+  "date": "27 August 2026",
+  "hero": {
+   "src": "/images/blog/why-do-you-want-to-work-here-answer/12735e68d20d.jpg",
+   "alt": "A professional researching a potential employer at a laptop beside an office window."
+  }
+ },
+ {
+  "path": "/blog/why-should-we-hire-you-answer",
+  "section": "blog",
+  "h1": "Why Should We Hire You? A Clear Answer with 4 Examples",
+  "description": "Build a convincing answer to why should we hire you using the job requirements and your real experience, with examples for graduates and experienced candidates.",
+  "lastmod": "2026-09-07",
+  "category": "Interview Prep",
+  "readTime": "5 min read",
+  "date": "25 August 2026",
+  "hero": {
+   "src": "/images/blog/why-should-we-hire-you-answer/96069110ffaf.jpg",
+   "alt": "A candidate explaining her experience to an interviewer across a meeting table."
+  }
+ },
+ {
+  "path": "/compare",
+  "section": "compare",
+  "h1": "Amigo vs every AI interview copilot",
+  "description": "Compare Amigo against Final Round AI, LockedIn AI, Verve AI, Cluely, Parakeet AI, HuddleMate, and Interview Coder. Stealth, coding support, Buddy mode, and pricing side by side.",
+  "lastmod": "2026-10-05"
+ },
+ {
+  "path": "/compare/best-ai-interview-copilots",
+  "section": "compare",
+  "h1": "7 Best AI Interview Copilots Compared",
+  "description": "Objective comparison of the top AI interview copilot tools in 2026: Amigo, Final Round AI, LockedIn AI, Verve AI, Parakeet AI, HuddleMate, and Interview Coder. Features, pricing, and stealth compared.",
+  "lastmod": "2026-10-05"
+ },
+ {
+  "path": "/compare/cluely-alternative",
+  "section": "compare",
+  "h1": "The Best Cluely Alternative for Interviews",
+  "description": "Looking for a Cluely alternative? Amigo is built specifically for job interviews — resume-aware answers, OS-level stealth, Buddy mode, and pay-as-you-go pricing. Try free, no card.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/final-round-ai-alternative",
+  "section": "compare",
+  "h1": "The Best Final Round AI Alternative",
+  "description": "Looking for a Final Round AI alternative? Amigo offers real-time AI interview assistance at 30% lower cost with 100% undetectable stealth mode, Buddy feature, and no screen freezing. Try free.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/huddlemate-alternative",
+  "section": "compare",
+  "h1": "The Best HuddleMate Alternative",
+  "description": "Looking for a HuddleMate alternative? Amigo delivers faster real-time AI, deeper stealth, coding interview support, Buddy mode, and 30% lower prices. Try free.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/interview-coder-alternative",
+  "section": "compare",
+  "h1": "The Best Interview Coder / Cluely Alternative",
+  "description": "Looking for an Interview Coder or Cluely alternative? Amigo adds behavioral interview support, Buddy mode, full system stealth, and STAR answers — at 30% lower cost. Try free.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/lockedin-ai-alternative",
+  "section": "compare",
+  "h1": "The Best LockedIn AI Alternative",
+  "description": "Looking for a LockedIn AI alternative? Amigo offers real-time AI interview help with OS-level stealth, a Buddy feature, and pay-as-you-go pricing — no subscription. Try free, no card.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/parakeet-ai-alternative",
+  "section": "compare",
+  "h1": "The Best Parakeet AI Alternative",
+  "description": "Looking for a Parakeet AI alternative? Amigo adds coding interview support, Buddy mode, full Task Manager stealth, and resume-personalized answers — at 30% lower cost. Try free.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/compare/verve-ai-alternative",
+  "section": "compare",
+  "h1": "The Best Verve AI Alternative",
+  "description": "Looking for a Verve AI alternative? Amigo offers real-time interview help with OS-level stealth, Buddy mode, and pay-as-you-go pricing — no subscription tiers. Try free, no card.",
+  "lastmod": "2026-11-23"
+ },
+ {
+  "path": "/docs",
+  "section": "docs",
+  "h1": "Introduction to Amigo",
+  "description": "Learn how to use Amigo, the real-time AI copilot for live video and coding interviews. Setup guides, platform support, billing, and best practices.",
+  "lastmod": "2026-10-05",
+  "category": "Getting Started"
+ },
+ {
+  "path": "/docs/ai-copilot",
+  "section": "docs",
+  "h1": "AI Copilot Overview",
+  "description": "How the Amigo AI copilot listens to live interviews and streams personalized answers in seconds, fully undetectable and tuned to your resume and the role.",
+  "lastmod": "2026-09-24",
+  "category": "Core Features"
+ },
+ {
+  "path": "/docs/billing/plans",
+  "section": "docs",
+  "h1": "Plans & Pricing",
+  "description": "Flexible pricing for Amigo's AI interview copilot: pay-as-you-go minutes packs, or an optional monthly Unlimited subscription. Start with a 10-minute free trial.",
+  "lastmod": "2026-09-24",
+  "category": "Account & Billing"
+ },
+ {
+  "path": "/docs/billing/subscription",
+  "section": "docs",
+  "h1": "Managing Your Account",
+  "description": "Manage your Amigo account, payment methods, and billing history. View plans, top up interview credits, subscribe for unlimited access, and update preferences.",
+  "lastmod": "2026-09-24",
+  "category": "Account & Billing"
+ },
+ {
+  "path": "/docs/billing/tokens",
+  "section": "docs",
+  "h1": "Minutes & Credits",
+  "description": "How Amigo interview credits work: purchasing, usage, and tracking. Pay only for the interview minutes you use; purchased credits never expire.",
+  "lastmod": "2026-09-24",
+  "category": "Account & Billing"
+ },
+ {
+  "path": "/docs/coding-interviews",
+  "section": "docs",
+  "h1": "Coding Interviews",
+  "description": "Get real-time AI assistance during live coding interviews on HackerRank, LeetCode, CoderPad, Codility, and more. Solutions, explanations, and edge-case hints.",
+  "lastmod": "2026-09-24",
+  "category": "Core Features"
+ },
+ {
+  "path": "/docs/installation",
+  "section": "docs",
+  "h1": "Installation",
+  "description": "Step-by-step installation of the Amigo desktop copilot on Windows 10/11 and macOS 12+. System requirements, download links, and first-run setup.",
+  "lastmod": "2026-09-24",
+  "category": "Getting Started"
+ },
+ {
+  "path": "/docs/platforms/meet",
+  "section": "docs",
+  "h1": "Google Meet",
+  "description": "Connect Amigo to Google Meet interviews. Setup, audio capture, and tips for a real-time AI copilot that stays out of Meet's screen share.",
+  "lastmod": "2026-10-16",
+  "category": "Platform Guide"
+ },
+ {
+  "path": "/docs/platforms/other",
+  "section": "docs",
+  "h1": "Other Platforms",
+  "description": "Use Amigo with Webex, Skype, BlueJeans, HireVue, and other interview platforms. Real-time AI copilot, fully invisible to platforms and proctors.",
+  "lastmod": "2026-09-24",
+  "category": "Platform Guide"
+ },
+ {
+  "path": "/docs/platforms/teams",
+  "section": "docs",
+  "h1": "Microsoft Teams",
+  "description": "Connect Amigo to Microsoft Teams interviews. Setup, audio routing, and tips for an undetectable real-time AI copilot during live calls.",
+  "lastmod": "2026-09-24",
+  "category": "Platform Guide"
+ },
+ {
+  "path": "/docs/platforms/zoom",
+  "section": "docs",
+  "h1": "Zoom",
+  "description": "Connect Amigo to Zoom interviews. Setup, audio routing, and tips to keep the AI copilot fully invisible during live calls.",
+  "lastmod": "2026-09-24",
+  "category": "Platform Guide"
+ },
+ {
+  "path": "/docs/practice-mode",
+  "section": "docs",
+  "h1": "Practice Mode",
+  "description": "Use Amigo's Practice Mode to warm up before any interview. Get AI-generated questions, real-time answers, and build confidence before the real thing.",
+  "lastmod": "2026-09-24",
+  "category": "Core Features"
+ },
+ {
+  "path": "/docs/privacy-policy",
+  "section": "docs",
+  "h1": "Privacy Policy",
+  "description": "How Amigo handles your data. End-to-end encrypted sessions, no recordings or transcripts stored, and your privacy is protected at every step.",
+  "lastmod": "2026-09-22",
+  "category": "Legal"
+ },
+ {
+  "path": "/docs/quick-start",
+  "section": "docs",
+  "h1": "Quick Start",
+  "description": "Get Amigo running in under 5 minutes. Sign up, install the desktop copilot, and start your first AI-assisted live interview.",
+  "lastmod": "2026-09-24",
+  "category": "Getting Started"
+ },
+ {
+  "path": "/docs/stealth-mode",
+  "section": "docs",
+  "h1": "Stealth Mode",
+  "description": "How Amigo stays invisible to interview platforms and proctoring tools: system-level overlay, screen-share-safe, no recordings, no transcripts stored.",
+  "lastmod": "2026-09-24",
+  "category": "Core Features"
+ },
+ {
+  "path": "/docs/terms",
+  "section": "docs",
+  "h1": "Terms of Use",
+  "description": "Terms of service for the Amigo AI Interview Copilot: your responsibilities, our commitments, billing terms, and acceptable use.",
+  "lastmod": "2026-09-24",
+  "category": "Legal"
+ },
+ {
+  "path": "/docs/video-interviews",
+  "section": "docs",
+  "h1": "Video Interviews",
+  "description": "Use Amigo's invisible overlay during live video interviews on Zoom, Microsoft Teams, Google Meet, Webex, and more. Real-time AI guidance, end-to-end private.",
+  "lastmod": "2026-09-24",
+  "category": "Core Features"
+ },
+ {
+  "path": "/pricing",
+  "section": "pricing",
+  "h1": "AmigoHelp AI Pricing",
+  "description": "AmigoHelp AI pricing: start free with 10 minutes, then pay-as-you-go minute packs from $15 or an optional monthly Unlimited subscription. Credits never expire.",
+  "lastmod": "2026-10-06"
+ }
+]

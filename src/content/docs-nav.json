@@ -1,0 +1,95 @@
+[
+ {
+  "title": "Getting Started",
+  "items": [
+   {
+    "path": "/docs",
+    "label": "Introduction"
+   },
+   {
+    "path": "/docs/quick-start",
+    "label": "Quick Start"
+   },
+   {
+    "path": "/docs/installation",
+    "label": "Installation"
+   }
+  ]
+ },
+ {
+  "title": "Core Features",
+  "items": [
+   {
+    "path": "/docs/ai-copilot",
+    "label": "AI Copilot Overview"
+   },
+   {
+    "path": "/docs/video-interviews",
+    "label": "Video Interviews"
+   },
+   {
+    "path": "/docs/coding-interviews",
+    "label": "Coding Interviews"
+   },
+   {
+    "path": "/docs/practice-mode",
+    "label": "Practice Mode"
+   },
+   {
+    "path": "/docs/stealth-mode",
+    "label": "Stealth Mode"
+   }
+  ]
+ },
+ {
+  "title": "Platform Guide",
+  "items": [
+   {
+    "path": "/docs/platforms/zoom",
+    "label": "Zoom"
+   },
+   {
+    "path": "/docs/platforms/teams",
+    "label": "Microsoft Teams"
+   },
+   {
+    "path": "/docs/platforms/meet",
+    "label": "Google Meet"
+   },
+   {
+    "path": "/docs/platforms/other",
+    "label": "Other Platforms"
+   }
+  ]
+ },
+ {
+  "title": "Account & Billing",
+  "items": [
+   {
+    "path": "/docs/billing/plans",
+    "label": "Plans & Pricing"
+   },
+   {
+    "path": "/docs/billing/subscription",
+    "label": "Managing Your Account"
+   },
+   {
+    "path": "/docs/billing/tokens",
+    "label": "Minutes & Credits"
+   }
+  ]
+ },
+ {
+  "title": "Legal",
+  "items": [
+   {
+    "path": "/docs/privacy-policy",
+    "label": "Privacy Policy"
+   },
+   {
+    "path": "/docs/terms",
+    "label": "Terms & Conditions"
+   }
+  ]
+ }
+]

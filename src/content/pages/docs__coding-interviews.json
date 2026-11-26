@@ -1,0 +1,38 @@
+{
+ "path": "/docs/coding-interviews",
+ "section": "docs",
+ "title": "Coding Interviews with Amigo | Amigo — AI Career Companion & Interview Copilot",
+ "description": "Get real-time AI assistance during live coding interviews on HackerRank, LeetCode, CoderPad, Codility, and more. Solutions, explanations, and edge-case hints.",
+ "ogType": "article",
+ "image": null,
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Docs",
+     "item": "https://www.amigohelp.ai/docs/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Coding Interviews",
+     "item": "https://www.amigohelp.ai/docs/coding-interviews/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-24",
+ "h1": "Coding Interviews",
+ "category": "Core Features",
+ "html": "<p>Amigo supports live coding interviews end-to-end, from understanding the problem to walking the interviewer through your solution. It recognises the platform you're using, reads the problem statement, and provides step-by-step guidance without giving away the final answer outright.</p>\n<p>For the best coding interview experience, set your Copilot Profile to <strong>Coding Test</strong> session format. This bypasses intent classification entirely and routes every question to the most capable AI model (M3), maximising code-generation quality and accuracy.</p>\n<hr>\n<h2 id=\"coding-test-mode\">Coding Test Mode</h2>\n<p>When your session format is set to Coding Test, Amigo operates differently from Live Interview mode. Instead of classifying each question to decide which model to use, every prompt is routed directly to the most capable model in your provider chain. This means faster, more accurate code generation with deeper algorithmic reasoning, ideal for timed assessments where every second counts.</p>\n<p>You can set this from your <a href=\"/copilot-profiles/\">Copilot Profile</a> before starting a session. If your profile doesn't specify a format, Amigo defaults to Live Interview mode, which still handles coding questions well but also performs real-time intent classification.</p>\n<hr>\n<h2 id=\"supported-platforms\">Supported Platforms</h2>\n<p>Amigo detects and integrates with the most common coding interview environments:</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Platform</th><th>Auto-detection</th><th>Screen Read</th><th>Notes</th></tr>\n</thead>\n<tbody><tr><td>LeetCode</td><td>✓</td><td>✓</td><td>Detects problem tab and reads full description</td></tr>\n<tr><td>HackerRank</td><td>✓</td><td>✓</td><td>Works in both interview and practice modes</td></tr>\n<tr><td>CoderPad</td><td>✓</td><td>✓</td><td>Reads problem pane alongside live editor</td></tr>\n<tr><td>CodeSignal</td><td>✓</td><td>✓</td><td>Supports timed corporate assessments</td></tr>\n<tr><td>Custom / Shared Doc</td><td>N/A</td><td>N/A</td><td>Use voice input to describe the problem aloud</td></tr>\n</tbody>\n</table></div>\n<hr>\n<h2 id=\"how-it-guides\">How Amigo Guides You</h2>\n<p>Rather than handing you complete code, Amigo coaches you through a structured problem-solving approach, so your thought process comes across as genuine and polished.</p>\n<ol><li><strong>Understand</strong>: Amigo summarises the problem in plain language and highlights edge cases to clarify with the interviewer (e.g. empty input, negative numbers, large datasets).</li><li><strong>Approach</strong>: Two or three candidate algorithms are listed with their time and space complexity. Amigo recommends the optimal one for the constraints given.</li><li><strong>Pseudocode</strong>: A language-agnostic pseudocode outline lets you verify your logic before writing real code.</li><li><strong>Implementation hints</strong>: If you get stuck on a specific line, press the <em>Hint</em> button in the overlay for a nudge without spoiling the solution.</li><li><strong>Walkthrough</strong>: After coding, Amigo prepares a dry-run explanation you can narrate to the interviewer, tracing through the example input step by step.</li></ol>\n<hr>\n<h2 id=\"complexity\">Complexity Analysis</h2>\n<p>Every suggested approach includes a complexity card:</p>\n<ul><li><strong>Time complexity</strong>: Big-O notation with a short explanation of where the dominant term comes from.</li><li><strong>Space complexity</strong>: Includes auxiliary space and recursion stack depth where relevant.</li><li><strong>Optimisation path</strong>: If a brute-force solution is shown first, Amigo notes what data structure or technique reduces it to the optimal bound.</li></ul>\n<p>Interviewers almost always ask \"what's the time complexity of your solution?\" Glance at the complexity card before submitting so the answer is ready.</p>\n<hr>\n<h2 id=\"system-design\">System Design Rounds</h2>\n<p>For open-ended system design questions (e.g. \"Design a URL shortener\", \"How would you build a notification service?\"), Amigo provides a structured framework:</p>\n<ol><li>Requirements gathering: functional and non-functional.</li><li>Capacity estimation: requests per second, storage, bandwidth.</li><li>High-level design: components, APIs, data flow diagram (described verbally).</li><li>Deep-dive: database schema, caching strategy, message queue, CDN usage.</li><li>Trade-offs: single points of failure, CAP theorem positioning, scalability limits.</li></ol>\n<hr>\n<h2 id=\"tips\">Tips for Coding Sessions</h2>\n<ul><li>Think aloud. Amigo listens to your narration and can correct your approach before you go down the wrong path.</li><li>State your assumptions explicitly. Amigo will flag if an assumption contradicts the problem constraints.</li><li>Test with the examples first, then with edge cases. Amigo suggests the edge cases to check.</li><li>If the interviewer gives you a hint, repeat it aloud so Amigo can incorporate it into the next suggestion.</li></ul>\n<p>Coding Test mode uses the most capable model tier (M3) for every question, which consumes more tokens per suggestion than Live Interview mode. Using the Concise response length can help manage token consumption during longer sessions. See <a href=\"/docs/billing/tokens/\">Tokens &amp; Credits</a> for details.</p>"
+}

@@ -1,0 +1,185 @@
+{
+ "path": "/blog/data-scientist-interview-questions",
+ "section": "blog",
+ "title": "Data Scientist Interview Questions: SQL, Stats & Product Cases (2026) | Amigo — AI Career Companion & Interview Copilot",
+ "description": "The data science loop explained: the SQL screen, probability and inference, the modelling case, the product-metrics round, and what interviewers actually score in each.",
+ "ogType": "article",
+ "image": "https://www.amigohelp.ai/images/blog/data-scientist-interview-questions/b3320d47c81f.jpg",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": [
+    "Article",
+    "FAQPage"
+   ],
+   "@id": "https://www.amigohelp.ai/blog/data-scientist-interview-questions/#article",
+   "headline": "Data Scientist Interview Questions: SQL, Stats & Product Cases (2026)",
+   "description": "The data science loop explained: the SQL screen, probability and inference, the modelling case, the product-metrics round, and what interviewers actually score in each.",
+   "datePublished": "2026-08-18",
+   "dateModified": "2026-08-18",
+   "url": "https://www.amigohelp.ai/blog/data-scientist-interview-questions/",
+   "image": {
+    "@type": "ImageObject",
+    "url": "https://www.amigohelp.ai/images/blog/data-scientist-interview-questions/b3320d47c81f.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Anika Reddy"
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Amigo",
+    "url": "https://www.amigohelp.ai/",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.amigohelp.ai/favicon.png",
+     "width": 288,
+     "height": 288
+    }
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What rounds are in a data scientist interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A typical loop has five: a SQL and coding screen, a probability and statistics round, a modelling or machine learning case, a product and metrics case built around experimentation, and a behavioral round. The weighting varies more than in engineering loops — a product analytics team may drop the modelling round entirely, while a machine learning platform team may replace the product case with system design."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much SQL do data science interviews require?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "More than most candidates expect, and at a level that plateaus quickly. Window functions, self-joins, conditional aggregation, and date arithmetic cover the large majority of questions. If you can write a cohort retention query and a running-total-by-group query from memory, you are past where most SQL screens stop."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What statistics topics come up most in data science interviews?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hypothesis testing and what a p-value does and does not mean, statistical power and sample size, confidence intervals, the central limit theorem, selection and survivorship bias, and conditional probability including Bayes. Power and bias appear most often in strong loops because they distinguish someone who has designed a study from someone who has only run a test."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the product-metrics round and how do you prepare for it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An open prompt such as 'a feature launched and retention dropped two percent, what do you do' or 'how would you measure the success of this product'. Preparation is structural rather than factual: practise defining the metric before diagnosing it, segmenting before concluding, and naming what would change your mind. Reading your own company's experiment write-ups is the highest-yield preparation available."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do data scientists get asked LeetCode questions?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sometimes, but usually a narrower slice than software engineering loops face — strings, hash maps, and light array manipulation rather than graphs and dynamic programming. Pandas or dataframe manipulation is more common than classical algorithms at analytics-leaning companies, and full algorithm screens are most likely at large tech firms that run one hiring bar across all technical roles."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you answer 'how would you measure the success of this feature'?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Name the goal before the metric. State what the feature is meant to change in user behaviour, choose one primary metric that moves only if that happened, add two or three guardrail metrics that catch harm, and say explicitly what tradeoff you would accept. Candidates who list ten metrics without ranking them score worse than candidates who pick one and defend it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is data leakage and why do interviewers ask about it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Leakage is when information unavailable at prediction time reaches the training data, producing offline results that collapse in production. Interviewers ask because it is the single most common reason a real model fails after launch, and because catching it requires understanding how the data was generated rather than which algorithm to apply."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long should you prepare for a data science interview?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Four to six weeks of consistent work is typical for someone already doing the job, with the split weighted toward the rounds that are hardest to fake: roughly a third on SQL and coding to reach fluency, a third on product and experimentation cases spoken out loud, and the remainder on statistics review and behavioral stories."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.amigohelp.ai/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://www.amigohelp.ai/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Article",
+     "item": "https://www.amigohelp.ai/blog/data-scientist-interview-questions/"
+    }
+   ]
+  }
+ ],
+ "lastmod": "2026-09-07",
+ "h1": "Data Scientist Interview Questions: SQL, Stats & Product Cases (2026)",
+ "lead": "The data science loop explained: the SQL screen, probability and inference, the modelling case, the product-metrics round, and what interviewers actually score in each.",
+ "category": "Role & Skills",
+ "readTime": "12 min read",
+ "date": "18 August 2026",
+ "author": "Anika Reddy",
+ "hero": {
+  "src": "/images/blog/data-scientist-interview-questions/b3320d47c81f.jpg",
+  "alt": "A data scientist explaining a scatterplot on a whiteboard to an interviewer."
+ },
+ "html": "<p>Data science interviews are the least standardised technical loop in the industry. Two companies can use the same job title for a role that is eighty percent SQL and dashboards and a role that is eighty percent model training, and the loops they run reflect that difference. What does not vary is the shape of the failure: candidates over-prepare the modelling round because it feels like the intellectual centre of the job, then lose the loop in a product-metrics case where they were asked what they would measure and answered with a list instead of a decision. This guide covers each round in a data science loop, the questions that come up most inside them, and what interviewers are actually scoring when they ask.</p>\n <h2>Find Out Which Job You Are Interviewing For</h2>\n <p>Do this before you prepare anything. The same title covers at least three different jobs, and the loop follows the job rather than the title.</p>\n <p>Product / Analytics</p>\n<ul><li>Heavy SQL, heavy experimentation</li><li>Metrics definition and diagnosis</li><li>Causal inference over model training</li><li>Modelling round may not exist</li><li>Stakeholder communication scored highly</li></ul>\n<p>Machine Learning</p>\n<ul><li>Modelling case is the centre of gravity</li><li>Feature engineering and evaluation depth</li><li>Training/serving skew and leakage</li><li>Often a coding round closer to engineering</li><li>May include ML system design</li></ul>\n<p>Research / Applied Science</p>\n<ul><li>Deeper statistics and probability</li><li>Paper discussion or past-work deep dive</li><li>Method derivation, not library usage</li><li>Publication record often relevant</li><li>Longest and most variable loop</li></ul>\n <p>Ask the recruiter directly which rounds you will face and what each one covers. This is a normal question, it is answered honestly almost every time, and the answer redirects weeks of preparation. Candidates who skip it routinely spend a month on neural network architectures for a role whose hardest round is a retention query and an experiment design.</p>\n <h2>The SQL and Coding Screen</h2>\n <p>SQL is the most reliably tested skill in the entire loop and the one with the clearest ceiling. The difficulty plateaus fast: a handful of patterns cover the large majority of questions, and fluency in those patterns matters more than breadth.</p>\n <p><strong>Window functions.</strong> ROW_NUMBER, RANK, LAG and LEAD, and running aggregates with SUM OVER. The canonical questions are second-highest salary per department, month-over-month change, and first and last event per user. If window functions are not automatic, start here — they appear more than any other single topic.</p>\n<p><strong>Cohort retention.</strong> Group users by signup period, then measure what fraction returned in each subsequent period. This is the archetypal data science SQL question because it requires a self-join or a generated date spine plus careful handling of users who have not had time to return yet. Write it from memory before your screen.</p>\n<p><strong>Conditional aggregation.</strong> COUNT and SUM with CASE WHEN inside them, to pivot rows into columns in one pass. Interviewers use it to see whether you reach for a single scan or write three subqueries and join them.</p>\n<p><strong>Date arithmetic and gaps.</strong> Sessionising events with a thirty-minute inactivity gap, finding consecutive-day streaks, filling missing dates. The gaps-and-islands pattern is worth learning explicitly since it is unintuitive the first time and mechanical afterwards.</p>\n<p><strong>Join semantics under duplication.</strong> What happens to your row count and your SUM when the right-hand table has more than one match. Silently inflated metrics from a fan-out join are a real production failure, which is why this comes up as a follow-up rather than a question of its own.</p>\n<p><strong>NULL behaviour.</strong> NULLs in aggregates, in NOT IN, in joins, and in COUNT of a column versus COUNT of star. Small, frequently asked, and a fast negative signal when missed because it suggests you have not debugged a wrong number before.</p>\n <p>Narrate the query before you type it</p>\n<p>Say what the output table looks like — one row per what, with which columns — then name the joins and the grain, then write. This costs fifteen seconds and it is scored, because the most common way to fail a SQL screen is not a syntax error but confidently producing a result at the wrong grain. An interviewer who hears you state the grain up front will often correct a wrong assumption before you have wasted ten minutes on it.</p>\n <p>The general coding portion, where it exists, is usually lighter than an engineering screen: string and dictionary manipulation, a counting problem, sometimes dataframe operations in pandas. Large tech companies that run one technical bar across roles are the exception and may give you a genuine algorithms question, which is another reason to ask the recruiter what to expect.</p>\n <h2>Probability and Statistics</h2>\n <p>This round rewards precision of language over breadth of coverage. Most candidates know the concepts approximately; interviewers are listening for whether you know them exactly, because approximate statistics is how bad experiment decisions get made.</p>\n <p><strong>What a p-value actually means.</strong> The probability of observing a result at least this extreme if the null hypothesis were true — not the probability the null is true, and not the probability your result is real. Being able to state it correctly, and to say plainly that a p-value of 0.04 does not mean a ninety-six percent chance the effect exists, is a stronger signal than any amount of test-name recall.</p>\n<p><strong>Power, effect size, and sample size.</strong> Power is the probability of detecting an effect that is genuinely there. The practical version interviewers want: you cannot compute the sample size you need without deciding the smallest effect worth detecting, and running an underpowered test then reporting \"no significant difference\" is the most common analytical mistake in industry.</p>\n<p><strong>Confidence intervals.</strong> What the interval covers across repeated sampling, and why a wide interval that contains zero is a different message from a narrow one that contains zero. Strong candidates prefer reporting the interval over the binary significant/not-significant verdict, and can say why.</p>\n<p><strong>Multiple comparisons.</strong> Test twenty metrics at the 0.05 threshold and you should expect roughly one false positive by chance. Interviewers raise this whenever you propose a metrics dashboard for an experiment. Naming a correction, or better, pre-registering one primary metric, is the answer they are waiting for.</p>\n<p><strong>Selection and survivorship bias.</strong> Who is missing from the data and why. Expect a scenario question: a survey of churned users answered mostly by the ones who still care, a model trained only on approved loan applicants, an engagement metric computed only over users who opened the app. The skill is noticing the absence, not naming the term.</p>\n<p><strong>Simpson's paradox.</strong> A trend that reverses when the data is aggregated across groups of unequal size. Comes up as a puzzle — conversion improved in every country but fell overall — and the expected move is to ask for the segment mix rather than to doubt the arithmetic.</p>\n<p><strong>Conditional probability and Bayes.</strong> The medical-test framing is near-universal: a test is ninety-nine percent accurate for a disease affecting one in ten thousand, so what does a positive result mean. The answer is dominated by the base rate, and the point of the question is whether you reach for it unprompted.</p>\n <h2>The Product and Metrics Round</h2>\n <p>This is the round that decides the most loops and receives the least preparation. The prompts are deliberately open — <em>how would you measure the success of this feature</em>, <em>engagement dropped four percent last week, what happened</em>, <em>should we ship this</em> — and there is no correct answer to retrieve. What is being scored is whether you impose structure on an ambiguous question, which is most of the actual job.</p>\n <p>1</p>\n<p>Clarify the goal before naming any metric</p>\n<p>What is this feature supposed to change about user behaviour, and for whom. Two minutes here prevents a wrong answer delivered fluently. If the interviewer is vague on purpose, state the assumption out loud and proceed: \"I will assume the goal is to increase repeat usage among new users rather than total volume — tell me if that is wrong.\"</p>\n<p>2</p>\n<p>Choose one primary metric and defend it</p>\n<p>One. It should move if and only if the goal was achieved, and it should be hard to game. Then add two or three guardrails that catch collateral damage: latency, complaint rate, revenue per user, unsubscribes. Ranking is the signal; an unranked list of ten metrics reads as an inability to decide.</p>\n<p>3</p>\n<p>Say how you would test it</p>\n<p>Randomisation unit, exposure point, duration, and the smallest effect worth detecting. Name the practical problems: novelty effects in the first week, network interference when users interact with each other, seasonality, and what you would do if the unit of randomisation cannot be the user.</p>\n<p>4</p>\n<p>Segment before you conclude</p>\n<p>For a diagnosis prompt this is the whole round: platform, geography, new versus existing users, device, and release cohort. A four-percent aggregate drop is usually a large drop in one segment, and finding the segment is the answer rather than a step toward it.</p>\n<p>5</p>\n<p>Separate instrumentation from reality</p>\n<p>Before concluding that behaviour changed, ask whether measurement changed: a logging deploy, a redefined event, a bot filter, a client version that stopped reporting. Experienced analysts check this first, and interviewers notice when it is checked at all.</p>\n<p>6</p>\n<p>State the decision and what would reverse it</p>\n<p>Finish with a recommendation, not a summary. \"Ship it to the segment where it worked, hold the rest, and revisit if the guardrail on support tickets keeps rising.\" Naming your own falsification condition is the strongest close available in this round.</p>\n <p>Where product-case candidates lose points</p>\n<p>Three ways, all avoidable. Listing metrics without ranking them, so the interviewer cannot tell what you would actually optimise. Diagnosing before defining, so the analysis has no anchor. And concluding without a decision, which leaves the impression that you would produce a document rather than a recommendation. None of these are knowledge gaps, which is why practice out loud closes them faster than reading does.</p>\n <h2>The Modelling Case</h2>\n <p>The modelling round is rarely about algorithm internals. It is a conversation about a concrete problem — predict churn, rank search results, detect fraud, forecast demand — and the questions cluster on the parts of a modelling project that break in production rather than on the parts covered in a course.</p>\n <p><strong>Framing before modelling.</strong> Is this supervised, and what exactly is the label? For churn, is it no purchase in thirty days, or an explicit cancellation, and measured from when? Candidates who define the label carefully are already differentiated, because in real projects an ambiguous label is a more common failure than a suboptimal model.</p>\n<p><strong>Data leakage.</strong> Any feature that would not exist at prediction time. The refund flag when predicting fraud, the cancellation-survey response when predicting churn, aggregates computed over the full period including the future. Expect to be asked how you would detect leakage; the honest answer involves a suspiciously good validation score and a careful audit of when each feature was written.</p>\n<p><strong>Why not accuracy.</strong> On a one-percent positive class, predicting all negatives scores ninety-nine percent. Precision, recall, the tradeoff between them, and where the threshold should sit given the cost of each error type. Say what a false positive costs the business versus a false negative — that sentence is what separates this answer from a definition.</p>\n<p><strong>Validation that respects time.</strong> For anything with a temporal component, random k-fold is wrong: it trains on the future and predicts the past. Time-based splits, and grouped splits when multiple rows share a user, so the same entity is not on both sides.</p>\n<p><strong>Class imbalance.</strong> Class weights, threshold tuning, resampling, and choosing a metric that survives imbalance. Reach for weights and thresholds before synthetic oversampling, and be ready to say why: fewer moving parts and no fabricated data to explain to a stakeholder.</p>\n<p><strong>Baselines and the simplest model that works.</strong> What does a rule of thumb or a logistic regression achieve? Interviewers ask because a candidate who reaches for gradient boosting before establishing a baseline cannot tell you how much lift the complexity bought. Naming the baseline first is close to a free point.</p>\n<p><strong>What happens after launch.</strong> Training/serving skew, feature drift, retraining cadence, and how you would know the model degraded before a stakeholder tells you. This is the question that most cleanly separates candidates who have shipped a model from candidates who have finished a notebook.</p>\n<p><strong>Explaining it to a non-technical stakeholder.</strong> Frequently asked outright. Practise a sixty-second version of a model you have built, in business terms, with no jargon and one concrete number. It is a communication test with a technical surface, and it is scored as heavily as the modelling itself on most product-facing teams.</p>\n <p>On machine learning platform and infrastructure teams this round often extends into design: where features are computed, how the training pipeline is scheduled, how predictions are served and cached, and how you would roll back a bad model. The five-phase structure in our <a href=\"/blog/system-design-interview-questions-framework/\">system design framework</a> transfers directly, with the data pipeline in place of the request path.</p>\n <h2>The Behavioral Round, Data Science Version</h2>\n <p>Structurally the same as any other behavioral round, with a distinctive weighting: the stories that land are about influence without authority and about being wrong in public. Data scientists rarely own the decision, so interviewers probe how you behave when the recommendation is ignored.</p>\n <p>1</p>\n<p>An analysis that changed a decision</p>\n<p>The strongest story available to you. What the team believed, what you found, how you convinced them, and what shipped differently as a result. Carry the number.</p>\n<p>2</p>\n<p>An analysis that was ignored</p>\n<p>Asked more often than candidates expect. The good version is neither bitter nor passive: what you would communicate differently, and what you learned about who needed convincing and when.</p>\n<p>3</p>\n<p>A time you were wrong</p>\n<p>A metric you reported that turned out to be broken, a model that failed after launch, a conclusion that a segment cut reversed. Name the systemic fix — the check that now runs, the review you added — rather than a promise to be more careful.</p>\n<p>4</p>\n<p>Disagreeing with a stakeholder</p>\n<p>Usually a product manager who wanted a number to support a decision already taken. Interviewers are checking whether you hold the line on the analysis while staying useful to the team.</p>\n<p>5</p>\n<p>Explaining something technical to a non-technical audience</p>\n<p>Have a specific instance ready, not a claim that you are good at it. Confidence intervals to a marketing team, or why the test needs two more weeks, are both fine.</p>\n <p>The two-minute delivery target and the structure for these stories are covered in our <a href=\"/blog/behavioral-interview-questions-answers/\">behavioral interview guide</a>, and the opening question that precedes almost all of them is covered in <a href=\"/blog/tell-me-about-yourself-interview-answer/\">our framework for \"tell me about yourself\"</a>.</p>\n <h2>How to Prepare, in Priority Order</h2>\n <p>1</p>\n<p>Reach SQL fluency, then stop</p>\n<p>Window functions, cohort retention, conditional aggregation, and gaps-and-islands, until you can write each without reference. This is a fixed, small body of work with a clear finish line, and it is the round you are most certain to face. Two focused weeks is usually enough.</p>\n<p>2</p>\n<p>Do ten product cases out loud, timed</p>\n<p>Alternate measurement prompts and diagnosis prompts. Speak them at real pace with a real clock, because the failure mode here is structural collapse under time pressure rather than missing knowledge. Repeat three of them a second time.</p>\n<p>3</p>\n<p>Write up two of your own projects as cases</p>\n<p>The problem, the label definition, the baseline, what you measured, what surprised you, and what you would do differently. Interviewers dig into your own work more than into hypotheticals, and \"I would have to check\" about your own project is an expensive answer.</p>\n<p>4</p>\n<p>Review statistics for precision, not coverage</p>\n<p>A short list stated exactly: p-values, power, intervals, multiple comparisons, bias, Bayes. Rehearse saying each definition aloud in one sentence. Precision of language is the whole score in this round.</p>\n<p>5</p>\n<p>Read your target company’s public experiment write-ups</p>\n<p>Most large product companies publish them on their engineering or data blogs. It is the cheapest possible calibration for what a good answer sounds like at that specific company, and it supplies vocabulary you can use in the room.</p>\n<p>6</p>\n<p>Write six behavioral stories, influence-weighted</p>\n<p>Changed a decision, was ignored, was wrong, disagreed with a stakeholder, explained something technical, and shipped something end to end. Rehearse spoken and timed.</p>\n <p>Notice how much of that list is spoken rather than read. The rounds that decide data science loops — the product case, the modelling conversation, the behavioral stories — are all interruption-heavy dialogues, and the gap between knowing an answer and delivering it while being questioned is exactly where well-prepared candidates still lose. That is the practical case for volume: the same prompt, narrated, interrupted, and repeated until the structure holds without effort. If you are interviewing across several technical tracks at once, our <a href=\"/blog/backend-developer-interview-questions/\">backend interview guide</a> covers the engineering mirror of this loop, and the <a href=\"/blog/how-to-prepare-faang-software-engineer-interview/\">FAANG preparation roadmap</a> covers sequencing when you are running multiple processes in parallel.</p>\n <p>Practise the rounds that actually decide data science loops</p>\n<p>Amigo runs unlimited timed practice from your resume and target role, then supports you live during the real interview with structured answers streamed in real time.</p>\n<p><a href=\"/signup/\">Try Amigo free →</a></p>",
+ "faqs": [
+  {
+   "q": "What rounds are in a data scientist interview?",
+   "a": "A typical loop has five: a SQL and coding screen, a probability and statistics round, a modelling or machine learning case, a product and metrics case built around experimentation, and a behavioral round. The weighting varies more than in engineering loops — a product analytics team may drop the modelling round entirely, while a machine learning platform team may replace the product case with system design."
+  },
+  {
+   "q": "How much SQL do data science interviews require?",
+   "a": "More than most candidates expect, and at a level that plateaus quickly. Window functions, self-joins, conditional aggregation, and date arithmetic cover the large majority of questions. If you can write a cohort retention query and a running-total-by-group query from memory, you are past where most SQL screens stop."
+  },
+  {
+   "q": "What statistics topics come up most in data science interviews?",
+   "a": "Hypothesis testing and what a p-value does and does not mean, statistical power and sample size, confidence intervals, the central limit theorem, selection and survivorship bias, and conditional probability including Bayes. Power and bias appear most often in strong loops because they distinguish someone who has designed a study from someone who has only run a test."
+  },
+  {
+   "q": "What is the product-metrics round and how do you prepare for it?",
+   "a": "An open prompt such as 'a feature launched and retention dropped two percent, what do you do' or 'how would you measure the success of this product'. Preparation is structural rather than factual: practise defining the metric before diagnosing it, segmenting before concluding, and naming what would change your mind. Reading your own company's experiment write-ups is the highest-yield preparation available."
+  },
+  {
+   "q": "Do data scientists get asked LeetCode questions?",
+   "a": "Sometimes, but usually a narrower slice than software engineering loops face — strings, hash maps, and light array manipulation rather than graphs and dynamic programming. Pandas or dataframe manipulation is more common than classical algorithms at analytics-leaning companies, and full algorithm screens are most likely at large tech firms that run one hiring bar across all technical roles."
+  },
+  {
+   "q": "How do you answer 'how would you measure the success of this feature'?",
+   "a": "Name the goal before the metric. State what the feature is meant to change in user behaviour, choose one primary metric that moves only if that happened, add two or three guardrail metrics that catch harm, and say explicitly what tradeoff you would accept. Candidates who list ten metrics without ranking them score worse than candidates who pick one and defend it."
+  },
+  {
+   "q": "What is data leakage and why do interviewers ask about it?",
+   "a": "Leakage is when information unavailable at prediction time reaches the training data, producing offline results that collapse in production. Interviewers ask because it is the single most common reason a real model fails after launch, and because catching it requires understanding how the data was generated rather than which algorithm to apply."
+  },
+  {
+   "q": "How long should you prepare for a data science interview?",
+   "a": "Four to six weeks of consistent work is typical for someone already doing the job, with the split weighted toward the rounds that are hardest to fake: roughly a third on SQL and coding to reach fluency, a third on product and experimentation cases spoken out loud, and the remainder on statistics review and behavioral stories."
+  }
+ ],
+ "related": [
+  "/blog/how-to-explain-a-project-in-an-interview",
+  "/blog/backend-developer-interview-questions",
+  "/blog/frontend-developer-interview-questions"
+ ]
+}
